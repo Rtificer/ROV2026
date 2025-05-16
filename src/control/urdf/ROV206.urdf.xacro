@@ -1,0 +1,54 @@
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="rov">
+
+<ros2_control name="ThrusterSystem" type="system">
+    <hardware>
+      <plugin>rov_control/ThrusterHardwareInterface</plugin>
+    </hardware>
+    <joint name="front_left_bottom_thruster_joint"/>
+    <joint name="front_right_bottom_thruster_joint"/>
+    <joint name="front_right_bottom_thruster_joint"/>
+    <joint name="front_right_bottom_thruster_joint"/>
+    <joint name="front_right_bottom_thruster_joint"/>
+    <joint name="front_right_bottom_thruster_joint"/>
+    <joint name="front_right_bottom_thruster_joint"/>
+    <joint name="front_right_bottom_thruster_joint"/>
+  </ros2_control>
+
+<xacro:property name="pi" value="3.141592653589793"/>
+
+<!-- Thruster Macro -->
+<xacro:macro name="thruster" params="name x y z roll pitch yaw">
+  <link name="${name}"/>
+  <joint name="${name}_joint" type="fixed">
+    <command_interface name="effort"/>
+    <state_interface name="effort"/>
+    <parent link="base_link"/>
+    <child link="${name}"/>
+    <origin 
+      xyz="${x} ${y} ${z}" 
+      rpy="${
+        roll * pi / 180.0
+      } ${
+        pitch * pi / 180.0
+      } ${
+        yaw * pi / 180.0
+      }"
+    />
+  </joint>
+</xacro:macro>
+
+<!-- Thruster Properties -->
+<xacro:property name="roll_offset" value="45"/>
+<xacro:property name="pitch_offset" value="45"/>
+<xacro:property name="yaw_offset" value="45"/>
+
+<xacro:thruster name="front_left_bottom_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="${270 + yaw_offset}"/>
+<xacro:thruster name="front_right_bottom_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="${yaw_offset}"/>
+<xacro:thruster name="front_left_top_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="${270 + yaw_offset}"/>
+<xacro:thruster name="front_right_top_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="yaw_offset"/>
+<xacro:thruster name="back_left_bottom_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="45"/>
+<xacro:thruster name="back_right_bottom_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="45"/>
+<xacro:thruster name="back_left_top_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="45"/>
+<xacro:thruster name="back_right_top_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="45"/>
+
