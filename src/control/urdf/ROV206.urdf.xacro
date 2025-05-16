@@ -1,54 +1,81 @@
-
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="rov">
 
-<ros2_control name="ThrusterSystem" type="system">
+  <ros2_control name="ThrusterSystem" type="system">
     <hardware>
       <plugin>rov_control/ThrusterHardwareInterface</plugin>
     </hardware>
     <joint name="front_left_bottom_thruster_joint"/>
     <joint name="front_right_bottom_thruster_joint"/>
-    <joint name="front_right_bottom_thruster_joint"/>
-    <joint name="front_right_bottom_thruster_joint"/>
-    <joint name="front_right_bottom_thruster_joint"/>
-    <joint name="front_right_bottom_thruster_joint"/>
-    <joint name="front_right_bottom_thruster_joint"/>
-    <joint name="front_right_bottom_thruster_joint"/>
+    <joint name="front_left_top_thruster_joint"/>
+    <joint name="front_right_top_thruster_joint"/>
+    <joint name="back_left_bottom_thruster_joint"/>
+    <joint name="back_right_bottom_thruster_joint"/>
+    <joint name="back_left_top_thruster_joint"/>
+    <joint name="back_right_top_thruster_joint"/>
   </ros2_control>
 
-<xacro:property name="pi" value="3.141592653589793"/>
+  <!-- Constants -->
+  <xacro:property name="pi" value="3.141592653589793"/>
 
-<!-- Thruster Macro -->
-<xacro:macro name="thruster" params="name x y z roll pitch yaw">
-  <link name="${name}"/>
-  <joint name="${name}_joint" type="fixed">
-    <command_interface name="effort"/>
-    <state_interface name="effort"/>
-    <parent link="base_link"/>
-    <child link="${name}"/>
-    <origin 
-      xyz="${x} ${y} ${z}" 
-      rpy="${
-        roll * pi / 180.0
-      } ${
-        pitch * pi / 180.0
-      } ${
-        yaw * pi / 180.0
-      }"
-    />
-  </joint>
-</xacro:macro>
+  <!-- Thruster Joint Macro -->
+  <xacro:macro name="thruster" params="name x y z roll pitch yaw">
+    <link name="${name}"/>
+    <joint name="${name}_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="${name}"/>
+      <origin 
+        xyz="${x * 0.0254} ${y * 0.0254} ${z * 0.0254}" 
+        rpy="${
+          roll * pi / 180.0
+        } ${
+          pitch * pi / 180.0
+        } ${
+          yaw * pi / 180.0
+        }"
+      />
+    </joint>
+  </xacro:macro>
 
-<!-- Thruster Properties -->
-<xacro:property name="roll_offset" value="45"/>
-<xacro:property name="pitch_offset" value="45"/>
-<xacro:property name="yaw_offset" value="45"/>
+  <!-- Transmission Macro -->
+  <xacro:macro name="thruster_transmission" params="joint_name">
+    <transmission name="${joint_name}_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${joint_name}">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${joint_name}_motor">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
 
-<xacro:thruster name="front_left_bottom_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="${270 + yaw_offset}"/>
-<xacro:thruster name="front_right_bottom_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="${yaw_offset}"/>
-<xacro:thruster name="front_left_top_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="${270 + yaw_offset}"/>
-<xacro:thruster name="front_right_top_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="yaw_offset"/>
-<xacro:thruster name="back_left_bottom_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="45"/>
-<xacro:thruster name="back_right_bottom_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="45"/>
-<xacro:thruster name="back_left_top_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="45"/>
-<xacro:thruster name="back_right_top_thruster" x="0" y="0" z="0" roll="45" pitch="45" yaw="45"/>
+  <!-- Thruster Properties -->
+  <xacro:property name="pitch_offset" value="45"/>
+  <xacro:property name="yaw_offset" value="45"/>
+  <xacro:property name="x_offset" value="6"/>
+  <xacro:property name="y_offset" value="12"/>
+  <xacro:property name="z_offset" value="6"/>
+  
 
+  <!-- Thrusters -->
+  <xacro:thruster name="front_left_bottom_thruster" x="${-x_offset}" y="${y_offset}" z="${-z_offset}" roll="0" pitch="${-pitch_offset}" yaw="${270 + yaw_offset}"/>
+  <xacro:thruster name="front_right_bottom_thruster" x="${x_offset}" y="${y_offset}" z="${-z_offset}" roll="0" pitch="${-pitch_offset}" yaw="${yaw_offset}"/>
+  <xacro:thruster name="front_left_top_thruster" x="${-x_offset}" y="${y_offset}" z="${z_offset}" roll="0" pitch="${pitch_offset}" yaw="${270 + yaw_offset}"/>
+  <xacro:thruster name="front_right_top_thruster" x="${x_offset}" y="${y_offset}" z="${z_offset}" roll="0" pitch="${pitch_offset}" yaw="${yaw_offset}"/>
+  <xacro:thruster name="back_left_bottom_thruster" x="${-x_offset}" y="${-y_offset}" z="${-z_offset}" roll="0" pitch="${-pitch_offset}" yaw="${180 + yaw_offset}"/>
+  <xacro:thruster name="back_right_bottom_thruster" x="${x_offset}" y="${-y_offset}" z="${-z_offset}" roll="0" pitch="${-pitch_offset}" yaw="${90 + yaw_offset}"/>
+  <xacro:thruster name="back_left_top_thruster" x="${-x_offset}" y="${-y_offset}" z="${z_offset}" roll="0" pitch="${pitch_offset}" yaw="${180 + yaw_offset}"/>
+  <xacro:thruster name="back_right_top_thruster" x="${x_offset}" y="${-y_offset}" z="${z_offset}" roll="0" pitch="${pitch_offset}" yaw="${90 + yaw_offset}"/>
+
+  <!-- Transmissions -->
+  <xacro:thruster_transmission joint_name="front_left_bottom_thruster_joint"/>
+  <xacro:thruster_transmission joint_name="front_right_bottom_thruster_joint"/>
+  <xacro:thruster_transmission joint_name="front_left_top_thruster_joint"/>
+  <xacro:thruster_transmission joint_name="front_right_top_thruster_joint"/>
+  <xacro:thruster_transmission joint_name="back_left_bottom_thruster_joint"/>
+  <xacro:thruster_transmission joint_name="back_right_bottom_thruster_joint"/>
+  <xacro:thruster_transmission joint_name="back_left_top_thruster_joint"/>
+  <xacro:thruster_transmission joint_name="back_right_top_thruster_joint"/>
+
+</robot>
