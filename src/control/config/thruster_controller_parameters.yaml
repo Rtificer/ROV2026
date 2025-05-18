@@ -1,0 +1,15 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 50 # Hz
+
+    thruster_controller:
+      type: effort_controllers/JointGroupEffortController
+      joints:
+        - front_left_bottom_thruster_joint
+        - front_right_bottom_thruster_joint
+        - front_left_top_thruster_joint
+        - front_right_top_thruster_joint
+        - back_left_bottom_thruster_joint
+        - back_right_bottom_thruster_joint
+        - back_left_top_thruster_joint
+        - back_right_top_thruster_joint
