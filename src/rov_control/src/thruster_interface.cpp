@@ -6,18 +6,20 @@ namespace rov_control
 {
   // Recieve hardware information during initialization
   hardware_interface::CallbackReturn ThrusterHardwareInterface::on_init(const hardware_interface::HardwareInfo &info) {
+    // Check if all required paramters are set and valid.
     if (hardware_interface::SystemInterface::on_init(info) != CallbackReturn::SUCCESS)
     {
       return CallbackReturn::ERROR;
     }
 
+    // Initilize a vector of command and state values to 0 where the length of the vector is equal to the number of joints (thrusters)
     command_.resize(info.joints.size(), 0.0);
     state_.resize(info.joints.size(), 0.0);
 
     return CallbackReturn::SUCCESS;
   }
 
-  // Exports state and command interfaces to the ROS 2 control framework
+  //Exports state interfaces based on the interfaces defined in description/urdf/ROV2026.urdf.xacro
   std::vector<hardware_interface::StateInterface> ThrusterHardwareInterface::export_state_interfaces() {
     std::vector<hardware_interface::StateInterface> interfaces;
     for (size_t i = 0; i < info_.joints.size(); ++i)
@@ -27,6 +29,7 @@ namespace rov_control
     return interfaces;
   }
 
+   //Exports command interfaces based on the interfaces defined in description/urdf/ROV2026.urdf.xacro
   std::vector<hardware_interface::CommandInterface> ThrusterHardwareInterface::export_command_interfaces() {
     std::vector<hardware_interface::CommandInterface> interfaces;
     for (size_t i = 0; i < info_.joints.size(); ++i)
