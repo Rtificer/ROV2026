@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(control)
+project(rov_control)
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -30,5 +30,23 @@ ament_target_dependencies(${PROJECT_NAME}
 )
 
 pluginlib_export_plugin_description_file(hardware_interface plugins/thruster_hardware_plugin.xml)
+
+
+install(
+  TARGETS rov_control
+  EXPORT export_rov_control
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+ament_export_libraries(
+  rov_control
+)
+ament_export_targets(
+  export_rov_control
+)
+
+
 
 ament_package()

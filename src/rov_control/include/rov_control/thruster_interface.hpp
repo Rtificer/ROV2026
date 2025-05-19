@@ -1,12 +1,15 @@
+#ifndef ROV_CONTROL_THRUSTER_INTERFACE_HPP
+#define ROV_CONTROL_THRUSTER_INTERFACE_HPP
+
 #pragma once
 #include "hardware_interface/system_interface.hpp"
 #include "hardware_interface/hardware_info.hpp"
 #include "rclcpp/macros.hpp"
 #include <vector>
 
+
 namespace rov_control
 {
-
   // Hardware interface for controlling thrusters, inheriting from SystemInterface
   class ThrusterHardwareInterface : public hardware_interface::SystemInterface
   {
@@ -34,5 +37,6 @@ namespace rov_control
     // Stores the latest state values for each thruster
     std::vector<double> state_;
   };
-
 }
+
+#endif  // ROV_CONTROL_THRUSTER_INTERFACE_HPP

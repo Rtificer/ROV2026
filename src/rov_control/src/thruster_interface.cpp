@@ -1,4 +1,4 @@
-#include "control/thruster_interface.hpp"
+#include "rov_control/thruster_interface.hpp"
 #include "pluginlib/class_list_macros.hpp"
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 
