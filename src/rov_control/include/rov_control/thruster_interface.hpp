@@ -17,7 +17,7 @@ namespace rov_control
     // Macro to define shared pointer stuff
     RCLCPP_SHARED_PTR_DEFINITIONS(ThrusterHardwareInterface)
 
-    // Recieve hardware information during initialization
+    // Receive hardware information during initialization
     hardware_interface::CallbackReturn on_init(const hardware_interface::HardwareInfo &info) override;
 
     // Exports state and command interfaces to the ROS 2 control framework

@@ -4,6 +4,7 @@
 
 namespace rov_control
 {
+
   // Recieve hardware information during initialization
   hardware_interface::CallbackReturn ThrusterHardwareInterface::on_init(const hardware_interface::HardwareInfo &info) {
     // Check if all required paramters are set and valid.

@@ -1,0 +1,64 @@
+[0.009s] Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/rov_control -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/rov_control
+[0.178s] -- The C compiler identification is GNU 13.3.0
+[0.377s] -- The CXX compiler identification is GNU 13.3.0
+[0.395s] -- Detecting C compiler ABI info
+[0.477s] -- Detecting C compiler ABI info - done
+[0.485s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.486s] -- Detecting C compile features
+[0.486s] -- Detecting C compile features - done
+[0.495s] -- Detecting CXX compiler ABI info
+[0.627s] -- Detecting CXX compiler ABI info - done
+[0.636s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.636s] -- Detecting CXX compile features
+[0.636s] -- Detecting CXX compile features - done
+[0.641s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.767s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.875s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.926s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.942s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.963s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.987s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.084s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.089s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.171s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.188s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.209s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.295s] -- Found hardware_interface: 4.28.1 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[1.699s] -- Found controller_interface: 4.28.1 (/opt/ros/jazzy/share/controller_interface/cmake)
+[1.783s] -- Configuring done (1.8s)
+[1.822s] -- Generating done (0.0s)
+[1.826s] -- Build files have been written to: /home/student/Desktop/ROV2026/build/rov_control
+[1.835s] Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/rov_control -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/rov_control
+[1.835s] Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6
+[1.877s] [ 50%] [32mBuilding CXX object CMakeFiles/rov_control.dir/src/thruster_interface.cpp.o[0m
+[6.011s] [100%] [32m[1mLinking CXX shared library librov_control.so[0m
+[6.399s] [100%] Built target rov_control
+[6.407s] Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6
+[6.408s] Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/rov_control
+[6.415s] -- Install configuration: ""
+[6.415s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/thruster_hardware_plugin.xml
+[6.415s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/librov_control.so
+[6.417s] -- Set non-toolchain portion of runtime path of "/home/student/Desktop/ROV2026/install/rov_control/lib/librov_control.so" to ""
+[6.417s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.sh
+[6.417s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.dsv
+[6.417s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/package_run_dependencies/rov_control
+[6.417s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/parent_prefix_path/rov_control
+[6.417s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.sh
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.dsv
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.sh
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.dsv
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.bash
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.sh
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.zsh
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.dsv
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/packages/rov_control
+[6.418s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/rov_control
+[6.419s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport.cmake
+[6.419s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport-noconfig.cmake
+[6.419s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_libraries-extras.cmake
+[6.419s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_targets-extras.cmake
+[6.419s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig.cmake
+[6.419s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig-version.cmake
+[6.420s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.xml
+[6.421s] Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/rov_control
