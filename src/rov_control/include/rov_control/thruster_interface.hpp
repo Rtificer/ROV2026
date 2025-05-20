@@ -30,6 +30,12 @@ namespace rov_control
     // Writes commands to the thrusters
     hardware_interface::return_type write(const rclcpp::Time &, const rclcpp::Duration &) override;
 
+    // Reset or initialize hardware after a change in configuration
+    hardware_interface::CallbackReturn on_configure(const rclcpp_lifecycle::State & previous_state);
+
+    // Reset or shutdown hardware in preparation for reconfiguration or shutdown
+    hardware_interface::CallbackReturn on_cleanup(const rclcpp_lifecycle::State & previous_state);
+
   private:
     // Stores the latest command values for each thruster
     std::vector<double> command_;
