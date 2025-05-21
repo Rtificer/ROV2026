@@ -12,6 +12,12 @@ extern "C"
 
 namespace rov_control
 {
+  static pca9685_handle_t pca9685_handle;
+
+   static uint16_t milliseconds_to_ticks(uint16_t pulse_us, uint16_t pwm_freq_hz) {
+    // 1 cycle = 20,000 us (50Hz), 4096 steps
+    return (pulse_us * 4096) / (1000000UL / pwm_freq_hz);
+  }
 
   /**
    * @brief Initialize the thruster hardware interface with hardware information.
@@ -23,6 +29,8 @@ namespace rov_control
    * @param info The hardware information structure containing joint and interface definitions.
    * @return hardware_interface::CallbackReturn Returns SUCCESS if initialization was successful, ERROR otherwise.
    */
+
+
   hardware_interface::CallbackReturn ThrusterHardwareInterface::on_init(const hardware_interface::HardwareInfo &info) {
     // Check if all required parameters are set and valid.
     if (hardware_interface::SystemInterface::on_init(info) != CallbackReturn::SUCCESS)
