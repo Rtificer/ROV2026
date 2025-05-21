@@ -42,6 +42,8 @@ namespace rov_control
 
     // Stores the latest state values for each thruster
     std::vector<double> state_;
+
+    uint16_t pwm_freq_hz_{50};  // PWM frequency in Hz
   };
 }
 
