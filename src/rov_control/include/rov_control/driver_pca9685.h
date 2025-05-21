@@ -473,8 +473,7 @@ uint8_t pca9685_write_all_channel(pca9685_handle_t *handle, uint16_t on_count, u
  *             0.0 <= delay_percent <= 100.0
  *             0.0 <= high_duty_cycle_percent <= 100.0
  */
-uint8_t pca9685_pwm_convert_to_register(pca9685_handle_t *handle, float delay_percent, float high_duty_cycle_percent,
-                                        uint16_t *on_count, uint16_t *off_count);
+uint8_t pca9685_pwm_convert_to_register(pca9685_handle_t *handle, float delay_percent, float high_duty_cycle_percent, uint16_t *on_count, uint16_t *off_count);
 
 /**
  * @brief      convert the register raw data to the pwm

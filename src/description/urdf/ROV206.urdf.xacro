@@ -12,6 +12,10 @@
   <ros2_control name="ThrusterSystem" type="system">
     <hardware>
       <plugin>rov_control/ThrusterHardwareInterface</plugin>
+      <param name="pwm_freq_hz">50</param>
+      <param name="pwm_min_µs">1000</param>
+      <param name="pwm_max_µs">2000</param>
+      <param name="pwm_mid_µs">1500</param>
     </hardware>
     <xacro:thruster_control_joint name="front_left_bottom_thruster"/>
     <xacro:thruster_control_joint name="front_right_bottom_thruster"/>
