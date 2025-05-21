@@ -12,17 +12,18 @@ extern "C"
 
 namespace rov_control
 {
-  static pca9685_handle_t pca9685_handle;
 
-  static uint16_t microseconds_to_ticks(uint16_t microseconds, uint16_t pwm_freq_hz)
-  {
-    // Convert microseconds to ticks based on frequency
-    return static_cast<uint16_t>((static_cast<uint32_t>(microseconds) * pwm_freq_hz * 4096) / 1000000);
-  }
-
-  // Receive hardware information during initialization
-  hardware_interface::CallbackReturn ThrusterHardwareInterface::on_init(const hardware_interface::HardwareInfo &info)
-  {
+  /**
+   * @brief Initialize the thruster hardware interface with hardware information.
+   *
+   * This method is called during the initialization phase of the hardware interface lifecycle.
+   * It checks if all required parameters are set and valid by calling the base class implementation.
+   * If successful, it initializes the command and state vectors to zero, with a length equal to the number of thruster joints.
+   *
+   * @param info The hardware information structure containing joint and interface definitions.
+   * @return hardware_interface::CallbackReturn Returns SUCCESS if initialization was successful, ERROR otherwise.
+   */
+  hardware_interface::CallbackReturn ThrusterHardwareInterface::on_init(const hardware_interface::HardwareInfo &info) {
     // Check if all required parameters are set and valid.
     if (hardware_interface::SystemInterface::on_init(info) != CallbackReturn::SUCCESS)
     {
