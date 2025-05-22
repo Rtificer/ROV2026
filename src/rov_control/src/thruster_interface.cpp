@@ -213,11 +213,17 @@ namespace rov_control
    * @brief Write the current command values to the thruster hardware.
    *
    * This method sends the command values stored in the internal command vector to the thruster hardware.
-   * For each thruster, the corresponding command value is sent to the hardware interface.
-   * Currently, this implementation logs the command values for each thruster. 
-   * TODO: Replace/add to the logging with actual hardware communication as needed.
+   * For each thruster, the corresponding command value is converted to PCA9685 ticks using the configured
+   * PWM parameters (min, max, mid pulse widths, and frequency). The pulse is always set to start at the
+   * beginning of the PWM cycle (on=0), and the width is set by the calculated ticks value (off=ticks).
    *
-   * @return hardware_interface::return_type Returns OK after sending the commands.
+   * The function calls pca9685_write_channel() for each thruster channel:
+   *   - The third argument (on=0) means the PWM pulse starts at the beginning of the cycle.
+   *   - The fourth argument (off=ticks) sets the pulse width.
+   * If writing to any channel fails, an error is logged and the function returns ERROR.
+   * Otherwise, it logs the command sent to each thruster and returns OK.
+   *
+   * @return hardware_interface::return_type Returns OK after sending the commands, or ERROR if any write fails.
    */
   hardware_interface::return_type ThrusterHardwareInterface::write()
   {
