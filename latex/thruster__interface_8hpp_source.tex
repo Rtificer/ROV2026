@@ -1,0 +1,72 @@
+\doxysection{thruster\+\_\+interface.\+hpp}
+\hypertarget{thruster__interface_8hpp_source}{}\label{thruster__interface_8hpp_source}\index{src/rov\_control/include/rov\_control/thruster\_interface.hpp@{src/rov\_control/include/rov\_control/thruster\_interface.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROV\_CONTROL\_THRUSTER\_INTERFACE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROV\_CONTROL\_THRUSTER\_INTERFACE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}hardware\_interface/system\_interface.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}hardware\_interface/hardware\_info.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}rclcpp/macros.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }rov\_control}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \textcolor{comment}{//\ Hardware\ interface\ for\ controlling\ thrusters,\ inheriting\ from\ SystemInterface}}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface}{ThrusterHardwareInterface}}\ :\ \textcolor{keyword}{public}\ hardware\_interface::SystemInterface}
+\DoxyCodeLine{00014\ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Macro\ to\ define\ shared\ pointer\ stuff}}
+\DoxyCodeLine{00017\ \ \ \ \ RCLCPP\_SHARED\_PTR\_DEFINITIONS(\mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface}{ThrusterHardwareInterface}})}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_abbd837b4d214cd05a40588212f4e74c9}{on\_init}}(const\ hardware\_interface::HardwareInfo\ \&info)\ override;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::vector<hardware\_interface::StateInterface>\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_adbe5e7fa69e2a24b7f78316406fd7b96}{export\_state\_interfaces}}()\ override;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00051\ \ \ \ \ std::vector<hardware\_interface::CommandInterface>\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_af788d1fdfac10670768bfdefc6ab09ce}{export\_command\_interfaces}}()\ override;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00062\ \ \ \ \ hardware\_interface::return\_type\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a89faade16e301a5177e417bedcec840d}{read}}();\ \textcolor{comment}{//\ Add\ override\ when\ needed.}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00080\ \ \ \ \ hardware\_interface::return\_type\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_aa1c4bb7d35ff1dfc0696c262d75a34c5}{write}}();\ \textcolor{comment}{//\ Add\ override\ when\ needed.}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00092\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a8265d068b0e73ab919e96f9bba57ebb1}{on\_configure}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00105\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_aaad573b84f1eb13a0dba544a1da5089b}{on\_cleanup}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00118\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a88696bfa332c2b6a308e83c246b0d080}{on\_shutdown}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00130\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a5dd7f1141ba64dc63975d973ecba7f15}{on\_activate}}();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00142\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_ad5d52c903b9006056b567a28fe402769}{on\_deactivate}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00154\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_ac3dda9730f55662427cf3f09d1b57280}{on\_error}}();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ private:}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ Stores\ the\ latest\ command\ values\ for\ each\ thruster}}
+\DoxyCodeLine{00158\ \ \ \ \ std::vector<\textcolor{keywordtype}{double}>\ command\_;}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{comment}{//\ Stores\ the\ latest\ state\ values\ for\ each\ thruster}}
+\DoxyCodeLine{00161\ \ \ \ \ std::vector<\textcolor{keywordtype}{double}>\ state\_;}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ uint16\_t\ pwm\_freq\_hz\_\{50\};\ \textcolor{comment}{//\ PWM\ frequency\ in\ Hz}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ uint16\_t\ pwm\_min\_µs\_\{1000\};\ \textcolor{comment}{//\ Minimum\ pulse\ width\ in\ microseconds}}
+\DoxyCodeLine{00166\ \ \ \ \ uint16\_t\ pwm\_max\_µs\_\{2000\};\ \textcolor{comment}{//\ Maximum\ pulse\ width\ in\ microseconds}}
+\DoxyCodeLine{00167\ \ \ \ \ uint16\_t\ pwm\_mid\_µs\_\{1500\};\ \textcolor{comment}{//\ Mid\ pulse\ width\ in\ microseconds}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a2db88eeed2739b0ecac65e528a305b0e}{load\_parameters}}(\textcolor{keyword}{const}\ hardware\_interface::HardwareInfo\ \&info);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00208\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a309ae29b7dba32120bc94495eb59d1a3}{command\_to\_ticks}}(}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ command,}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ uint16\_t\ pwm\_min\_µs,}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ uint16\_t\ pwm\_max\_µs,}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ uint16\_t\ pwm\_mid\_µs,}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ uint16\_t\ pwm\_freq\_hz);}
+\DoxyCodeLine{00214\ \ \ \};}
+\DoxyCodeLine{00215\ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ROV\_CONTROL\_THRUSTER\_INTERFACE\_HPP}}
+
+\end{DoxyCode}

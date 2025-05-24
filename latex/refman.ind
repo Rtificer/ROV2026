@@ -1,0 +1,64 @@
+\begin{theindex}
+
+  \item {command\_to\_ticks}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{9}
+
+  \indexspace
+
+  \item {export\_command\_interfaces}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{9}
+  \item {export\_state\_interfaces}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{10}
+
+  \indexspace
+
+  \item {load\_parameters}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{10}
+
+  \indexspace
+
+  \item {on\_activate}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{10}
+  \item {on\_cleanup}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{11}
+  \item {on\_configure}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{11}
+  \item {on\_deactivate}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{11}
+  \item {on\_error}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{11}
+  \item {on\_init}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{12}
+  \item {on\_shutdown}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{12}
+
+  \indexspace
+
+  \item {read}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{12}
+  \item {rov\_control::ThrusterHardwareInterface}, \hyperpage{7}
+    \subitem {command\_to\_ticks}, \hyperpage{9}
+    \subitem {export\_command\_interfaces}, \hyperpage{9}
+    \subitem {export\_state\_interfaces}, \hyperpage{10}
+    \subitem {load\_parameters}, \hyperpage{10}
+    \subitem {on\_activate}, \hyperpage{10}
+    \subitem {on\_cleanup}, \hyperpage{11}
+    \subitem {on\_configure}, \hyperpage{11}
+    \subitem {on\_deactivate}, \hyperpage{11}
+    \subitem {on\_error}, \hyperpage{11}
+    \subitem {on\_init}, \hyperpage{12}
+    \subitem {on\_shutdown}, \hyperpage{12}
+    \subitem {read}, \hyperpage{12}
+    \subitem {write}, \hyperpage{13}
+
+  \indexspace
+
+  \item {src/rov\_control/include/rov\_control/thruster\_interface.hpp}, 
+		\hyperpage{15}
+
+  \indexspace
+
+  \item {write}
+    \subitem {rov\_control::ThrusterHardwareInterface}, \hyperpage{13}
+
+\end{theindex}

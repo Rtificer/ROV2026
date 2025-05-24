@@ -37,7 +37,7 @@
 #ifndef DRIVER_PCA9685_INTERFACE_H
 #define DRIVER_PCA9685_INTERFACE_H
 
-#include "rov_control/driver_pca9685.h"
+#include "rov_control/libdriver_pca9685/driver_pca9685.h"
 
 
 #ifdef __cplusplus

@@ -1,0 +1,321 @@
+\doxysection{rov\+\_\+control\+::Thruster\+Hardware\+Interface Class Reference}
+\hypertarget{classrov__control_1_1ThrusterHardwareInterface}{}\label{classrov__control_1_1ThrusterHardwareInterface}\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+
+
+Inheritance diagram for rov\+\_\+control\+::Thruster\+Hardware\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classrov__control_1_1ThrusterHardwareInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rov\+\_\+control\+::Thruster\+Hardware\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classrov__control_1_1ThrusterHardwareInterface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_abbd837b4d214cd05a40588212f4e74c9}{on\+\_\+init}} (const hardware\+\_\+interface\+::\+Hardware\+Info \&info) override
+\begin{DoxyCompactList}\small\item\em Initialize the thruster hardware interface with hardware information. \end{DoxyCompactList}\item 
+std\+::vector$<$ hardware\+\_\+interface\+::\+State\+Interface $>$ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_adbe5e7fa69e2a24b7f78316406fd7b96}{export\+\_\+state\+\_\+interfaces}} () override
+\begin{DoxyCompactList}\small\item\em Export state interfaces for the thruster hardware. \end{DoxyCompactList}\item 
+std\+::vector$<$ hardware\+\_\+interface\+::\+Command\+Interface $>$ \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_af788d1fdfac10670768bfdefc6ab09ce}{export\+\_\+command\+\_\+interfaces}} () override
+\begin{DoxyCompactList}\small\item\em Export command interfaces for the thruster hardware. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::return\+\_\+type \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a89faade16e301a5177e417bedcec840d}{read}} ()
+\begin{DoxyCompactList}\small\item\em Read the current state of the thruster hardware. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::return\+\_\+type \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_aa1c4bb7d35ff1dfc0696c262d75a34c5}{write}} ()
+\begin{DoxyCompactList}\small\item\em Write the current command values to the thruster hardware. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a8265d068b0e73ab919e96f9bba57ebb1}{on\+\_\+configure}} ()
+\begin{DoxyCompactList}\small\item\em Configure the thruster hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_aaad573b84f1eb13a0dba544a1da5089b}{on\+\_\+cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleanup the thruster hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a88696bfa332c2b6a308e83c246b0d080}{on\+\_\+shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown the thruster hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a5dd7f1141ba64dc63975d973ecba7f15}{on\+\_\+activate}} ()
+\begin{DoxyCompactList}\small\item\em Activate the thruster hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_ad5d52c903b9006056b567a28fe402769}{on\+\_\+deactivate}} ()
+\begin{DoxyCompactList}\small\item\em Deactivate the thruster hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_ac3dda9730f55662427cf3f09d1b57280}{on\+\_\+error}} ()
+\begin{DoxyCompactList}\small\item\em Handle error state for the thruster hardware interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a2db88eeed2739b0ecac65e528a305b0e}{load\+\_\+parameters}} (const hardware\+\_\+interface\+::\+Hardware\+Info \&info)
+\begin{DoxyCompactList}\small\item\em Loads hardware info. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{classrov__control_1_1ThrusterHardwareInterface_a309ae29b7dba32120bc94495eb59d1a3}{command\+\_\+to\+\_\+ticks}} (double command, uint16\+\_\+t pwm\+\_\+min\+\_\+µs, uint16\+\_\+t pwm\+\_\+max\+\_\+µs, uint16\+\_\+t pwm\+\_\+mid\+\_\+µs, uint16\+\_\+t pwm\+\_\+freq\+\_\+hz)
+\begin{DoxyCompactList}\small\item\em Convert a normalized thruster command to PCA9685 ticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_a403ef6decbb4155bf4b52371eefdc26d}\label{classrov__control_1_1ThrusterHardwareInterface_a403ef6decbb4155bf4b52371eefdc26d} 
+std\+::vector$<$ double $>$ {\bfseries command\+\_\+}
+\item 
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_aeae28f99a07740964f4bdebb9a20cc6e}\label{classrov__control_1_1ThrusterHardwareInterface_aeae28f99a07740964f4bdebb9a20cc6e} 
+std\+::vector$<$ double $>$ {\bfseries state\+\_\+}
+\item 
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_ad89c674be786ee369ab97e40d6a65204}\label{classrov__control_1_1ThrusterHardwareInterface_ad89c674be786ee369ab97e40d6a65204} 
+uint16\+\_\+t {\bfseries pwm\+\_\+freq\+\_\+hz\+\_\+} \{50\}
+\item 
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_ab5712c7e07706d29be5ae90ba2f5ad05}\label{classrov__control_1_1ThrusterHardwareInterface_ab5712c7e07706d29be5ae90ba2f5ad05} 
+uint16\+\_\+t {\bfseries pwm\+\_\+min\+\_\+µs\+\_\+} \{1000\}
+\item 
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_a5b0ae9ebd1d142f716976bda4d5fc7a8}\label{classrov__control_1_1ThrusterHardwareInterface_a5b0ae9ebd1d142f716976bda4d5fc7a8} 
+uint16\+\_\+t {\bfseries pwm\+\_\+max\+\_\+µs\+\_\+} \{2000\}
+\item 
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_a235548f709524c6ca7443b54752095fc}\label{classrov__control_1_1ThrusterHardwareInterface_a235548f709524c6ca7443b54752095fc} 
+uint16\+\_\+t {\bfseries pwm\+\_\+mid\+\_\+µs\+\_\+} \{1500\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_a309ae29b7dba32120bc94495eb59d1a3}\label{classrov__control_1_1ThrusterHardwareInterface_a309ae29b7dba32120bc94495eb59d1a3} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!command\_to\_ticks@{command\_to\_ticks}}
+\index{command\_to\_ticks@{command\_to\_ticks}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{command\_to\_ticks()}{command\_to\_ticks()}}
+{\footnotesize\ttfamily uint16\+\_\+t rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::command\+\_\+to\+\_\+ticks (\begin{DoxyParamCaption}\item[{double}]{command,  }\item[{uint16\+\_\+t}]{pwm\+\_\+min\+\_\+µs,  }\item[{uint16\+\_\+t}]{pwm\+\_\+max\+\_\+µs,  }\item[{uint16\+\_\+t}]{pwm\+\_\+mid\+\_\+µs,  }\item[{uint16\+\_\+t}]{pwm\+\_\+freq\+\_\+hz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert a normalized thruster command to PCA9685 ticks. 
+
+This function maps a normalized command value (-\/1 to 1) to a PWM pulse width in microseconds, then converts that pulse width to PCA9685 ticks. The mapping uses the configured minimum, maximum, and midpoint pulse widths.
+
+The mapping formula is\+: pulse\+\_\+µs = pwm\+\_\+mid\+\_\+µs + command \texorpdfstring{$\ast$}{*} (command \texorpdfstring{$>$}{>}= 0 ? (pwm\+\_\+max\+\_\+µs -\/ pwm\+\_\+mid\+\_\+µs) \+: (pwm\+\_\+mid\+\_\+µs -\/ pwm\+\_\+min\+\_\+µs))
+
+
+\begin{DoxyItemize}
+\item For command = 0.\+0, returns the midpoint pulse width (neutral/stop).
+\item For command \texorpdfstring{$>$}{>} 0.\+0, linearly interpolates between midpoint and maximum (forward thrust).
+\item For command \texorpdfstring{$<$}{<} 0.\+0, linearly interpolates between midpoint and minimum (reverse thrust).
+\item The command value is clamped to \mbox{[}-\/1.\+0, 1.\+0\mbox{]} for safety.
+\end{DoxyItemize}
+
+For our Blue Robotics Basic ESCs, and with most other ESCs, the mapping is\+:
+\begin{DoxyItemize}
+\item Minimum pulse (e.\+g., 1100 µs) = full reverse
+\item Midpoint pulse (e.\+g., 1500 µs) = stop
+\item Maximum pulse (e.\+g., 1900 µs) = full forward
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The normalized thruster command \mbox{[}-\/1.\+0, 1.\+0\mbox{]}. \\
+\hline
+{\em pwm\+\_\+min\+\_\+µs} & Minimum pulse width in microseconds. \\
+\hline
+{\em pwm\+\_\+max\+\_\+µs} & Maximum pulse width in microseconds. \\
+\hline
+{\em pwm\+\_\+mid\+\_\+µs} & Midpoint pulse width in microseconds. \\
+\hline
+{\em pwm\+\_\+freq\+\_\+hz} & PWM frequency in Hertz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of PCA9685 ticks corresponding to the command. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_af788d1fdfac10670768bfdefc6ab09ce}\label{classrov__control_1_1ThrusterHardwareInterface_af788d1fdfac10670768bfdefc6ab09ce} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!export\_command\_interfaces@{export\_command\_interfaces}}
+\index{export\_command\_interfaces@{export\_command\_interfaces}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{export\_command\_interfaces()}{export\_command\_interfaces()}}
+{\footnotesize\ttfamily std\+::vector$<$ hardware\+\_\+interface\+::\+Command\+Interface $>$ rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::export\+\_\+command\+\_\+interfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Export command interfaces for the thruster hardware. 
+
+This method creates and returns a vector of command interfaces for each thruster joint, as defined in the description/urdf/\+ROV2026.\+urdf.\+xacro. Each interface allows the ROS 2 control framework to send effort (command) values to the corresponding thruster.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$hardware\+\_\+interface\+::\+Command\+Interface$>$ A vector containing the command interfaces for all thrusters. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_adbe5e7fa69e2a24b7f78316406fd7b96}\label{classrov__control_1_1ThrusterHardwareInterface_adbe5e7fa69e2a24b7f78316406fd7b96} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!export\_state\_interfaces@{export\_state\_interfaces}}
+\index{export\_state\_interfaces@{export\_state\_interfaces}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{export\_state\_interfaces()}{export\_state\_interfaces()}}
+{\footnotesize\ttfamily std\+::vector$<$ hardware\+\_\+interface\+::\+State\+Interface $>$ rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::export\+\_\+state\+\_\+interfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Export state interfaces for the thruster hardware. 
+
+This method creates and returns a vector of state interfaces for each thruster joint, as defined in the description/urdf/\+ROV2026.\+urdf.\+xacro. Each interface allows the ROS 2 control framework to read the current effort (state) values from the corresponding thruster.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$hardware\+\_\+interface\+::\+State\+Interface$>$ A vector containing the state interfaces for all thrusters. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_a2db88eeed2739b0ecac65e528a305b0e}\label{classrov__control_1_1ThrusterHardwareInterface_a2db88eeed2739b0ecac65e528a305b0e} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!load\_parameters@{load\_parameters}}
+\index{load\_parameters@{load\_parameters}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{load\_parameters()}{load\_parameters()}}
+{\footnotesize\ttfamily void rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::load\+\_\+parameters (\begin{DoxyParamCaption}\item[{const hardware\+\_\+interface\+::\+Hardware\+Info \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads hardware info. 
+
+This method reads the PWM-\/related parameters (frequency, minimum, maximum, and midpoint pulse widths) from the provided hardware\+\_\+interface\+::\+Hardware\+Info structure. If a parameter is present in the hardware parameters map, its value is parsed and assigned to the corresponding member variable. If a parameter is not present, the existing value (typically the default) is retained.
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & The hardware information structure containing hardware parameters. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_a5dd7f1141ba64dc63975d973ecba7f15}\label{classrov__control_1_1ThrusterHardwareInterface_a5dd7f1141ba64dc63975d973ecba7f15} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!on\_activate@{on\_activate}}
+\index{on\_activate@{on\_activate}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{on\_activate()}{on\_activate()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::on\+\_\+activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activate the thruster hardware interface. 
+
+This method is called during the transition from the inactive state to the active state in the ROS 2 lifecycle. It is responsible for preparing the hardware interface to start accepting and executing commands. TODO\+: Activate or enable hardware.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if activation was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_aaad573b84f1eb13a0dba544a1da5089b}\label{classrov__control_1_1ThrusterHardwareInterface_aaad573b84f1eb13a0dba544a1da5089b} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!on\_cleanup@{on\_cleanup}}
+\index{on\_cleanup@{on\_cleanup}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{on\_cleanup()}{on\_cleanup()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::on\+\_\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleanup the thruster hardware interface. 
+
+This method is called during the transition from the inactive state to the unconfigured state in the ROS 2 lifecycle. It resets the command and state vectors to zero and releases any resources allocated during configuration or activation. This prepares the hardware interface for possible reconfiguration or safe shutdown. TODO\+: Cleanup or release hardware resources in preparation for reconfiguration or shutdown.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if cleanup was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_a8265d068b0e73ab919e96f9bba57ebb1}\label{classrov__control_1_1ThrusterHardwareInterface_a8265d068b0e73ab919e96f9bba57ebb1} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!on\_configure@{on\_configure}}
+\index{on\_configure@{on\_configure}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{on\_configure()}{on\_configure()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::on\+\_\+configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configure the thruster hardware interface. 
+
+This method is called during the transition from the unconfigured state to the inactive state in the ROS 2 lifecycle. It resets the command and state vectors to zero and prepares the hardware interface for activation. TODO\+: Initialization or setup hardware required before activation.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if configuration was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_ad5d52c903b9006056b567a28fe402769}\label{classrov__control_1_1ThrusterHardwareInterface_ad5d52c903b9006056b567a28fe402769} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!on\_deactivate@{on\_deactivate}}
+\index{on\_deactivate@{on\_deactivate}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{on\_deactivate()}{on\_deactivate()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::on\+\_\+deactivate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deactivate the thruster hardware interface. 
+
+This method is called during the transition from the active state to the inactive state in the ROS 2 lifecycle. It is responsible for stopping the hardware interface from accepting and executing commands. We reset the state and command vectors to zero to ensure safe deactivation. TODO\+: Deactivate or disable hardware.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if deactivation was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_ac3dda9730f55662427cf3f09d1b57280}\label{classrov__control_1_1ThrusterHardwareInterface_ac3dda9730f55662427cf3f09d1b57280} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!on\_error@{on\_error}}
+\index{on\_error@{on\_error}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{on\_error()}{on\_error()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::on\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handle error state for the thruster hardware interface. 
+
+This method is called when the hardware interface enters the error state in the ROS 2 lifecycle. It is responsible for putting the hardware into a safe state, such as stopping all thrusters by setting the command and state vectors to zero, and logging the error. This ensures that the hardware does not continue operating in an unsafe or undefined state after an error has occurred.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns ERROR to indicate the hardware is in an error state. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_abbd837b4d214cd05a40588212f4e74c9}\label{classrov__control_1_1ThrusterHardwareInterface_abbd837b4d214cd05a40588212f4e74c9} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!on\_init@{on\_init}}
+\index{on\_init@{on\_init}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{on\_init()}{on\_init()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::on\+\_\+init (\begin{DoxyParamCaption}\item[{const hardware\+\_\+interface\+::\+Hardware\+Info \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Initialize the thruster hardware interface with hardware information. 
+
+This method is called during the initialization phase of the hardware interface lifecycle. It checks if all required parameters are set and valid by calling the base class implementation. If successful, it initializes the command and state vectors to zero, with a length equal to the number of thruster joints.
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & The hardware information structure containing joint and interface definitions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if initialization was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_a88696bfa332c2b6a308e83c246b0d080}\label{classrov__control_1_1ThrusterHardwareInterface_a88696bfa332c2b6a308e83c246b0d080} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!on\_shutdown@{on\_shutdown}}
+\index{on\_shutdown@{on\_shutdown}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{on\_shutdown()}{on\_shutdown()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::on\+\_\+shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shutdown the thruster hardware interface. 
+
+This method is called during the transition to the finalized (shutdown) state in the ROS 2 lifecycle. It is responsible for safely stopping all thrusters, releasing hardware resources, and resetting the command and state vectors to zero. This ensures the hardware is left in a safe state before the node is destroyed or the process exits. TODO\+: Shutdown hardware.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if shutdown was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_a89faade16e301a5177e417bedcec840d}\label{classrov__control_1_1ThrusterHardwareInterface_a89faade16e301a5177e417bedcec840d} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!read@{read}}
+\index{read@{read}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::return\+\_\+type rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read the current state of the thruster hardware. 
+
+This method updates the internal state vector to reflect the current state of each thruster. Since the ESCs do not provide feedback, the state is set to match the last command sent. This allows the ROS 2 control framework to assume the thrusters are following the commanded values.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::return\+\_\+type Returns OK after updating the state. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1ThrusterHardwareInterface_aa1c4bb7d35ff1dfc0696c262d75a34c5}\label{classrov__control_1_1ThrusterHardwareInterface_aa1c4bb7d35ff1dfc0696c262d75a34c5} 
+\index{rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}!write@{write}}
+\index{write@{write}!rov\_control::ThrusterHardwareInterface@{rov\_control::ThrusterHardwareInterface}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::return\+\_\+type rov\+\_\+control\+::\+Thruster\+Hardware\+Interface\+::write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Write the current command values to the thruster hardware. 
+
+This method sends the command values stored in the internal command vector to the thruster hardware. For each thruster, the corresponding command value is converted to PCA9685 ticks using the configured PWM parameters (min, max, mid pulse widths, and frequency). The pulse is always set to start at the beginning of the PWM cycle (on=0), and the width is set by the calculated ticks value (off=ticks).
+
+The function calls pca9685\+\_\+write\+\_\+channel() for each thruster channel\+:
+\begin{DoxyItemize}
+\item The third argument (on=0) means the PWM pulse starts at the beginning of the cycle.
+\item The fourth argument (off=ticks) sets the pulse width. If writing to any channel fails, an error is logged and the function returns ERROR. Otherwise, it logs the command sent to each thruster and returns OK.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::return\+\_\+type Returns OK after sending the commands, or ERROR if any write fails. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rov\+\_\+control/include/rov\+\_\+control/thruster\+\_\+interface.\+hpp\end{DoxyCompactItemize}

@@ -34,7 +34,7 @@
  * </table>
  */
 
-#include "rov_control/driver_pca9685_interface.h"
+#include "rov_control/libdriver_pca9685/driver_pca9685_interface.h"
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
