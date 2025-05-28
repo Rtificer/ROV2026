@@ -1,9 +1,9 @@
 /**
- * @file thruster_interface.cpp
- * @brief Implementation of the ThrusterHardwareInterface for ROV2026.
+ * @file pwm_interface.cpp
+ * @brief Implementation of the PWMInterface for ROV2026.
  */
 
-#include "rov_control/thruster_interface.hpp"
+#include "rov_control/pwm_interface.hpp"
 #include "pluginlib/class_list_macros.hpp"
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 #include "rclcpp_lifecycle/state.hpp"
@@ -34,7 +34,7 @@ namespace rov_control
     return (pulse_µs * 4096) / (1000000UL / pwm_freq_hz);
   }
 
-  void ThrusterHardwareInterface::load_parameters(const hardware_interface::HardwareInfo &info)
+  void PWMInterface::load_parameters(const hardware_interface::HardwareInfo &info)
   {
     auto param = info.hardware_parameters.find("pwm_freq_hz");
     if (param != info.hardware_parameters.end()) {
@@ -58,15 +58,14 @@ namespace rov_control
   }
 
   // Receive hardware information during initialization
-  hardware_interface::CallbackReturn ThrusterHardwareInterface::on_init(const hardware_interface::HardwareInfo &info) {
+  hardware_interface::CallbackReturn PWMInterface::on_init(const hardware_interface::HardwareInfo &info) {
     // Check if all required parameters are set and valid.
     if (hardware_interface::SystemInterface::on_init(info) != CallbackReturn::SUCCESS)
     {
       return CallbackReturn::ERROR;
     }
 
-    // Initialize a vector of command and state values to 0 where the length of the vector is equal to the number of
-    // joints (thrusters)
+    // Initialize a vector of command and state values to 0 where the length of the vector is equal to the number of joints
     command_.resize(info.joints.size(), 0.0);
     state_.resize(info.joints.size(), 0.0);
 
@@ -87,7 +86,7 @@ namespace rov_control
     // Initialize PCA9685
     if (pca9685_init(&pca9685_handle) != 0)
     {
-      RCLCPP_ERROR(rclcpp::get_logger("ThrusterHardwareInterface"), "PCA9685 init failed!");
+      RCLCPP_ERROR(rclcpp::get_logger("PWMInterface"), "PCA9685 init failed!");
       return CallbackReturn::ERROR;
     }
 
@@ -96,12 +95,12 @@ namespace rov_control
     uint8_t prescaler_reg = 0;
     if (pca9685_output_frequency_convert_to_register(&pca9685_handle, PCA9685_OSCILLATOR_INTERNAL_FREQUENCY, pwm_freq_hz_, &prescaler_reg) != 0)
     {
-      RCLCPP_ERROR(rclcpp::get_logger("ThrusterHardwareInterface"), "Failed to convert frequency to prescaler!");
+      RCLCPP_ERROR(rclcpp::get_logger("PWMInterface"), "Failed to convert frequency to prescaler!");
       return CallbackReturn::ERROR;
     }
     if (pca9685_set_prescaler(&pca9685_handle, prescaler_reg) != 0)
     {
-      RCLCPP_ERROR(rclcpp::get_logger("ThrusterHardwareInterface"), "Set PWM prescaler failed!");
+      RCLCPP_ERROR(rclcpp::get_logger("PWMInterface"), "Set PWM prescaler failed!");
       return CallbackReturn::ERROR;
     }
 
@@ -109,29 +108,37 @@ namespace rov_control
   }
 
   // Exports state interfaces based on the interfaces defined in description/urdf/ROV2026.urdf.xacro
-  std::vector<hardware_interface::StateInterface> ThrusterHardwareInterface::export_state_interfaces()
+  std::vector<hardware_interface::StateInterface> PWMInterface::export_state_interfaces()
   {
     std::vector<hardware_interface::StateInterface> interfaces;
     for (size_t i = 0; i < info_.joints.size(); ++i)
     {
       interfaces.emplace_back(info_.joints[i].name, hardware_interface::HW_IF_EFFORT, &state_[i]);
     }
+    for (size_t i = 8; i < info_.joints.size(); ++i)
+    {
+      interfaces.emplace_back(info_.joints[i].name, hardware_interface::HW_IF_POSITION, &command_[i]);
+    }
     return interfaces;
   }
 
   // Exports command interfaces based on the interfaces defined in description/urdf/ROV2026.urdf.xacro
-  std::vector<hardware_interface::CommandInterface> ThrusterHardwareInterface::export_command_interfaces()
+  std::vector<hardware_interface::CommandInterface> PWMInterface::export_command_interfaces()
   {
     std::vector<hardware_interface::CommandInterface> interfaces;
-    for (size_t i = 0; i < info_.joints.size(); ++i)
+    for (size_t i = 0; i < info_.joints.size() - 3; ++i)
     {
       interfaces.emplace_back(info_.joints[i].name, hardware_interface::HW_IF_EFFORT, &command_[i]);
+    }
+    for (size_t i = 7; i < info_.joints.size(); ++i)
+    {
+      interfaces.emplace_back(info_.joints[i].name, hardware_interface::HW_IF_POSITION, &command_[i]);
     }
     return interfaces;
   }
 
   // Reads the current state from the thrusters
-  hardware_interface::return_type ThrusterHardwareInterface::read() 
+  hardware_interface::return_type PWMInterface::read() 
   {
     for (size_t i = 0; i < state_.size(); ++i)
     {
@@ -142,22 +149,26 @@ namespace rov_control
   } 
 
   // Writes commands to the thrusters
-  hardware_interface::return_type ThrusterHardwareInterface::write()
+  hardware_interface::return_type PWMInterface::write()
   {
     for (size_t i = 0; i < command_.size(); ++i)
     {
       uint16_t ticks = command_to_ticks(command_[i], pwm_min_µs_, pwm_max_µs_, pwm_mid_µs_, pwm_freq_hz_);
       if (pca9685_write_channel(&pca9685_handle, static_cast<pca9685_channel_t>(i), 0, ticks) != 0) {
-        RCLCPP_ERROR(rclcpp::get_logger("ThrusterHardwareInterface"), "Failed to set PWM for thruster %zu", i);
+        RCLCPP_ERROR(rclcpp::get_logger("PWMInterface"), "Failed to set PWM for thruster %zu", i);
         return hardware_interface::return_type::ERROR;
       }
-      RCLCPP_INFO(rclcpp::get_logger("ThrusterHardwareInterface"), "Thruster %zu: %.2f", i, command_[i]);
+      if (i < 8) {
+        RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Thruster %zu: %.2f", i + 1, command_[i]);
+      } else {
+        RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Arm Actuator: %zu: %.2f", i - 7, command_[i]);
+      }
     }
     return hardware_interface::return_type::OK;
   }
 
   // Reset or initialize hardware after a change in configuration
-  hardware_interface::CallbackReturn ThrusterHardwareInterface::on_configure()
+  hardware_interface::CallbackReturn PWMInterface::on_configure()
   {
     // TODO: Reset or initialize or reset hardware here.
 
@@ -168,21 +179,21 @@ namespace rov_control
     // Try to read pwm_freq_hz from hardware parameters, default to 50 if not set
     load_parameters(info_);
 
-    RCLCPP_INFO(rclcpp::get_logger("ThrusterHardwareInterface"), "Thruster hardware configured.");
+    RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Thruster hardware configured.");
     return hardware_interface::CallbackReturn::SUCCESS;
   }
 
   // Reset or shutdown hardware in preparation for reconfiguration or shutdown
-  hardware_interface::CallbackReturn ThrusterHardwareInterface::on_cleanup() {
+  hardware_interface::CallbackReturn PWMInterface::on_cleanup() {
     // Reset command and state vectors to zero.
     std::fill(command_.begin(), command_.end(), 0.0);
     std::fill(state_.begin(), state_.end(), 0.0);
 
-    RCLCPP_INFO(rclcpp::get_logger("ThrusterHardwareInterface"), "Thruster hardware cleaned up.");
+    RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Thruster hardware cleaned up.");
     return hardware_interface::CallbackReturn::SUCCESS;
   }
 
-  hardware_interface::CallbackReturn ThrusterHardwareInterface::on_shutdown()
+  hardware_interface::CallbackReturn PWMInterface::on_shutdown()
   {
     // TODO: Reset hardware here in preparation for reconfiguration or shutdown.
 
@@ -190,36 +201,36 @@ namespace rov_control
     std::fill(command_.begin(), command_.end(), 0.0);
     std::fill(state_.begin(), state_.end(), 0.0);
 
-    RCLCPP_INFO(rclcpp::get_logger("ThrusterHardwareInterface"), "Thruster hardware cleaned up.");
+    RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Thruster hardware cleaned up.");
     return hardware_interface::CallbackReturn::SUCCESS;
   }
 
-  hardware_interface::CallbackReturn ThrusterHardwareInterface::on_activate() {
+  hardware_interface::CallbackReturn PWMInterface::on_activate() {
   
-    RCLCPP_INFO(rclcpp::get_logger("ThrusterHardwareInterface"), "Thruster hardware activated up.");
+    RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Thruster hardware activated up.");
     return hardware_interface::CallbackReturn::SUCCESS;
   }
 
-  hardware_interface::CallbackReturn ThrusterHardwareInterface::on_deactivate() {
+  hardware_interface::CallbackReturn PWMInterface::on_deactivate() {
     // Reset command and state vectors to zero.
     std::fill(command_.begin(), command_.end(), 0.0);
     std::fill(state_.begin(), state_.end(), 0.0);
 
-    RCLCPP_INFO(rclcpp::get_logger("ThrusterHardwareInterface"), "Thruster hardware deactivated up.");
+    RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Thruster hardware deactivated up.");
     return hardware_interface::CallbackReturn::SUCCESS;
   }
 
-  hardware_interface::CallbackReturn ThrusterHardwareInterface::on_error() {
+  hardware_interface::CallbackReturn PWMInterface::on_error() {
     // Handle error state: log the error and leave hardware in a safe state.
     // Do not reset command or state vectors, as this may interfere with debugging or recovery.
     std::fill(command_.begin(), command_.end(), 0.0);
     std::fill(state_.begin(), state_.end(), 0.0);
 
-    RCLCPP_ERROR(rclcpp::get_logger("ThrusterHardwareInterface"), "Thruster hardware encountered an error state! All thrusters stopped.");
+    RCLCPP_ERROR(rclcpp::get_logger("PWMInterface"), "Thruster hardware encountered an error state! All thrusters stopped.");
 
     // Return ERROR to indicate the hardware is in an error state.
     return hardware_interface::CallbackReturn::ERROR;
   }
 } // namespace rov_control
 
-PLUGINLIB_EXPORT_CLASS(rov_control::ThrusterHardwareInterface, hardware_interface::SystemInterface)
+PLUGINLIB_EXPORT_CLASS(rov_control::PWMInterface, hardware_interface::SystemInterface)

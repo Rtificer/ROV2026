@@ -1,0 +1,32 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100 # Hz
+    diagnostics:
+      threshold:
+        controller_manager:
+          periodicity:
+            mean_error: #are we consistently too fast or too slow?
+              error: 10
+              warn: 5
+            standard_devation: #is our update rate incosistent?
+              error: 10
+              warn: 5
+              
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    thruster_pid_controller:
+      type: pid_controllers/PidController
+      ros__parameters:
+        dof_names: ["surge, sway, heave, roll, pitch, yaw"]
+
+        command_interface: effort
+        reference_and_state_interfaces: [velocity]
+
+        gains:
+          surge:  {p: 5.0, i: 0.0, d: 2.0, i_clamp_max: 2.0, i_clamp_min: -2.0}
+          sway:   {p: 5.0, i: 0.0, d: 2.0, i_clamp_max: 2.0, i_clamp_min: -2.0}
+          heave:  {p: 6.0, i: 0.0, d: 3.0, i_clamp_max: 2.0, i_clamp_min: -2.0}
+          roll:   {p: 3.0, i: 0.0, d: 1.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+          pitch:  {p: 3.0, i: 0.0, d: 1.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+          yaw:    {p: 3.0, i: 0.0, d: 1.5, i_clamp_max: 1.0, i_clamp_min: -1.0}

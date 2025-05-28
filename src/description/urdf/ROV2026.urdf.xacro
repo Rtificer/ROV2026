@@ -5,7 +5,7 @@
   <xacro:macro name="thruster_control_joint" params="name">
     <joint name="${name}_joint">
       <command_interface name="effort"/>
-      <state_interface name="effort"/>
+      <state_interface name="velocity"/>
     </joint>
   </xacro:macro>
 
