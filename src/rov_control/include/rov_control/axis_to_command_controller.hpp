@@ -1,10 +1,12 @@
+// osqp_thruster_controller.hpp
+
 #ifndef ROV_CONTROLLERS__OSQP_THRUSTER_CONTROLLER_HPP_
 #define ROV_CONTROLLERS__OSQP_THRUSTER_CONTROLLER_HPP_
 
 #include <controller_interface/chainable_controller_interface.hpp>
 #include <hardware_interface/types/hardware_interface_type_values.hpp>
 #include <rclcpp/rclcpp.hpp>
-#include <osqp.h>
+#include "osqp.h"
 
 #include <string>
 #include <vector>
@@ -14,10 +16,10 @@
 namespace rov_controllers
 {
 
-class OsqpThrusterController : public controller_interface::ChainableControllerInterface
+class AxisToCommandController : public controller_interface::ChainableControllerInterface
 {
 public:
-  OsqpThrusterController();
+  AxisToCommandController();
 
   controller_interface::InterfaceConfiguration command_interface_configuration() const override;
   controller_interface::InterfaceConfiguration state_interface_configuration() const override;

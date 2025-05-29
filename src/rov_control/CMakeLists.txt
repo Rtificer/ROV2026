@@ -12,6 +12,7 @@ find_package(controller_interface REQUIRED)
 # Build OSQP from vendor source
 add_subdirectory(external/osqp)
 
+# ========= BUILD THRUSTER HARDWARE INTERFACE =========
 add_library(${PROJECT_NAME} SHARED
   src/pwm_interface.cpp
 )
@@ -35,8 +36,9 @@ add_library(axis_to_command_controller SHARED
 )
 
 target_include_directories(axis_to_command_controller PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/external/osqp/include
+  include
+  external/osqp/include
+  external/osqp/algebra/common
 )
 
 target_link_libraries(axis_to_command_controller
@@ -74,4 +76,5 @@ ament_export_libraries(
 ament_export_targets(
   export_rov_control
 )
+
 ament_package()
