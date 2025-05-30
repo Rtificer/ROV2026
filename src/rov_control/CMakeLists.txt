@@ -39,6 +39,7 @@ target_include_directories(axis_to_command_controller PRIVATE
   include
   external/osqp/include
   external/osqp/algebra/common
+  external/osqp/build/include
 )
 
 target_link_libraries(axis_to_command_controller

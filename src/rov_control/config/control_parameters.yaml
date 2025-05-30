@@ -5,13 +5,13 @@ controller_manager:
       threshold:
         controller_manager:
           periodicity:
-            mean_error: #are we consistently too fast or too slow?
+            mean_error:
               error: 10
               warn: 5
-            standard_devation: #is our update rate incosistent?
+            standard_devation:
               error: 10
               warn: 5
-              
+
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
@@ -19,10 +19,8 @@ controller_manager:
       type: pid_controllers/PidController
       ros__parameters:
         dof_names: ["surge, sway, heave, roll, pitch, yaw"]
-
         command_interface: effort
         reference_and_state_interfaces: [velocity]
-
         gains:
           surge:  {p: 5.0, i: 0.0, d: 2.0, i_clamp_max: 2.0, i_clamp_min: -2.0}
           sway:   {p: 5.0, i: 0.0, d: 2.0, i_clamp_max: 2.0, i_clamp_min: -2.0}
@@ -30,3 +28,20 @@ controller_manager:
           roll:   {p: 3.0, i: 0.0, d: 1.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
           pitch:  {p: 3.0, i: 0.0, d: 1.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
           yaw:    {p: 3.0, i: 0.0, d: 1.5, i_clamp_max: 1.0, i_clamp_min: -1.0}
+
+    axis_to_command_controller:
+      type: rov_controllers/AxisToCommandController
+      ros__parameters:
+        joints: [
+          "front_left_bottom_thruster_joint",
+          "front_right_bottom_thruster_joint",
+          "front_left_top_thruster_joint",
+          "front_right_top_thruster_joint",
+          "back_left_bottom_thruster_joint",
+          "back_right_bottom_thruster_joint",
+          "back_left_top_thruster_joint",
+          "back_right_top_thruster_joint"
+        ]
+        wrench_weights: [1.0, 1.0, 1.0, 1.0, 10.0, 10.0]
+        effort_weights: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+        qp_time_limit: 0.05
