@@ -1,0 +1,352 @@
+\doxysection{rov\+\_\+controllers\+::Axis\+To\+Command\+Controller Class Reference}
+\hypertarget{classrov__controllers_1_1AxisToCommandController}{}\label{classrov__controllers_1_1AxisToCommandController}\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+
+
+{\ttfamily \#include $<$axis\+\_\+to\+\_\+command\+\_\+controller.\+hpp$>$}
+
+
+
+Inheritance diagram for rov\+\_\+controllers\+::Axis\+To\+Command\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classrov__controllers_1_1AxisToCommandController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rov\+\_\+controllers\+::Axis\+To\+Command\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classrov__controllers_1_1AxisToCommandController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_af46f564987af7ab4dd25cb1553748f0c}{Axis\+To\+Command\+Controller}} ()
+\item 
+controller\+\_\+interface\+::\+Interface\+Configuration \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_aba31a38e36e4e65b1d579d134c9c85e0}{command\+\_\+interface\+\_\+configuration}} () const override
+\item 
+controller\+\_\+interface\+::\+Interface\+Configuration \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a14a2407d58c87e2c05843a3beed98f43}{state\+\_\+interface\+\_\+configuration}} () const override
+\item 
+Callback\+Return \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a34dd74cae7c8373bee514408ca47f7e6}{on\+\_\+init}} () override
+\begin{DoxyCompactList}\small\item\em Declare controller parameters and perform initial setup. \end{DoxyCompactList}\item 
+Callback\+Return \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a81203bd6674d7698f6c26aae1ce94f44}{on\+\_\+configure}} (const rclcpp\+\_\+lifecycle\+::\+State \&previous\+\_\+state) override
+\begin{DoxyCompactList}\small\item\em Retrieve and validate controller parameters from the ROS parameter server. \end{DoxyCompactList}\item 
+Callback\+Return \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a8887804a99e4c22a427bcc00c5cbf43f}{on\+\_\+activate}} (const rclcpp\+\_\+lifecycle\+::\+State \&previous\+\_\+state) override
+\item 
+Callback\+Return \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a5ea354bbbacb6fb0a1dcb96be88b5230}{on\+\_\+deactivate}} (const rclcpp\+\_\+lifecycle\+::\+State \&previous\+\_\+state) override
+\item 
+controller\+\_\+interface\+::return\+\_\+type \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a484718069a50ddae3d2d7eb79b533cbe}{update\+\_\+and\+\_\+write\+\_\+commands}} (const rclcpp\+::\+Time \&time, const rclcpp\+::\+Duration \&period) override
+\begin{DoxyCompactList}\small\item\em Computes and writes thruster commands to achieve a desired wrench using quadratic programming. \end{DoxyCompactList}\item 
+controller\+\_\+interface\+::return\+\_\+type \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a19c2c7aa050d07645cb2670f31be1a49}{update\+\_\+reference\+\_\+from\+\_\+subscribers}} (const rclcpp\+::\+Time \&time, const rclcpp\+::\+Duration \&period) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_aee164c861a3f6f9f0bea73bc0e187288}{position\+\_\+offset\+\_\+}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_afe8fa9638886c143eab9165a70e1f9b8}{rotation\+\_\+offset\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a697d25664cb3053d0b71d58ab363e888}{forward\+\_\+max\+\_\+thrust\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a0f260fe17382e0c64e35ad306c6e1ff6}{reverse\+\_\+max\+\_\+thrust\+\_\+}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_afae78ac8651d61876f8e76572b2b2004}{joint\+\_\+names\+\_\+}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a4e77714f18c8a3989a64ade7e6065f98}{wrench\+\_\+weights\+\_\+}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_ae5668893e3ea2adbcc981450159a23a9}{effort\+\_\+weights\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a8d2afb8877cd4225dca424b71d3c6b0a}{qp\+\_\+time\+\_\+limit\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_adc9f2942f10eb0b7ab99ca2e50ad1be6}{prim\+\_\+res\+\_\+threshold\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_aa218e83ed70ba987d98ada1642b9d1c5}{dual\+\_\+res\+\_\+threshold\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a9e950f56be00b03a5221a427cb874f28}{num\+\_\+joints\+\_\+}} = 8
+\item 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ hardware\+\_\+interface\+::\+Loaned\+Command\+Interface $>$ $>$ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a70cc97aa1b3c9ab9f22ae5e79118268c}{command\+\_\+interfaces\+\_\+}}
+\item 
+OSQPSettings \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a757e6ebd52b154730effa1e62dd3e645}{settings\+\_\+}}
+\item 
+OSQPWorkspace \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a1a30589ed1bce2d4d1788d6ba911f653}{qp\+\_\+workspace\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_af46f564987af7ab4dd25cb1553748f0c}\label{classrov__controllers_1_1AxisToCommandController_af46f564987af7ab4dd25cb1553748f0c} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!AxisToCommandController@{AxisToCommandController}}
+\index{AxisToCommandController@{AxisToCommandController}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{AxisToCommandController()}{AxisToCommandController()}}
+{\footnotesize\ttfamily rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::\+Axis\+To\+Command\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_aba31a38e36e4e65b1d579d134c9c85e0}\label{classrov__controllers_1_1AxisToCommandController_aba31a38e36e4e65b1d579d134c9c85e0} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!command\_interface\_configuration@{command\_interface\_configuration}}
+\index{command\_interface\_configuration@{command\_interface\_configuration}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{command\_interface\_configuration()}{command\_interface\_configuration()}}
+{\footnotesize\ttfamily controller\+\_\+interface\+::\+Interface\+Configuration rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::command\+\_\+interface\+\_\+configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a8887804a99e4c22a427bcc00c5cbf43f}\label{classrov__controllers_1_1AxisToCommandController_a8887804a99e4c22a427bcc00c5cbf43f} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!on\_activate@{on\_activate}}
+\index{on\_activate@{on\_activate}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{on\_activate()}{on\_activate()}}
+{\footnotesize\ttfamily Callback\+Return rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::on\+\_\+activate (\begin{DoxyParamCaption}\item[{const rclcpp\+\_\+lifecycle\+::\+State \&}]{previous\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a81203bd6674d7698f6c26aae1ce94f44}\label{classrov__controllers_1_1AxisToCommandController_a81203bd6674d7698f6c26aae1ce94f44} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!on\_configure@{on\_configure}}
+\index{on\_configure@{on\_configure}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{on\_configure()}{on\_configure()}}
+{\footnotesize\ttfamily Callback\+Return rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::on\+\_\+configure (\begin{DoxyParamCaption}\item[{const rclcpp\+\_\+lifecycle\+::\+State \&}]{previous\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Retrieve and validate controller parameters from the ROS parameter server. 
+
+This method is called when the controller transitions to the "{}configured"{} state. It loads all required parameters, checks their validity, and initializes internal variables. If any parameter is invalid, the method returns an error.
+
+The following parameters are retrieved\+: 
+\begin{DoxyParams}{Parameters}
+{\em position\+\_\+offset} & Vector of 3 doubles \{x, y, z\} (cm). Offset of thrusters from the center of mass. \\
+\hline
+{\em rotation\+\_\+offset} & Vector of 2 doubles \{pitch, yaw\} (deg). Orientation offset for each thruster. \\
+\hline
+{\em forward\+\_\+max\+\_\+thrust} & Maximum forward thrust per thruster (double, Newtons). \\
+\hline
+{\em reverse\+\_\+max\+\_\+thrust} & Maximum reverse thrust per thruster (double, Newtons). \\
+\hline
+{\em joints} & Vector of joint names (strings) for each thruster. \\
+\hline
+{\em wrench\+\_\+weights} & Vector of 6 doubles. Weighting factors for each wrench axis (force/torque). \\
+\hline
+{\em effort\+\_\+weights} & Vector of doubles, same size as joints. Weighting factors for each thruster\textquotesingle{}s effort. \\
+\hline
+{\em qp\+\_\+time\+\_\+limit} & Maximum time allowed for QP solve (double, milliseconds). \\
+\hline
+{\em prim\+\_\+res\+\_\+threshold} & Threshold for QP solver\textquotesingle{}s primal residual (double). \\
+\hline
+{\em dual\+\_\+res\+\_\+threshold} & Threshold for QP solver\textquotesingle{}s dual residual (double).\\
+\hline
+{\em previous\+\_\+state} & The previous lifecycle state (unused). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Callback\+Return\+::\+SUCCESS if configuration is successful, Callback\+Return\+::\+ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a5ea354bbbacb6fb0a1dcb96be88b5230}\label{classrov__controllers_1_1AxisToCommandController_a5ea354bbbacb6fb0a1dcb96be88b5230} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!on\_deactivate@{on\_deactivate}}
+\index{on\_deactivate@{on\_deactivate}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{on\_deactivate()}{on\_deactivate()}}
+{\footnotesize\ttfamily Callback\+Return rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::on\+\_\+deactivate (\begin{DoxyParamCaption}\item[{const rclcpp\+\_\+lifecycle\+::\+State \&}]{previous\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a34dd74cae7c8373bee514408ca47f7e6}\label{classrov__controllers_1_1AxisToCommandController_a34dd74cae7c8373bee514408ca47f7e6} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!on\_init@{on\_init}}
+\index{on\_init@{on\_init}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{on\_init()}{on\_init()}}
+{\footnotesize\ttfamily Callback\+Return rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::on\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Declare controller parameters and perform initial setup. 
+
+This method is called once when the controller is created. It declares all configurable parameters required for the controller. No hardware or ROS interfaces are accessed at this stage.
+
+The following parameters are declared\+: 
+\begin{DoxyParams}{Parameters}
+{\em position\+\_\+offset} & Vector of 3 doubles \{x, y, z\} (cm). Offset of thrusters from the center of mass. \\
+\hline
+{\em rotation\+\_\+offset} & Vector of 2 doubles \{pitch, yaw\} (deg). Orientation offset for each thruster. \\
+\hline
+{\em forward\+\_\+max\+\_\+thrust} & Maximum forward thrust per thruster (double, Newtons). \\
+\hline
+{\em reverse\+\_\+max\+\_\+thrust} & Maximum reverse thrust per thruster (double, Newtons). \\
+\hline
+{\em joints} & Vector of joint names (strings) for each thruster. \\
+\hline
+{\em wrench\+\_\+weights} & Vector of 6 doubles. Weighting factors for each wrench axis (force/torque). \\
+\hline
+{\em effort\+\_\+weights} & Vector of doubles, same size as joints. Weighting factors for each thruster\textquotesingle{}s effort. \\
+\hline
+{\em qp\+\_\+time\+\_\+limit} & Maximum time allowed for QP solve (double, milliseconds). \\
+\hline
+{\em prim\+\_\+res\+\_\+threshold} & Threshold for QP solver\textquotesingle{}s primal residual (double). \\
+\hline
+{\em dual\+\_\+res\+\_\+threshold} & Threshold for QP solver\textquotesingle{}s dual residual (double).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Callback\+Return\+::\+SUCCESS if initialization is successful. 
+\end{DoxyReturn}
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a14a2407d58c87e2c05843a3beed98f43}\label{classrov__controllers_1_1AxisToCommandController_a14a2407d58c87e2c05843a3beed98f43} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!state\_interface\_configuration@{state\_interface\_configuration}}
+\index{state\_interface\_configuration@{state\_interface\_configuration}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{state\_interface\_configuration()}{state\_interface\_configuration()}}
+{\footnotesize\ttfamily controller\+\_\+interface\+::\+Interface\+Configuration rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::state\+\_\+interface\+\_\+configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a484718069a50ddae3d2d7eb79b533cbe}\label{classrov__controllers_1_1AxisToCommandController_a484718069a50ddae3d2d7eb79b533cbe} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!update\_and\_write\_commands@{update\_and\_write\_commands}}
+\index{update\_and\_write\_commands@{update\_and\_write\_commands}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{update\_and\_write\_commands()}{update\_and\_write\_commands()}}
+{\footnotesize\ttfamily controller\+\_\+interface\+::return\+\_\+type rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::update\+\_\+and\+\_\+write\+\_\+commands (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Time \&}]{time,  }\item[{const rclcpp\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Computes and writes thruster commands to achieve a desired wrench using quadratic programming. 
+
+This function calculates the optimal commands for each thruster on the ROV to achieve a desired "{}wrench"{} (a combination of forces and torques) on the robot\textquotesingle{}s body. It does this by formulating and solving a quadratic programming (QP) problem, which is a type of optimization problem that finds the best solution (here, thruster outputs) while minimizing a cost (such as energy use) and respecting constraints (such as thruster limits).
+
+{\bfseries{Key Steps\+:}}
+\begin{DoxyEnumerate}
+\item {\bfseries{Weight Matrices\+:}}
+\begin{DoxyItemize}
+\item Builds a matrix {\ttfamily W} to weight the importance of each component of the wrench (force/torque). Used describe to the solver the drag and other forces leading to movement in certain directions being less efficent than in others.
+\item Builds a matrix {\ttfamily Q} to weight the effort used by each thruster. This is used to compensate for thrusters underperforming or allow the robot to function in the case of loss of functionality of a thruster (usually something is stuck, etc.)
+\end{DoxyItemize}
+\item {\bfseries{Thruster Geometry\+:}}
+\begin{DoxyItemize}
+\item Calculates the position and orientation of each thruster relative to the robot\textquotesingle{}s center based on information in control\+\_\+parameters.\+yaml
+\item For each thruster, computes its direction (using pitch and yaw angles) and how much force it can apply in both forward and reverse directions.
+\item Uses the cross product to determine the torque each thruster can generate about the robot\textquotesingle{}s center.
+\end{DoxyItemize}
+\item {\bfseries{Mapping Forces and Torques\+:}}
+\begin{DoxyItemize}
+\item Constructs matrices ({\ttfamily M\+\_\+plus} and {\ttfamily M\+\_\+minus}) that describe how each thruster\textquotesingle{}s force contributes to the overall wrench.
+\item {\ttfamily M\+\_\+plus} maps forward thrust (an individual thruster forward thrust not the ROV moving forward) to its effect on the vehicles wrench.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+{\ttfamily M\+\_\+minus} does the same for reverse thrust, which is usually lower (like is the case with the T200 we\textquotesingle{}re using).
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Quadratic Programming (QP) Solver\+:}}
+\begin{DoxyItemize}
+\item A QP solver is a mathematical tool that finds the best set of thruster commands to achieve the desired wrench, while minimizing the cost (weighted by {\ttfamily Q}) and staying within thruster limits.
+\item The solver considers both forward and reverse thrust capabilities.
+\item If a solution is found, the resulting thruster commands are written to the hardware interfaces.
+\item If not, a warning is logged.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+{\bfseries{Linear Algebra Concepts Used\+:}}
+\begin{DoxyItemize}
+\item {\bfseries{Cross Product\+:}} Used to compute the torque generated by a thruster force applied at a position offset from the center.
+\item {\bfseries{Dot Product and Matrix Multiplication\+:}} Used in the optimization cost and constraints.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The current time (not directly used in this function). \\
+\hline
+{\em period} & The time since the last update (not directly used in this function). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+controller\+\_\+interface\+::return\+\_\+type OK if successful, otherwise logs a warning.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function assumes the desired wrench is set elsewhere and that the robot\textquotesingle{}s center of mass is at the origin. The QP solver ensures that the solution respects physical limits and tries to use the least amount of effort. 
+\end{DoxyNote}
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a19c2c7aa050d07645cb2670f31be1a49}\label{classrov__controllers_1_1AxisToCommandController_a19c2c7aa050d07645cb2670f31be1a49} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!update\_reference\_from\_subscribers@{update\_reference\_from\_subscribers}}
+\index{update\_reference\_from\_subscribers@{update\_reference\_from\_subscribers}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{update\_reference\_from\_subscribers()}{update\_reference\_from\_subscribers()}}
+{\footnotesize\ttfamily controller\+\_\+interface\+::return\+\_\+type rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::update\+\_\+reference\+\_\+from\+\_\+subscribers (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Time \&}]{time,  }\item[{const rclcpp\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a70cc97aa1b3c9ab9f22ae5e79118268c}\label{classrov__controllers_1_1AxisToCommandController_a70cc97aa1b3c9ab9f22ae5e79118268c} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!command\_interfaces\_@{command\_interfaces\_}}
+\index{command\_interfaces\_@{command\_interfaces\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{command\_interfaces\_}{command\_interfaces\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::reference\+\_\+wrapper$<$hardware\+\_\+interface\+::\+Loaned\+Command\+Interface$>$ $>$ rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::command\+\_\+interfaces\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_aa218e83ed70ba987d98ada1642b9d1c5}\label{classrov__controllers_1_1AxisToCommandController_aa218e83ed70ba987d98ada1642b9d1c5} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!dual\_res\_threshold\_@{dual\_res\_threshold\_}}
+\index{dual\_res\_threshold\_@{dual\_res\_threshold\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{dual\_res\_threshold\_}{dual\_res\_threshold\_}}
+{\footnotesize\ttfamily double rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::dual\+\_\+res\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_ae5668893e3ea2adbcc981450159a23a9}\label{classrov__controllers_1_1AxisToCommandController_ae5668893e3ea2adbcc981450159a23a9} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!effort\_weights\_@{effort\_weights\_}}
+\index{effort\_weights\_@{effort\_weights\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{effort\_weights\_}{effort\_weights\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::effort\+\_\+weights\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a697d25664cb3053d0b71d58ab363e888}\label{classrov__controllers_1_1AxisToCommandController_a697d25664cb3053d0b71d58ab363e888} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!forward\_max\_thrust\_@{forward\_max\_thrust\_}}
+\index{forward\_max\_thrust\_@{forward\_max\_thrust\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{forward\_max\_thrust\_}{forward\_max\_thrust\_}}
+{\footnotesize\ttfamily double rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::forward\+\_\+max\+\_\+thrust\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_afae78ac8651d61876f8e76572b2b2004}\label{classrov__controllers_1_1AxisToCommandController_afae78ac8651d61876f8e76572b2b2004} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!joint\_names\_@{joint\_names\_}}
+\index{joint\_names\_@{joint\_names\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{joint\_names\_}{joint\_names\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::joint\+\_\+names\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a9e950f56be00b03a5221a427cb874f28}\label{classrov__controllers_1_1AxisToCommandController_a9e950f56be00b03a5221a427cb874f28} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!num\_joints\_@{num\_joints\_}}
+\index{num\_joints\_@{num\_joints\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{num\_joints\_}{num\_joints\_}}
+{\footnotesize\ttfamily size\+\_\+t rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::num\+\_\+joints\+\_\+ = 8\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_aee164c861a3f6f9f0bea73bc0e187288}\label{classrov__controllers_1_1AxisToCommandController_aee164c861a3f6f9f0bea73bc0e187288} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!position\_offset\_@{position\_offset\_}}
+\index{position\_offset\_@{position\_offset\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{position\_offset\_}{position\_offset\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::position\+\_\+offset\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_adc9f2942f10eb0b7ab99ca2e50ad1be6}\label{classrov__controllers_1_1AxisToCommandController_adc9f2942f10eb0b7ab99ca2e50ad1be6} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!prim\_res\_threshold\_@{prim\_res\_threshold\_}}
+\index{prim\_res\_threshold\_@{prim\_res\_threshold\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{prim\_res\_threshold\_}{prim\_res\_threshold\_}}
+{\footnotesize\ttfamily double rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::prim\+\_\+res\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a8d2afb8877cd4225dca424b71d3c6b0a}\label{classrov__controllers_1_1AxisToCommandController_a8d2afb8877cd4225dca424b71d3c6b0a} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!qp\_time\_limit\_@{qp\_time\_limit\_}}
+\index{qp\_time\_limit\_@{qp\_time\_limit\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{qp\_time\_limit\_}{qp\_time\_limit\_}}
+{\footnotesize\ttfamily double rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::qp\+\_\+time\+\_\+limit\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a1a30589ed1bce2d4d1788d6ba911f653}\label{classrov__controllers_1_1AxisToCommandController_a1a30589ed1bce2d4d1788d6ba911f653} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!qp\_workspace\_@{qp\_workspace\_}}
+\index{qp\_workspace\_@{qp\_workspace\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{qp\_workspace\_}{qp\_workspace\_}}
+{\footnotesize\ttfamily OSQPWorkspace\texorpdfstring{$\ast$}{*} rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::qp\+\_\+workspace\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a0f260fe17382e0c64e35ad306c6e1ff6}\label{classrov__controllers_1_1AxisToCommandController_a0f260fe17382e0c64e35ad306c6e1ff6} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!reverse\_max\_thrust\_@{reverse\_max\_thrust\_}}
+\index{reverse\_max\_thrust\_@{reverse\_max\_thrust\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{reverse\_max\_thrust\_}{reverse\_max\_thrust\_}}
+{\footnotesize\ttfamily double rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::reverse\+\_\+max\+\_\+thrust\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_afe8fa9638886c143eab9165a70e1f9b8}\label{classrov__controllers_1_1AxisToCommandController_afe8fa9638886c143eab9165a70e1f9b8} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!rotation\_offset\_@{rotation\_offset\_}}
+\index{rotation\_offset\_@{rotation\_offset\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{rotation\_offset\_}{rotation\_offset\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::rotation\+\_\+offset\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a757e6ebd52b154730effa1e62dd3e645}\label{classrov__controllers_1_1AxisToCommandController_a757e6ebd52b154730effa1e62dd3e645} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!settings\_@{settings\_}}
+\index{settings\_@{settings\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{settings\_}{settings\_}}
+{\footnotesize\ttfamily OSQPSettings rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::settings\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1AxisToCommandController_a4e77714f18c8a3989a64ade7e6065f98}\label{classrov__controllers_1_1AxisToCommandController_a4e77714f18c8a3989a64ade7e6065f98} 
+\index{rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}!wrench\_weights\_@{wrench\_weights\_}}
+\index{wrench\_weights\_@{wrench\_weights\_}!rov\_controllers::AxisToCommandController@{rov\_controllers::AxisToCommandController}}
+\doxysubsubsection{\texorpdfstring{wrench\_weights\_}{wrench\_weights\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller\+::wrench\+\_\+weights\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rov\+\_\+control/include/rov\+\_\+control/\mbox{\hyperlink{axis__to__command__controller_8hpp}{axis\+\_\+to\+\_\+command\+\_\+controller.\+hpp}}\end{DoxyCompactItemize}

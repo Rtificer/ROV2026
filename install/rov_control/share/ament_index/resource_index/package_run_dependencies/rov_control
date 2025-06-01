@@ -1,1 +1,1 @@
-hardware_interface;rclcpp;pluginlib;controller_interface;ament_lint_auto;ament_lint_common
+hardware_interface;rclcpp;pluginlib;controller_interface;control_toolbox;eigen3_cmake_module;ament_lint_auto;ament_lint_common

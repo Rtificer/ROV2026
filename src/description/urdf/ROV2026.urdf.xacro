@@ -1,5 +1,6 @@
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="rov">
-
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="ROV2026">
+  <xacro:yaml filename="$(find-pkg-share rov_control)/config/control_parameters.yaml"/>
+  <xacro:property name="thruster_params" value="${controller_manager['ros__parameters']['axis_to_command_controller']}" />
   <link name="base_link"/>
 
   <xacro:macro name="thruster_control_joint" params="name">
@@ -9,9 +10,9 @@
     </joint>
   </xacro:macro>
 
-  <ros2_control name="ThrusterSystem" type="system">
+  <ros2_control name="PWMSystem" type="system">
     <hardware>
-      <plugin>rov_control/ThrusterHardwareInterface</plugin>
+      <plugin>rov_control/PWMInterface</plugin>
       <param name="pwm_freq_hz">50</param>
       <param name="pwm_min_µs">1000</param>
       <param name="pwm_max_µs">2000</param>
@@ -103,10 +104,8 @@
 
 
   <!-- Thruster Properties -->
-  <xacro:property name="pitch_offset" value="45"/>
-  <xacro:property name="yaw_offset" value="45"/>
-  <xacro:property name="rotation_offset" value="45 45"/> <!-- pitch yaw-->
-  <xacro:property name="position_offset" value="16 30 16"/> <!-- x y z-->
+  <xacro:property name="position_offset" value="${thruster_params['position_offset']}" />
+  <xacro:property name="rotation_offset" value="${thruster_params['rotation_offset']}" />
 
   <!-- Thrusters -->
   <xacro:thruster 

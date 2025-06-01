@@ -1,0 +1,356 @@
+\doxysection{rov\+\_\+control\+::PWMInterface Class Reference}
+\hypertarget{classrov__control_1_1PWMInterface}{}\label{classrov__control_1_1PWMInterface}\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+
+
+{\ttfamily \#include $<$pwm\+\_\+interface.\+hpp$>$}
+
+
+
+Inheritance diagram for rov\+\_\+control\+::PWMInterface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classrov__control_1_1PWMInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rov\+\_\+control\+::PWMInterface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classrov__control_1_1PWMInterface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1PWMInterface_a50da806c99d97dbc89eb78d8ae1d4fb8}{on\+\_\+init}} (const hardware\+\_\+interface\+::\+Hardware\+Info \&info) override
+\begin{DoxyCompactList}\small\item\em Initialize the pwm hardware interface with hardware information. \end{DoxyCompactList}\item 
+std\+::vector$<$ hardware\+\_\+interface\+::\+State\+Interface $>$ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a53df8cbe968e423fceeb5198ca6db18c}{export\+\_\+state\+\_\+interfaces}} () override
+\begin{DoxyCompactList}\small\item\em Export state interfaces for the pwm hardware. \end{DoxyCompactList}\item 
+std\+::vector$<$ hardware\+\_\+interface\+::\+Command\+Interface $>$ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a52dc453fa4874b2dd39e46f1611ba3aa}{export\+\_\+command\+\_\+interfaces}} () override
+\begin{DoxyCompactList}\small\item\em Export command interfaces for the pwm hardware. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::return\+\_\+type \mbox{\hyperlink{classrov__control_1_1PWMInterface_ad04db75eaa1f5425fcda2133337cebb0}{read}} (const rclcpp\+::\+Time \&time, const rclcpp\+::\+Duration \&period) override
+\begin{DoxyCompactList}\small\item\em Read the current state of the pwm hardware. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::return\+\_\+type \mbox{\hyperlink{classrov__control_1_1PWMInterface_a49f2e6cc79c5fdbddfb3ed90b5b1c190}{write}} (const rclcpp\+::\+Time \&time, const rclcpp\+::\+Duration \&period) override
+\begin{DoxyCompactList}\small\item\em Write the current command values to the pwm hardware. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1PWMInterface_af3474724b6eac30fd729b8ff1298df00}{on\+\_\+configure}} ()
+\begin{DoxyCompactList}\small\item\em Configure the pwm hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1PWMInterface_a3bde60e13810ff40b04b2578f8878621}{on\+\_\+cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleanup the pwm hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1PWMInterface_a7738632dace0d852f7149860a37bfac0}{on\+\_\+shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown the pwm hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1PWMInterface_aaea2943e8203604494d48335f4b5f9f6}{on\+\_\+activate}} ()
+\begin{DoxyCompactList}\small\item\em Activate the pwm hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1PWMInterface_a5331dc30690826b7c5d675b9b78766e1}{on\+\_\+deactivate}} ()
+\begin{DoxyCompactList}\small\item\em Deactivate the pwm hardware interface. \end{DoxyCompactList}\item 
+hardware\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__control_1_1PWMInterface_a3ff8316085c1e00e5e7be256547c337b}{on\+\_\+error}} ()
+\begin{DoxyCompactList}\small\item\em Handle error state for the pwm hardware interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classrov__control_1_1PWMInterface_a5f150a0ff93daea01c185b12fc429790}{load\+\_\+parameters}} (const hardware\+\_\+interface\+::\+Hardware\+Info \&info)
+\begin{DoxyCompactList}\small\item\em Loads hardware info. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{classrov__control_1_1PWMInterface_a71cd8378d02ebfd2ac4a320ac62092d4}{command\+\_\+to\+\_\+ticks}} (double command, uint16\+\_\+t pwm\+\_\+min\+\_\+µs, uint16\+\_\+t pwm\+\_\+max\+\_\+µs, uint16\+\_\+t pwm\+\_\+mid\+\_\+µs, uint16\+\_\+t pwm\+\_\+freq\+\_\+hz)
+\begin{DoxyCompactList}\small\item\em Convert a normalized pwm command to PCA9685 ticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a0a5ec476f7fda4d541dc35983cb6965f}{command\+\_\+}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a2f207b516495acedd3650ad285e29aa0}{state\+\_\+}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classrov__control_1_1PWMInterface_a8061d34f799b836f5790bb1d6fad6fff}{pwm\+\_\+freq\+\_\+hz\+\_\+}} \{50\}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classrov__control_1_1PWMInterface_a42a6fbb5923998fb0857ac8551865919}{pwm\+\_\+min\+\_\+µs\+\_\+}} \{1000\}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classrov__control_1_1PWMInterface_ac576d3b99106895df90956551d63da6c}{pwm\+\_\+max\+\_\+µs\+\_\+}} \{2000\}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classrov__control_1_1PWMInterface_a5bc4a1f92b3ee9e84d6b6f359b5e37ee}{pwm\+\_\+mid\+\_\+µs\+\_\+}} \{1500\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrov__control_1_1PWMInterface_a71cd8378d02ebfd2ac4a320ac62092d4}\label{classrov__control_1_1PWMInterface_a71cd8378d02ebfd2ac4a320ac62092d4} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!command\_to\_ticks@{command\_to\_ticks}}
+\index{command\_to\_ticks@{command\_to\_ticks}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{command\_to\_ticks()}{command\_to\_ticks()}}
+{\footnotesize\ttfamily uint16\+\_\+t rov\+\_\+control\+::\+PWMInterface\+::command\+\_\+to\+\_\+ticks (\begin{DoxyParamCaption}\item[{double}]{command,  }\item[{uint16\+\_\+t}]{pwm\+\_\+min\+\_\+µs,  }\item[{uint16\+\_\+t}]{pwm\+\_\+max\+\_\+µs,  }\item[{uint16\+\_\+t}]{pwm\+\_\+mid\+\_\+µs,  }\item[{uint16\+\_\+t}]{pwm\+\_\+freq\+\_\+hz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert a normalized pwm command to PCA9685 ticks. 
+
+This function maps a normalized command value (-\/1 to 1) to a PWM pulse width in microseconds, then converts that pulse width to PCA9685 ticks. The mapping uses the configured minimum, maximum, and midpoint pulse widths.
+
+The mapping formula is\+: pulse\+\_\+µs = pwm\+\_\+mid\+\_\+µs + command \texorpdfstring{$\ast$}{*} (command \texorpdfstring{$>$}{>}= 0 ? (pwm\+\_\+max\+\_\+µs -\/ pwm\+\_\+mid\+\_\+µs) \+: (pwm\+\_\+mid\+\_\+µs -\/ pwm\+\_\+min\+\_\+µs))
+
+
+\begin{DoxyItemize}
+\item For command = 0.\+0, returns the midpoint pulse width (neutral/stop).
+\item For command \texorpdfstring{$>$}{>} 0.\+0, linearly interpolates between midpoint and maximum (forward thrust).
+\item For command \texorpdfstring{$<$}{<} 0.\+0, linearly interpolates between midpoint and minimum (reverse thrust).
+\item The command value is clamped to \mbox{[}-\/1.\+0, 1.\+0\mbox{]} for safety.
+\end{DoxyItemize}
+
+For our Blue Robotics Basic ESCs, and with most other ESCs, the mapping is\+:
+\begin{DoxyItemize}
+\item Minimum pulse (e.\+g., 1100 µs) = full reverse
+\item Midpoint pulse (e.\+g., 1500 µs) = stop
+\item Maximum pulse (e.\+g., 1900 µs) = full forward
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The normalized pwm command \mbox{[}-\/1.\+0, 1.\+0\mbox{]}. \\
+\hline
+{\em pwm\+\_\+min\+\_\+µs} & Minimum pulse width in microseconds. \\
+\hline
+{\em pwm\+\_\+max\+\_\+µs} & Maximum pulse width in microseconds. \\
+\hline
+{\em pwm\+\_\+mid\+\_\+µs} & Midpoint pulse width in microseconds. \\
+\hline
+{\em pwm\+\_\+freq\+\_\+hz} & PWM frequency in Hertz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of PCA9685 ticks corresponding to the command. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_a52dc453fa4874b2dd39e46f1611ba3aa}\label{classrov__control_1_1PWMInterface_a52dc453fa4874b2dd39e46f1611ba3aa} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!export\_command\_interfaces@{export\_command\_interfaces}}
+\index{export\_command\_interfaces@{export\_command\_interfaces}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{export\_command\_interfaces()}{export\_command\_interfaces()}}
+{\footnotesize\ttfamily std\+::vector$<$ hardware\+\_\+interface\+::\+Command\+Interface $>$ rov\+\_\+control\+::\+PWMInterface\+::export\+\_\+command\+\_\+interfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Export command interfaces for the pwm hardware. 
+
+This method creates and returns a vector of command interfaces for each pwm joint, as defined in the description/urdf/\+ROV2026.\+urdf.\+xacro. Each interface allows the ROS 2 control framework to send command values to the corresponding pwm component.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$hardware\+\_\+interface\+::\+Command\+Interface$>$ A vector containing the command interfaces for all pwm components. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_a53df8cbe968e423fceeb5198ca6db18c}\label{classrov__control_1_1PWMInterface_a53df8cbe968e423fceeb5198ca6db18c} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!export\_state\_interfaces@{export\_state\_interfaces}}
+\index{export\_state\_interfaces@{export\_state\_interfaces}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{export\_state\_interfaces()}{export\_state\_interfaces()}}
+{\footnotesize\ttfamily std\+::vector$<$ hardware\+\_\+interface\+::\+State\+Interface $>$ rov\+\_\+control\+::\+PWMInterface\+::export\+\_\+state\+\_\+interfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Export state interfaces for the pwm hardware. 
+
+This method creates and returns a vector of state interfaces for each pwm joint, as defined in the description/urdf/\+ROV2026.\+urdf.\+xacro. Each interface allows the ROS 2 control framework to read the current effort (state) values from the corresponding pwm component.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$hardware\+\_\+interface\+::\+State\+Interface$>$ A vector containing the state interfaces for all pwm components. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_a5f150a0ff93daea01c185b12fc429790}\label{classrov__control_1_1PWMInterface_a5f150a0ff93daea01c185b12fc429790} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!load\_parameters@{load\_parameters}}
+\index{load\_parameters@{load\_parameters}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{load\_parameters()}{load\_parameters()}}
+{\footnotesize\ttfamily void rov\+\_\+control\+::\+PWMInterface\+::load\+\_\+parameters (\begin{DoxyParamCaption}\item[{const hardware\+\_\+interface\+::\+Hardware\+Info \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads hardware info. 
+
+This method reads the PWM-\/related parameters (frequency, minimum, maximum, and midpoint pulse widths) from the provided hardware\+\_\+interface\+::\+Hardware\+Info structure. If a parameter is present in the hardware parameters map, its value is parsed and assigned to the corresponding member variable. If a parameter is not present, the existing value (typically the default) is retained.
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & The hardware information structure containing hardware parameters. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classrov__control_1_1PWMInterface_aaea2943e8203604494d48335f4b5f9f6}\label{classrov__control_1_1PWMInterface_aaea2943e8203604494d48335f4b5f9f6} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!on\_activate@{on\_activate}}
+\index{on\_activate@{on\_activate}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{on\_activate()}{on\_activate()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+PWMInterface\+::on\+\_\+activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activate the pwm hardware interface. 
+
+This method is called during the transition from the inactive state to the active state in the ROS 2 lifecycle. It is responsible for preparing the hardware interface to start accepting and executing commands. TODO\+: Activate or enable hardware.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if activation was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_a3bde60e13810ff40b04b2578f8878621}\label{classrov__control_1_1PWMInterface_a3bde60e13810ff40b04b2578f8878621} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!on\_cleanup@{on\_cleanup}}
+\index{on\_cleanup@{on\_cleanup}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{on\_cleanup()}{on\_cleanup()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+PWMInterface\+::on\+\_\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleanup the pwm hardware interface. 
+
+This method is called during the transition from the inactive state to the unconfigured state in the ROS 2 lifecycle. It resets the command and state vectors to zero and releases any resources allocated during configuration or activation. This prepares the hardware interface for possible reconfiguration or safe shutdown. TODO\+: Cleanup or release hardware resources in preparation for reconfiguration or shutdown.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if cleanup was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_af3474724b6eac30fd729b8ff1298df00}\label{classrov__control_1_1PWMInterface_af3474724b6eac30fd729b8ff1298df00} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!on\_configure@{on\_configure}}
+\index{on\_configure@{on\_configure}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{on\_configure()}{on\_configure()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+PWMInterface\+::on\+\_\+configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configure the pwm hardware interface. 
+
+This method is called during the transition from the unconfigured state to the inactive state in the ROS 2 lifecycle. It resets the command and state vectors to zero and prepares the hardware interface for activation. TODO\+: Initialization or setup hardware required before activation.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if configuration was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_a5331dc30690826b7c5d675b9b78766e1}\label{classrov__control_1_1PWMInterface_a5331dc30690826b7c5d675b9b78766e1} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!on\_deactivate@{on\_deactivate}}
+\index{on\_deactivate@{on\_deactivate}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{on\_deactivate()}{on\_deactivate()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+PWMInterface\+::on\+\_\+deactivate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deactivate the pwm hardware interface. 
+
+This method is called during the transition from the active state to the inactive state in the ROS 2 lifecycle. It is responsible for stopping the hardware interface from accepting and executing commands. We reset the state and command vectors to zero to ensure safe deactivation. TODO\+: Deactivate or disable hardware.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if deactivation was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_a3ff8316085c1e00e5e7be256547c337b}\label{classrov__control_1_1PWMInterface_a3ff8316085c1e00e5e7be256547c337b} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!on\_error@{on\_error}}
+\index{on\_error@{on\_error}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{on\_error()}{on\_error()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+PWMInterface\+::on\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handle error state for the pwm hardware interface. 
+
+This method is called when the hardware interface enters the error state in the ROS 2 lifecycle. It is responsible for putting the hardware into a safe state, such as stopping all pwm compoents by setting the command and state vectors to zero, and logging the error. This ensures that the hardware does not continue operating in an unsafe or undefined state after an error has occurred.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns ERROR to indicate the hardware is in an error state. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_a50da806c99d97dbc89eb78d8ae1d4fb8}\label{classrov__control_1_1PWMInterface_a50da806c99d97dbc89eb78d8ae1d4fb8} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!on\_init@{on\_init}}
+\index{on\_init@{on\_init}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{on\_init()}{on\_init()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+PWMInterface\+::on\+\_\+init (\begin{DoxyParamCaption}\item[{const hardware\+\_\+interface\+::\+Hardware\+Info \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Initialize the pwm hardware interface with hardware information. 
+
+This method is called during the initialization phase of the hardware interface lifecycle. It checks if all required parameters are set and valid by calling the base class implementation. If successful, it initializes the command and state vectors to zero, with a length equal to the number of pwm joints.
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & The hardware information structure containing joint and interface definitions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if initialization was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_a7738632dace0d852f7149860a37bfac0}\label{classrov__control_1_1PWMInterface_a7738632dace0d852f7149860a37bfac0} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!on\_shutdown@{on\_shutdown}}
+\index{on\_shutdown@{on\_shutdown}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{on\_shutdown()}{on\_shutdown()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::\+Callback\+Return rov\+\_\+control\+::\+PWMInterface\+::on\+\_\+shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shutdown the pwm hardware interface. 
+
+This method is called during the transition to the finalized (shutdown) state in the ROS 2 lifecycle. It is responsible for safely stopping all pwm components, releasing hardware resources, and resetting the command and state vectors to zero. This ensures the hardware is left in a safe state before the node is destroyed or the process exits. TODO\+: Shutdown hardware.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::\+Callback\+Return Returns SUCCESS if shutdown was successful, ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_ad04db75eaa1f5425fcda2133337cebb0}\label{classrov__control_1_1PWMInterface_ad04db75eaa1f5425fcda2133337cebb0} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!read@{read}}
+\index{read@{read}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::return\+\_\+type rov\+\_\+control\+::\+PWMInterface\+::read (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Time \&}]{time,  }\item[{const rclcpp\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Read the current state of the pwm hardware. 
+
+This method updates the internal state vector to reflect the current state of each pwm component.
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::return\+\_\+type Returns OK after updating the state. 
+\end{DoxyReturn}
+\Hypertarget{classrov__control_1_1PWMInterface_a49f2e6cc79c5fdbddfb3ed90b5b1c190}\label{classrov__control_1_1PWMInterface_a49f2e6cc79c5fdbddfb3ed90b5b1c190} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!write@{write}}
+\index{write@{write}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily hardware\+\_\+interface\+::return\+\_\+type rov\+\_\+control\+::\+PWMInterface\+::write (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Time \&}]{time,  }\item[{const rclcpp\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Write the current command values to the pwm hardware. 
+
+This method sends the command values stored in the internal command vector to each pwm component. For each pwm component, the corresponding command value is converted to PCA9685 ticks using the configured PWM parameters (min, max, mid pulse widths, and frequency). The pulse is always set to start at the beginning of the PWM cycle (on=0), and the width is set by the calculated ticks value (off=ticks).
+
+The function calls pca9685\+\_\+write\+\_\+channel() for each pwm channel\+:
+\begin{DoxyItemize}
+\item The third argument (on=0) means the PWM pulse starts at the beginning of the cycle.
+\item The fourth argument (off=ticks) sets the pulse width. If writing to any channel fails, an error is logged and the function returns ERROR. Otherwise, it logs the command sent to each pwm component and returns OK.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+hardware\+\_\+interface\+::return\+\_\+type Returns OK after sending the commands, or ERROR if any write fails. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classrov__control_1_1PWMInterface_a0a5ec476f7fda4d541dc35983cb6965f}\label{classrov__control_1_1PWMInterface_a0a5ec476f7fda4d541dc35983cb6965f} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!command\_@{command\_}}
+\index{command\_@{command\_}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{command\_}{command\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ rov\+\_\+control\+::\+PWMInterface\+::command\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__control_1_1PWMInterface_a8061d34f799b836f5790bb1d6fad6fff}\label{classrov__control_1_1PWMInterface_a8061d34f799b836f5790bb1d6fad6fff} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!pwm\_freq\_hz\_@{pwm\_freq\_hz\_}}
+\index{pwm\_freq\_hz\_@{pwm\_freq\_hz\_}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{pwm\_freq\_hz\_}{pwm\_freq\_hz\_}}
+{\footnotesize\ttfamily uint16\+\_\+t rov\+\_\+control\+::\+PWMInterface\+::pwm\+\_\+freq\+\_\+hz\+\_\+ \{50\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__control_1_1PWMInterface_ac576d3b99106895df90956551d63da6c}\label{classrov__control_1_1PWMInterface_ac576d3b99106895df90956551d63da6c} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!pwm\_max\_µs\_@{pwm\_max\_µs\_}}
+\index{pwm\_max\_µs\_@{pwm\_max\_µs\_}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{pwm\_max\_µs\_}{pwm\_max\_µs\_}}
+{\footnotesize\ttfamily uint16\+\_\+t rov\+\_\+control\+::\+PWMInterface\+::pwm\+\_\+max\+\_\+µs\+\_\+ \{2000\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__control_1_1PWMInterface_a5bc4a1f92b3ee9e84d6b6f359b5e37ee}\label{classrov__control_1_1PWMInterface_a5bc4a1f92b3ee9e84d6b6f359b5e37ee} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!pwm\_mid\_µs\_@{pwm\_mid\_µs\_}}
+\index{pwm\_mid\_µs\_@{pwm\_mid\_µs\_}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{pwm\_mid\_µs\_}{pwm\_mid\_µs\_}}
+{\footnotesize\ttfamily uint16\+\_\+t rov\+\_\+control\+::\+PWMInterface\+::pwm\+\_\+mid\+\_\+µs\+\_\+ \{1500\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__control_1_1PWMInterface_a42a6fbb5923998fb0857ac8551865919}\label{classrov__control_1_1PWMInterface_a42a6fbb5923998fb0857ac8551865919} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!pwm\_min\_µs\_@{pwm\_min\_µs\_}}
+\index{pwm\_min\_µs\_@{pwm\_min\_µs\_}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{pwm\_min\_µs\_}{pwm\_min\_µs\_}}
+{\footnotesize\ttfamily uint16\+\_\+t rov\+\_\+control\+::\+PWMInterface\+::pwm\+\_\+min\+\_\+µs\+\_\+ \{1000\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__control_1_1PWMInterface_a2f207b516495acedd3650ad285e29aa0}\label{classrov__control_1_1PWMInterface_a2f207b516495acedd3650ad285e29aa0} 
+\index{rov\_control::PWMInterface@{rov\_control::PWMInterface}!state\_@{state\_}}
+\index{state\_@{state\_}!rov\_control::PWMInterface@{rov\_control::PWMInterface}}
+\doxysubsubsection{\texorpdfstring{state\_}{state\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ rov\+\_\+control\+::\+PWMInterface\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rov\+\_\+control/include/rov\+\_\+control/\mbox{\hyperlink{pwm__interface_8hpp}{pwm\+\_\+interface.\+hpp}}\end{DoxyCompactItemize}

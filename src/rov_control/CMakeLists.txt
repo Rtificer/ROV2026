@@ -7,6 +7,7 @@ find_package(rclcpp REQUIRED)
 find_package(hardware_interface REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(controller_interface REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 # ========= OSQP VENDOR SETUP =========
 # Build OSQP from vendor source
@@ -40,6 +41,7 @@ target_include_directories(axis_to_command_controller PRIVATE
   external/osqp/include
   external/osqp/algebra/common
   external/osqp/build/include
+  ${EIGEN3_INCLUDE_DIRS}
 )
 
 target_link_libraries(axis_to_command_controller
@@ -50,6 +52,7 @@ ament_target_dependencies(axis_to_command_controller
   rclcpp
   controller_interface
   hardware_interface
+  Eigen3
 )
 
 pluginlib_export_plugin_description_file(

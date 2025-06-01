@@ -1,0 +1,59 @@
+\doxysection{thruster\+\_\+pid\+\_\+controller.\+hpp}
+\hypertarget{thruster__pid__controller_8hpp_source}{}\label{thruster__pid__controller_8hpp_source}\index{src/rov\_control/include/rov\_control/thruster\_pid\_controller.hpp@{src/rov\_control/include/rov\_control/thruster\_pid\_controller.hpp}}
+\mbox{\hyperlink{thruster__pid__controller_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROV\_CONTROL\_\_THRUSTER\_PID\_CONTROLLER\_HPP\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROV\_CONTROL\_\_THRUSTER\_PID\_CONTROLLER\_HPP\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <rclcpp/rclcpp.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <controller\_interface/chainable\_controller\_interface.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <geometry\_msgs/msg/twist.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <geometry\_msgs/msg/wrench.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <control\_toolbox/pid.hpp>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerov__controllers}{rov\_controllers}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrov__controllers_1_1PidController}{PidController}}\ :\ \textcolor{keyword}{public}\ controller\_interface::ChainableControllerInterface}
+\DoxyCodeLine{00021\ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classrov__controllers_1_1PidController_a7df0a4ac961f4f7120004ac22605ec71}{PidController}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ controller\_interface::InterfaceConfiguration\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a6f43cf7cab33e7faad4e8e92db582437}{command\_interface\_configuration}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ controller\_interface::InterfaceConfiguration\ \mbox{\hyperlink{classrov__controllers_1_1PidController_acaadeafef93e2c0d74bab3474b0136b5}{state\_interface\_configuration}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00043\ \ \ \ \ controller\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__controllers_1_1PidController_af39f4ea18c51976d793c5edbf46db945}{on\_init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00068\ \ \ \ \ controller\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__controllers_1_1PidController_aa800b128f11ee18746b64106a0bdd9cb}{on\_configure}}(\textcolor{keyword}{const}\ rclcpp\_lifecycle::State\ \&)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ CallbackReturn\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a56e96ac8db43cf5cea385d0dd7ca47e8}{on\_activate}}(\textcolor{keyword}{const}\ rclcpp\_lifecycle::State\ \&previous\_state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ CallbackReturn\ \mbox{\hyperlink{classrov__controllers_1_1PidController_ab6575921c8c73ad6ddbdfa40b15a7095}{on\_deactivate}}(\textcolor{keyword}{const}\ rclcpp\_lifecycle::State\ \&previous\_state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00092\ \ \ \ \ controller\_interface::return\_type\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a2ddd7e6493301b945764445baa8df6f8}{update\_and\_write\_commands}}(}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ rclcpp::Time\ \&time,}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ rclcpp::Duration\ \&period)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00097\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classrov__controllers_1_1PidController_ac9f3506596fb6bb5cdb7a62657dab403}{dof\_names\_}};}
+\DoxyCodeLine{00098\ \ \ \ \ std::vector<std::shared\_ptr<control\_toolbox::Pid>>\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a7d8b3df76cb41a22e207e44d7c8b2082}{pids\_}};}
+\DoxyCodeLine{00099\ \ \ \ \ std::string\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a277fb975658da95b6a826c26e244bb4b}{reference\_topic\_}},\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a85d0d589d3f0a518dfb688036fb613f3}{state\_topic\_}},\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a31fb0de97413fdced248507d77f3568f}{output\_topic\_}};}
+\DoxyCodeLine{00100\ \ \ \ \ geometry\_msgs::msg::Twist\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a02b213fef27c5a56d514c3d974a89598}{ref\_}},\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a7f27e6f4e04d20bf01bf7e565dcbd490}{state\_}};}
+\DoxyCodeLine{00101\ \ \ \ \ std::mutex\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a41a96abbaefa830f142289495a67a46f}{data\_mutex\_}};}
+\DoxyCodeLine{00102\ \ \ \ \ rclcpp::Subscription<geometry\_msgs::msg::Twist>::SharedPtr\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a97a9f12b1a71e3e6b4b70312748e1bf5}{ref\_sub\_}},\ \mbox{\hyperlink{classrov__controllers_1_1PidController_ab5b5d29a4f095525bfb28b48cbf73d68}{state\_sub\_}};}
+\DoxyCodeLine{00103\ \ \ \ \ rclcpp::Publisher<geometry\_msgs::msg::Wrench>::SharedPtr\ \mbox{\hyperlink{classrov__controllers_1_1PidController_a16747f1d77cca699d4f8a89b7b0bb703}{wrench\_pub\_}};}
+\DoxyCodeLine{00104\ \ \ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \}\ \textcolor{comment}{//\ namespace\ rov\_controllers}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ THRUSTER\_PID\_CONTROLLER\_HPP}}
+
+\end{DoxyCode}

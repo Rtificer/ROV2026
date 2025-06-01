@@ -1,0 +1,27 @@
+\doxysection{gamepad\+\_\+parser\+\_\+node.\+hpp}
+\hypertarget{gamepad__parser__node_8hpp_source}{}\label{gamepad__parser__node_8hpp_source}\index{src/rov\_control/include/rov\_control/gamepad\_parser\_node.hpp@{src/rov\_control/include/rov\_control/gamepad\_parser\_node.hpp}}
+\mbox{\hyperlink{gamepad__parser__node_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROV\_CONTROL\_\_GAMEPAD\_PARSER\_NODE\_HPP\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROV\_CONTROL\_\_GAMEPAD\_PARSER\_NODE\_HPP\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <rclcpp/rclcpp.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sensor\_msgs/msg/joy.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <geometry\_msgs/msg/twist.hpp>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGamepadParser}{GamepadParser}}\ :\ \textcolor{keyword}{public}\ rclcpp::Node}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \mbox{\hyperlink{classGamepadParser_a1b59a78bd2f8841d7e941ed0efdd9e09}{GamepadParser}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGamepadParser_a4918af1b3135d983645a5571a035f533}{joy\_callback}}(\textcolor{keyword}{const}\ sensor\_msgs::msg::Joy::SharedPtr\ msg);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ rclcpp::Subscription<sensor\_msgs::msg::Joy>::SharedPtr\ \mbox{\hyperlink{classGamepadParser_a2eebf552ab65e3172cfacce008548cde}{joy\_sub\_}};}
+\DoxyCodeLine{00032\ \ \ rclcpp::Publisher<geometry\_msgs::msg::Twist>::SharedPtr\ \mbox{\hyperlink{classGamepadParser_abc34a1ca50cbb7735daef5a6d073cd85}{twist\_pub\_}};}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAMEPAD\_PARSER\_NODE\_HPP}}
+
+\end{DoxyCode}

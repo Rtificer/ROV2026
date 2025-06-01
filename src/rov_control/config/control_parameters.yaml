@@ -16,7 +16,7 @@ controller_manager:
       type: joint_state_broadcaster/JointStateBroadcaster
 
     thruster_pid_controller:
-      type: pid_controllers/PidController
+      type: pid_controller/PidController
       ros__parameters:
         dof_names: ["surge, sway, heave, roll, pitch, yaw"]
         command_interface: effort
@@ -42,6 +42,16 @@ controller_manager:
           "back_left_top_thruster_joint",
           "back_right_top_thruster_joint"
         ]
-        wrench_weights: [1.0, 1.0, 1.0, 1.0, 10.0, 10.0]
-        effort_weights: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
-        qp_time_limit: 0.05
+        position_offset: [16, 30, 16] # centimeters, [x, y, z]
+        rotation_offset: [45, 45]     # degrees, [pitch, yaw]
+        forward_max_thrust: 20.0      # Newtons
+        reverse_max_thrust: 15.0      # Newtons
+        wrench_weights: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+        effort_weights: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+        qp_time_limit: 50             # ms
+        prim_res_threshold: 1e-2
+        dual_res_threshold: 1e-2
+        
+gamepad_parser:
+  ros__parameters:
+    deadzone: 0.1

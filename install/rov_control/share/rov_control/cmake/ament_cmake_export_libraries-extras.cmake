@@ -1,6 +1,6 @@
 # generated from ament_cmake_export_libraries/cmake/template/ament_cmake_export_libraries.cmake.in
 
-set(_exported_libraries "rov_control")
+set(_exported_libraries "rov_control;axis_to_command_controller")
 set(_exported_library_names "")
 
 # populate rov_control_LIBRARIES

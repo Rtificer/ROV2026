@@ -37,28 +37,33 @@ namespace rov_control
   void PWMInterface::load_parameters(const hardware_interface::HardwareInfo &info)
   {
     auto param = info.hardware_parameters.find("pwm_freq_hz");
-    if (param != info.hardware_parameters.end()) {
-        pwm_freq_hz_ = static_cast<uint16_t>(std::stoi(param->second));
+    if (param != info.hardware_parameters.end())
+    {
+      pwm_freq_hz_ = static_cast<uint16_t>(std::stoi(param->second));
     }
 
     param = info.hardware_parameters.find("pwm_min_µs");
-    if (param != info.hardware_parameters.end()) {
-        pwm_min_µs_ = static_cast<uint16_t>(std::stoi(param->second));
+    if (param != info.hardware_parameters.end())
+    {
+      pwm_min_µs_ = static_cast<uint16_t>(std::stoi(param->second));
     }
 
     param = info.hardware_parameters.find("pwm_max_µs");
-    if (param != info.hardware_parameters.end()) {
-        pwm_max_µs_ = static_cast<uint16_t>(std::stoi(param->second));
+    if (param != info.hardware_parameters.end())
+    {
+      pwm_max_µs_ = static_cast<uint16_t>(std::stoi(param->second));
     }
 
     param = info.hardware_parameters.find("pwm_mid_µs");
-    if (param != info.hardware_parameters.end()) {
-        pwm_mid_µs_ = static_cast<uint16_t>(std::stoi(param->second));
+    if (param != info.hardware_parameters.end())
+    {
+      pwm_mid_µs_ = static_cast<uint16_t>(std::stoi(param->second));
     }
   }
 
   // Receive hardware information during initialization
-  hardware_interface::CallbackReturn PWMInterface::on_init(const hardware_interface::HardwareInfo &info) {
+  hardware_interface::CallbackReturn PWMInterface::on_init(const hardware_interface::HardwareInfo &info)
+  {
     // Check if all required parameters are set and valid.
     if (hardware_interface::SystemInterface::on_init(info) != CallbackReturn::SUCCESS)
     {
@@ -138,7 +143,9 @@ namespace rov_control
   }
 
   // Reads the current state from the thrusters
-  hardware_interface::return_type PWMInterface::read() 
+  hardware_interface::return_type PWMInterface::read(
+      const rclcpp::Time & /*time*/,
+      const rclcpp::Duration & /*period*/)
   {
     for (size_t i = 0; i < state_.size(); ++i)
     {
@@ -146,21 +153,27 @@ namespace rov_control
           command_[i]; // Returns the expected state based on the commands given, as the ESCs do not provide feedback
     }
     return hardware_interface::return_type::OK;
-  } 
+  }
 
   // Writes commands to the thrusters
-  hardware_interface::return_type PWMInterface::write()
+  hardware_interface::return_type PWMInterface::write(
+      const rclcpp::Time & /*time*/,
+      const rclcpp::Duration & /*period*/)
   {
     for (size_t i = 0; i < command_.size(); ++i)
     {
       uint16_t ticks = command_to_ticks(command_[i], pwm_min_µs_, pwm_max_µs_, pwm_mid_µs_, pwm_freq_hz_);
-      if (pca9685_write_channel(&pca9685_handle, static_cast<pca9685_channel_t>(i), 0, ticks) != 0) {
+      if (pca9685_write_channel(&pca9685_handle, static_cast<pca9685_channel_t>(i), 0, ticks) != 0)
+      {
         RCLCPP_ERROR(rclcpp::get_logger("PWMInterface"), "Failed to set PWM for thruster %zu", i);
         return hardware_interface::return_type::ERROR;
       }
-      if (i < 8) {
+      if (i < 8)
+      {
         RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Thruster %zu: %.2f", i + 1, command_[i]);
-      } else {
+      }
+      else
+      {
         RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Arm Actuator: %zu: %.2f", i - 7, command_[i]);
       }
     }
@@ -184,7 +197,8 @@ namespace rov_control
   }
 
   // Reset or shutdown hardware in preparation for reconfiguration or shutdown
-  hardware_interface::CallbackReturn PWMInterface::on_cleanup() {
+  hardware_interface::CallbackReturn PWMInterface::on_cleanup()
+  {
     // Reset command and state vectors to zero.
     std::fill(command_.begin(), command_.end(), 0.0);
     std::fill(state_.begin(), state_.end(), 0.0);
@@ -205,13 +219,15 @@ namespace rov_control
     return hardware_interface::CallbackReturn::SUCCESS;
   }
 
-  hardware_interface::CallbackReturn PWMInterface::on_activate() {
-  
+  hardware_interface::CallbackReturn PWMInterface::on_activate()
+  {
+
     RCLCPP_INFO(rclcpp::get_logger("PWMInterface"), "Thruster hardware activated up.");
     return hardware_interface::CallbackReturn::SUCCESS;
   }
 
-  hardware_interface::CallbackReturn PWMInterface::on_deactivate() {
+  hardware_interface::CallbackReturn PWMInterface::on_deactivate()
+  {
     // Reset command and state vectors to zero.
     std::fill(command_.begin(), command_.end(), 0.0);
     std::fill(state_.begin(), state_.end(), 0.0);
@@ -220,7 +236,8 @@ namespace rov_control
     return hardware_interface::CallbackReturn::SUCCESS;
   }
 
-  hardware_interface::CallbackReturn PWMInterface::on_error() {
+  hardware_interface::CallbackReturn PWMInterface::on_error()
+  {
     // Handle error state: log the error and leave hardware in a safe state.
     // Do not reset command or state vectors, as this may interfere with debugging or recovery.
     std::fill(command_.begin(), command_.end(), 0.0);

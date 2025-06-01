@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS rov_control::rov_control)
+foreach(_cmake_expected_target IN ITEMS rov_control::rov_control rov_control::axis_to_command_controller)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -63,6 +63,13 @@ set_target_properties(rov_control::rov_control PROPERTIES
   INTERFACE_LINK_LIBRARIES "rclcpp::rclcpp;hardware_interface::mock_components;hardware_interface::hardware_interface;pluginlib::pluginlib;controller_interface::controller_interface"
 )
 
+# Create imported target rov_control::axis_to_command_controller
+add_library(rov_control::axis_to_command_controller SHARED IMPORTED)
+
+set_target_properties(rov_control::axis_to_command_controller PROPERTIES
+  INTERFACE_LINK_LIBRARIES "osqp::osqpstatic;rclcpp::rclcpp;controller_interface::controller_interface;hardware_interface::mock_components;hardware_interface::hardware_interface"
+)
+
 if(CMAKE_VERSION VERSION_LESS 2.8.12)
   message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
 endif()
@@ -99,8 +106,24 @@ endforeach()
 unset(_cmake_target)
 unset(_cmake_import_check_targets)
 
-# This file does not depend on other imported targets which have
-# been exported from the same project but in a separate export set.
+# Make sure the targets which have been exported in some other
+# export set exist.
+unset(${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets)
+foreach(_target "osqp::osqpstatic" )
+  if(NOT TARGET "${_target}" )
+    set(${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets "${${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets} ${_target}")
+  endif()
+endforeach()
+
+if(DEFINED ${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets)
+  if(CMAKE_FIND_PACKAGE_NAME)
+    set( ${CMAKE_FIND_PACKAGE_NAME}_FOUND FALSE)
+    set( ${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE "The following imported targets are referenced, but are missing: ${${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets}")
+  else()
+    message(FATAL_ERROR "The following imported targets are referenced, but are missing: ${${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets}")
+  endif()
+endif()
+unset(${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets)
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

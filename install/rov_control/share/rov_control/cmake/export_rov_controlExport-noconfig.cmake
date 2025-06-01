@@ -15,5 +15,15 @@ set_target_properties(rov_control::rov_control PROPERTIES
 list(APPEND _cmake_import_check_targets rov_control::rov_control )
 list(APPEND _cmake_import_check_files_for_rov_control::rov_control "${_IMPORT_PREFIX}/lib/librov_control.so" )
 
+# Import target "rov_control::axis_to_command_controller" for configuration ""
+set_property(TARGET rov_control::axis_to_command_controller APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+set_target_properties(rov_control::axis_to_command_controller PROPERTIES
+  IMPORTED_LOCATION_NOCONFIG "${_IMPORT_PREFIX}/lib/libaxis_to_command_controller.so"
+  IMPORTED_SONAME_NOCONFIG "libaxis_to_command_controller.so"
+  )
+
+list(APPEND _cmake_import_check_targets rov_control::axis_to_command_controller )
+list(APPEND _cmake_import_check_files_for_rov_control::axis_to_command_controller "${_IMPORT_PREFIX}/lib/libaxis_to_command_controller.so" )
+
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

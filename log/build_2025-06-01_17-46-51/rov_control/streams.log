@@ -1,0 +1,247 @@
+[0.008s] Invoking command in '/home/artificer/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/artificer/Desktop/ROV2026/build/rov_control -- -j12 -l12
+[0.014s] Change Dir: '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.014s] 
+[0.014s] Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j12 -l12
+[0.022s] /usr/bin/cmake -P /home/artificer/Desktop/ROV2026/build/rov_control/CMakeFiles/VerifyGlobs.cmake
+[0.029s] /usr/bin/cmake -S/home/artificer/Desktop/ROV2026/src/rov_control -B/home/artificer/Desktop/ROV2026/build/rov_control --check-build-system CMakeFiles/Makefile.cmake 0
+[0.041s] /usr/bin/cmake -E cmake_progress_start /home/artificer/Desktop/ROV2026/build/rov_control/CMakeFiles /home/artificer/Desktop/ROV2026/build/rov_control//CMakeFiles/progress.marks
+[0.047s] /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+[0.048s] gmake[1]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.048s] /usr/bin/gmake  -f CMakeFiles/rov_control.dir/build.make CMakeFiles/rov_control.dir/depend
+[0.048s] /usr/bin/gmake  -f _deps/qdldl-build/CMakeFiles/qdldlobject.dir/build.make _deps/qdldl-build/CMakeFiles/qdldlobject.dir/depend
+[0.048s] /usr/bin/gmake  -f external/osqp/algebra/builtin/CMakeFiles/copy_codegen_linalg.dir/build.make external/osqp/algebra/builtin/CMakeFiles/copy_codegen_linalg.dir/depend
+[0.049s] /usr/bin/gmake  -f external/osqp/CMakeFiles/copy_codegen_makefile.dir/build.make external/osqp/CMakeFiles/copy_codegen_makefile.dir/depend
+[0.049s] /usr/bin/gmake  -f external/osqp/include/CMakeFiles/copy_codegen_incs.dir/build.make external/osqp/include/CMakeFiles/copy_codegen_incs.dir/depend
+[0.049s] /usr/bin/gmake  -f external/osqp/src/CMakeFiles/copy_codegen_srcs.dir/build.make external/osqp/src/CMakeFiles/copy_codegen_srcs.dir/depend
+[0.049s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.049s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/_deps/qdldl-src /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/_deps/qdldl-build /home/artificer/Desktop/ROV2026/build/rov_control/_deps/qdldl-build/CMakeFiles/qdldlobject.dir/DependInfo.cmake "--color="
+[0.049s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.050s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp/algebra/builtin /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/algebra/builtin /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/algebra/builtin/CMakeFiles/copy_codegen_linalg.dir/DependInfo.cmake "--color="
+[0.050s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.050s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/CMakeFiles/copy_codegen_makefile.dir/DependInfo.cmake "--color="
+[0.050s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.050s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp/include /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/include /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/include/CMakeFiles/copy_codegen_incs.dir/DependInfo.cmake "--color="
+[0.050s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.050s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp/src /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/src /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/src/CMakeFiles/copy_codegen_srcs.dir/DependInfo.cmake "--color="
+[0.052s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.052s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/CMakeFiles/rov_control.dir/DependInfo.cmake "--color="
+[0.058s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.059s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.059s] /usr/bin/gmake  -f _deps/qdldl-build/CMakeFiles/qdldlobject.dir/build.make _deps/qdldl-build/CMakeFiles/qdldlobject.dir/build
+[0.059s] /usr/bin/gmake  -f external/osqp/algebra/builtin/CMakeFiles/copy_codegen_linalg.dir/build.make external/osqp/algebra/builtin/CMakeFiles/copy_codegen_linalg.dir/build
+[0.059s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.059s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.059s] /usr/bin/gmake  -f external/osqp/include/CMakeFiles/copy_codegen_incs.dir/build.make external/osqp/include/CMakeFiles/copy_codegen_incs.dir/build
+[0.059s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.059s] /usr/bin/gmake  -f external/osqp/src/CMakeFiles/copy_codegen_srcs.dir/build.make external/osqp/src/CMakeFiles/copy_codegen_srcs.dir/build
+[0.060s] /usr/bin/gmake  -f external/osqp/CMakeFiles/copy_codegen_makefile.dir/build.make external/osqp/CMakeFiles/copy_codegen_makefile.dir/build
+[0.060s] Dependencies file "CMakeFiles/rov_control.dir/src/pwm_interface.cpp.o.d" is newer than depends file "/home/artificer/Desktop/ROV2026/build/rov_control/CMakeFiles/rov_control.dir/compiler_depend.internal".
+[0.060s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.060s] gmake[2]: Nothing to be done for '_deps/qdldl-build/CMakeFiles/qdldlobject.dir/build'.
+[0.060s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.060s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.060s] gmake[2]: Nothing to be done for 'external/osqp/algebra/builtin/CMakeFiles/copy_codegen_linalg.dir/build'.
+[0.060s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.060s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.060s] gmake[2]: Nothing to be done for 'external/osqp/src/CMakeFiles/copy_codegen_srcs.dir/build'.
+[0.061s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.061s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.061s] gmake[2]: Nothing to be done for 'external/osqp/include/CMakeFiles/copy_codegen_incs.dir/build'.
+[0.061s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.061s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.061s] gmake[2]: Nothing to be done for 'external/osqp/CMakeFiles/copy_codegen_makefile.dir/build'.
+[0.061s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.061s] [35m[1mConsolidate compiler generated dependencies of target rov_control[0m
+[0.067s] [  1%] Built target qdldlobject
+[0.067s] [ 20%] Built target copy_codegen_linalg
+[0.068s] /usr/bin/gmake  -f external/osqp/CMakeFiles/OSQPLIB.dir/build.make external/osqp/CMakeFiles/OSQPLIB.dir/depend
+[0.068s] [ 38%] Built target copy_codegen_incs
+[0.068s] [ 45%] Built target copy_codegen_srcs
+[0.068s] [ 45%] Built target copy_codegen_makefile
+[0.068s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.068s] /usr/bin/gmake  -f CMakeFiles/rov_control.dir/build.make CMakeFiles/rov_control.dir/build
+[0.069s] /usr/bin/gmake  -f external/osqp/CMakeFiles/copy_codegen_files.dir/build.make external/osqp/CMakeFiles/copy_codegen_files.dir/depend
+[0.070s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.070s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/CMakeFiles/copy_codegen_files.dir/DependInfo.cmake "--color="
+[0.071s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.071s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/CMakeFiles/OSQPLIB.dir/DependInfo.cmake "--color="
+[0.073s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.074s] gmake[2]: Nothing to be done for 'CMakeFiles/rov_control.dir/build'.
+[0.074s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.077s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.078s] /usr/bin/gmake  -f external/osqp/CMakeFiles/copy_codegen_files.dir/build.make external/osqp/CMakeFiles/copy_codegen_files.dir/build
+[0.078s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.078s] /usr/bin/gmake  -f external/osqp/CMakeFiles/OSQPLIB.dir/build.make external/osqp/CMakeFiles/OSQPLIB.dir/build
+[0.078s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.078s] gmake[2]: Nothing to be done for 'external/osqp/CMakeFiles/copy_codegen_files.dir/build'.
+[0.078s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.080s] [ 47%] Built target rov_control
+[0.082s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.082s] gmake[2]: Nothing to be done for 'external/osqp/CMakeFiles/OSQPLIB.dir/build'.
+[0.082s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.086s] [ 47%] Built target copy_codegen_files
+[0.090s] [ 78%] Built target OSQPLIB
+[0.091s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqpstatic.dir/build.make external/osqp/CMakeFiles/osqpstatic.dir/depend
+[0.091s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqp.dir/build.make external/osqp/CMakeFiles/osqp.dir/depend
+[0.092s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.092s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/CMakeFiles/osqpstatic.dir/DependInfo.cmake "--color="
+[0.092s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.092s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/CMakeFiles/osqp.dir/DependInfo.cmake "--color="
+[0.100s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.100s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.100s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqp.dir/build.make external/osqp/CMakeFiles/osqp.dir/build
+[0.100s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqpstatic.dir/build.make external/osqp/CMakeFiles/osqpstatic.dir/build
+[0.102s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.102s] gmake[2]: Nothing to be done for 'external/osqp/CMakeFiles/osqpstatic.dir/build'.
+[0.102s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.102s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.102s] gmake[2]: Nothing to be done for 'external/osqp/CMakeFiles/osqp.dir/build'.
+[0.102s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.109s] [ 83%] Built target osqpstatic
+[0.109s] [ 83%] Built target osqp
+[0.110s] /usr/bin/gmake  -f CMakeFiles/axis_to_command_controller.dir/build.make CMakeFiles/axis_to_command_controller.dir/depend
+[0.110s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqp_simple_demo.dir/build.make external/osqp/CMakeFiles/osqp_simple_demo.dir/depend
+[0.110s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqp_demo.dir/build.make external/osqp/CMakeFiles/osqp_demo.dir/depend
+[0.110s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqp_codegen_demo.dir/build.make external/osqp/CMakeFiles/osqp_codegen_demo.dir/depend
+[0.111s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.111s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/CMakeFiles/osqp_simple_demo.dir/DependInfo.cmake "--color="
+[0.111s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.111s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/CMakeFiles/osqp_codegen_demo.dir/DependInfo.cmake "--color="
+[0.112s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.112s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp /home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/CMakeFiles/osqp_demo.dir/DependInfo.cmake "--color="
+[0.114s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.114s] cd /home/artificer/Desktop/ROV2026/build/rov_control && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/src/rov_control /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control /home/artificer/Desktop/ROV2026/build/rov_control/CMakeFiles/axis_to_command_controller.dir/DependInfo.cmake "--color="
+[0.120s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.120s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.120s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.120s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqp_simple_demo.dir/build.make external/osqp/CMakeFiles/osqp_simple_demo.dir/build
+[0.120s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqp_demo.dir/build.make external/osqp/CMakeFiles/osqp_demo.dir/build
+[0.120s] /usr/bin/gmake  -f external/osqp/CMakeFiles/osqp_codegen_demo.dir/build.make external/osqp/CMakeFiles/osqp_codegen_demo.dir/build
+[0.122s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.122s] gmake[2]: Nothing to be done for 'external/osqp/CMakeFiles/osqp_simple_demo.dir/build'.
+[0.122s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.122s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.122s] gmake[2]: Nothing to be done for 'external/osqp/CMakeFiles/osqp_codegen_demo.dir/build'.
+[0.122s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.122s] Dependencies file "CMakeFiles/axis_to_command_controller.dir/src/axis_to_command_controller.cpp.o.d" is newer than depends file "/home/artificer/Desktop/ROV2026/build/rov_control/CMakeFiles/axis_to_command_controller.dir/compiler_depend.internal".
+[0.122s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.122s] gmake[2]: Nothing to be done for 'external/osqp/CMakeFiles/osqp_demo.dir/build'.
+[0.123s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.123s] [35m[1mConsolidate compiler generated dependencies of target axis_to_command_controller[0m
+[0.129s] [ 88%] Built target osqp_simple_demo
+[0.130s] [ 94%] Built target osqp_codegen_demo
+[0.130s] [ 97%] Built target osqp_demo
+[0.131s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.131s] /usr/bin/gmake  -f CMakeFiles/axis_to_command_controller.dir/build.make CMakeFiles/axis_to_command_controller.dir/build
+[0.138s] gmake[2]: Entering directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[0.145s] [ 98%] [32mBuilding CXX object CMakeFiles/axis_to_command_controller.dir/src/axis_to_command_controller.cpp.o[0m
+[0.146s] /usr/bin/c++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DFASTCDR_DYN_LINK -DTINYXML2_IMPORT -D_FILE_OFFSET_BITS=64 -Daxis_to_command_controller_EXPORTS -I/home/artificer/Desktop/ROV2026/src/rov_control/include -I/home/artificer/Desktop/ROV2026/src/rov_control/external/osqp/include -I/home/artificer/Desktop/ROV2026/src/rov_control/external/osqp/algebra/common -I/home/artificer/Desktop/ROV2026/src/rov_control/external/osqp/build/include -I/usr/include/eigen3 -I/home/artificer/Desktop/ROV2026/src/rov_control/external/osqp/include/public -I/home/artificer/Desktop/ROV2026/build/rov_control/external/osqp/include/public -isystem /opt/ros/jazzy/include/rclcpp -isystem /opt/ros/jazzy/include/controller_interface -isystem /opt/ros/jazzy/include/hardware_interface -isystem /opt/ros/jazzy/include/pal_statistics_msgs -isystem /opt/ros/jazzy/include/rclcpp_lifecycle -isystem /opt/ros/jazzy/include -isystem /opt/ros/jazzy/include/builtin_interfaces -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/fastcdr -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/jazzy/include/rmw -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_c -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp -isystem /opt/ros/jazzy/include/libstatistics_collector -isystem /opt/ros/jazzy/include/rcl -isystem /opt/ros/jazzy/include/rcl_interfaces -isystem /opt/ros/jazzy/include/service_msgs -isystem /opt/ros/jazzy/include/rcl_logging_interface -isystem /opt/ros/jazzy/include/rcl_yaml_param_parser -isystem /opt/ros/jazzy/include/type_description_interfaces -isystem /opt/ros/jazzy/include/rcpputils -isystem /opt/ros/jazzy/include/statistics_msgs -isystem /opt/ros/jazzy/include/rosgraph_msgs -isystem /opt/ros/jazzy/include/rosidl_typesupport_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -isystem /opt/ros/jazzy/include/tracetools -isystem /opt/ros/jazzy/include/control_msgs -isystem /opt/ros/jazzy/include/action_msgs -isystem /opt/ros/jazzy/include/unique_identifier_msgs -isystem /opt/ros/jazzy/include/geometry_msgs -isystem /opt/ros/jazzy/include/std_msgs -isystem /opt/ros/jazzy/include/sensor_msgs -isystem /opt/ros/jazzy/include/trajectory_msgs -isystem /opt/ros/jazzy/include/lifecycle_msgs -isystem /opt/ros/jazzy/include/pluginlib -isystem /opt/ros/jazzy/include/ament_index_cpp -isystem /opt/ros/jazzy/include/class_loader -isystem /opt/ros/jazzy/include/rcl_lifecycle -isystem /opt/ros/jazzy/include/realtime_tools -isystem /opt/ros/jazzy/include/rclcpp_action -isystem /opt/ros/jazzy/include/rcl_action -isystem /opt/ros/jazzy/include/joint_limits -isystem /opt/ros/jazzy/include/urdf -isystem /opt/ros/jazzy/include/urdfdom -isystem /opt/ros/jazzy/include/urdfdom_headers -fPIC -MD -MT CMakeFiles/axis_to_command_controller.dir/src/axis_to_command_controller.cpp.o -MF CMakeFiles/axis_to_command_controller.dir/src/axis_to_command_controller.cpp.o.d -o CMakeFiles/axis_to_command_controller.dir/src/axis_to_command_controller.cpp.o -c /home/artificer/Desktop/ROV2026/src/rov_control/src/axis_to_command_controller.cpp
+[5.873s] [100%] [32m[1mLinking CXX shared library libaxis_to_command_controller.so[0m
+[5.874s] /usr/bin/cmake -E cmake_link_script CMakeFiles/axis_to_command_controller.dir/link.txt --verbose=1
+[5.880s] /usr/bin/c++ -fPIC -shared -Wl,-soname,libaxis_to_command_controller.so -o libaxis_to_command_controller.so CMakeFiles/axis_to_command_controller.dir/src/axis_to_command_controller.cpp.o  -Wl,-rpath,/opt/ros/jazzy/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu: external/osqp/out/libosqpstatic.a /opt/ros/jazzy/lib/libcontroller_interface.so /opt/ros/jazzy/lib/libmock_components.so /opt/ros/jazzy/lib/libhardware_interface.so /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_generator_py.so /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libcontrol_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libsensor_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libjoint_limiter_interface.so /opt/ros/jazzy/lib/libjoint_saturation_limiter.so /opt/ros/jazzy/lib/libjoint_limits_helpers.so /opt/ros/jazzy/lib/libclass_loader.so /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_generator_py.so /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libtrajectory_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/liburdf.so /opt/ros/jazzy/lib/x86_64-linux-gnu/liburdfdom_model.so.4.0 /usr/lib/x86_64-linux-gnu/libtinyxml2.so.10.0.0 /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.1.0 /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_py.so /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/librmw.so /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/librcutils.so /opt/ros/jazzy/lib/librcpputils.so /opt/ros/jazzy/lib/librosidl_typesupport_c.so /opt/ros/jazzy/lib/librosidl_typesupport_cpp.so /opt/ros/jazzy/lib/librosidl_runtime_c.so /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_generator_py.so /opt/ros/jazzy/lib/librclcpp.so /opt/ros/jazzy/lib/librclcpp_lifecycle.so /opt/ros/jazzy/lib/libpal_statistics.so /opt/ros/jazzy/lib/librclcpp_lifecycle.so /opt/ros/jazzy/lib/librcl_lifecycle.so /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_generator_py.so /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/librealtime_tools.so /opt/ros/jazzy/lib/libthread_priority.so /opt/ros/jazzy/lib/librclcpp_action.so /opt/ros/jazzy/lib/librclcpp.so /opt/ros/jazzy/lib/liblibstatistics_collector.so /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_generator_py.so /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_generator_py.so /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/librcl_action.so /opt/ros/jazzy/lib/librcl.so /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/librcl_interfaces__rosidl_generator_py.so /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_c.so /opt/ros/jazzy/lib/librcl_interfaces__rosidl_generator_c.so /opt/ros/jazzy/lib/librcl_yaml_param_parser.so /opt/ros/jazzy/lib/libtracetools.so -llttng-ust -llttng-ust-common -rdynamic -ldl /opt/ros/jazzy/lib/librcl_logging_interface.so /opt/ros/jazzy/lib/librmw_implementation.so /opt/ros/jazzy/lib/libament_index_cpp.so /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_generator_py.so /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_generator_c.so /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libaction_msgs__rosidl_generator_py.so /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libaction_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_c.so /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so /opt/ros/jazzy/lib/librmw.so /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so /opt/ros/jazzy/lib/libfastcdr.so.2.2.5 /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so /opt/ros/jazzy/lib/librosidl_typesupport_cpp.so /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_py.so /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so /opt/ros/jazzy/lib/libservice_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_c.so /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_c.so /opt/ros/jazzy/lib/librosidl_typesupport_c.so /opt/ros/jazzy/lib/librcpputils.so /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_generator_c.so /opt/ros/jazzy/lib/librosidl_runtime_c.so /opt/ros/jazzy/lib/librcutils.so -ldl -lcap -Wl,-rpath-link,/opt/ros/jazzy/lib 
+[6.050s] gmake[2]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[6.058s] [100%] Built target axis_to_command_controller
+[6.059s] gmake[1]: Leaving directory '/home/artificer/Desktop/ROV2026/build/rov_control'
+[6.059s] /usr/bin/cmake -E cmake_progress_start /home/artificer/Desktop/ROV2026/build/rov_control/CMakeFiles 0
+[6.070s] 
+[6.071s] Invoked command in '/home/artificer/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/artificer/Desktop/ROV2026/build/rov_control -- -j12 -l12
+[6.072s] Invoking command in '/home/artificer/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/artificer/Desktop/ROV2026/build/rov_control
+[6.079s] -- Install configuration: ""
+[6.080s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl.h
+[6.080s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_types.h
+[6.080s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_version.h
+[6.080s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp.h
+[6.080s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_constants.h
+[6.080s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_functions.h
+[6.080s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_types.h
+[6.080s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_export_define.h
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_configure.h
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libosqpstatic.a
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets.cmake
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets-noconfig.cmake
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libosqp.so
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets.cmake
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets-noconfig.cmake
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config.cmake
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config-version.cmake
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/Makefile
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public
+[6.081s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_export_define.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_constants.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_functions.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_types.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_utils.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/scaling.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_math.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/glob_opts.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/error.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/timing.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/printing.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_interface.h
+[6.082s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/auxil.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_version.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/util.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/kkt.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_impl.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/profilers.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_vector.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/version.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/lin_alg.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_types.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_matrix.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/types.h
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl.c
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/vector.c
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/util.c
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/error.c
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl_interface.c
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_math.c
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/matrix.c
+[6.083s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/algebra_libs.c
+[6.084s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/scaling.c
+[6.084s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_utils.c
+[6.084s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/kkt.c
+[6.084s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/osqp_api.c
+[6.084s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/auxil.c
+[6.084s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/axis_to_command_controller_plugin.xml
+[6.084s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/librov_control.so
+[6.084s] -- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so
+[6.086s] -- Set non-toolchain portion of runtime path of "/home/artificer/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so" to ""
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/axis_to_command_controller.hpp
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/gamepad_parser_node.hpp
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/pwm_interface.hpp
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/thruster_pid_controller.hpp
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685.h
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685_interface.h
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.sh
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.dsv
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/package_run_dependencies/rov_control
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/parent_prefix_path/rov_control
+[6.086s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.sh
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.dsv
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.sh
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.dsv
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.bash
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.sh
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.zsh
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.dsv
+[6.087s] -- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/packages/rov_control
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rov_control
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport.cmake
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport-noconfig.cmake
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_libraries-extras.cmake
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_targets-extras.cmake
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig.cmake
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig-version.cmake
+[6.087s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/package.xml
+[6.089s] Invoked command in '/home/artificer/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/artificer/Desktop/ROV2026/build/rov_control

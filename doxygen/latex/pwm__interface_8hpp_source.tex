@@ -1,0 +1,75 @@
+\doxysection{pwm\+\_\+interface.\+hpp}
+\hypertarget{pwm__interface_8hpp_source}{}\label{pwm__interface_8hpp_source}\index{src/rov\_control/include/rov\_control/pwm\_interface.hpp@{src/rov\_control/include/rov\_control/pwm\_interface.hpp}}
+\mbox{\hyperlink{pwm__interface_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROV\_CONTROL\_\_PWM\_INTERFACE\_HPP\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROV\_CONTROL\_\_PWM\_INTERFACE\_HPP\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}hardware\_interface/system\_interface.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}hardware\_interface/hardware\_info.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}rclcpp/macros.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerov__control}{rov\_control}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \textcolor{comment}{//\ Hardware\ interface\ for\ controlling\ pwm\ components\ inheriting\ from\ SystemInterface}}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrov__control_1_1PWMInterface}{PWMInterface}}\ :\ \textcolor{keyword}{public}\ hardware\_interface::SystemInterface}
+\DoxyCodeLine{00014\ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Macro\ to\ define\ shared\ pointer\ stuff}}
+\DoxyCodeLine{00017\ \ \ \ \ RCLCPP\_SHARED\_PTR\_DEFINITIONS(\mbox{\hyperlink{classrov__control_1_1PWMInterface}{PWMInterface}})}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a50da806c99d97dbc89eb78d8ae1d4fb8}{on\_init}}(const\ hardware\_interface::HardwareInfo\ \&info)\ override;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::vector<hardware\_interface::StateInterface>\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a53df8cbe968e423fceeb5198ca6db18c}{export\_state\_interfaces}}()\ override;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00051\ \ \ \ \ std::vector<hardware\_interface::CommandInterface>\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a52dc453fa4874b2dd39e46f1611ba3aa}{export\_command\_interfaces}}()\ override;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00060\ \ \ \ \ hardware\_interface::return\_type\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_ad04db75eaa1f5425fcda2133337cebb0}{read}}(}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ const\ rclcpp::Time\ \&time,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ const\ rclcpp::Duration\ \&period)\ override;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00080\ \ \ \ \ hardware\_interface::return\_type\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a49f2e6cc79c5fdbddfb3ed90b5b1c190}{write}}(}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ const\ rclcpp::Time\ \&time,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ const\ rclcpp::Duration\ \&period)\ override;}
+\DoxyCodeLine{00093\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_af3474724b6eac30fd729b8ff1298df00}{on\_configure}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00106\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a3bde60e13810ff40b04b2578f8878621}{on\_cleanup}}();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00119\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a7738632dace0d852f7149860a37bfac0}{on\_shutdown}}();}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00131\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_aaea2943e8203604494d48335f4b5f9f6}{on\_activate}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00143\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a5331dc30690826b7c5d675b9b78766e1}{on\_deactivate}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00155\ \ \ \ \ hardware\_interface::CallbackReturn\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a3ff8316085c1e00e5e7be256547c337b}{on\_error}}();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ private:}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{comment}{//\ Stores\ the\ latest\ command\ values\ for\ each\ pwm\ component}}
+\DoxyCodeLine{00159\ \ \ \ \ std::vector<\textcolor{keywordtype}{double}>\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a0a5ec476f7fda4d541dc35983cb6965f}{command\_}};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//\ Stores\ the\ latest\ state\ values\ for\ each\ pwm\ component.}}
+\DoxyCodeLine{00162\ \ \ \ \ std::vector<\textcolor{keywordtype}{double}>\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a2f207b516495acedd3650ad285e29aa0}{state\_}};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a8061d34f799b836f5790bb1d6fad6fff}{pwm\_freq\_hz\_}}\{50\};\ \textcolor{comment}{//\ PWM\ frequency\ in\ Hz}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a42a6fbb5923998fb0857ac8551865919}{pwm\_min\_µs\_}}\{1000\};\ \textcolor{comment}{//\ Minimum\ pulse\ width\ in\ microseconds}}
+\DoxyCodeLine{00167\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_ac576d3b99106895df90956551d63da6c}{pwm\_max\_µs\_}}\{2000\};\ \textcolor{comment}{//\ Maximum\ pulse\ width\ in\ microseconds}}
+\DoxyCodeLine{00168\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a5bc4a1f92b3ee9e84d6b6f359b5e37ee}{pwm\_mid\_µs\_}}\{1500\};\ \textcolor{comment}{//\ Mid\ pulse\ width\ in\ microseconds}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a5f150a0ff93daea01c185b12fc429790}{load\_parameters}}(\textcolor{keyword}{const}\ hardware\_interface::HardwareInfo\ \&info);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00209\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{classrov__control_1_1PWMInterface_a71cd8378d02ebfd2ac4a320ac62092d4}{command\_to\_ticks}}(}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ command,}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ uint16\_t\ pwm\_min\_µs,}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ uint16\_t\ pwm\_max\_µs,}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ uint16\_t\ pwm\_mid\_µs,}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ uint16\_t\ pwm\_freq\_hz);}
+\DoxyCodeLine{00215\ \ \ \};}
+\DoxyCodeLine{00216\ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ROV\_CONTROL\_PWM\_INTERFACE\_HPP}}
+
+\end{DoxyCode}

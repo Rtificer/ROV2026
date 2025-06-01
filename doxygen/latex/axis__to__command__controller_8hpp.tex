@@ -1,0 +1,97 @@
+\doxysection{src/rov\+\_\+control/include/rov\+\_\+control/axis\+\_\+to\+\_\+command\+\_\+controller.hpp File Reference}
+\hypertarget{axis__to__command__controller_8hpp}{}\label{axis__to__command__controller_8hpp}\index{src/rov\_control/include/rov\_control/axis\_to\_command\_controller.hpp@{src/rov\_control/include/rov\_control/axis\_to\_command\_controller.hpp}}
+{\ttfamily \#include $<$controller\+\_\+interface/chainable\+\_\+controller\+\_\+interface.\+hpp$>$}\newline
+{\ttfamily \#include $<$hardware\+\_\+interface/types/hardware\+\_\+interface\+\_\+type\+\_\+values.\+hpp$>$}\newline
+{\ttfamily \#include $<$rclcpp/rclcpp.\+hpp$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include "{}osqp.\+h"{}}\newline
+Include dependency graph for axis\+\_\+to\+\_\+command\+\_\+controller.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{axis__to__command__controller_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController}{rov\+\_\+controllers\+::\+Axis\+To\+Command\+Controller}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacerov__controllers}{rov\+\_\+controllers}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{axis__to__command__controller_8hpp_a38687d7993a68fa0042b964b60a6c1a0}{solve\+\_\+thruster\+\_\+qp}} (const Eigen\+::\+Matrix\+Xd \&M\+\_\+plus, const Eigen\+::\+Matrix\+Xd \&M\+\_\+minus, const Eigen\+::\+Matrix\+Xd \&W, const Eigen\+::\+Matrix\+Xd \&Q, const Eigen\+::\+Vector\+Xd \&desired\+\_\+wrench, Eigen\+::\+Vector\+Xd \&T\+\_\+plus, Eigen\+::\+Vector\+Xd \&T\+\_\+minus, double qp\+\_\+time\+\_\+limit, double \texorpdfstring{$\ast$}{*}prim\+\_\+residual=nullptr, double \texorpdfstring{$\ast$}{*}dual\+\_\+residual=nullptr)
+\begin{DoxyCompactList}\small\item\em Solve the thruster allocation quadratic program (QP) for ROV control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{axis__to__command__controller_8hpp_a38687d7993a68fa0042b964b60a6c1a0}\label{axis__to__command__controller_8hpp_a38687d7993a68fa0042b964b60a6c1a0} 
+\index{axis\_to\_command\_controller.hpp@{axis\_to\_command\_controller.hpp}!solve\_thruster\_qp@{solve\_thruster\_qp}}
+\index{solve\_thruster\_qp@{solve\_thruster\_qp}!axis\_to\_command\_controller.hpp@{axis\_to\_command\_controller.hpp}}
+\doxysubsubsection{\texorpdfstring{solve\_thruster\_qp()}{solve\_thruster\_qp()}}
+{\footnotesize\ttfamily bool solve\+\_\+thruster\+\_\+qp (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{M\+\_\+plus,  }\item[{const Eigen\+::\+Matrix\+Xd \&}]{M\+\_\+minus,  }\item[{const Eigen\+::\+Matrix\+Xd \&}]{W,  }\item[{const Eigen\+::\+Matrix\+Xd \&}]{Q,  }\item[{const Eigen\+::\+Vector\+Xd \&}]{desired\+\_\+wrench,  }\item[{Eigen\+::\+Vector\+Xd \&}]{T\+\_\+plus,  }\item[{Eigen\+::\+Vector\+Xd \&}]{T\+\_\+minus,  }\item[{double}]{qp\+\_\+time\+\_\+limit,  }\item[{double \texorpdfstring{$\ast$}{*}}]{prim\+\_\+residual = {\ttfamily nullptr},  }\item[{double \texorpdfstring{$\ast$}{*}}]{dual\+\_\+residual = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Solve the thruster allocation quadratic program (QP) for ROV control. 
+
+This function solves the following QP to optimally allocate forward (T⁺) and reverse (T⁻) thruster commands\+:
+
+Minimize over T⁺, T⁻\+: \begin{DoxyVerb}|| W (w - Σᵢ (T⁺ᵢ M⁺[:,i] + T⁻ᵢ M⁻[:,i])) ||² + (T⁺ + T⁻)ᵀ Q (T⁺ + T⁻)
+\end{DoxyVerb}
+ Subject to\+:
+
+
+\begin{DoxyItemize}
+\item 0 ≤ T⁺ᵢ ≤ 1
+\item -\/1 ≤ T⁻ᵢ ≤ 0
+\item Tᵢ = T⁺ᵢ + T⁻ᵢ ∈ \mbox{[}−1, 1\mbox{]}
+\end{DoxyItemize}
+
+Where\+:
+\begin{DoxyItemize}
+\item T (n x 1)\+: Total normalized thruster command vector with values in \mbox{[}-\/1, 1\mbox{]}.
+\item Tᵢ (scaler)\+: Each Tᵢ is the effort sent to thruster i. Equal to T⁺ᵢ + T⁻ᵢ.
+\item T⁺, T⁻ (n x 1)\+: Forward and reverse thruster command vectors. Constrained to \mbox{[}0, 1\mbox{]} and \mbox{[}-\/1, 0\mbox{]} respectively.
+\item M⁺, M⁻ (6 x n)\+: Thruster mapping matrices for forward/reverse. M⁺\mbox{[}\+:,i\mbox{]} describes the wrench contribution when thruster i is at 1 (max forward thrust), and vice versa for M⁻\mbox{[}\+:,i\mbox{]} (max reverse thrust).
+\item W (6 x 6)\+: Diagonal wrench weighting matrix. Scales errors in certain directions, accounting for the difference in drag present for certain axes. (Difference is thrust per direction because of the angles of the thrusters is accounted for in the mixer matricies.)
+\item Q (n x n)\+: Diagonal effort weighting matrix. Scales the effort penalty for each thruster. (This is used to account for differences in the output of each thruster, but likely will exlcusivly be used if a thruster stops working mid-\/opertation, to allow the ROV to continue operating with the remaining thrusters, but completly stopping the use of the failed thruster.)
+\item w (6 x 1)\+: The desired 6-\/DOF wrench vector. (a vector of 3 linear forces (x, y, z) and 3 torques (roll, pitch, yaw))
+\end{DoxyItemize}
+
+The QP is solved using OSQP. The solution is returned in T\+\_\+plus and T\+\_\+minus.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em M\+\_\+plus} & Thruster mapping matrix for forward thrust (6 x n) \\
+\hline
+\mbox{\texttt{ in}}  & {\em M\+\_\+minus} & Thruster mapping matrix for reverse thrust (6 x n) \\
+\hline
+\mbox{\texttt{ in}}  & {\em W} & Diagonal wrench weighting matrix (6 x 6) \\
+\hline
+\mbox{\texttt{ in}}  & {\em Q} & Diagonal effort weighting matrix (n x n) \\
+\hline
+\mbox{\texttt{ in}}  & {\em desired\+\_\+wrench} & Desired 6-\/DOF wrench vector (6 x 1) \\
+\hline
+\mbox{\texttt{ out}}  & {\em T\+\_\+plus} & Solution vector for forward thruster commands (n x 1) \\
+\hline
+\mbox{\texttt{ out}}  & {\em T\+\_\+minus} & Solution vector for reverse thruster commands (n x 1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em qp\+\_\+time\+\_\+limit} & Maximum time allowed for QP solve (milliseconds) \\
+\hline
+\mbox{\texttt{ out}}  & {\em prim\+\_\+residual} & (Optional) Pointer to store the primal residual \\
+\hline
+\mbox{\texttt{ out}}  & {\em dual\+\_\+residual} & (Optional) Pointer to store the dual residual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a solution was found, false otherwise 
+\end{DoxyReturn}

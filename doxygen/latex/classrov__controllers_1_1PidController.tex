@@ -1,0 +1,274 @@
+\doxysection{rov\+\_\+controllers\+::Pid\+Controller Class Reference}
+\hypertarget{classrov__controllers_1_1PidController}{}\label{classrov__controllers_1_1PidController}\index{rov\_controllers::PidController@{rov\_controllers::PidController}}
+
+
+{\ttfamily \#include $<$thruster\+\_\+pid\+\_\+controller.\+hpp$>$}
+
+
+
+Inheritance diagram for rov\+\_\+controllers\+::Pid\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classrov__controllers_1_1PidController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rov\+\_\+controllers\+::Pid\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classrov__controllers_1_1PidController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrov__controllers_1_1PidController_a7df0a4ac961f4f7120004ac22605ec71}{Pid\+Controller}} ()
+\item 
+controller\+\_\+interface\+::\+Interface\+Configuration \mbox{\hyperlink{classrov__controllers_1_1PidController_a6f43cf7cab33e7faad4e8e92db582437}{command\+\_\+interface\+\_\+configuration}} () const override
+\item 
+controller\+\_\+interface\+::\+Interface\+Configuration \mbox{\hyperlink{classrov__controllers_1_1PidController_acaadeafef93e2c0d74bab3474b0136b5}{state\+\_\+interface\+\_\+configuration}} () const override
+\item 
+controller\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__controllers_1_1PidController_af39f4ea18c51976d793c5edbf46db945}{on\+\_\+init}} () override
+\begin{DoxyCompactList}\small\item\em Declare controller parameters and perform initial setup. \end{DoxyCompactList}\item 
+controller\+\_\+interface\+::\+Callback\+Return \mbox{\hyperlink{classrov__controllers_1_1PidController_aa800b128f11ee18746b64106a0bdd9cb}{on\+\_\+configure}} (const rclcpp\+\_\+lifecycle\+::\+State \&) override
+\begin{DoxyCompactList}\small\item\em Retrieve and configure controller parameters from the ROS parameter server. \end{DoxyCompactList}\item 
+Callback\+Return \mbox{\hyperlink{classrov__controllers_1_1PidController_a56e96ac8db43cf5cea385d0dd7ca47e8}{on\+\_\+activate}} (const rclcpp\+\_\+lifecycle\+::\+State \&previous\+\_\+state) override
+\item 
+Callback\+Return \mbox{\hyperlink{classrov__controllers_1_1PidController_ab6575921c8c73ad6ddbdfa40b15a7095}{on\+\_\+deactivate}} (const rclcpp\+\_\+lifecycle\+::\+State \&previous\+\_\+state) override
+\item 
+controller\+\_\+interface\+::return\+\_\+type \mbox{\hyperlink{classrov__controllers_1_1PidController_a2ddd7e6493301b945764445baa8df6f8}{update\+\_\+and\+\_\+write\+\_\+commands}} (const rclcpp\+::\+Time \&time, const rclcpp\+::\+Duration \&period) override
+\begin{DoxyCompactList}\small\item\em Compute and publish the desired wrench using PID controllers for each DOF. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrov__controllers_1_1PidController_ac9f3506596fb6bb5cdb7a62657dab403}{dof\+\_\+names\+\_\+}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ control\+\_\+toolbox\+::\+Pid $>$ $>$ \mbox{\hyperlink{classrov__controllers_1_1PidController_a7d8b3df76cb41a22e207e44d7c8b2082}{pids\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classrov__controllers_1_1PidController_a277fb975658da95b6a826c26e244bb4b}{reference\+\_\+topic\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classrov__controllers_1_1PidController_a85d0d589d3f0a518dfb688036fb613f3}{state\+\_\+topic\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classrov__controllers_1_1PidController_a31fb0de97413fdced248507d77f3568f}{output\+\_\+topic\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::msg\+::\+Twist \mbox{\hyperlink{classrov__controllers_1_1PidController_a02b213fef27c5a56d514c3d974a89598}{ref\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::msg\+::\+Twist \mbox{\hyperlink{classrov__controllers_1_1PidController_a7f27e6f4e04d20bf01bf7e565dcbd490}{state\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{classrov__controllers_1_1PidController_a41a96abbaefa830f142289495a67a46f}{data\+\_\+mutex\+\_\+}}
+\item 
+rclcpp\+::\+Subscription$<$ geometry\+\_\+msgs\+::msg\+::\+Twist $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classrov__controllers_1_1PidController_a97a9f12b1a71e3e6b4b70312748e1bf5}{ref\+\_\+sub\+\_\+}}
+\item 
+rclcpp\+::\+Subscription$<$ geometry\+\_\+msgs\+::msg\+::\+Twist $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classrov__controllers_1_1PidController_ab5b5d29a4f095525bfb28b48cbf73d68}{state\+\_\+sub\+\_\+}}
+\item 
+rclcpp\+::\+Publisher$<$ geometry\+\_\+msgs\+::msg\+::\+Wrench $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classrov__controllers_1_1PidController_a16747f1d77cca699d4f8a89b7b0bb703}{wrench\+\_\+pub\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrov__controllers_1_1PidController_a7df0a4ac961f4f7120004ac22605ec71}\label{classrov__controllers_1_1PidController_a7df0a4ac961f4f7120004ac22605ec71} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!PidController@{PidController}}
+\index{PidController@{PidController}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{PidController()}{PidController()}}
+{\footnotesize\ttfamily rov\+\_\+controllers\+::\+Pid\+Controller\+::\+Pid\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrov__controllers_1_1PidController_a6f43cf7cab33e7faad4e8e92db582437}\label{classrov__controllers_1_1PidController_a6f43cf7cab33e7faad4e8e92db582437} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!command\_interface\_configuration@{command\_interface\_configuration}}
+\index{command\_interface\_configuration@{command\_interface\_configuration}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{command\_interface\_configuration()}{command\_interface\_configuration()}}
+{\footnotesize\ttfamily controller\+\_\+interface\+::\+Interface\+Configuration rov\+\_\+controllers\+::\+Pid\+Controller\+::command\+\_\+interface\+\_\+configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a56e96ac8db43cf5cea385d0dd7ca47e8}\label{classrov__controllers_1_1PidController_a56e96ac8db43cf5cea385d0dd7ca47e8} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!on\_activate@{on\_activate}}
+\index{on\_activate@{on\_activate}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{on\_activate()}{on\_activate()}}
+{\footnotesize\ttfamily Callback\+Return rov\+\_\+controllers\+::\+Pid\+Controller\+::on\+\_\+activate (\begin{DoxyParamCaption}\item[{const rclcpp\+\_\+lifecycle\+::\+State \&}]{previous\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_aa800b128f11ee18746b64106a0bdd9cb}\label{classrov__controllers_1_1PidController_aa800b128f11ee18746b64106a0bdd9cb} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!on\_configure@{on\_configure}}
+\index{on\_configure@{on\_configure}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{on\_configure()}{on\_configure()}}
+{\footnotesize\ttfamily controller\+\_\+interface\+::\+Callback\+Return rov\+\_\+controllers\+::\+Pid\+Controller\+::on\+\_\+configure (\begin{DoxyParamCaption}\item[{const rclcpp\+\_\+lifecycle\+::\+State \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Retrieve and configure controller parameters from the ROS parameter server. 
+
+This method is called when the controller transitions to the "{}configured"{} state. It loads all required parameters, initializes PID controllers for each degree of freedom (DOF), and sets up ROS publishers and subscribers.
+
+The following parameters are retrieved\+: 
+\begin{DoxyParams}{Parameters}
+{\em dof\+\_\+names} & Vector of strings. Names of the degrees of freedom to control. \\
+\hline
+{\em reference\+\_\+topic} & String. Topic name for the desired velocity input. \\
+\hline
+{\em state\+\_\+topic} & String. Topic name for the current velocity input. \\
+\hline
+{\em output\+\_\+topic} & String. Topic name for the desired wrench output.\\
+\hline
+\end{DoxyParams}
+For each DOF in {\ttfamily dof\+\_\+names}, the following PID gain parameters are also retrieved\+:
+\begin{DoxyItemize}
+\item gains.$<$dof$>$.p (double) Proportional gain
+\item gains.$<$dof$>$.i (double) Integral gain
+\item gains.$<$dof$>$.d (double) Derivative gain
+\item gains.$<$dof$>$.i\+\_\+clamp\+\_\+max (double) Maximum integral clamp
+\item gains.$<$dof$>$.i\+\_\+clamp\+\_\+min (double) Minimum integral clamp
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The previous lifecycle state (unused). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Callback\+Return\+::\+SUCCESS if configuration is successful, Callback\+Return\+::\+ERROR otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classrov__controllers_1_1PidController_ab6575921c8c73ad6ddbdfa40b15a7095}\label{classrov__controllers_1_1PidController_ab6575921c8c73ad6ddbdfa40b15a7095} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!on\_deactivate@{on\_deactivate}}
+\index{on\_deactivate@{on\_deactivate}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{on\_deactivate()}{on\_deactivate()}}
+{\footnotesize\ttfamily Callback\+Return rov\+\_\+controllers\+::\+Pid\+Controller\+::on\+\_\+deactivate (\begin{DoxyParamCaption}\item[{const rclcpp\+\_\+lifecycle\+::\+State \&}]{previous\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_af39f4ea18c51976d793c5edbf46db945}\label{classrov__controllers_1_1PidController_af39f4ea18c51976d793c5edbf46db945} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!on\_init@{on\_init}}
+\index{on\_init@{on\_init}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{on\_init()}{on\_init()}}
+{\footnotesize\ttfamily controller\+\_\+interface\+::\+Callback\+Return rov\+\_\+controllers\+::\+Pid\+Controller\+::on\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Declare controller parameters and perform initial setup. 
+
+This method is called once when the controller is created. It declares all configurable parameters required for the PID controller. No hardware or ROS interfaces are accessed at this stage.
+
+The following parameters are declared\+: 
+\begin{DoxyParams}{Parameters}
+{\em dof\+\_\+names} & Vector of strings. Names of the degrees of freedom to control (default\+: \{"{}surge"{}, "{}sway"{}, "{}heave"{}, "{}roll"{}, "{}pitch"{}, "{}yaw"{}\}). \\
+\hline
+{\em reference\+\_\+topic} & String. Topic name for the desired velocity input (default\+: "{}/desired\+\_\+velocity"{}). \\
+\hline
+{\em state\+\_\+topic} & String. Topic name for the current velocity input (default\+: "{}/current\+\_\+velocity"{}). \\
+\hline
+{\em output\+\_\+topic} & String. Topic name for the desired wrench output (default\+: "{}/desired\+\_\+wrench"{}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Callback\+Return\+::\+SUCCESS if initialization is successful. 
+\end{DoxyReturn}
+\Hypertarget{classrov__controllers_1_1PidController_acaadeafef93e2c0d74bab3474b0136b5}\label{classrov__controllers_1_1PidController_acaadeafef93e2c0d74bab3474b0136b5} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!state\_interface\_configuration@{state\_interface\_configuration}}
+\index{state\_interface\_configuration@{state\_interface\_configuration}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{state\_interface\_configuration()}{state\_interface\_configuration()}}
+{\footnotesize\ttfamily controller\+\_\+interface\+::\+Interface\+Configuration rov\+\_\+controllers\+::\+Pid\+Controller\+::state\+\_\+interface\+\_\+configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a2ddd7e6493301b945764445baa8df6f8}\label{classrov__controllers_1_1PidController_a2ddd7e6493301b945764445baa8df6f8} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!update\_and\_write\_commands@{update\_and\_write\_commands}}
+\index{update\_and\_write\_commands@{update\_and\_write\_commands}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{update\_and\_write\_commands()}{update\_and\_write\_commands()}}
+{\footnotesize\ttfamily controller\+\_\+interface\+::return\+\_\+type rov\+\_\+controllers\+::\+Pid\+Controller\+::update\+\_\+and\+\_\+write\+\_\+commands (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Time \&}]{time,  }\item[{const rclcpp\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Compute and publish the desired wrench using PID controllers for each DOF. 
+
+This method is called periodically to update the controller output. It computes the error between the reference and state for each degree of freedom (DOF), applies the corresponding PID controller, and publishes the resulting wrench.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The current time. \\
+\hline
+{\em period} & The time elapsed since the last update.\\
+\hline
+\end{DoxyParams}
+Internal parameters and topics used\+:
+\begin{DoxyItemize}
+\item {\ttfamily ref\+\_\+} The latest reference (desired) velocity (geometry\+\_\+msgs\+::msg\+::\+Twist).
+\item {\ttfamily state\+\_\+} The latest measured (current) velocity (geometry\+\_\+msgs\+::msg\+::\+Twist).
+\item {\ttfamily pids\+\_\+} Vector of PID controllers, one for each DOF.
+\item {\ttfamily wrench\+\_\+pub\+\_\+} Publisher for the computed wrench (geometry\+\_\+msgs\+::msg\+::\+Wrench).
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+controller\+\_\+interface\+::return\+\_\+type\+::\+OK if successful. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classrov__controllers_1_1PidController_a41a96abbaefa830f142289495a67a46f}\label{classrov__controllers_1_1PidController_a41a96abbaefa830f142289495a67a46f} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!data\_mutex\_@{data\_mutex\_}}
+\index{data\_mutex\_@{data\_mutex\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{data\_mutex\_}{data\_mutex\_}}
+{\footnotesize\ttfamily std\+::mutex rov\+\_\+controllers\+::\+Pid\+Controller\+::data\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_ac9f3506596fb6bb5cdb7a62657dab403}\label{classrov__controllers_1_1PidController_ac9f3506596fb6bb5cdb7a62657dab403} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!dof\_names\_@{dof\_names\_}}
+\index{dof\_names\_@{dof\_names\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{dof\_names\_}{dof\_names\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ rov\+\_\+controllers\+::\+Pid\+Controller\+::dof\+\_\+names\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a31fb0de97413fdced248507d77f3568f}\label{classrov__controllers_1_1PidController_a31fb0de97413fdced248507d77f3568f} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!output\_topic\_@{output\_topic\_}}
+\index{output\_topic\_@{output\_topic\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{output\_topic\_}{output\_topic\_}}
+{\footnotesize\ttfamily std\+::string rov\+\_\+controllers\+::\+Pid\+Controller\+::output\+\_\+topic\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a7d8b3df76cb41a22e207e44d7c8b2082}\label{classrov__controllers_1_1PidController_a7d8b3df76cb41a22e207e44d7c8b2082} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!pids\_@{pids\_}}
+\index{pids\_@{pids\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{pids\_}{pids\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$control\+\_\+toolbox\+::\+Pid$>$ $>$ rov\+\_\+controllers\+::\+Pid\+Controller\+::pids\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a02b213fef27c5a56d514c3d974a89598}\label{classrov__controllers_1_1PidController_a02b213fef27c5a56d514c3d974a89598} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!ref\_@{ref\_}}
+\index{ref\_@{ref\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{ref\_}{ref\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::msg\+::\+Twist rov\+\_\+controllers\+::\+Pid\+Controller\+::ref\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a97a9f12b1a71e3e6b4b70312748e1bf5}\label{classrov__controllers_1_1PidController_a97a9f12b1a71e3e6b4b70312748e1bf5} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!ref\_sub\_@{ref\_sub\_}}
+\index{ref\_sub\_@{ref\_sub\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{ref\_sub\_}{ref\_sub\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Subscription$<$geometry\+\_\+msgs\+::msg\+::\+Twist$>$\+::\+Shared\+Ptr rov\+\_\+controllers\+::\+Pid\+Controller\+::ref\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a277fb975658da95b6a826c26e244bb4b}\label{classrov__controllers_1_1PidController_a277fb975658da95b6a826c26e244bb4b} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!reference\_topic\_@{reference\_topic\_}}
+\index{reference\_topic\_@{reference\_topic\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{reference\_topic\_}{reference\_topic\_}}
+{\footnotesize\ttfamily std\+::string rov\+\_\+controllers\+::\+Pid\+Controller\+::reference\+\_\+topic\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a7f27e6f4e04d20bf01bf7e565dcbd490}\label{classrov__controllers_1_1PidController_a7f27e6f4e04d20bf01bf7e565dcbd490} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!state\_@{state\_}}
+\index{state\_@{state\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{state\_}{state\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::msg\+::\+Twist rov\+\_\+controllers\+::\+Pid\+Controller\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_ab5b5d29a4f095525bfb28b48cbf73d68}\label{classrov__controllers_1_1PidController_ab5b5d29a4f095525bfb28b48cbf73d68} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!state\_sub\_@{state\_sub\_}}
+\index{state\_sub\_@{state\_sub\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{state\_sub\_}{state\_sub\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Subscription$<$geometry\+\_\+msgs\+::msg\+::\+Twist$>$\+::\+Shared\+Ptr rov\+\_\+controllers\+::\+Pid\+Controller\+::state\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a85d0d589d3f0a518dfb688036fb613f3}\label{classrov__controllers_1_1PidController_a85d0d589d3f0a518dfb688036fb613f3} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!state\_topic\_@{state\_topic\_}}
+\index{state\_topic\_@{state\_topic\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{state\_topic\_}{state\_topic\_}}
+{\footnotesize\ttfamily std\+::string rov\+\_\+controllers\+::\+Pid\+Controller\+::state\+\_\+topic\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classrov__controllers_1_1PidController_a16747f1d77cca699d4f8a89b7b0bb703}\label{classrov__controllers_1_1PidController_a16747f1d77cca699d4f8a89b7b0bb703} 
+\index{rov\_controllers::PidController@{rov\_controllers::PidController}!wrench\_pub\_@{wrench\_pub\_}}
+\index{wrench\_pub\_@{wrench\_pub\_}!rov\_controllers::PidController@{rov\_controllers::PidController}}
+\doxysubsubsection{\texorpdfstring{wrench\_pub\_}{wrench\_pub\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Publisher$<$geometry\+\_\+msgs\+::msg\+::\+Wrench$>$\+::\+Shared\+Ptr rov\+\_\+controllers\+::\+Pid\+Controller\+::wrench\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rov\+\_\+control/include/rov\+\_\+control/\mbox{\hyperlink{thruster__pid__controller_8hpp}{thruster\+\_\+pid\+\_\+controller.\+hpp}}\end{DoxyCompactItemize}

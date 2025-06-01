@@ -1,0 +1,94 @@
+\doxysection{Gamepad\+Parser Class Reference}
+\hypertarget{classGamepadParser}{}\label{classGamepadParser}\index{GamepadParser@{GamepadParser}}
+
+
+{\ttfamily \#include $<$gamepad\+\_\+parser\+\_\+node.\+hpp$>$}
+
+
+
+Inheritance diagram for Gamepad\+Parser\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classGamepadParser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Gamepad\+Parser\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classGamepadParser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGamepadParser_a1b59a78bd2f8841d7e941ed0efdd9e09}{Gamepad\+Parser}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classGamepadParser}{Gamepad\+Parser} node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGamepadParser_a4918af1b3135d983645a5571a035f533}{joy\+\_\+callback}} (const sensor\+\_\+msgs\+::msg\+::\+Joy\+::\+Shared\+Ptr msg)
+\begin{DoxyCompactList}\small\item\em Callback function for processing incoming joystick messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+rclcpp\+::\+Subscription$<$ sensor\+\_\+msgs\+::msg\+::\+Joy $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classGamepadParser_a2eebf552ab65e3172cfacce008548cde}{joy\+\_\+sub\+\_\+}}
+\item 
+rclcpp\+::\+Publisher$<$ geometry\+\_\+msgs\+::msg\+::\+Twist $>$\+::\+Shared\+Ptr \mbox{\hyperlink{classGamepadParser_abc34a1ca50cbb7735daef5a6d073cd85}{twist\+\_\+pub\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGamepadParser_a1b59a78bd2f8841d7e941ed0efdd9e09}\label{classGamepadParser_a1b59a78bd2f8841d7e941ed0efdd9e09} 
+\index{GamepadParser@{GamepadParser}!GamepadParser@{GamepadParser}}
+\index{GamepadParser@{GamepadParser}!GamepadParser@{GamepadParser}}
+\doxysubsubsection{\texorpdfstring{GamepadParser()}{GamepadParser()}}
+{\footnotesize\ttfamily Gamepad\+Parser\+::\+Gamepad\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classGamepadParser}{Gamepad\+Parser} node. 
+
+Declares the "{}deadzone"{} parameter and sets up the subscriber for the /joy topic and the publisher for the /desired\+\_\+velocity topic. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGamepadParser_a4918af1b3135d983645a5571a035f533}\label{classGamepadParser_a4918af1b3135d983645a5571a035f533} 
+\index{GamepadParser@{GamepadParser}!joy\_callback@{joy\_callback}}
+\index{joy\_callback@{joy\_callback}!GamepadParser@{GamepadParser}}
+\doxysubsubsection{\texorpdfstring{joy\_callback()}{joy\_callback()}}
+{\footnotesize\ttfamily void Gamepad\+Parser\+::joy\+\_\+callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Joy\+::\+Shared\+Ptr}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Callback function for processing incoming joystick messages. 
+
+Applies a deadzone to joystick axes and publishes a geometry\+\_\+msgs\+::msg\+::\+Twist message to the /desired\+\_\+velocity topic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Shared pointer to the received sensor\+\_\+msgs\+::msg\+::\+Joy message. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classGamepadParser_a2eebf552ab65e3172cfacce008548cde}\label{classGamepadParser_a2eebf552ab65e3172cfacce008548cde} 
+\index{GamepadParser@{GamepadParser}!joy\_sub\_@{joy\_sub\_}}
+\index{joy\_sub\_@{joy\_sub\_}!GamepadParser@{GamepadParser}}
+\doxysubsubsection{\texorpdfstring{joy\_sub\_}{joy\_sub\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Subscription$<$sensor\+\_\+msgs\+::msg\+::\+Joy$>$\+::\+Shared\+Ptr Gamepad\+Parser\+::joy\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGamepadParser_abc34a1ca50cbb7735daef5a6d073cd85}\label{classGamepadParser_abc34a1ca50cbb7735daef5a6d073cd85} 
+\index{GamepadParser@{GamepadParser}!twist\_pub\_@{twist\_pub\_}}
+\index{twist\_pub\_@{twist\_pub\_}!GamepadParser@{GamepadParser}}
+\doxysubsubsection{\texorpdfstring{twist\_pub\_}{twist\_pub\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Publisher$<$geometry\+\_\+msgs\+::msg\+::\+Twist$>$\+::\+Shared\+Ptr Gamepad\+Parser\+::twist\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rov\+\_\+control/include/rov\+\_\+control/\mbox{\hyperlink{gamepad__parser__node_8hpp}{gamepad\+\_\+parser\+\_\+node.\+hpp}}\end{DoxyCompactItemize}

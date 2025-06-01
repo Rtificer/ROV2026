@@ -1,0 +1,84 @@
+\doxysection{axis\+\_\+to\+\_\+command\+\_\+controller.\+hpp}
+\hypertarget{axis__to__command__controller_8hpp_source}{}\label{axis__to__command__controller_8hpp_source}\index{src/rov\_control/include/rov\_control/axis\_to\_command\_controller.hpp@{src/rov\_control/include/rov\_control/axis\_to\_command\_controller.hpp}}
+\mbox{\hyperlink{axis__to__command__controller_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROV\_CONTROLLERS\_\_AXIS\_TO\_COMMAND\_CONTROLLER\_HPP\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROV\_CONTROLLERS\_\_AXIS\_TO\_COMMAND\_CONTROLLER\_HPP\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <controller\_interface/chainable\_controller\_interface.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <hardware\_interface/types/hardware\_interface\_type\_values.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <rclcpp/rclcpp.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <Eigen/Core>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}osqp.h"{}}}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{axis__to__command__controller_8hpp_a38687d7993a68fa0042b964b60a6c1a0}{solve\_thruster\_qp}}(}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::MatrixXd\ \&M\_plus,}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::MatrixXd\ \&M\_minus,}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::MatrixXd\ \&W,}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::MatrixXd\ \&Q,}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::VectorXd\ \&desired\_wrench,}
+\DoxyCodeLine{00061\ \ \ \ \ Eigen::VectorXd\ \&T\_plus,}
+\DoxyCodeLine{00062\ \ \ \ \ Eigen::VectorXd\ \&T\_minus,}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{double}\ qp\_time\_limit,}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{double}\ *prim\_residual\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{double}\ *dual\_residual\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerov__controllers}{rov\_controllers}}}
+\DoxyCodeLine{00068\ \{}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController}{AxisToCommandController}}\ :\ \textcolor{keyword}{public}\ controller\_interface::ChainableControllerInterface}
+\DoxyCodeLine{00071\ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_af46f564987af7ab4dd25cb1553748f0c}{AxisToCommandController}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ controller\_interface::InterfaceConfiguration\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_aba31a38e36e4e65b1d579d134c9c85e0}{command\_interface\_configuration}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ controller\_interface::InterfaceConfiguration\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a14a2407d58c87e2c05843a3beed98f43}{state\_interface\_configuration}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00099\ \ \ \ \ CallbackReturn\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a34dd74cae7c8373bee514408ca47f7e6}{on\_init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00123\ \ \ \ \ CallbackReturn\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a81203bd6674d7698f6c26aae1ce94f44}{on\_configure}}(\textcolor{keyword}{const}\ rclcpp\_lifecycle::State\ \&previous\_state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ CallbackReturn\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a8887804a99e4c22a427bcc00c5cbf43f}{on\_activate}}(\textcolor{keyword}{const}\ rclcpp\_lifecycle::State\ \&previous\_state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ CallbackReturn\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a5ea354bbbacb6fb0a1dcb96be88b5230}{on\_deactivate}}(\textcolor{keyword}{const}\ rclcpp\_lifecycle::State\ \&previous\_state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00168\ \ \ \ \ controller\_interface::return\_type\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a484718069a50ddae3d2d7eb79b533cbe}{update\_and\_write\_commands}}(}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ rclcpp::Time\ \&time,}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ rclcpp::Duration\ \&period)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ controller\_interface::return\_type\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a19c2c7aa050d07645cb2670f31be1a49}{update\_reference\_from\_subscribers}}(}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ rclcpp::Time\ \&time,}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ rclcpp::Duration\ \&period)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00177\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_aee164c861a3f6f9f0bea73bc0e187288}{position\_offset\_}};\ \textcolor{comment}{//\ [x,\ y,\ z]}}
+\DoxyCodeLine{00178\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_afe8fa9638886c143eab9165a70e1f9b8}{rotation\_offset\_}};\ \textcolor{comment}{//\ [pitch,\ yaw]}}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a697d25664cb3053d0b71d58ab363e888}{forward\_max\_thrust\_}};}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a0f260fe17382e0c64e35ad306c6e1ff6}{reverse\_max\_thrust\_}};}
+\DoxyCodeLine{00181\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_afae78ac8651d61876f8e76572b2b2004}{joint\_names\_}};}
+\DoxyCodeLine{00182\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a4e77714f18c8a3989a64ade7e6065f98}{wrench\_weights\_}};}
+\DoxyCodeLine{00183\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_ae5668893e3ea2adbcc981450159a23a9}{effort\_weights\_}};}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a8d2afb8877cd4225dca424b71d3c6b0a}{qp\_time\_limit\_}};}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_adc9f2942f10eb0b7ab99ca2e50ad1be6}{prim\_res\_threshold\_}};}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_aa218e83ed70ba987d98ada1642b9d1c5}{dual\_res\_threshold\_}};}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a9e950f56be00b03a5221a427cb874f28}{num\_joints\_}}\ =\ 8;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ std::vector<std::reference\_wrapper<hardware\_interface::LoanedCommandInterface>>\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a70cc97aa1b3c9ab9f22ae5e79118268c}{command\_interfaces\_}};}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ OSQPSettings\ \mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a757e6ebd52b154730effa1e62dd3e645}{settings\_}};}
+\DoxyCodeLine{00192\ \ \ \ \ OSQPWorkspace\ *\mbox{\hyperlink{classrov__controllers_1_1AxisToCommandController_a1a30589ed1bce2d4d1788d6ba911f653}{qp\_workspace\_}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00193\ \ \ \};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \}\ \textcolor{comment}{//\ namespace\ rov\_controllers}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ROV\_CONTROLLERS\_\_AXIS\_TO\_COMMAND\_CONTROLLER\_HPP\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,10 @@
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/axis_to_command_controller.cpp:[m[K In member function ‘[01m[Kvirtual controller_interface::return_type rov_controllers::AxisToCommandController::[01;32m[Kupdate_and_write_commands[m[K(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/axis_to_command_controller.cpp:379:47:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kbool hardware_interface::LoanedCommandInterface::[01;32m[Kset_value[m[K(const T&, unsigned int) [35m[K[with T = double][m[K[m[K’, declared with attribute ‘[01m[Knodiscard[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  379 |         [01;35m[Kcommand_interfaces_[i].get().set_value(T(i))[m[K;
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/controller_interface/controller_interface/controller_interface_base.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/controller_interface/controller_interface/chainable_controller_interface.hpp:23[m[K,
+                 from [01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/axis_to_command_controller.cpp:6[m[K:
+[01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/loaned_command_interface.hpp:113:22:[m[K [01;36m[Knote: [m[Kdeclared here
+  113 |   [[nodiscard]] bool [01;36m[Kset_value[m[K(const T & value, unsigned int max_tries = 10)
+      |                      [01;36m[K^~~~~~~~~[m[K
