@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['effort_5fweights_5f_0',['effort_weights_',['../classrov__controllers_1_1AxisToCommandController.html#ae5668893e3ea2adbcc981450159a23a9',1,'rov_controllers::AxisToCommandController']]],
-  ['export_5fcommand_5finterfaces_1',['export_command_interfaces',['../classrov__control_1_1PWMInterface.html#a52dc453fa4874b2dd39e46f1611ba3aa',1,'rov_control::PWMInterface']]],
-  ['export_5fstate_5finterfaces_2',['export_state_interfaces',['../classrov__control_1_1PWMInterface.html#a53df8cbe968e423fceeb5198ca6db18c',1,'rov_control::PWMInterface']]]
+  ['data_5fmutex_5f_0',['data_mutex_',['../classrov__controllers_1_1PidController.html#a41a96abbaefa830f142289495a67a46f',1,'rov_controllers::PidController']]],
+  ['dof_5fnames_5f_1',['dof_names_',['../classrov__controllers_1_1PidController.html#ac9f3506596fb6bb5cdb7a62657dab403',1,'rov_controllers::PidController']]],
+  ['dual_5fres_5fthreshold_5f_2',['dual_res_threshold_',['../classrov__controllers_1_1AxisToCommandController.html#aa218e83ed70ba987d98ada1642b9d1c5',1,'rov_controllers::AxisToCommandController']]]
 ];

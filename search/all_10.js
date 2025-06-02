@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['wrench_5fpub_5f_0',['wrench_pub_',['../classrov__controllers_1_1PidController.html#a16747f1d77cca699d4f8a89b7b0bb703',1,'rov_controllers::PidController']]],
-  ['wrench_5fweights_5f_1',['wrench_weights_',['../classrov__controllers_1_1AxisToCommandController.html#a4e77714f18c8a3989a64ade7e6065f98',1,'rov_controllers::AxisToCommandController']]],
-  ['write_2',['write',['../classrov__control_1_1PWMInterface.html#a49f2e6cc79c5fdbddfb3ed90b5b1c190',1,'rov_control::PWMInterface']]]
+  ['update_5fand_5fwrite_5fcommands_0',['update_and_write_commands',['../classrov__controllers_1_1AxisToCommandController.html#a484718069a50ddae3d2d7eb79b533cbe',1,'rov_controllers::AxisToCommandController::update_and_write_commands()'],['../classrov__controllers_1_1PidController.html#a2ddd7e6493301b945764445baa8df6f8',1,'rov_controllers::PidController::update_and_write_commands()']]],
+  ['update_5freference_5ffrom_5fsubscribers_1',['update_reference_from_subscribers',['../classrov__controllers_1_1AxisToCommandController.html#a19c2c7aa050d07645cb2670f31be1a49',1,'rov_controllers::AxisToCommandController']]]
 ];

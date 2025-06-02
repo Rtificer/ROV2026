@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['num_5fjoints_5f_0',['num_joints_',['../classrov__controllers_1_1AxisToCommandController.html#a9e950f56be00b03a5221a427cb874f28',1,'rov_controllers::AxisToCommandController']]]
+  ['load_5fparameters_0',['load_parameters',['../classrov__control_1_1PWMInterface.html#a5f150a0ff93daea01c185b12fc429790',1,'rov_control::PWMInterface']]]
 ];

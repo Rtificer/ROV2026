@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['num_5fjoints_5f_0',['num_joints_',['../classrov__controllers_1_1AxisToCommandController.html#a9e950f56be00b03a5221a427cb874f28',1,'rov_controllers::AxisToCommandController']]]
+  ['forward_5fmax_5fthrust_5f_0',['forward_max_thrust_',['../classrov__controllers_1_1AxisToCommandController.html#a697d25664cb3053d0b71d58ab363e888',1,'rov_controllers::AxisToCommandController']]]
 ];

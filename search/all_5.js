@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['gamepad_5fparser_5fnode_2ehpp_0',['gamepad_parser_node.hpp',['../gamepad__parser__node_8hpp.html',1,'']]],
-  ['gamepadparser_1',['gamepadparser',['../classGamepadParser.html',1,'GamepadParser'],['../classGamepadParser.html#a1b59a78bd2f8841d7e941ed0efdd9e09',1,'GamepadParser::GamepadParser()']]]
+  ['forward_5fmax_5fthrust_5f_0',['forward_max_thrust_',['../classrov__controllers_1_1AxisToCommandController.html#a697d25664cb3053d0b71d58ab363e888',1,'rov_controllers::AxisToCommandController']]]
 ];
