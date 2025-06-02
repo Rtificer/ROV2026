@@ -1,0 +1,238 @@
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+-- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+-- Debug mode: 
+-- We are on a Linux system
+-- Embedded mode: OFF
+-- Algebra backend: builtin
+-- Solver profiling: ON
+-- Solver interrupt: ON
+-- Using double precision floating-point
+-- Using long integers
+-- Code generation: ON
+-- Derivative support: ON
+-- Fetching/configuring QDLDL solver
+--   Using double precision floats
+--   Long integers (64bit) are ON
+--   Static library build is OFF
+--   Shared library build is OFF
+--   Demo executable build is OFF
+--   Not building demo executable
+--   Unit testing suite build is OFF
+-- Build static library: ON
+-- Build shared library: ON
+-- Build demo executable: ON
+-- Configuring done (1.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/student/Desktop/ROV2026/build/rov_control
+[  1%] [34m[1mCopying algebra_matrix.h[0m
+[  2%] [32mBuilding C object _deps/qdldl-build/CMakeFiles/qdldlobject.dir/src/qdldl.c.o[0m
+[  3%] [34m[1mCopying codegen makefile[0m
+[  4%] [32mBuilding CXX object CMakeFiles/rov_control.dir/src/pwm_interface.cpp.o[0m
+[  5%] [34m[1mCopying algebra_impl.h[0m
+[  6%] [34m[1mCopying auxil.c[0m
+[  7%] [34m[1mCopying algebra_vector.h[0m
+[  8%] [34m[1mCopying error.c[0m
+[  8%] Built target copy_codegen_makefile
+[ 10%] [34m[1mCopying csc_math.h[0m
+[ 11%] [34m[1mCopying auxil.h[0m
+[ 13%] [34m[1mCopying osqp_api.c[0m
+[ 13%] [34m[1mCopying error.h[0m
+[ 14%] [34m[1mCopying kkt.h[0m
+[ 15%] [34m[1mCopying csc_utils.h[0m
+[ 16%] [34m[1mCopying util.c[0m
+[ 17%] [34m[1mCopying scaling.c[0m
+[ 18%] [34m[1mCopying glob_opts.h[0m
+[ 20%] [34m[1mCopying qdldl.h[0m
+[ 21%] [34m[1mCopying lin_alg.h[0m
+[ 22%] [34m[1mCopying printing.h[0m
+[ 23%] [34m[1mCopying qdldl_interface.h[0m
+[ 23%] Built target copy_codegen_srcs
+[ 23%] Built target qdldlobject
+[ 24%] [34m[1mCopying qdldl_types.h[0m
+[ 25%] [34m[1mCopying profilers.h[0m
+[ 26%] [34m[1mCopying qdldl_version.h[0m
+[ 27%] [34m[1mCopying algebra_libs.c[0m
+[ 28%] [34m[1mCopying scaling.h[0m
+[ 30%] [34m[1mCopying csc_utils.c[0m
+[ 31%] [34m[1mCopying csc_math.c[0m
+[ 32%] [34m[1mCopying timing.h[0m
+[ 33%] [34m[1mCopying kkt.c[0m
+[ 34%] [34m[1mCopying types.h[0m
+[ 35%] [34m[1mCopying matrix.c[0m
+[ 36%] [34m[1mCopying util.h[0m
+[ 37%] [34m[1mCopying osqp.h[0m
+[ 38%] [34m[1mCopying version.h[0m
+[ 40%] [34m[1mCopying osqp_api_constants.h[0m
+[ 41%] [34m[1mCopying qdldl.c[0m
+[ 42%] [34m[1mCopying osqp_api_functions.h[0m
+[ 43%] [34m[1mCopying qdldl_interface.c[0m
+[ 44%] [34m[1mCopying osqp_api_types.h[0m
+[ 45%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/src/auxil.c.o[0m
+[ 46%] [34m[1mCopying vector.c[0m
+[ 47%] [34m[1mCopying osqp_export_define.h[0m
+[ 48%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/src/scaling.c.o[0m
+[ 50%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/src/error.c.o[0m
+[ 50%] Built target copy_codegen_linalg
+[ 51%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/src/util.c.o[0m
+[ 51%] Built target copy_codegen_incs
+[ 51%] Built target copy_codegen_files
+[ 52%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/src/polish.c.o[0m
+[ 53%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/src/derivative.c.o[0m
+[ 54%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/src/interrupt_unix.c.o[0m
+[ 55%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/src/timing_linux.c.o[0m
+[ 56%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/src/codegen.c.o[0m
+[ 57%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/csc_math.c.o[0m
+[ 58%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/csc_utils.c.o[0m
+[ 60%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/builtin/algebra_libs.c.o[0m
+[ 61%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/builtin/vector.c.o[0m
+[ 62%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/builtin/matrix.c.o[0m
+[ 63%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/SuiteSparse_config.c.o[0m
+[ 64%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_1.c.o[0m
+[ 65%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_2.c.o[0m
+[ 66%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_aat.c.o[0m
+[ 67%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_control.c.o[0m
+[ 68%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_defaults.c.o[0m
+[ 70%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_info.c.o[0m
+[ 71%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_order.c.o[0m
+[ 72%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_post_tree.c.o[0m
+[ 73%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_postorder.c.o[0m
+[ 74%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_preprocess.c.o[0m
+[ 75%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/amd/src/amd_valid.c.o[0m
+[ 76%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/kkt.c.o[0m
+[ 77%] [32mBuilding C object external/osqp/CMakeFiles/OSQPLIB.dir/algebra/_common/lin_sys/qdldl/qdldl_interface.c.o[0m
+[ 77%] Built target OSQPLIB
+[ 80%] [32mBuilding C object external/osqp/CMakeFiles/osqp.dir/src/osqp_api.c.o[0m
+[ 80%] [32mBuilding C object external/osqp/CMakeFiles/osqpstatic.dir/src/osqp_api.c.o[0m
+[ 82%] [32m[1mLinking C static library out/libosqpstatic.a[0m
+[ 82%] [32m[1mLinking C shared library out/libosqp.so[0m
+[ 82%] Built target osqp
+[ 82%] Built target osqpstatic
+[ 83%] [32mBuilding C object external/osqp/CMakeFiles/osqp_simple_demo.dir/examples/osqp_simple_demo.c.o[0m
+[ 84%] [32mBuilding C object external/osqp/CMakeFiles/osqp_codegen_demo.dir/examples/osqp_codegen_demo.c.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/axis_to_command_controller.dir/src/axis_to_command_controller.cpp.o[0m
+[ 86%] [32mBuilding C object external/osqp/CMakeFiles/osqp_demo.dir/examples/osqp_demo.c.o[0m
+[ 87%] [32mBuilding C object external/osqp/CMakeFiles/osqp_demo.dir/examples/problems/cvxqp2_s.c.o[0m
+[ 88%] [32m[1mLinking C executable out/osqp_simple_demo[0m
+[ 90%] [32m[1mLinking C executable out/osqp_codegen_demo[0m
+[ 91%] [32mBuilding C object external/osqp/CMakeFiles/osqp_demo.dir/examples/problems/qptest.c.o[0m
+[ 92%] [32mBuilding C object external/osqp/CMakeFiles/osqp_demo.dir/examples/problems/qpcblend.c.o[0m
+[ 92%] Built target osqp_simple_demo
+[ 93%] [32mBuilding C object external/osqp/CMakeFiles/osqp_demo.dir/examples/problems/hs21.c.o[0m
+[ 94%] [32mBuilding C object external/osqp/CMakeFiles/osqp_demo.dir/examples/problems/hs35.c.o[0m
+[ 94%] Built target osqp_codegen_demo
+[ 96%] [32mBuilding C object external/osqp/CMakeFiles/osqp_demo.dir/examples/problems/largeqp.c.o[0m
+[ 96%] [32mBuilding C object external/osqp/CMakeFiles/osqp_demo.dir/examples/problems/primalc1.c.o[0m
+[ 97%] [32m[1mLinking C executable out/osqp_demo[0m
+[ 97%] Built target osqp_demo
+[ 98%] [32m[1mLinking CXX shared library librov_control.so[0m
+[ 98%] Built target rov_control
+[100%] [32m[1mLinking CXX shared library libaxis_to_command_controller.so[0m
+[100%] Built target axis_to_command_controller
+-- Install configuration: ""
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_types.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_version.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_constants.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_functions.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_types.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_export_define.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_configure.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/libosqpstatic.a
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets.cmake
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets-noconfig.cmake
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/libosqp.so
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets.cmake
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets-noconfig.cmake
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config.cmake
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config-version.cmake
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/scaling.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/util.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/vector.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/osqp_api.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl_interface.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/auxil.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/kkt.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_utils.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/error.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/matrix.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/algebra_libs.c
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_math.c
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_functions.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_types.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_constants.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_export_define.h
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/auxil.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/timing.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_interface.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/version.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/printing.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/scaling.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_utils.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/error.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/types.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_math.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_types.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/profilers.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_matrix.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_version.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/lin_alg.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_impl.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/glob_opts.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/util.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_vector.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/kkt.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/Makefile
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/axis_to_command_controller_plugin.xml
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/librov_control.so
+-- Set non-toolchain portion of runtime path of "/home/student/Desktop/ROV2026/install/rov_control/lib/librov_control.so" to ""
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so
+-- Set non-toolchain portion of runtime path of "/home/student/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so" to ""
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/include/
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/thruster_pid_controller.hpp
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/gamepad_parser_node.hpp
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685_interface.h
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685.h
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/pwm_interface.hpp
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/axis_to_command_controller.hpp
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.sh
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.dsv
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/package_run_dependencies/rov_control
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/parent_prefix_path/rov_control
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.sh
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.sh
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.dsv
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.bash
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.sh
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.zsh
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.dsv
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/packages/rov_control
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rov_control
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport.cmake
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport-noconfig.cmake
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig.cmake
+-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig-version.cmake
+-- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.xml

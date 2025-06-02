@@ -54,4 +54,23 @@ controller_manager:
         
 gamepad_parser:
   ros__parameters:
-    deadzone: 0.1
+    deadzone: 0.05
+    axis_mapping:
+      left_stick_x: "sway"
+      left_stick_y: "surge"
+      right_stick_x: "yaw"
+      right_stick_y: "heave"
+      left_trigger: ""
+      right_trigger: ""
+      dpad_x: ""
+      dpad_y: ""
+    button_mapping:
+      a: ""
+      b: ""
+      x: ""
+      y: ""
+      left_bumper: ""
+      right_bumper: ""
+      left_stick_button: ""
+      right_stick_button: ""
+
