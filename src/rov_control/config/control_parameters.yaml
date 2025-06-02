@@ -49,28 +49,32 @@ controller_manager:
         wrench_weights: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
         effort_weights: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
         qp_time_limit: 50             # ms
+
         prim_res_threshold: 1e-2
         dual_res_threshold: 1e-2
         
 gamepad_parser:
   ros__parameters:
     deadzone: 0.05
-    axis_mapping:
-      left_stick_x: "sway"
-      left_stick_y: "surge"
-      right_stick_x: "yaw"
-      right_stick_y: "heave"
-      left_trigger: ""
-      right_trigger: ""
-      dpad_x: ""
-      dpad_y: ""
-    button_mapping:
-      a: ""
-      b: ""
-      x: ""
-      y: ""
-      left_bumper: ""
-      right_bumper: ""
-      left_stick_button: ""
-      right_stick_button: ""
-
+    axes:
+      left_stick_x:  {binding: "sway", index: 0}
+      left_stick_y:  {binding: "surge", index: 1}
+      right_stick_x: {binding: "yaw", index: 3}
+      right_stick_y: {binding: "pitch", index: 4}
+      left_trigger:  {binding: "", index: 2}
+      right_trigger: {binding: "", index: 5}
+      dpad_x:        {binding: "roll", index: 6}
+      dpad_y:        {binding: "heave", index: 7}
+    buttons:
+      a:                  {binding: "", index: 0}
+      b:                  {binding: "", index: 1}
+      x:                  {binding: "", index: 2}
+      y:                  {binding: "", index: 3}
+      left_bumper:        {binding: "", index: 4}
+      right_bumper:       {binding: "", index: 5}
+      left_stick_button:  {binding: "", index: 9}
+      right_stick_button: {binding: "", index: 10}
+      menu_button:        {binding: "", index: 7}
+      view_button:        {binding: "", index: 6}
+      upload_button:      {binding: "", index: 11}
+      xbox_button:        {binding: "", index: 8}

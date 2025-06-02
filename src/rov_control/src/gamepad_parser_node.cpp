@@ -3,7 +3,33 @@
 
 GamepadParser::GamepadParser() : Node("gamepad_parser")
 {
-  this->declare_parameter<float>("deadzone", 0.1f); // Declare parameter with default value
+  this->declare_parameter<float>("deadzone", 0.1f);
+
+  // Parse axes
+  std::vector<std::string> axis_names;
+  this->get_parameter("axes", axis_names);
+  for (const auto& axis_name : axis_names) {
+    std::string binding;
+    int index;
+    this->get_parameter("axes." + axis_name + ".binding", binding);
+    this->get_parameter("axes." + axis_name + ".index", index);
+    if (!binding.empty()) {
+      axis_bindings_[binding] = index;
+    }
+  }
+
+  // Parse buttons
+  std::vector<std::string> button_names;
+  this->get_parameter("buttons", button_names);
+  for (const auto& button_name : button_names) {
+    std::string binding;
+    int index;
+    this->get_parameter("buttons." + button_name + ".binding", binding);
+    this->get_parameter("buttons." + button_name + ".index", index);
+    if (!binding.empty()) {
+      button_bindings_[binding] = index;
+    }
+  }
 
   joy_sub_ = this->create_subscription<sensor_msgs::msg::Joy>(
     "/joy", 10,
@@ -30,20 +56,31 @@ void GamepadParser::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
   };
 
   geometry_msgs::msg::Twist twist;
-  twist.linear.x = apply_deadzone(msg->axes[1], deadzone);   // Left stick vertical
-  twist.linear.y = apply_deadzone(msg->axes[0], deadzone);   // Left stick horizontal
-  twist.angular.z = apply_deadzone(msg->axes[3], deadzone);  // Right stick horizontal
+  // Use binding names to get the correct axis index
+  twist.linear.x  = apply_deadzone(msg->axes[axis_bindings_["surge"]], deadzone);
+  twist.linear.y  = apply_deadzone(msg->axes[axis_bindings_["sway"]], deadzone);
+  twist.linear.z  = apply_deadzone(msg->axes[axis_bindings_["heave"]], deadzone);
+  twist.angular.z = apply_deadzone(msg->axes[axis_bindings_["yaw"]], deadzone);
+  twist.angular.x = apply_deadzone(msg->axes[axis_bindings_["pitch"]], deadzone);
+  twist.angular.y = apply_deadzone(msg->axes[axis_bindings_["roll"]], deadzone);
+
+  // Example: check if a button with a binding is pressed
+  // if (button_bindings_.count("some_action")) {
+  //   bool pressed = msg->buttons[button_bindings_["some_action"]];
+  //   // ... handle button press ...
+  // }
+
   twist_pub_->publish(twist);
 }
 
 /**
- * @brief Main entry point for the gamepad parser node.
+ * @brief Main entry pouint8_t for the gamepad parser node.
  *
  * Initializes ROS, spins the GamepadParser node, and shuts down ROS on exit.
  *
  * @param argc Argument count.
  * @param argv Argument vector.
- * @return int Exit code.
+ * @return uint8_t Exit code.
  */
 int main(int argc, char **argv)
 {

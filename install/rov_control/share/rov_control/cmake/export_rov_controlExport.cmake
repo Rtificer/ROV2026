@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS rov_control::rov_control rov_control::axis_to_command_controller)
+foreach(_cmake_expected_target IN ITEMS rov_control::rov_control rov_control::axis_to_command_controller rov_control::gamepad_parser_node)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -60,7 +60,7 @@ add_library(rov_control::rov_control SHARED IMPORTED)
 
 set_target_properties(rov_control::rov_control PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "rclcpp::rclcpp;hardware_interface::mock_components;hardware_interface::hardware_interface;pluginlib::pluginlib;controller_interface::controller_interface"
+  INTERFACE_LINK_LIBRARIES "rclcpp::rclcpp;hardware_interface::mock_components;hardware_interface::hardware_interface;pluginlib::pluginlib;controller_interface::controller_interface;sensor_msgs::sensor_msgs__rosidl_generator_c;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_c;sensor_msgs::sensor_msgs__rosidl_generator_cpp;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_cpp;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_c;sensor_msgs::sensor_msgs__rosidl_typesupport_c;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_cpp;sensor_msgs::sensor_msgs__rosidl_typesupport_cpp;sensor_msgs::sensor_msgs__rosidl_generator_py;sensor_msgs::sensor_msgs_library"
 )
 
 # Create imported target rov_control::axis_to_command_controller
@@ -69,6 +69,9 @@ add_library(rov_control::axis_to_command_controller SHARED IMPORTED)
 set_target_properties(rov_control::axis_to_command_controller PROPERTIES
   INTERFACE_LINK_LIBRARIES "osqp::osqpstatic;rclcpp::rclcpp;controller_interface::controller_interface;hardware_interface::mock_components;hardware_interface::hardware_interface"
 )
+
+# Create imported target rov_control::gamepad_parser_node
+add_executable(rov_control::gamepad_parser_node IMPORTED)
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)
   message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")

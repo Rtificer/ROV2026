@@ -1,0 +1,43 @@
+[0.009s] Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6
+[0.038s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.217s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.243s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.251s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.261s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.274s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.332s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.333s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.389s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.449s] -- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[0.664s] -- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+[0.671s] -- Debug mode: 
+[0.671s] -- We are on a Linux system
+[0.671s] -- Embedded mode: OFF
+[0.671s] -- Algebra backend: builtin
+[0.672s] -- Solver profiling: ON
+[0.672s] -- Solver interrupt: ON
+[0.672s] -- Using double precision floating-point
+[0.672s] -- Using long integers
+[0.672s] -- Code generation: ON
+[0.672s] -- Derivative support: ON
+[0.677s] -- Fetching/configuring QDLDL solver
+[1.146s] --   Using double precision floats
+[1.146s] --   Long integers (64bit) are ON
+[1.147s] --   Static library build is OFF
+[1.147s] --   Shared library build is OFF
+[1.147s] --   Demo executable build is OFF
+[1.147s] --   Not building demo executable
+[1.147s] --   Unit testing suite build is OFF
+[1.148s] -- Build static library: ON
+[1.148s] -- Build shared library: ON
+[1.148s] -- Build demo executable: ON
+[1.149s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):
+[1.149s]   ament_target_dependencies() the passed package name 'gamepad_parser_node'
+[1.149s]   was not found before
+[1.149s] Call Stack (most recent call first):
+[1.150s]   CMakeLists.txt:28 (ament_target_dependencies)
+[1.150s] 
+[1.150s] [0m
+[1.150s] -- Configuring incomplete, errors occurred!
+[1.158s] gmake: *** [Makefile:478: cmake_check_build_system] Error 1
+[1.160s] Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6

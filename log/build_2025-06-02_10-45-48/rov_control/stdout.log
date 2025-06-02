@@ -1,0 +1,45 @@
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+-- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+-- Debug mode: 
+-- We are on a Linux system
+-- Embedded mode: OFF
+-- Algebra backend: builtin
+-- Solver profiling: ON
+-- Solver interrupt: ON
+-- Using double precision floating-point
+-- Using long integers
+-- Code generation: ON
+-- Derivative support: ON
+-- Fetching/configuring QDLDL solver
+--   Using double precision floats
+--   Long integers (64bit) are ON
+--   Static library build is OFF
+--   Shared library build is OFF
+--   Demo executable build is OFF
+--   Not building demo executable
+--   Unit testing suite build is OFF
+-- Build static library: ON
+-- Build shared library: ON
+-- Build demo executable: ON
+-- Configuring done (1.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/student/Desktop/ROV2026/build/rov_control
+[  4%] [32mBuilding CXX object CMakeFiles/gamepad_parser_node.dir/src/gamepad_parser_node.cpp.o[0m
+[ 19%] Built target copy_codegen_makefile
+[ 19%] Built target copy_codegen_linalg
+[ 39%] Built target copy_codegen_incs
+[ 40%] Built target qdldlobject
+[ 41%] [32mBuilding CXX object CMakeFiles/rov_control.dir/src/pwm_interface.cpp.o[0m
+[ 46%] Built target copy_codegen_srcs
+[ 77%] Built target OSQPLIB
+[ 78%] [32m[1mLinking CXX shared library librov_control.so[0m
+[ 78%] Built target rov_control

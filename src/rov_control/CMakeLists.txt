@@ -24,11 +24,25 @@ target_include_directories(${PROJECT_NAME}
     $<INSTALL_INTERFACE:include>
 )
 
+add_executable(gamepad_parser_node src/gamepad_parser_node.cpp)
+target_include_directories(gamepad_parser_node
+  PRIVATE
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+)
+ament_target_dependencies(gamepad_parser_node
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+)
+
+
 ament_target_dependencies(${PROJECT_NAME}
   rclcpp
   hardware_interface
   pluginlib
   controller_interface
+  sensor_msgs
+  Eigen3
 )
 
 # ========= BUILD AXIS-TO-COMMAND CONTROLLER =========
@@ -62,11 +76,11 @@ pluginlib_export_plugin_description_file(
 
 # ========= INSTALL =========
 install(
-  TARGETS rov_control axis_to_command_controller
+  TARGETS rov_control axis_to_command_controller gamepad_parser_node
   EXPORT export_rov_control
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
-  RUNTIME DESTINATION bin
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 
 install(DIRECTORY include/

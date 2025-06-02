@@ -1,0 +1,55 @@
+[0.009s] Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6
+[0.039s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.221s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.246s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.255s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.265s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.277s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.334s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.335s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.389s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.447s] -- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[0.667s] -- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+[0.673s] -- Debug mode: 
+[0.673s] -- We are on a Linux system
+[0.674s] -- Embedded mode: OFF
+[0.674s] -- Algebra backend: builtin
+[0.674s] -- Solver profiling: ON
+[0.674s] -- Solver interrupt: ON
+[0.674s] -- Using double precision floating-point
+[0.674s] -- Using long integers
+[0.674s] -- Code generation: ON
+[0.674s] -- Derivative support: ON
+[0.679s] -- Fetching/configuring QDLDL solver
+[1.157s] --   Using double precision floats
+[1.157s] --   Long integers (64bit) are ON
+[1.159s] --   Static library build is OFF
+[1.159s] --   Shared library build is OFF
+[1.159s] --   Demo executable build is OFF
+[1.159s] --   Not building demo executable
+[1.159s] --   Unit testing suite build is OFF
+[1.159s] -- Build static library: ON
+[1.159s] -- Build shared library: ON
+[1.160s] -- Build demo executable: ON
+[1.242s] -- Configuring done (1.2s)
+[1.356s] -- Generating done (0.1s)
+[1.367s] -- Build files have been written to: /home/student/Desktop/ROV2026/build/rov_control
+[1.400s] [  4%] [32mBuilding CXX object CMakeFiles/gamepad_parser_node.dir/src/gamepad_parser_node.cpp.o[0m
+[1.400s] [ 19%] Built target copy_codegen_makefile
+[1.400s] [ 19%] Built target copy_codegen_linalg
+[1.400s] [ 39%] Built target copy_codegen_incs
+[1.403s] [ 40%] Built target qdldlobject
+[1.410s] [01m[K/home/student/Desktop/ROV2026/src/rov_control/src/gamepad_parser_node.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Krov_control/gamepad_parser_node.hpp: No such file or directory
+[1.410s]     1 | #include [01;31m[K"rov_control/gamepad_parser_node.hpp"[m[K
+[1.410s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.411s] compilation terminated.
+[1.411s] gmake[2]: *** [CMakeFiles/gamepad_parser_node.dir/build.make:76: CMakeFiles/gamepad_parser_node.dir/src/gamepad_parser_node.cpp.o] Error 1
+[1.412s] gmake[1]: *** [CMakeFiles/Makefile2:281: CMakeFiles/gamepad_parser_node.dir/all] Error 2
+[1.413s] gmake[1]: *** Waiting for unfinished jobs....
+[1.413s] [ 41%] [32mBuilding CXX object CMakeFiles/rov_control.dir/src/pwm_interface.cpp.o[0m
+[1.418s] [ 46%] Built target copy_codegen_srcs
+[1.431s] [ 77%] Built target OSQPLIB
+[5.547s] [ 78%] [32m[1mLinking CXX shared library librov_control.so[0m
+[5.832s] [ 78%] Built target rov_control
+[5.833s] gmake: *** [Makefile:146: all] Error 2
+[5.835s] Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6

@@ -28,6 +28,9 @@ private:
    */
   void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg);
 
+  std::map<std::string, uint8_t> axis_bindings_;
+  std::map<std::string, uint8_t> button_bindings_;
+
   rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub_;
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr twist_pub_;
 };

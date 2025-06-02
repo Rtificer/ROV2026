@@ -25,5 +25,14 @@ set_target_properties(rov_control::axis_to_command_controller PROPERTIES
 list(APPEND _cmake_import_check_targets rov_control::axis_to_command_controller )
 list(APPEND _cmake_import_check_files_for_rov_control::axis_to_command_controller "${_IMPORT_PREFIX}/lib/libaxis_to_command_controller.so" )
 
+# Import target "rov_control::gamepad_parser_node" for configuration ""
+set_property(TARGET rov_control::gamepad_parser_node APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+set_target_properties(rov_control::gamepad_parser_node PROPERTIES
+  IMPORTED_LOCATION_NOCONFIG "${_IMPORT_PREFIX}/lib/rov_control/gamepad_parser_node"
+  )
+
+list(APPEND _cmake_import_check_targets rov_control::gamepad_parser_node )
+list(APPEND _cmake_import_check_files_for_rov_control::gamepad_parser_node "${_IMPORT_PREFIX}/lib/rov_control/gamepad_parser_node" )
+
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)
