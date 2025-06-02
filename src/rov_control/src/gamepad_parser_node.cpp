@@ -3,30 +3,37 @@
 
 GamepadParser::GamepadParser() : Node("gamepad_parser")
 {
-  this->declare_parameter<float>("deadzone", 0.1f);
-
-  // Parse axes
-  std::vector<std::string> axis_names;
-  this->get_parameter("axes", axis_names);
-  for (const auto& axis_name : axis_names) {
+  //List of possible axis keys for the gamepad
+  std::vector<std::string> axis_keys = {
+    "left_stick_x", "left_stick_y", "right_stick_x", "right_stick_y",
+    "left_trigger", "right_trigger", "dpad_x", "dpad_y"
+  };
+  for (const auto& axis_key : axis_keys) {
     std::string binding;
-    int index;
-    this->get_parameter("axes." + axis_name + ".binding", binding);
-    this->get_parameter("axes." + axis_name + ".index", index);
-    if (!binding.empty()) {
+    uint8_t index;
+    this->declare_parameter<std::string>("axes." + axis_key + ".binding", "");
+    this->declare_parameter<uint8_t>("axes." + axis_key + ".index", -1);
+    this->get_parameter("axes." + axis_key + ".binding", binding);
+    this->get_parameter("axes." + axis_key + ".index", index);
+    if (!binding.empty() && index >= 0) {
       axis_bindings_[binding] = index;
     }
   }
 
-  // Parse buttons
-  std::vector<std::string> button_names;
-  this->get_parameter("buttons", button_names);
-  for (const auto& button_name : button_names) {
+  //List of possible button keys for the gamepad
+  std::vector<std::string> button_keys = {
+    "a", "b", "x", "y", "left_bumper", "right_bumper",
+    "left_stick_button", "right_stick_button", "menu_button",
+    "view_button", "upload_button", "xbox_button"
+  };
+  for (const auto& button_key : button_keys) {
     std::string binding;
-    int index;
-    this->get_parameter("buttons." + button_name + ".binding", binding);
-    this->get_parameter("buttons." + button_name + ".index", index);
-    if (!binding.empty()) {
+    uint8_t index;
+    this->declare_parameter<std::string>("buttons." + button_key + ".binding", "");
+    this->declare_parameter<uint8_t>("buttons." + button_key + ".index", -1);
+    this->get_parameter("buttons." + button_key + ".binding", binding);
+    this->get_parameter("buttons." + button_key + ".index", index);
+    if (!binding.empty() && index >= 0) {
       button_bindings_[binding] = index;
     }
   }
@@ -39,48 +46,28 @@ GamepadParser::GamepadParser() : Node("gamepad_parser")
 
 void GamepadParser::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
 {
-  float deadzone = this->get_parameter("deadzone").as_double();
-
-  /**
-   * @brief Apply a deadzone to a joystick axis value.
-   *
-   * If the absolute value of the input is less than the deadzone threshold,
-   * returns 0.0f; otherwise, returns the original value.
-   *
-   * @param value The joystick axis value.
-   * @param deadzone The deadzone threshold.
-   * @return float The processed axis value after applying the deadzone.
-   */
-  auto apply_deadzone = [](float value, float deadzone) {
-    return (std::abs(value) < deadzone) ? 0.0f : value;
-  };
+  // Removed: float deadzone = this->get_parameter("deadzone").as_double();
 
   geometry_msgs::msg::Twist twist;
   // Use binding names to get the correct axis index
-  twist.linear.x  = apply_deadzone(msg->axes[axis_bindings_["surge"]], deadzone);
-  twist.linear.y  = apply_deadzone(msg->axes[axis_bindings_["sway"]], deadzone);
-  twist.linear.z  = apply_deadzone(msg->axes[axis_bindings_["heave"]], deadzone);
-  twist.angular.z = apply_deadzone(msg->axes[axis_bindings_["yaw"]], deadzone);
-  twist.angular.x = apply_deadzone(msg->axes[axis_bindings_["pitch"]], deadzone);
-  twist.angular.y = apply_deadzone(msg->axes[axis_bindings_["roll"]], deadzone);
-
-  // Example: check if a button with a binding is pressed
-  // if (button_bindings_.count("some_action")) {
-  //   bool pressed = msg->buttons[button_bindings_["some_action"]];
-  //   // ... handle button press ...
-  // }
+  twist.linear.x  = msg->axes[axis_bindings_["surge"]];
+  twist.linear.y  = msg->axes[axis_bindings_["sway"]];
+  twist.linear.z  = msg->axes[axis_bindings_["heave"]];
+  twist.angular.z = msg->axes[axis_bindings_["yaw"]];
+  twist.angular.x = msg->axes[axis_bindings_["pitch"]];
+  twist.angular.y = msg->axes[axis_bindings_["roll"]];
 
   twist_pub_->publish(twist);
 }
 
 /**
- * @brief Main entry pouint8_t for the gamepad parser node.
+ * @brief Main entry point for the gamepad parser node.
  *
  * Initializes ROS, spins the GamepadParser node, and shuts down ROS on exit.
  *
  * @param argc Argument count.
  * @param argv Argument vector.
- * @return uint8_t Exit code.
+ * @return int Exit code.
  */
 int main(int argc, char **argv)
 {

@@ -1,0 +1,8 @@
+[31mCMake Error at CMakeLists.txt:14 (add_subdirectory):
+  The source directory
+
+    /home/artificer/Desktop/ROV2026/src/rov_control/external/osqp
+
+  does not contain a CMakeLists.txt file.
+
+[0m

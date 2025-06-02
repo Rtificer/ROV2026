@@ -55,16 +55,15 @@ controller_manager:
         
 gamepad_parser:
   ros__parameters:
-    deadzone: 0.05
     axes:
       left_stick_x:  {binding: "sway", index: 0}
       left_stick_y:  {binding: "surge", index: 1}
       right_stick_x: {binding: "yaw", index: 3}
-      right_stick_y: {binding: "pitch", index: 4}
+      right_stick_y: {binding: "heave", index: 4}
       left_trigger:  {binding: "", index: 2}
       right_trigger: {binding: "", index: 5}
       dpad_x:        {binding: "roll", index: 6}
-      dpad_y:        {binding: "heave", index: 7}
+      dpad_y:        {binding: "pitch", index: 7}
     buttons:
       a:                  {binding: "", index: 0}
       b:                  {binding: "", index: 1}
@@ -78,3 +77,7 @@ gamepad_parser:
       view_button:        {binding: "", index: 6}
       upload_button:      {binding: "", index: 11}
       xbox_button:        {binding: "", index: 8}
+
+joy_node:
+  ros__parameters:
+    deadzone: 0.05
