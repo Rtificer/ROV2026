@@ -9,7 +9,7 @@
 #include <memory>
 
 #include <rclcpp/rclcpp.hpp>
-#include <controller_interface/chainable_controller_interface.hpp>
+#include <controller_interface/controller_interface.hpp>
 #include <geometry_msgs/msg/twist.hpp>
 #include <geometry_msgs/msg/wrench.hpp>
 #include <control_toolbox/pid.hpp>
@@ -17,7 +17,7 @@
 namespace rov_controllers
 {
 
-  class PidController : public controller_interface::ChainableControllerInterface
+  class PidController : public controller_interface::ControllerInterface
   {
   public:
     PidController();
@@ -67,9 +67,9 @@ namespace rov_controllers
      */
     controller_interface::CallbackReturn on_configure(const rclcpp_lifecycle::State &) override;
 
-    CallbackReturn on_activate(const rclcpp_lifecycle::State &previous_state) override;
+    controller_interface::CallbackReturn on_activate(const rclcpp_lifecycle::State &previous_state) override;
 
-    CallbackReturn on_deactivate(const rclcpp_lifecycle::State &previous_state) override;
+    controller_interface::CallbackReturn on_deactivate(const rclcpp_lifecycle::State &previous_state) override;
 
     /**
      * @brief Compute and publish the desired wrench using PID controllers for each DOF.
@@ -89,7 +89,7 @@ namespace rov_controllers
      *
      * @return controller_interface::return_type::OK if successful.
      */
-    controller_interface::return_type update_and_write_commands(
+    controller_interface::return_type update(
         const rclcpp::Time &time,
         const rclcpp::Duration &period) override;
 

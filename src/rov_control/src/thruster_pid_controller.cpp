@@ -4,7 +4,7 @@
 #include <mutex>
 
 #include <rclcpp/rclcpp.hpp>
-#include <controller_interface/chainable_controller_interface.hpp>
+#include <controller_interface/controller_interface.hpp>
 #include <pluginlib/class_list_macros.hpp>
 #include <geometry_msgs/msg/twist.hpp>
 #include <geometry_msgs/msg/wrench.hpp>
@@ -14,6 +14,20 @@
 
 namespace rov_controllers
 {
+
+  controller_interface::InterfaceConfiguration PidController::command_interface_configuration() const
+  {
+    controller_interface::InterfaceConfiguration config;
+    config.type = controller_interface::interface_configuration_type::NONE;
+    return config;
+  }
+
+  controller_interface::InterfaceConfiguration PidController::state_interface_configuration() const
+  {
+    controller_interface::InterfaceConfiguration config;
+    config.type = controller_interface::interface_configuration_type::NONE;
+    return config;
+  }
 
   controller_interface::CallbackReturn PidController::on_init()
   {
@@ -32,6 +46,7 @@ namespace rov_controllers
     output_topic_ = get_node()->get_parameter("output_topic").as_string();
 
     // Load PID gains for each DOF
+    pids_.clear();
     for (const auto &dof : dof_names_)
     {
       std::string prefix = "gains." + dof;
@@ -77,7 +92,7 @@ namespace rov_controllers
     return CallbackReturn::SUCCESS;
   }
 
-  controller_interface::return_type PidController::update_and_write_commands(
+  controller_interface::return_type PidController::update(
       const rclcpp::Time &time,
       const rclcpp::Duration &period)
   {
@@ -103,4 +118,4 @@ namespace rov_controllers
   }
 } // namespace rov_controllers
 
-PLUGINLIB_EXPORT_CLASS(rov_controllers::PidController, controller_interface::ChainableControllerInterface)
+PLUGINLIB_EXPORT_CLASS(rov_controllers::PidController, controller_interface::ControllerInterface)

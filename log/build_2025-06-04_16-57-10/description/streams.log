@@ -1,0 +1,45 @@
+[0.015s] Invoking command in '/home/student/Desktop/ROV2026/build/description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/description
+[0.086s] -- The C compiler identification is GNU 13.3.0
+[0.155s] -- The CXX compiler identification is GNU 13.3.0
+[0.167s] -- Detecting C compiler ABI info
+[0.249s] -- Detecting C compiler ABI info - done
+[0.257s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.258s] -- Detecting C compile features
+[0.258s] -- Detecting C compile features - done
+[0.265s] -- Detecting CXX compiler ABI info
+[0.349s] -- Detecting CXX compiler ABI info - done
+[0.358s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.358s] -- Detecting CXX compile features
+[0.359s] -- Detecting CXX compile features - done
+[0.361s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.494s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.565s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.595s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.688s] -- Added test 'lint_cmake' to check CMake code style
+[0.689s] -- Added test 'xmllint' to check XML markup files
+[0.690s] -- Configuring done (0.7s)
+[0.693s] -- Generating done (0.0s)
+[0.694s] -- Build files have been written to: /home/student/Desktop/ROV2026/build/description
+[0.698s] Invoked command in '/home/student/Desktop/ROV2026/build/description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/description
+[0.699s] Invoking command in '/home/student/Desktop/ROV2026/build/description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/description -- -j6 -l6
+[0.732s] Invoked command in '/home/student/Desktop/ROV2026/build/description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/description -- -j6 -l6
+[0.740s] Invoking command in '/home/student/Desktop/ROV2026/build/description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/description
+[0.747s] -- Install configuration: ""
+[0.748s] -- Execute custom install script
+[0.748s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/urdf/ROV2026.urdf.xacro
+[0.748s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/ament_index/resource_index/package_run_dependencies/description
+[0.748s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/ament_index/resource_index/parent_prefix_path/description
+[0.748s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/environment/ament_prefix_path.sh
+[0.748s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/environment/ament_prefix_path.dsv
+[0.749s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/environment/path.sh
+[0.749s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/environment/path.dsv
+[0.749s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/local_setup.bash
+[0.749s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/local_setup.sh
+[0.749s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/local_setup.zsh
+[0.749s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/local_setup.dsv
+[0.749s] -- Symlinking: /home/student/Desktop/ROV2026/install/description/share/description/package.dsv
+[0.757s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/ament_index/resource_index/packages/description
+[0.757s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/cmake/descriptionConfig.cmake
+[0.757s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/cmake/descriptionConfig-version.cmake
+[0.757s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/description/share/description/package.xml
+[0.759s] Invoked command in '/home/student/Desktop/ROV2026/build/description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/description

@@ -1,0 +1,449 @@
+[0.102s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--cmake-clean-cache']
+[0.102s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=True, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x740bbfc9f740>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x740bc06afd40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x740bc06afd40>>, mixin_verb=('build',))
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.134s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/student/Desktop/ROV2026'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extension 'ros'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extensions ['cmake', 'python']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extension 'cmake'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extension 'python'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extensions ['python_setup_py']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen) by extension 'python_setup_py'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extension 'ros'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extensions ['cmake', 'python']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extension 'cmake'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extension 'python'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extensions ['python_setup_py']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html) by extension 'python_setup_py'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extension 'ros'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extensions ['cmake', 'python']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extension 'cmake'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extension 'python'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extensions ['python_setup_py']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css) by extension 'python_setup_py'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extension 'ros'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extensions ['cmake', 'python']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extension 'cmake'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extension 'python'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extensions ['python_setup_py']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs) by extension 'python_setup_py'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extension 'ros'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extensions ['cmake', 'python']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extension 'cmake'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extension 'python'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extensions ['python_setup_py']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/docs/img) by extension 'python_setup_py'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'ros'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['cmake', 'python']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'cmake'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'python'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['python_setup_py']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'python_setup_py'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extension 'ros'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extensions ['cmake', 'python']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extension 'cmake'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extension 'python'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extensions ['python_setup_py']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/img) by extension 'python_setup_py'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extension 'ros'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extensions ['cmake', 'python']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extension 'cmake'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extension 'python'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extensions ['python_setup_py']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include) by extension 'python_setup_py'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'ros'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['cmake', 'python']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'cmake'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'python'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['python_setup_py']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'python_setup_py'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extension 'ignore'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extension 'ignore_ament_install'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extensions ['colcon_pkg']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extension 'colcon_pkg'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extension 'ros'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extensions ['cmake', 'python']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extension 'cmake'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extension 'python'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extensions ['python_setup_py']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/html/search) by extension 'python_setup_py'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extensions ['colcon_meta']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extension 'colcon_meta'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extensions ['ros']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extension 'ros'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extensions ['cmake', 'python']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extension 'cmake'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extension 'python'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extensions ['python_setup_py']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(doxygen/latex) by extension 'python_setup_py'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/description) by extension 'ros'
+[0.166s] DEBUG:colcon.colcon_core.package_identification:Package 'src/description' with type 'ros.ament_cmake' and name 'description'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_hardware) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_hardware) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_hardware) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_hardware) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_hardware) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_hardware) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_hardware) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_hardware) by extension 'ros'
+[0.167s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dummy_hardware' with type 'ros.ament_cmake' and name 'dummy_hardware'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/rov_control) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/rov_control) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/rov_control) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/rov_control) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/rov_control) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/rov_control) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/rov_control) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/rov_control) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/rov_control) by extension 'ros'
+[0.168s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rov_control' with type 'ros.ament_cmake' and name 'rov_control'
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.183s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/student/Desktop/ROV2026/install/rov_control' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.183s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/student/Desktop/ROV2026/install/dummy_hardware' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.183s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/student/Desktop/ROV2026/install/description' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.183s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/student/Desktop/ROV2026/install/rov_control' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.183s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/student/Desktop/ROV2026/install/dummy_hardware' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.183s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/student/Desktop/ROV2026/install/description' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.184s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/student/Desktop/ROV2026/install
+[0.186s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 350 installed packages in /opt/ros/jazzy
+[0.187s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'description' build argument 'cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'description' build argument 'cmake_target' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'description' build argument 'cmake_clean_cache' from command line to 'True'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'description' build argument 'cmake_clean_first' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'description' build argument 'cmake_force_configure' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'description' build argument 'ament_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.237s] DEBUG:colcon.colcon_core.verb:Building package 'description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/Desktop/ROV2026/build/description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/Desktop/ROV2026/install/description', 'merge_install': False, 'path': '/home/student/Desktop/ROV2026/src/description', 'symlink_install': True, 'test_result_base': None}
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'dummy_hardware' build argument 'cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'dummy_hardware' build argument 'cmake_target' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'dummy_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'dummy_hardware' build argument 'cmake_clean_cache' from command line to 'True'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'dummy_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'dummy_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'dummy_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'dummy_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'dummy_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.237s] DEBUG:colcon.colcon_core.verb:Building package 'dummy_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/Desktop/ROV2026/build/dummy_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/Desktop/ROV2026/install/dummy_hardware', 'merge_install': False, 'path': '/home/student/Desktop/ROV2026/src/dummy_hardware', 'symlink_install': True, 'test_result_base': None}
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'rov_control' build argument 'cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'rov_control' build argument 'cmake_target' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'rov_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'rov_control' build argument 'cmake_clean_cache' from command line to 'True'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'rov_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'rov_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'rov_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'rov_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'rov_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.238s] DEBUG:colcon.colcon_core.verb:Building package 'rov_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/Desktop/ROV2026/build/rov_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/Desktop/ROV2026/install/rov_control', 'merge_install': False, 'path': '/home/student/Desktop/ROV2026/src/rov_control', 'symlink_install': True, 'test_result_base': None}
+[0.238s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.238s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.239s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student/Desktop/ROV2026/src/description' with build type 'ament_cmake'
+[0.239s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student/Desktop/ROV2026/src/description'
+[0.240s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.240s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.241s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.243s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student/Desktop/ROV2026/src/dummy_hardware' with build type 'ament_cmake'
+[0.243s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student/Desktop/ROV2026/src/dummy_hardware'
+[0.244s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.244s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.246s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student/Desktop/ROV2026/src/rov_control' with build type 'ament_cmake'
+[0.246s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student/Desktop/ROV2026/src/rov_control'
+[0.247s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.247s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.252s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/Desktop/ROV2026/build/description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/description
+[0.254s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/Desktop/ROV2026/build/dummy_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/dummy_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/dummy_hardware
+[0.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/rov_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/rov_control
+[0.946s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/Desktop/ROV2026/build/description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/description
+[0.946s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/Desktop/ROV2026/build/description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/description -- -j6 -l6
+[0.980s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/Desktop/ROV2026/build/description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/description -- -j6 -l6
+[0.988s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/Desktop/ROV2026/build/description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/description
+[1.122s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(description)
+[1.122s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/Desktop/ROV2026/build/description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/description
+[1.125s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description' for CMake module files
+[1.125s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description' for CMake config files
+[1.125s] Level 1:colcon.colcon_core.shell:create_environment_hook('description', 'cmake_prefix_path')
+[1.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/description/share/description/hook/cmake_prefix_path.ps1'
+[1.126s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/description/share/description/hook/cmake_prefix_path.dsv'
+[1.126s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/description/share/description/hook/cmake_prefix_path.sh'
+[1.127s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description/bin'
+[1.127s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description/lib/pkgconfig/description.pc'
+[1.127s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description/lib/python3.12/site-packages'
+[1.127s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description/bin'
+[1.127s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/description/share/description/package.ps1'
+[1.128s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/Desktop/ROV2026/install/description/share/description/package.dsv'
+[1.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/description/share/description/package.sh'
+[1.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/description/share/description/package.bash'
+[1.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/description/share/description/package.zsh'
+[1.131s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/Desktop/ROV2026/install/description/share/colcon-core/packages/description)
+[1.131s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(description)
+[1.131s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description' for CMake module files
+[1.132s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description' for CMake config files
+[1.132s] Level 1:colcon.colcon_core.shell:create_environment_hook('description', 'cmake_prefix_path')
+[1.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/description/share/description/hook/cmake_prefix_path.ps1'
+[1.133s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/description/share/description/hook/cmake_prefix_path.dsv'
+[1.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/description/share/description/hook/cmake_prefix_path.sh'
+[1.134s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description/bin'
+[1.134s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description/lib/pkgconfig/description.pc'
+[1.134s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description/lib/python3.12/site-packages'
+[1.134s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/description/bin'
+[1.134s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/description/share/description/package.ps1'
+[1.135s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/Desktop/ROV2026/install/description/share/description/package.dsv'
+[1.135s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/description/share/description/package.sh'
+[1.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/description/share/description/package.bash'
+[1.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/description/share/description/package.zsh'
+[1.137s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/Desktop/ROV2026/install/description/share/colcon-core/packages/description)
+[1.691s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/Desktop/ROV2026/build/dummy_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/dummy_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/dummy_hardware
+[1.691s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/Desktop/ROV2026/build/dummy_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/dummy_hardware -- -j6 -l6
+[2.573s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/rov_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/rov_control
+[2.574s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6
+[7.255s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/Desktop/ROV2026/build/dummy_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/dummy_hardware -- -j6 -l6
+[7.255s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/Desktop/ROV2026/build/dummy_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/dummy_hardware
+[7.438s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dummy_hardware)
+[7.438s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware' for CMake module files
+[7.439s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware' for CMake config files
+[7.439s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_hardware', 'cmake_prefix_path')
+[7.439s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/cmake_prefix_path.ps1'
+[7.440s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/cmake_prefix_path.dsv'
+[7.440s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/cmake_prefix_path.sh'
+[7.441s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/lib'
+[7.442s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_hardware', 'ld_library_path_lib')
+[7.442s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/ld_library_path_lib.ps1'
+[7.443s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/Desktop/ROV2026/build/dummy_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/dummy_hardware
+[7.444s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/ld_library_path_lib.dsv'
+[7.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/ld_library_path_lib.sh'
+[7.444s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/bin'
+[7.444s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/lib/pkgconfig/dummy_hardware.pc'
+[7.444s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/lib/python3.12/site-packages'
+[7.445s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/bin'
+[7.445s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.ps1'
+[7.446s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.dsv'
+[7.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.sh'
+[7.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.bash'
+[7.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.zsh'
+[7.447s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/Desktop/ROV2026/install/dummy_hardware/share/colcon-core/packages/dummy_hardware)
+[7.448s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dummy_hardware)
+[7.448s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware' for CMake module files
+[7.448s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware' for CMake config files
+[7.449s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_hardware', 'cmake_prefix_path')
+[7.449s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/cmake_prefix_path.ps1'
+[7.449s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/cmake_prefix_path.dsv'
+[7.450s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/cmake_prefix_path.sh'
+[7.452s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/lib'
+[7.453s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_hardware', 'ld_library_path_lib')
+[7.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/ld_library_path_lib.ps1'
+[7.454s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/ld_library_path_lib.dsv'
+[7.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/hook/ld_library_path_lib.sh'
+[7.457s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/bin'
+[7.458s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/lib/pkgconfig/dummy_hardware.pc'
+[7.458s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/lib/python3.12/site-packages'
+[7.458s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/dummy_hardware/bin'
+[7.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.ps1'
+[7.460s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.dsv'
+[7.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.sh'
+[7.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.bash'
+[7.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.zsh'
+[7.462s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/Desktop/ROV2026/install/dummy_hardware/share/colcon-core/packages/dummy_hardware)
+[16.317s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6
+[16.318s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/rov_control
+[16.668s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rov_control)
+[16.669s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control' for CMake module files
+[16.669s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/rov_control
+[16.669s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control' for CMake config files
+[16.670s] Level 1:colcon.colcon_core.shell:create_environment_hook('rov_control', 'cmake_prefix_path')
+[16.670s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/cmake_prefix_path.ps1'
+[16.670s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/cmake_prefix_path.dsv'
+[16.670s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/cmake_prefix_path.sh'
+[16.671s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/lib'
+[16.671s] Level 1:colcon.colcon_core.shell:create_environment_hook('rov_control', 'ld_library_path_lib')
+[16.671s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/ld_library_path_lib.ps1'
+[16.671s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/ld_library_path_lib.dsv'
+[16.671s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/ld_library_path_lib.sh'
+[16.672s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/bin'
+[16.672s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/lib/pkgconfig/rov_control.pc'
+[16.672s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/lib/python3.12/site-packages'
+[16.672s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/bin'
+[16.672s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.ps1'
+[16.673s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv'
+[16.673s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.sh'
+[16.673s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.bash'
+[16.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.zsh'
+[16.674s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/Desktop/ROV2026/install/rov_control/share/colcon-core/packages/rov_control)
+[16.674s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rov_control)
+[16.674s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control' for CMake module files
+[16.675s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control' for CMake config files
+[16.675s] Level 1:colcon.colcon_core.shell:create_environment_hook('rov_control', 'cmake_prefix_path')
+[16.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/cmake_prefix_path.ps1'
+[16.676s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/cmake_prefix_path.dsv'
+[16.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/cmake_prefix_path.sh'
+[16.676s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/lib'
+[16.676s] Level 1:colcon.colcon_core.shell:create_environment_hook('rov_control', 'ld_library_path_lib')
+[16.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/ld_library_path_lib.ps1'
+[16.677s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/ld_library_path_lib.dsv'
+[16.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/hook/ld_library_path_lib.sh'
+[16.677s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/bin'
+[16.677s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/lib/pkgconfig/rov_control.pc'
+[16.678s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/lib/python3.12/site-packages'
+[16.678s] Level 1:colcon.colcon_core.environment:checking '/home/student/Desktop/ROV2026/install/rov_control/bin'
+[16.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.ps1'
+[16.678s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv'
+[16.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.sh'
+[16.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.bash'
+[16.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.zsh'
+[16.680s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/Desktop/ROV2026/install/rov_control/share/colcon-core/packages/rov_control)
+[16.680s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[16.680s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[16.680s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[16.680s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[16.685s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[16.685s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[16.685s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[16.687s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[16.687s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/Desktop/ROV2026/install/local_setup.ps1'
+[16.688s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/student/Desktop/ROV2026/install/_local_setup_util_ps1.py'
+[16.689s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/Desktop/ROV2026/install/setup.ps1'
+[16.690s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/Desktop/ROV2026/install/local_setup.sh'
+[16.690s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/student/Desktop/ROV2026/install/_local_setup_util_sh.py'
+[16.691s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/Desktop/ROV2026/install/setup.sh'
+[16.692s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/Desktop/ROV2026/install/local_setup.bash'
+[16.692s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/Desktop/ROV2026/install/setup.bash'
+[16.693s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/Desktop/ROV2026/install/local_setup.zsh'
+[16.693s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/Desktop/ROV2026/install/setup.zsh'

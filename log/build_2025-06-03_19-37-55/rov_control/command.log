@@ -1,1 +1,0 @@
-Invoking command in '/home/artificer/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/rov_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/rov_control

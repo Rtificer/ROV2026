@@ -67,7 +67,8 @@ set_target_properties(rov_control::rov_control PROPERTIES
 add_library(rov_control::axis_to_command_controller SHARED IMPORTED)
 
 set_target_properties(rov_control::axis_to_command_controller PROPERTIES
-  INTERFACE_LINK_LIBRARIES "osqp::osqpstatic;rclcpp::rclcpp;controller_interface::controller_interface;hardware_interface::mock_components;hardware_interface::hardware_interface"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "osqp::osqpstatic;rclcpp::rclcpp;controller_interface::controller_interface;hardware_interface::mock_components;hardware_interface::hardware_interface;pluginlib::pluginlib"
 )
 
 # Create imported target rov_control::gamepad_parser_node

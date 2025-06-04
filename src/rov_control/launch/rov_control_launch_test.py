@@ -3,31 +3,38 @@ from launch_ros.actions import Node
 from launch.substitutions import Command, PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
 
-from ament_index_python.packages import get_package_share_directory
-
 def generate_launch_description():
     urdf_path = PathJoinSubstitution([
         FindPackageShare('description'),
         'urdf',
         'ROV2026.urdf.xacro'
     ])
-    urdf_path_str = str(urdf_path)
+    
+    param_path = PathJoinSubstitution([
+        FindPackageShare('rov_control'),
+        'config'
+    ])
+    
+    
 
     return LaunchDescription([
         Node(
             package='controller_manager',
             executable='ros2_control_node',
-            parameters=[
-                '/home/artificer/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml',
-                '/home/artificer/Desktop/ROV2026/src/description/urdf/ROV2026.urdf.xacro'
-            ],
+            parameters=['/home/student/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml'],
+            output='screen'
+        ),
+        Node(
+            package='controller_manager',
+            executable='spawner',
+            arguments=['axis_to_command_controller'],
             output='screen'
         ),
         Node(
             package='rov_control',
             executable='gamepad_parser_node',
             parameters=[
-                '/home/artificer/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml'
+                PathJoinSubstitution([param_path, "gamepad_parameters.yaml"])
             ],
             output='screen'
         ),
@@ -35,7 +42,7 @@ def generate_launch_description():
             package='joy',
             executable='joy_node',
             parameters=[
-                '/home/artificer/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml'
+                PathJoinSubstitution([param_path, "joy_parameters.yaml"])
             ],
             output='screen'
         ),

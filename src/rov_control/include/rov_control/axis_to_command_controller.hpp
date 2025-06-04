@@ -176,6 +176,10 @@ namespace rov_controllers
         const rclcpp::Time &time,
         const rclcpp::Duration &period) override;
 
+  protected:
+    std::vector<hardware_interface::CommandInterface> on_export_reference_interfaces() override;
+    std::vector<hardware_interface::StateInterface> on_export_state_interfaces() override;
+
   private:
     std::vector<double> position_offset_; // [x, y, z]
     std::vector<double> rotation_offset_; // [pitch, yaw]
@@ -190,8 +194,8 @@ namespace rov_controllers
     size_t num_joints_ = 8;
 
     std::vector<std::reference_wrapper<hardware_interface::LoanedCommandInterface>> command_interfaces_;
-    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr desired_velocity_sub_;
-    geometry_msgs::msg::Twist::SharedPtr latest_twist_;
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr desired_wrench_sub_;
+    geometry_msgs::msg::Twist::SharedPtr latest_wrench_;
 
     OSQPSettings settings_;
     OSQPWorkspace *qp_workspace_ = nullptr;

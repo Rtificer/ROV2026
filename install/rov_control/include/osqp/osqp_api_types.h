@@ -1,1 +1,1 @@
-/home/artificer/Desktop/ROV2026/src/rov_control/external/osqp/include/public/osqp_api_types.h
+/home/student/Desktop/ROV2026/src/rov_control/external/osqp/include/public/osqp_api_types.h

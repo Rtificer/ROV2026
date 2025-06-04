@@ -141,6 +141,22 @@ bool solve_thruster_qp(
 
 namespace rov_controllers
 {
+
+controller_interface::InterfaceConfiguration AxisToCommandController::command_interface_configuration() const
+{
+  controller_interface::InterfaceConfiguration config;
+  config.type = controller_interface::interface_configuration_type::INDIVIDUAL;
+  config.names = joint_names_;
+  return config;
+}
+
+controller_interface::InterfaceConfiguration AxisToCommandController::state_interface_configuration() const
+{
+  controller_interface::InterfaceConfiguration config;
+  config.type = controller_interface::interface_configuration_type::NONE;
+  return config;
+}
+
   AxisToCommandController::AxisToCommandController() = default;
 
   controller_interface::CallbackReturn AxisToCommandController::on_init()
@@ -164,6 +180,9 @@ namespace rov_controllers
     auto_declare<double>("qp_time_limit", 50);                                     // ms
     auto_declare<double>("prim_res_threshold", 1e-2);
     auto_declare<double>("dual_res_threshold", 1e-2);
+
+    //This may seem redudant but is actually needed so that joint_names_ is populated before on_export_reference_interfaces() is called
+    joint_names_ = get_node()->get_parameter("joints").as_string_array();
     return CallbackReturn::SUCCESS;
   }
 
@@ -179,10 +198,10 @@ namespace rov_controllers
     qp_time_limit_ = get_node()->get_parameter("qp_time_limit").as_double();
     prim_res_threshold_ = get_node()->get_parameter("prim_res_threshold").as_double();
     dual_res_threshold_ = get_node()->get_parameter("dual_res_threshold").as_double();
-    desired_velocity_sub_ = get_node()->create_subscription<geometry_msgs::msg::Twist>(
-    "/desired_velocity", 10,
+    desired_wrench_sub_ = get_node()->create_subscription<geometry_msgs::msg::Twist>(
+    "/desired_wrench", 10,
     [this](const geometry_msgs::msg::Twist::SharedPtr msg) {
-      latest_twist_ = msg;
+      latest_wrench_ = msg;
     });
     
 
@@ -331,9 +350,9 @@ namespace rov_controllers
       M_minus.block<3, 1>(3, i) = tau_minus;
     }
     Eigen::VectorXd desired_wrench(6);
-    if (latest_twist_) {
-      desired_wrench << latest_twist_->linear.x, latest_twist_->linear.y, latest_twist_->linear.z,
-                        latest_twist_->angular.x, latest_twist_->angular.y, latest_twist_->angular.z;
+    if (latest_wrench_) {
+      desired_wrench << latest_wrench_->linear.x, latest_wrench_->linear.y, latest_wrench_->linear.z,
+                        latest_wrench_->angular.x, latest_wrench_->angular.y, latest_wrench_->angular.z;
     } else {
       desired_wrench.setZero();
     }
@@ -387,7 +406,22 @@ namespace rov_controllers
     // Implement your logic here, or just return OK if not needed
     return controller_interface::return_type::OK;
   }
+  std::vector<hardware_interface::CommandInterface>
+  rov_controllers::AxisToCommandController::on_export_reference_interfaces()
+  {
+    std::vector<hardware_interface::CommandInterface> refs;
+    for (const auto& joint : joint_names_) {
+        refs.emplace_back(joint, hardware_interface::HW_IF_EFFORT);
+    }
+    RCLCPP_INFO(rclcpp::get_logger("AxisToCommandController"), "Exporting %zu reference interfaces", refs.size());
+    return refs;
+  }
 
+  std::vector<hardware_interface::StateInterface>
+  rov_controllers::AxisToCommandController::on_export_state_interfaces()
+  {
+    return {};
+  }
 } // namespace rov_controllers
 
 PLUGINLIB_EXPORT_CLASS(rov_controllers::AxisToCommandController, controller_interface::ChainableControllerInterface)

@@ -1,6 +1,6 @@
 <library path="thruster_pid_controller">
   <class
-    name="rov_controllers::PidController"
+    name="rov_controllers/PidController"
     type="rov_controllers::PidController"
     base_class_type="controller_interface::ControllerInterface">
     <description>

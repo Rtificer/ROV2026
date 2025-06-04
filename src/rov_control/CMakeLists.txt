@@ -52,6 +52,11 @@ add_library(axis_to_command_controller SHARED
   src/axis_to_command_controller.cpp
 )
 
+target_include_directories(axis_to_command_controller PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
+
 target_include_directories(axis_to_command_controller PRIVATE
   include
   external/osqp/include
@@ -68,6 +73,7 @@ ament_target_dependencies(axis_to_command_controller
   rclcpp
   controller_interface
   hardware_interface
+  pluginlib
   Eigen3
 )
 
