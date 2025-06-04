@@ -184,6 +184,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a9e950f56be00b03a5221a427cb874f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70cc97aa1b3c9ab9f22ae5e79118268c" id="r_a70cc97aa1b3c9ab9f22ae5e79118268c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::reference_wrapper&lt; hardware_interface::LoanedCommandInterface &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a70cc97aa1b3c9ab9f22ae5e79118268c">command_interfaces_</a></td></tr>
 <tr class="separator:a70cc97aa1b3c9ab9f22ae5e79118268c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1966499205f519ff146550afeb37255b" id="r_a1966499205f519ff146550afeb37255b"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; geometry_msgs::msg::Twist &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a1966499205f519ff146550afeb37255b">desired_velocity_sub_</a></td></tr>
+<tr class="separator:a1966499205f519ff146550afeb37255b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a06c6e06c60dce62faddc9c5cf67dd" id="r_a54a06c6e06c60dce62faddc9c5cf67dd"><td class="memItemLeft" align="right" valign="top">geometry_msgs::msg::Twist::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a54a06c6e06c60dce62faddc9c5cf67dd">latest_twist_</a></td></tr>
+<tr class="separator:a54a06c6e06c60dce62faddc9c5cf67dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a757e6ebd52b154730effa1e62dd3e645" id="r_a757e6ebd52b154730effa1e62dd3e645"><td class="memItemLeft" align="right" valign="top">OSQPSettings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a757e6ebd52b154730effa1e62dd3e645">settings_</a></td></tr>
 <tr class="separator:a757e6ebd52b154730effa1e62dd3e645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a30589ed1bce2d4d1788d6ba911f653" id="r_a1a30589ed1bce2d4d1788d6ba911f653"><td class="memItemLeft" align="right" valign="top">OSQPWorkspace *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a1a30589ed1bce2d4d1788d6ba911f653">qp_workspace_</a> = nullptr</td></tr>
@@ -539,6 +543,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a1966499205f519ff146550afeb37255b" name="a1966499205f519ff146550afeb37255b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1966499205f519ff146550afeb37255b">&#9670;&#160;</a></span>desired_velocity_sub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Subscription&lt;geometry_msgs::msg::Twist&gt;::SharedPtr rov_controllers::AxisToCommandController::desired_velocity_sub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa218e83ed70ba987d98ada1642b9d1c5" name="aa218e83ed70ba987d98ada1642b9d1c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa218e83ed70ba987d98ada1642b9d1c5">&#9670;&#160;</a></span>dual_res_threshold_</h2>
 
@@ -616,6 +642,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;std::string&gt; rov_controllers::AxisToCommandController::joint_names_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54a06c6e06c60dce62faddc9c5cf67dd" name="a54a06c6e06c60dce62faddc9c5cf67dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a06c6e06c60dce62faddc9c5cf67dd">&#9670;&#160;</a></span>latest_twist_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::msg::Twist::SharedPtr rov_controllers::AxisToCommandController::latest_twist_</td>
         </tr>
       </table>
   </td>
