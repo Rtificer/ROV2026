@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('classrov__controllers_1_1AxisToCommand
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classrov__controllers_1_1AxisToCommandController-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">rov_controllers::AxisToCommandController Class Reference</div></div>
@@ -158,6 +159,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a19c2c7aa050d07645cb2670f31be1a49" id="r_a19c2c7aa050d07645cb2670f31be1a49"><td class="memItemLeft" align="right" valign="top">controller_interface::return_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a19c2c7aa050d07645cb2670f31be1a49">update_reference_from_subscribers</a> (const rclcpp::Time &amp;time, const rclcpp::Duration &amp;period) override</td></tr>
 <tr class="separator:a19c2c7aa050d07645cb2670f31be1a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae8527ff48322a41516530932b8b828b8" id="r_ae8527ff48322a41516530932b8b828b8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; hardware_interface::CommandInterface &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#ae8527ff48322a41516530932b8b828b8">on_export_reference_interfaces</a> () override</td></tr>
+<tr class="separator:ae8527ff48322a41516530932b8b828b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a75e674b2dfe5afd3266e30626a123" id="r_a02a75e674b2dfe5afd3266e30626a123"><td class="memItemLeft" align="right" valign="top">std::vector&lt; hardware_interface::StateInterface &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a02a75e674b2dfe5afd3266e30626a123">on_export_state_interfaces</a> () override</td></tr>
+<tr class="separator:a02a75e674b2dfe5afd3266e30626a123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aee164c861a3f6f9f0bea73bc0e187288" id="r_aee164c861a3f6f9f0bea73bc0e187288"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#aee164c861a3f6f9f0bea73bc0e187288">position_offset_</a></td></tr>
@@ -184,10 +192,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a9e950f56be00b03a5221a427cb874f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70cc97aa1b3c9ab9f22ae5e79118268c" id="r_a70cc97aa1b3c9ab9f22ae5e79118268c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::reference_wrapper&lt; hardware_interface::LoanedCommandInterface &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a70cc97aa1b3c9ab9f22ae5e79118268c">command_interfaces_</a></td></tr>
 <tr class="separator:a70cc97aa1b3c9ab9f22ae5e79118268c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1966499205f519ff146550afeb37255b" id="r_a1966499205f519ff146550afeb37255b"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; geometry_msgs::msg::Twist &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a1966499205f519ff146550afeb37255b">desired_velocity_sub_</a></td></tr>
-<tr class="separator:a1966499205f519ff146550afeb37255b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54a06c6e06c60dce62faddc9c5cf67dd" id="r_a54a06c6e06c60dce62faddc9c5cf67dd"><td class="memItemLeft" align="right" valign="top">geometry_msgs::msg::Twist::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a54a06c6e06c60dce62faddc9c5cf67dd">latest_twist_</a></td></tr>
-<tr class="separator:a54a06c6e06c60dce62faddc9c5cf67dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ffcdbc6df60ff62575bd8c2db07b9a9" id="r_a4ffcdbc6df60ff62575bd8c2db07b9a9"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; geometry_msgs::msg::Twist &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a4ffcdbc6df60ff62575bd8c2db07b9a9">desired_wrench_sub_</a></td></tr>
+<tr class="separator:a4ffcdbc6df60ff62575bd8c2db07b9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80332c0a92eed051a1a8203e6018df5f" id="r_a80332c0a92eed051a1a8203e6018df5f"><td class="memItemLeft" align="right" valign="top">geometry_msgs::msg::Twist::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a80332c0a92eed051a1a8203e6018df5f">latest_wrench_</a></td></tr>
+<tr class="separator:a80332c0a92eed051a1a8203e6018df5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a757e6ebd52b154730effa1e62dd3e645" id="r_a757e6ebd52b154730effa1e62dd3e645"><td class="memItemLeft" align="right" valign="top">OSQPSettings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a757e6ebd52b154730effa1e62dd3e645">settings_</a></td></tr>
 <tr class="separator:a757e6ebd52b154730effa1e62dd3e645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a30589ed1bce2d4d1788d6ba911f653" id="r_a1a30589ed1bce2d4d1788d6ba911f653"><td class="memItemLeft" align="right" valign="top">OSQPWorkspace *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1AxisToCommandController.html#a1a30589ed1bce2d4d1788d6ba911f653">qp_workspace_</a> = nullptr</td></tr>
@@ -329,6 +337,56 @@ Private Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8527ff48322a41516530932b8b828b8" name="ae8527ff48322a41516530932b8b828b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8527ff48322a41516530932b8b828b8">&#9670;&#160;</a></span>on_export_reference_interfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; hardware_interface::CommandInterface &gt; rov_controllers::AxisToCommandController::on_export_reference_interfaces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02a75e674b2dfe5afd3266e30626a123" name="a02a75e674b2dfe5afd3266e30626a123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a75e674b2dfe5afd3266e30626a123">&#9670;&#160;</a></span>on_export_state_interfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; hardware_interface::StateInterface &gt; rov_controllers::AxisToCommandController::on_export_state_interfaces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -543,8 +601,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1966499205f519ff146550afeb37255b" name="a1966499205f519ff146550afeb37255b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1966499205f519ff146550afeb37255b">&#9670;&#160;</a></span>desired_velocity_sub_</h2>
+<a id="a4ffcdbc6df60ff62575bd8c2db07b9a9" name="a4ffcdbc6df60ff62575bd8c2db07b9a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ffcdbc6df60ff62575bd8c2db07b9a9">&#9670;&#160;</a></span>desired_wrench_sub_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -553,7 +611,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">rclcpp::Subscription&lt;geometry_msgs::msg::Twist&gt;::SharedPtr rov_controllers::AxisToCommandController::desired_velocity_sub_</td>
+          <td class="memname">rclcpp::Subscription&lt;geometry_msgs::msg::Twist&gt;::SharedPtr rov_controllers::AxisToCommandController::desired_wrench_sub_</td>
         </tr>
       </table>
   </td>
@@ -653,8 +711,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a54a06c6e06c60dce62faddc9c5cf67dd" name="a54a06c6e06c60dce62faddc9c5cf67dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54a06c6e06c60dce62faddc9c5cf67dd">&#9670;&#160;</a></span>latest_twist_</h2>
+<a id="a80332c0a92eed051a1a8203e6018df5f" name="a80332c0a92eed051a1a8203e6018df5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80332c0a92eed051a1a8203e6018df5f">&#9670;&#160;</a></span>latest_wrench_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -663,7 +721,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">geometry_msgs::msg::Twist::SharedPtr rov_controllers::AxisToCommandController::latest_twist_</td>
+          <td class="memname">geometry_msgs::msg::Twist::SharedPtr rov_controllers::AxisToCommandController::latest_wrench_</td>
         </tr>
       </table>
   </td>

@@ -1,7 +1,9 @@
 var hierarchy =
 [
     [ "controller_interface::ChainableControllerInterface", null, [
-      [ "rov_controllers::AxisToCommandController", "classrov__controllers_1_1AxisToCommandController.html", null ],
+      [ "rov_controllers::AxisToCommandController", "classrov__controllers_1_1AxisToCommandController.html", null ]
+    ] ],
+    [ "controller_interface::ControllerInterface", null, [
       [ "rov_controllers::PidController", "classrov__controllers_1_1PidController.html", null ]
     ] ],
     [ "rclcpp::Node", null, [
