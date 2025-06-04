@@ -16,6 +16,8 @@ add_subdirectory(external/osqp)
 # ========= BUILD THRUSTER HARDWARE INTERFACE =========
 add_library(${PROJECT_NAME} SHARED
   src/pwm_interface.cpp
+  src/libdriver_pca9685/interface/driver_pca9685_interface.c
+  src/libdriver_pca9685/src/driver_pca9685.c
 )
 
 target_include_directories(${PROJECT_NAME}
@@ -69,10 +71,8 @@ ament_target_dependencies(axis_to_command_controller
   Eigen3
 )
 
-pluginlib_export_plugin_description_file(
-  controller_interface
-  plugins/axis_to_command_controller_plugin.xml
-)
+pluginlib_export_plugin_description_file(hardware_interface plugins/pwm_interface_plugin.xml)
+pluginlib_export_plugin_description_file(controller_interface plugins/axis_to_command_controller_plugin.xml)
 
 # ========= INSTALL =========
 install(
@@ -85,6 +85,10 @@ install(
 
 install(DIRECTORY include/
   DESTINATION include/
+)
+
+install(DIRECTORY launch/
+  DESTINATION share/${PROJECT_NAME}/launch
 )
 
 ament_export_libraries(

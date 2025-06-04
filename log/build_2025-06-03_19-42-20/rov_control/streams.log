@@ -1,0 +1,52 @@
+[0.009s] Invoking command in '/home/artificer/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/rov_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/rov_control
+[0.054s] -- The C compiler identification is GNU 13.3.0
+[0.100s] -- The CXX compiler identification is GNU 13.3.0
+[0.114s] -- Detecting C compiler ABI info
+[0.190s] -- Detecting C compiler ABI info - done
+[0.197s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.197s] -- Detecting C compile features
+[0.197s] -- Detecting C compile features - done
+[0.207s] -- Detecting CXX compiler ABI info
+[0.291s] -- Detecting CXX compiler ABI info - done
+[0.298s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.298s] -- Detecting CXX compile features
+[0.299s] -- Detecting CXX compile features - done
+[0.302s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.421s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.486s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.515s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.553s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.565s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.579s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.595s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.662s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.665s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.737s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.756s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.777s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.843s] -- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[1.162s] -- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+[1.175s] -- Debug mode: 
+[1.175s] -- We are on a Linux system
+[1.175s] -- Embedded mode: OFF
+[1.175s] -- Algebra backend: builtin
+[1.175s] -- Solver profiling: ON
+[1.176s] -- Solver interrupt: ON
+[1.176s] -- Using double precision floating-point
+[1.176s] -- Using long integers
+[1.176s] -- Code generation: ON
+[1.176s] -- Derivative support: ON
+[1.181s] -- Fetching/configuring QDLDL solver
+[1.665s] --   Using double precision floats
+[1.666s] --   Long integers (64bit) are ON
+[1.667s] --   Static library build is OFF
+[1.668s] --   Shared library build is OFF
+[1.668s] --   Demo executable build is OFF
+[1.668s] --   Not building demo executable
+[1.668s] --   Unit testing suite build is OFF
+[1.668s] -- Build static library: ON
+[1.668s] -- Build shared library: ON
+[1.668s] -- Build demo executable: ON
+[1.746s] -- Configuring done (1.7s)
+[1.801s] -- Generating done (0.0s)
+[1.813s] -- Build files have been written to: /home/artificer/Desktop/ROV2026/build/rov_control

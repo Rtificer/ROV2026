@@ -1,18 +1,18 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="ROV2026">
-  <xacro:yaml filename="$(find-pkg-share rov_control)/config/control_parameters.yaml"/>
-  <xacro:property name="thruster_params" value="${controller_manager['ros__parameters']['axis_to_command_controller']}" />
   <link name="base_link"/>
 
   <xacro:macro name="thruster_control_joint" params="name">
-    <joint name="${name}_joint">
+    <joint name="${name}_joint" type="continuous">
       <command_interface name="effort"/>
       <state_interface name="velocity"/>
+      <axis xyz="0 0 1"/>
+      <limit effort="1" velocity="100"/>
     </joint>
   </xacro:macro>
 
-  <ros2_control name="PWMSystem" type="system">
+  <ros2_control name="DummyHardwareSystem" type="system">
     <hardware>
-      <plugin>rov_control/PWMInterface</plugin>
+      <plugin>dummy_hardware/DummyHardwareSystem</plugin>
       <param name="pwm_freq_hz">50</param>
       <param name="pwm_min_µs">1000</param>
       <param name="pwm_max_µs">2000</param>
@@ -28,14 +28,11 @@
     <xacro:thruster_control_joint name="back_right_top_thruster"/>
   </ros2_control>
 
-  <!-- Constants -->
-  <xacro:property name="pi" value="3.141592653589793"/>
-
   <!-- Thruster  Macro -->
   <xacro:macro name="thruster" params="name x y z pitch yaw">
     <!-- Link and Joint -->
     <link name="${name}"/>
-    <joint name="${name}_joint" type="fixed">
+    <joint name="${name}_joint" type="continuous">
       <parent link="base_link"/>
       <child link="${name}"/>
       <origin 
@@ -48,6 +45,8 @@
           float(yaw) * pi / 180.0
         }"
       />
+      <axis xyz="0 0 1"/>
+      <limit effort="1" velocity="100"/>
     </joint>
   </xacro:macro>
 
@@ -98,47 +97,47 @@
     <joint name="${name}_joint" type="fixed">
       <parent link="${parent_link}"/>
       <child link="${child_link}"/>
-      <origin xyz="0 ${float(leg_length_upper) * 0.01} 0}" rpy="0 0 0"/>
+      <origin xyz="0 ${float(leg_length_upper) * 0.01} 0" rpy="0 0 0"/>
     </joint>
   </xacro:macro>
 
 
   <!-- Thruster Properties -->
-  <xacro:property name="position_offset" value="${thruster_params['position_offset']}" />
-  <xacro:property name="rotation_offset" value="${thruster_params['rotation_offset']}" />
+  <xacro:property name="position_offset" value="16 30 16" />
+  <xacro:property name="rotation_offset" value="45 45" />
 
   <!-- Thrusters -->
   <xacro:thruster 
     name="front_left_bottom_thruster" 
     x="${-float(position_offset.split()[0])}" 
-    y="${position_offset.split()[1]}" 
+    y="${float(position_offset.split()[1])}" 
     z="${-float(position_offset.split()[2])}" 
     pitch="${-float(rotation_offset.split()[0])}" 
     yaw="${270 + float(rotation_offset.split()[1])}"
   />
   <xacro:thruster 
     name="front_right_bottom_thruster" 
-    x="${position_offset.split()[0]}" 
-    y="${position_offset.split()[1]}" 
+    x="${float(position_offset.split()[0])}" 
+    y="${float(position_offset.split()[1])}" 
     z="${-float(position_offset.split()[2])}" 
     pitch="${-float(rotation_offset.split()[0])}" 
-    yaw="${rotation_offset.split()[1]}"
+    yaw="${float(rotation_offset.split()[1])}"
   />
   <xacro:thruster 
     name="front_left_top_thruster" 
-    x="${-position_offset.split()[0]}" 
-    y="${position_offset.split()[1]}" 
-    z="${position_offset.split()[2]}" 
-    pitch="${rotation_offset.split()[0]}" 
+    x="${-float(position_offset.split()[0])}" 
+    y="${float(position_offset.split()[1])}" 
+    z="${float(position_offset.split()[2])}" 
+    pitch="${float(rotation_offset.split()[0])}" 
     yaw="${270 + float(rotation_offset.split()[1])}"
   />
   <xacro:thruster 
     name="front_right_top_thruster" 
-    x="${position_offset.split()[0]}" 
-    y="${position_offset.split()[1]}" 
-    z="${position_offset.split()[2]}" 
-    pitch="${rotation_offset.split()[0]}" 
-    yaw="${rotation_offset.split()[1]}"
+    x="${float(position_offset.split()[0])}" 
+    y="${float(position_offset.split()[1])}" 
+    z="${float(position_offset.split()[2])}" 
+    pitch="${float(rotation_offset.split()[0])}" 
+    yaw="${float(rotation_offset.split()[1])}"
   />
   <xacro:thruster 
     name="back_left_bottom_thruster" 
@@ -150,7 +149,7 @@
   />
   <xacro:thruster 
     name="back_right_bottom_thruster" 
-    x="${position_offset.split()[0]}" 
+    x="${float(position_offset.split()[0])}" 
     y="${-float(position_offset.split()[1])}" 
     z="${-float(position_offset.split()[2])}" 
     pitch="${-float(rotation_offset.split()[0])}" 
@@ -160,99 +159,106 @@
     name="back_left_top_thruster" 
     x="${-float(position_offset.split()[0])}" 
     y="${-float(position_offset.split()[1])}" 
-    z="${position_offset.split()[2]}" 
-    pitch="${rotation_offset.split()[0]}" 
+    z="${float(position_offset.split()[2])}" 
+    pitch="${float(rotation_offset.split()[0])}" 
     yaw="${180 + float(rotation_offset.split()[1])}"
   />
   <xacro:thruster 
     name="back_right_top_thruster" 
-    x="${position_offset.split()[0]}" 
+    x="${float(position_offset.split()[0])}" 
     y="${-float(position_offset.split()[1])}" 
-    z="${position_offset.split()[2]}" 
-    pitch="${rotation_offset.split()[0]}" 
+    z="${float(position_offset.split()[2])}" 
+    pitch="${float(rotation_offset.split()[0])}" 
     yaw="${90 + float(rotation_offset.split()[1])}"
   />
 
 
-<!-- Arm Properties -->
-<xacro:property name="legs_origin" value="0 0 0"/> <!-- x y z -->
-<xacro:property name="leg_position_offset" value="4"/>
-<xacro:property name="leg_length_lower" value="10"/>
-<xacro:property name="leg_length_upper" value="3"/>
-<xacro:property name="actuator_distance" value="20"/>
+  <!-- Arm Properties -->
+  <xacro:property name="legs_origin" value="0 0 0"/> <!-- x y z -->
+  <xacro:property name="leg_position_offset" value="4"/>
+  <xacro:property name="leg_length_lower" value="10"/>
+  <xacro:property name="leg_length_upper" value="3"/>
+  <xacro:property name="actuator_distance" value="20"/>
 
-<xacro:linear_actuator 
-  name="leg_actuator_1" 
-  parent_link="base_link" 
-  child_link="leg_shaft_lower_1" 
-  x="${float(legs_origin.split()[0]) - (float(leg_position_offset) / sqrt(2))}" 
-  y="${float(legs_origin.split()[1])}" 
-  z="${float(legs_origin.split()[2]) + (float(leg_position_offset) / sqrt(2))}" 
-/>
-<xacro:linear_actuator 
-  name="leg_actuator_2" 
-  parent_link="base_link" 
-  child_link="leg_shaft_lower_2" 
-  x="${float(legs_origin.split()[0])}" 
-  y="${float(legs_origin.split()[1])}" 
-  z="${float(legs_origin.split()[2]) - float(leg_position_offset)}" 
-/>
-<xacro:linear_actuator 
-  name="leg_actuator_3" 
-  parent_link="base_link" 
-  child_link="leg_shaft_lower_3" 
-  x="${float(legs_origin.split()[0]) - (float(leg_position_offset) / sqrt(2))}" 
-  y="${float(legs_origin.split()[1])}" 
-  z="${float(legs_origin.split()[2]) + (float(leg_position_offset) / sqrt(2))}" 
-/>
+  <xacro:linear_actuator 
+    name="leg_actuator_1" 
+    parent_link="base_link" 
+    child_link="leg_shaft_lower_1" 
+    x="${float(legs_origin.split()[0]) - (float(leg_position_offset) / sqrt(2))}" 
+    y="${float(legs_origin.split()[1])}" 
+    z="${float(legs_origin.split()[2]) + (float(leg_position_offset) / sqrt(2))}" 
+    lower="${float(actuator_distance) / -2}"
+    upper="${float(actuator_distance) / 2}"
+  />
+  <xacro:linear_actuator 
+    name="leg_actuator_2" 
+    parent_link="base_link" 
+    child_link="leg_shaft_lower_2" 
+    x="${float(legs_origin.split()[0])}" 
+    y="${float(legs_origin.split()[1])}" 
+    z="${float(legs_origin.split()[2]) - float(leg_position_offset)}" 
+    lower="${float(actuator_distance) / -2}"
+    upper="${float(actuator_distance) / 2}"
+  />
+  <xacro:linear_actuator 
+    name="leg_actuator_3" 
+    parent_link="base_link" 
+    child_link="leg_shaft_lower_3" 
+    x="${float(legs_origin.split()[0]) - (float(leg_position_offset) / sqrt(2))}" 
+    y="${float(legs_origin.split()[1])}" 
+    z="${float(legs_origin.split()[2]) + (float(leg_position_offset) / sqrt(2))}" 
+    lower="${float(actuator_distance) / -2}"
+    upper="${float(actuator_distance) / 2}"
+  />
 
-<link name="leg_shaft_lower_1"/>
-<link name="leg_shaft_lower_2"/>
-<link name="leg_shaft_lower_3"/>
+  <link name="leg_shaft_lower_1"/>
+  <link name="leg_shaft_lower_2"/>
+  <link name="leg_shaft_lower_3"/>
 
-<xacro:ball_joint
-  name="arm_joint_1"
-  parent_link="leg_shaft_lower_1"
-  child_link="leg_shaft_upper_1"
-  x="0"
-  y="${float(leg_length_lower) / 2}"
-  z="0"
-/>
-<xacro:ball_joint
-  name="arm_joint_2"
-  parent_link="leg_shaft_lower_2"
-  child_link="leg_shaft_upper_2"
-  x="0"
-  y="${float(leg_length_lower) / 2}"
-  z="0"
-/>
-<xacro:ball_joint
-  name="arm_joint_3"
-  parent_link="leg_shaft_lower_3"
-  child_link="leg_shaft_upper_3"
-  x="0"
-  y="${float(leg_length_lower) / 2}"
-  z="0"
-/>
+  <xacro:ball_joint
+    name="arm_joint_1"
+    parent_link="leg_shaft_lower_1"
+    child_link="leg_shaft_upper_1"
+    x="0"
+    y="${float(leg_length_lower) / 2}"
+    z="0"
+  />
+  <xacro:ball_joint
+    name="arm_joint_2"
+    parent_link="leg_shaft_lower_2"
+    child_link="leg_shaft_upper_2"
+    x="0"
+    y="${float(leg_length_lower) / 2}"
+    z="0"
+  />
+  <xacro:ball_joint
+    name="arm_joint_3"
+    parent_link="leg_shaft_lower_3"
+    child_link="leg_shaft_upper_3"
+    x="0"
+    y="${float(leg_length_lower) / 2}"
+    z="0"
+  />
 
-<link name="leg_shaft_upper_1"/>
-<link name="leg_shaft_upper_2"/>
-<link name="leg_shaft_upper_3"/>
+  <link name="leg_shaft_upper_1"/>
+  <link name="leg_shaft_upper_2"/>
+  <link name="leg_shaft_upper_3"/>
 
-<link name="platform"/>
+  <link name="platform"/>
 
-<xacro:platform_connection
-  name="leg_shaft_1_platform_connection"
-  parent_link="leg_shaft_upper_1"
-  child_link="platform"
-/>
-<xacro:platform_connection
-  name="leg_shaft_2_platform_connection"
-  parent_link="leg_shaft_upper_2"
-  child_link="platform"
-/>
-<xacro:platform_connection
-  name="leg_shaft_3_platform_connection"
-  parent_link="leg_shaft_upper_3"
-  child_link="platform"
-/>
+  <xacro:platform_connection
+    name="leg_shaft_1_platform_connection"
+    parent_link="leg_shaft_upper_1"
+    child_link="platform"
+  />
+  <xacro:platform_connection
+    name="leg_shaft_2_platform_connection"
+    parent_link="leg_shaft_upper_2"
+    child_link="platform"
+  />
+  <xacro:platform_connection
+    name="leg_shaft_3_platform_connection"
+    parent_link="leg_shaft_upper_3"
+    child_link="platform"
+  />
+</robot>

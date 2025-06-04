@@ -6,11 +6,11 @@ controller_manager:
         controller_manager:
           periodicity:
             mean_error:
-              error: 10
-              warn: 5
+              error: 10.0
+              warn: 5.0
             standard_devation:
-              error: 10
-              warn: 5
+              error: 10.0
+              warn: 5.0
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster

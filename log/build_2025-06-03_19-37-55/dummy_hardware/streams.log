@@ -1,0 +1,41 @@
+[0.011s] Invoking command in '/home/artificer/Desktop/ROV2026/build/dummy_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/dummy_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/dummy_hardware
+[0.058s] -- The C compiler identification is GNU 13.3.0
+[0.104s] -- The CXX compiler identification is GNU 13.3.0
+[0.118s] -- Detecting C compiler ABI info
+[0.194s] -- Detecting C compiler ABI info - done
+[0.201s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.201s] -- Detecting C compile features
+[0.202s] -- Detecting C compile features - done
+[0.210s] -- Detecting CXX compiler ABI info
+[0.298s] -- Detecting CXX compiler ABI info - done
+[0.305s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.305s] -- Detecting CXX compile features
+[0.306s] -- Detecting CXX compile features - done
+[0.308s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.446s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.511s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.542s] -- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[0.586s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.599s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.614s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.631s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.826s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.867s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.870s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.892s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.942s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.945s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.960s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.963s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.970s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.979s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.197s] [31mCMake Error at /opt/ros/jazzy/share/pluginlib/cmake/pluginlib_export_plugin_description_file.cmake:84 (message):
+[1.197s]   Given plugin description file
+[1.197s]   '/home/artificer/Desktop/ROV2026/src/dummy_hardware/dummy_hardware_plugin.xml'
+[1.197s]   does not exist
+[1.197s] Call Stack (most recent call first):
+[1.197s]   CMakeLists.txt:19 (pluginlib_export_plugin_description_file)
+[1.197s] 
+[1.197s] [0m
+[1.197s] -- Configuring incomplete, errors occurred!
+[1.206s] Invoked command in '/home/artificer/Desktop/ROV2026/build/dummy_hardware' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/dummy_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/dummy_hardware

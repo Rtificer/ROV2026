@@ -1,0 +1,16 @@
+[31mCMake Error at /opt/ros/jazzy/share/rosidl_typesupport_c/cmake/get_used_typesupports.cmake:35 (message):
+  No 'rosidl_typesupport_c' found
+Call Stack (most recent call first):
+  /opt/ros/jazzy/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:8 (get_used_typesupports)
+  /opt/ros/jazzy/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/action_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/action_msgs/cmake/action_msgsConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/control_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/control_msgs/cmake/control_msgsConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/hardware_interface/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/hardware_interface/cmake/hardware_interfaceConfig.cmake:41 (include)
+  CMakeLists.txt:10 (find_package)
+
+[0m

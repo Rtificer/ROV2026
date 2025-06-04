@@ -141,6 +141,7 @@ bool solve_thruster_qp(
 
 namespace rov_controllers
 {
+  AxisToCommandController::AxisToCommandController() = default;
 
   controller_interface::CallbackReturn AxisToCommandController::on_init()
   {
@@ -178,6 +179,12 @@ namespace rov_controllers
     qp_time_limit_ = get_node()->get_parameter("qp_time_limit").as_double();
     prim_res_threshold_ = get_node()->get_parameter("prim_res_threshold").as_double();
     dual_res_threshold_ = get_node()->get_parameter("dual_res_threshold").as_double();
+    desired_velocity_sub_ = get_node()->create_subscription<geometry_msgs::msg::Twist>(
+    "/desired_velocity", 10,
+    [this](const geometry_msgs::msg::Twist::SharedPtr msg) {
+      latest_twist_ = msg;
+    });
+    
 
     if (effort_weights_.size() != joint_names_.size())
     {
@@ -324,6 +331,12 @@ namespace rov_controllers
       M_minus.block<3, 1>(3, i) = tau_minus;
     }
     Eigen::VectorXd desired_wrench(6);
+    if (latest_twist_) {
+      desired_wrench << latest_twist_->linear.x, latest_twist_->linear.y, latest_twist_->linear.z,
+                        latest_twist_->angular.x, latest_twist_->angular.y, latest_twist_->angular.z;
+    } else {
+      desired_wrench.setZero();
+    }
     Eigen::VectorXd T_plus, T_minus;
 
     double prim_res = 0.0, dual_res = 0.0;
@@ -331,6 +344,16 @@ namespace rov_controllers
     if (solve_thruster_qp(M_plus, M_minus, W, Q, desired_wrench, T_plus, T_minus, qp_time_limit_, &prim_res, &dual_res))
     {
       Eigen::VectorXd T = T_plus + T_minus;
+
+      // Print T to the console
+      std::ostringstream oss;
+      oss << "Thruster output T: [";
+      for (int i = 0; i < T.size(); ++i) {
+        oss << T(i);
+        if (i < T.size() - 1) oss << ", ";
+      }
+      oss << "]";
+      RCLCPP_INFO(get_node()->get_logger(), "%s", oss.str().c_str());
 
       double max_abs = T.cwiseAbs().maxCoeff();
       if (max_abs > 1.0)

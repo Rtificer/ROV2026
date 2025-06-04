@@ -1,0 +1,83 @@
+[0.000000] (-) TimerEvent: {}
+[0.000179] (-) JobUnselected: {'identifier': 'description'}
+[0.000348] (-) JobUnselected: {'identifier': 'dummy_hardware'}
+[0.000441] (rov_control) JobQueued: {'identifier': 'rov_control', 'dependencies': OrderedDict()}
+[0.000459] (rov_control) JobStarted: {'identifier': 'rov_control'}
+[0.006464] (rov_control) JobProgress: {'identifier': 'rov_control', 'progress': 'cmake'}
+[0.006797] (rov_control) Command: {'cmd': ['/usr/bin/cmake', '/home/artificer/Desktop/ROV2026/src/rov_control', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/rov_control'], 'cwd': '/home/artificer/Desktop/ROV2026/build/rov_control', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US', 'USER': 'artificer', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/artificer/Desktop/ROV2026/install/rov_control/lib:/home/artificer/Desktop/ROV2026/install/dummy_hardware/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/artificer', 'CHROME_DESKTOP': 'code.desktop', 'TERM_PROGRAM_VERSION': '1.100.3', 'DESKTOP_SESSION': 'cinnamon', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/artificer/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2126', 'INSIDE_NEMO_PYTHON': '', 'COLCON_PREFIX_PATH': '/home/artificer/Desktop/ROV2026/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'artificer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c2', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/artificer/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/artificer/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/desktop-linux:@/tmp/.ICE-unix/1494,unix/desktop-linux:/tmp/.ICE-unix/1494', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/artificer/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-9d6b24c8b015b31b.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/artificer/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-2e6a973c97.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/artificer', 'AMENT_PREFIX_PATH': '/home/artificer/Desktop/ROV2026/install/rov_control:/home/artificer/Desktop/ROV2026/install/dummy_hardware:/home/artificer/Desktop/ROV2026/install/description:/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'cinnamon', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'XDG_VTNR': '7', 'PWD': '/home/artificer/Desktop/ROV2026/build/rov_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/artificer/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/artificer/Desktop/ROV2026/install/rov_control:/home/artificer/Desktop/ROV2026/install/dummy_hardware:/home/artificer/Desktop/ROV2026/install/description:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.054370] (rov_control) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.099661] (rov_control) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.099813] (-) TimerEvent: {}
+[0.113242] (rov_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.187330] (rov_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.194627] (rov_control) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.194834] (rov_control) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.195139] (rov_control) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.199880] (-) TimerEvent: {}
+[0.202483] (rov_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.286280] (rov_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.293850] (rov_control) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.294075] (rov_control) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.294455] (rov_control) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.297162] (rov_control) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.299941] (-) TimerEvent: {}
+[0.400096] (-) TimerEvent: {}
+[0.418955] (rov_control) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.479876] (rov_control) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.500186] (-) TimerEvent: {}
+[0.512402] (rov_control) StdoutLine: {'line': b'-- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.552182] (rov_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.565102] (rov_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.579566] (rov_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.595851] (rov_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.600248] (-) TimerEvent: {}
+[0.665660] (rov_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.668530] (rov_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.700323] (-) TimerEvent: {}
+[0.738716] (rov_control) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[0.756677] (rov_control) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[0.777072] (rov_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.800367] (-) TimerEvent: {}
+[0.845682] (rov_control) StdoutLine: {'line': b'-- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)\n'}
+[0.900450] (-) TimerEvent: {}
+[1.000647] (-) TimerEvent: {}
+[1.100851] (-) TimerEvent: {}
+[1.168100] (rov_control) StdoutLine: {'line': b'-- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)\n'}
+[1.181128] (rov_control) StdoutLine: {'line': b'-- Debug mode: \n'}
+[1.181233] (rov_control) StdoutLine: {'line': b'-- We are on a Linux system\n'}
+[1.181430] (rov_control) StdoutLine: {'line': b'-- Embedded mode: OFF\n'}
+[1.181513] (rov_control) StdoutLine: {'line': b'-- Algebra backend: builtin\n'}
+[1.181571] (rov_control) StdoutLine: {'line': b'-- Solver profiling: ON\n'}
+[1.181627] (rov_control) StdoutLine: {'line': b'-- Solver interrupt: ON\n'}
+[1.181680] (rov_control) StdoutLine: {'line': b'-- Using double precision floating-point\n'}
+[1.181732] (rov_control) StdoutLine: {'line': b'-- Using long integers\n'}
+[1.181799] (rov_control) StdoutLine: {'line': b'-- Code generation: ON\n'}
+[1.181852] (rov_control) StdoutLine: {'line': b'-- Derivative support: ON\n'}
+[1.186877] (rov_control) StdoutLine: {'line': b'-- Fetching/configuring QDLDL solver\n'}
+[1.200913] (-) TimerEvent: {}
+[1.301090] (-) TimerEvent: {}
+[1.401297] (-) TimerEvent: {}
+[1.501547] (-) TimerEvent: {}
+[1.601759] (-) TimerEvent: {}
+[1.640524] (rov_control) StdoutLine: {'line': b'--   Using double precision floats\n'}
+[1.640684] (rov_control) StdoutLine: {'line': b'--   Long integers (64bit) are ON\n'}
+[1.642046] (rov_control) StdoutLine: {'line': b'--   Static library build is OFF\n'}
+[1.642192] (rov_control) StdoutLine: {'line': b'--   Shared library build is OFF\n'}
+[1.642303] (rov_control) StdoutLine: {'line': b'--   Demo executable build is OFF\n'}
+[1.642380] (rov_control) StdoutLine: {'line': b'--   Not building demo executable\n'}
+[1.642438] (rov_control) StdoutLine: {'line': b'--   Unit testing suite build is OFF\n'}
+[1.642933] (rov_control) StdoutLine: {'line': b'-- Build static library: ON\n'}
+[1.643054] (rov_control) StdoutLine: {'line': b'-- Build shared library: ON\n'}
+[1.643137] (rov_control) StdoutLine: {'line': b'-- Build demo executable: ON\n'}
+[1.648284] (rov_control) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/jazzy/share/pluginlib/cmake/pluginlib_export_plugin_description_file.cmake:84 (message):\n'}
+[1.648413] (rov_control) StderrLine: {'line': b'  Given plugin description file\n'}
+[1.648476] (rov_control) StderrLine: {'line': b"  '/home/artificer/Desktop/ROV2026/src/rov_control/plugins/axis_to_command_controller.xml'\n"}
+[1.648530] (rov_control) StderrLine: {'line': b'  does not exist\n'}
+[1.648580] (rov_control) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.648632] (rov_control) StderrLine: {'line': b'  CMakeLists.txt:75 (pluginlib_export_plugin_description_file)\n'}
+[1.648686] (rov_control) StderrLine: {'line': b'\n'}
+[1.648739] (rov_control) StderrLine: {'line': b'\x1b[0m\n'}
+[1.648811] (rov_control) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.661249] (rov_control) CommandEnded: {'returncode': 1}
+[1.670710] (rov_control) JobEnded: {'identifier': 'rov_control', 'rc': 1}
+[1.680998] (-) EventReactorShutdown: {}

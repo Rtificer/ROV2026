@@ -1,0 +1,7 @@
+<library path="dummy_hardware">
+  <class name="dummy_hardware/DummyHardwareSystem"
+         type="DummyHardwareSystem"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>Minimal dummy hardware system for testing.</description>
+  </class>
+</library>
