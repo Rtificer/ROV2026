@@ -1,1 +1,1 @@
-/home/student/Desktop/ROV2026/build/dummy_hardware/ament_cmake_core/dummy_hardwareConfig-version.cmake
+/home/artificer/Desktop/ROV2026/build/dummy_hardware/ament_cmake_core/dummy_hardwareConfig-version.cmake

@@ -15,13 +15,20 @@ def generate_launch_description():
         'config'
     ])
     
-    
 
     return LaunchDescription([
         Node(
             package='controller_manager',
             executable='ros2_control_node',
-            parameters=['/home/student/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml'],
+            parameters=[
+                '/home/student/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml'
+            ],
+            output='screen'
+        ),
+        Node(
+            package='controller_manager',
+            executable='spawner',
+            arguments=['thruster_pid_controller'],
             output='screen'
         ),
         Node(

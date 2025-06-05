@@ -30,7 +30,7 @@ def generate_launch_description():
         Node(
             package='controller_manager',
             executable='ros2_control_node',
-            parameters=[config_file],
+            parameters=["/home/artificer/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml"],
             output='screen'
         ),
         Node(

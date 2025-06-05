@@ -1,7 +1,11 @@
 controller_manager:
   ros__parameters:
     update_rate: 100 # Hz
-    foo: bar
+    controller_chains:
+      - top_controller: thruster_pid_controller
+        chain:
+          - thruster_pid_controller
+          - axis_to_command_controller
     diagnostics:
       threshold:
         controller_manager:
