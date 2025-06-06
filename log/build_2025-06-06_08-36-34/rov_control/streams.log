@@ -1,0 +1,178 @@
+[0.015s] Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/rov_control -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/rov_control
+[0.043s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.271s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.308s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.358s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.373s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.397s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.421s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.525s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.528s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.609s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.697s] -- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[1.006s] -- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+[1.020s] -- Found control_toolbox: 4.3.0 (/opt/ros/jazzy/share/control_toolbox/cmake)
+[1.114s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[1.116s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.116s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.226s] -- Debug mode: 
+[1.226s] -- We are on a Linux system
+[1.226s] -- Embedded mode: OFF
+[1.226s] -- Algebra backend: builtin
+[1.226s] -- Solver profiling: ON
+[1.227s] -- Solver interrupt: ON
+[1.227s] -- Using double precision floating-point
+[1.227s] -- Using long integers
+[1.227s] -- Code generation: ON
+[1.227s] -- Derivative support: ON
+[1.237s] -- Fetching/configuring QDLDL solver
+[1.803s] --   Using double precision floats
+[1.803s] --   Long integers (64bit) are ON
+[1.805s] --   Static library build is OFF
+[1.805s] --   Shared library build is OFF
+[1.805s] --   Demo executable build is OFF
+[1.805s] --   Not building demo executable
+[1.805s] --   Unit testing suite build is OFF
+[1.806s] -- Build static library: ON
+[1.806s] -- Build shared library: ON
+[1.806s] -- Build demo executable: ON
+[1.898s] -- Configuring done (1.9s)
+[1.991s] -- Generating done (0.1s)
+[2.006s] -- Build files have been written to: /home/student/Desktop/ROV2026/build/rov_control
+[2.018s] Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/student/Desktop/ROV2026/src/rov_control -DCMAKE_INSTALL_PREFIX=/home/student/Desktop/ROV2026/install/rov_control
+[2.019s] Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6
+[2.070s] [  2%] Built target copy_codegen_makefile
+[2.070s] [  2%] [32mBuilding CXX object CMakeFiles/thruster_pid_controller.dir/src/thruster_pid_controller.cpp.o[0m
+[2.072s] [ 18%] Built target copy_codegen_linalg
+[2.077s] [ 19%] Built target qdldlobject
+[2.082s] [ 21%] Built target gamepad_parser_node
+[2.083s] [ 22%] [32mBuilding CXX object CMakeFiles/rov_control.dir/src/pwm_interface.cpp.o[0m
+[2.088s] [ 28%] Built target copy_codegen_srcs
+[2.089s] [ 29%] [32mBuilding C object CMakeFiles/rov_control.dir/src/libdriver_pca9685/interface/driver_pca9685_interface.c.o[0m
+[2.092s] [ 47%] Built target copy_codegen_incs
+[2.097s] [ 48%] [32mBuilding C object CMakeFiles/rov_control.dir/src/libdriver_pca9685/src/driver_pca9685.c.o[0m
+[2.114s] [ 48%] Built target copy_codegen_files
+[2.123s] [ 78%] Built target OSQPLIB
+[2.147s] [ 80%] Built target osqpstatic
+[2.151s] [ 82%] Built target osqp
+[2.181s] [ 84%] Built target osqp_simple_demo
+[2.194s] [ 85%] [32mBuilding CXX object CMakeFiles/axis_to_command_controller.dir/src/axis_to_command_controller.cpp.o[0m
+[2.230s] [ 94%] Built target osqp_demo
+[2.262s] [ 96%] Built target osqp_codegen_demo
+[6.581s] [ 97%] [32m[1mLinking CXX shared library librov_control.so[0m
+[6.900s] [ 97%] Built target rov_control
+[9.911s] [ 98%] [32m[1mLinking CXX shared library libthruster_pid_controller.so[0m
+[10.322s] [ 98%] Built target thruster_pid_controller
+[12.931s] [100%] [32m[1mLinking CXX shared library libaxis_to_command_controller.so[0m
+[13.333s] [100%] Built target axis_to_command_controller
+[13.344s] Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/student/Desktop/ROV2026/build/rov_control -- -j6 -l6
+[13.345s] Invoking command in '/home/student/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/rov_control
+[13.351s] -- Install configuration: ""
+[13.352s] -- Execute custom install script
+[13.352s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl.h
+[13.360s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_types.h
+[13.367s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_version.h
+[13.374s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp.h
+[13.382s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_constants.h
+[13.389s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_functions.h
+[13.396s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_types.h
+[13.403s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_export_define.h
+[13.410s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_configure.h
+[13.417s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config.cmake
+[13.417s] -- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config-version.cmake
+[13.417s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/thruster_pid_controller_plugin.xml
+[13.424s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/pwm_interface_plugin.xml
+[13.432s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/axis_to_command_controller_plugin.xml
+[13.439s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/axis_to_command_controller.hpp
+[13.446s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/gamepad_parser_node.hpp
+[13.453s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685.h
+[13.460s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685_interface.h
+[13.468s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/pwm_interface.hpp
+[13.474s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/thruster_pid_controller.hpp
+[13.482s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch.py
+[13.489s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch_test.py
+[13.496s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/config/control_parameters.yaml
+[13.503s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/config/gamepad_parser_parameters.yaml
+[13.510s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/config/joy_parameters.yaml
+[13.517s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.sh
+[13.524s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.dsv
+[13.532s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/package_run_dependencies/rov_control
+[13.539s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/parent_prefix_path/rov_control
+[13.546s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.sh
+[13.553s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.dsv
+[13.560s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.sh
+[13.567s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.dsv
+[13.575s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.bash
+[13.582s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.sh
+[13.589s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.zsh
+[13.597s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.dsv
+[13.604s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv
+[13.611s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/packages/rov_control
+[13.618s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rov_control
+[13.625s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/rov_control
+[13.632s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_libraries-extras.cmake
+[13.640s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_targets-extras.cmake
+[13.647s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig.cmake
+[13.654s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig-version.cmake
+[13.661s] -- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.xml
+[13.669s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/libosqpstatic.a
+[13.669s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets.cmake
+[13.669s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets-noconfig.cmake
+[13.670s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/libosqp.so
+[13.670s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets.cmake
+[13.670s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets-noconfig.cmake
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/scaling.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/util.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/vector.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/osqp_api.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl_interface.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/auxil.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/kkt.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_utils.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/error.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/matrix.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/algebra_libs.c
+[13.671s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_math.c
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_functions.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_types.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_constants.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_export_define.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/auxil.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/timing.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_interface.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/version.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/printing.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/scaling.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_utils.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/error.h
+[13.672s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/types.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_math.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_types.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/profilers.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_matrix.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_version.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/lin_alg.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_impl.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/glob_opts.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/util.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_vector.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/kkt.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl.h
+[13.673s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/Makefile
+[13.673s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/libthruster_pid_controller.so
+[13.675s] -- Set non-toolchain portion of runtime path of "/home/student/Desktop/ROV2026/install/rov_control/lib/libthruster_pid_controller.so" to ""
+[13.676s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/librov_control.so
+[13.677s] -- Set non-toolchain portion of runtime path of "/home/student/Desktop/ROV2026/install/rov_control/lib/librov_control.so" to ""
+[13.678s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so
+[13.683s] -- Set non-toolchain portion of runtime path of "/home/student/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so" to ""
+[13.684s] -- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/rov_control/gamepad_parser_node
+[13.684s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport.cmake
+[13.684s] -- Installing: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport-noconfig.cmake
+[13.686s] Invoked command in '/home/student/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/student/Desktop/ROV2026/build/rov_control

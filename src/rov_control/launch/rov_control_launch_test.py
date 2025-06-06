@@ -2,6 +2,8 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.substitutions import Command, PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
+import smbus
+
 
 def generate_launch_description():
     urdf_path = PathJoinSubstitution([
@@ -15,13 +17,12 @@ def generate_launch_description():
         'config'
     ])
     
-
     return LaunchDescription([
         Node(
             package='controller_manager',
             executable='ros2_control_node',
             parameters=[
-                '/home/artificer/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml'
+                '/home/student/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml'
             ],
             output='screen'
         ),
@@ -41,7 +42,7 @@ def generate_launch_description():
             package='rov_control',
             executable='gamepad_parser_node',
             parameters=[
-                PathJoinSubstitution([param_path, "gamepad_parameters.yaml"])
+                '/home/student/Desktop/ROV2026/src/rov_control/config/gamepad_parser_parameters.yaml'
             ],
             output='screen'
         ),
@@ -49,7 +50,7 @@ def generate_launch_description():
             package='joy',
             executable='joy_node',
             parameters=[
-                PathJoinSubstitution([param_path, "joy_parameters.yaml"])
+                '/home/student/Desktop/ROV2026/src/rov_control/config/joy_parameters.yaml'
             ],
             output='screen'
         ),

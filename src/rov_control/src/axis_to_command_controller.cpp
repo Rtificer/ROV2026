@@ -199,9 +199,9 @@ namespace rov_controllers
     qp_time_limit_ = get_node()->get_parameter("qp_time_limit").as_double();
     prim_res_threshold_ = get_node()->get_parameter("prim_res_threshold").as_double();
     dual_res_threshold_ = get_node()->get_parameter("dual_res_threshold").as_double();
-    desired_wrench_sub_ = get_node()->create_subscription<geometry_msgs::msg::Twist>(
+    desired_wrench_sub_ = get_node()->create_subscription<geometry_msgs::msg::Wrench>(
         "/desired_wrench", 10,
-        [this](const geometry_msgs::msg::Twist::SharedPtr msg)
+        [this](const geometry_msgs::msg::Wrench::SharedPtr msg)
         {
           latest_wrench_ = msg;
         });
@@ -354,12 +354,12 @@ namespace rov_controllers
     Eigen::VectorXd desired_wrench(6);
     if (latest_wrench_)
     {
-      desired_wrench << latest_wrench_->linear.x, 
-                        latest_wrench_->linear.y, 
-                        latest_wrench_->linear.z,
-                        latest_wrench_->angular.x, 
-                        latest_wrench_->angular.y, 
-                        latest_wrench_->angular.z;
+      desired_wrench << latest_wrench_->force.x, 
+                        latest_wrench_->force.y, 
+                        latest_wrench_->force.z,
+                        latest_wrench_->torque.x, 
+                        latest_wrench_->torque.y, 
+                        latest_wrench_->torque.z;
     }
     else
     {

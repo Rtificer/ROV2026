@@ -1,0 +1,208 @@
+[0.000000] (-) TimerEvent: {}
+[0.000323] (-) JobUnselected: {'identifier': 'description'}
+[0.000382] (-) JobUnselected: {'identifier': 'dummy_hardware'}
+[0.000451] (rov_control) JobQueued: {'identifier': 'rov_control', 'dependencies': OrderedDict()}
+[0.000491] (rov_control) JobStarted: {'identifier': 'rov_control'}
+[0.006468] (rov_control) JobProgress: {'identifier': 'rov_control', 'progress': 'cmake'}
+[0.007142] (rov_control) JobProgress: {'identifier': 'rov_control', 'progress': 'build'}
+[0.007862] (rov_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/student/Desktop/ROV2026/build/rov_control', '--', '-j6', '-l6'], 'cwd': '/home/student/Desktop/ROV2026/build/rov_control', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US', 'USER': 'student', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/student/Desktop/ROV2026/install/rov_control/lib:/home/student/Desktop/ROV2026/install/dummy_hardware/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/student', 'CHROME_DESKTOP': 'code.desktop', 'TERM_PROGRAM_VERSION': '1.100.3', 'DESKTOP_SESSION': 'cinnamon', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/student/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '1913', 'INSIDE_NEMO_PYTHON': '', '_colcon_cd_root': '/opt/ros/jazzy/', 'COLCON_PREFIX_PATH': '/home/student/Desktop/ROV2026/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'student', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c2', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/student/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/student/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/16-linux:@/tmp/.ICE-unix/1220,unix/16-linux:/tmp/.ICE-unix/1220', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/student/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-24ef3565e38d51b0.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/student/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-fcdc5fc64d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/student', 'AMENT_PREFIX_PATH': '/home/student/Desktop/ROV2026/install/rov_control:/home/student/Desktop/ROV2026/install/dummy_hardware:/home/student/Desktop/ROV2026/install/description:/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'cinnamon', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'XDG_VTNR': '7', 'PWD': '/home/student/Desktop/ROV2026/build/rov_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/student/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/student/Desktop/ROV2026/install/rov_control:/home/student/Desktop/ROV2026/install/dummy_hardware:/home/student/Desktop/ROV2026/install/description:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.061248] (rov_control) StdoutLine: {'line': b'[  4%] Built target qdldlobject\n'}
+[0.061988] (rov_control) StdoutLine: {'line': b'[  6%] Built target copy_codegen_makefile\n'}
+[0.062096] (rov_control) StdoutLine: {'line': b'[ 18%] Built target copy_codegen_linalg\n'}
+[0.067025] (rov_control) StdoutLine: {'line': b'[ 20%] Built target thruster_pid_controller\n'}
+[0.068627] (rov_control) StdoutLine: {'line': b'[ 25%] Built target rov_control\n'}
+[0.075773] (rov_control) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/gamepad_parser_node.dir/src/gamepad_parser_node.cpp.o\x1b[0m\n'}
+[0.078707] (rov_control) StdoutLine: {'line': b'[ 31%] Built target copy_codegen_srcs\n'}
+[0.080327] (rov_control) StdoutLine: {'line': b'[ 50%] Built target copy_codegen_incs\n'}
+[0.087392] (rov_control) StdoutLine: {'line': b'[ 79%] Built target OSQPLIB\n'}
+[0.096479] (rov_control) StdoutLine: {'line': b'[ 79%] Built target copy_codegen_files\n'}
+[0.099639] (-) TimerEvent: {}
+[0.106677] (rov_control) StdoutLine: {'line': b'[ 83%] Built target osqpstatic\n'}
+[0.107081] (rov_control) StdoutLine: {'line': b'[ 83%] Built target osqp\n'}
+[0.128684] (rov_control) StdoutLine: {'line': b'[ 90%] Built target osqp_codegen_demo\n'}
+[0.128885] (rov_control) StdoutLine: {'line': b'[ 90%] Built target osqp_simple_demo\n'}
+[0.128956] (rov_control) StdoutLine: {'line': b'[ 96%] Built target osqp_demo\n'}
+[0.135261] (rov_control) StdoutLine: {'line': b'[ 98%] Built target axis_to_command_controller\n'}
+[0.199723] (-) TimerEvent: {}
+[0.299940] (-) TimerEvent: {}
+[0.400159] (-) TimerEvent: {}
+[0.500384] (-) TimerEvent: {}
+[0.600593] (-) TimerEvent: {}
+[0.700815] (-) TimerEvent: {}
+[0.801028] (-) TimerEvent: {}
+[0.901231] (-) TimerEvent: {}
+[1.001442] (-) TimerEvent: {}
+[1.101653] (-) TimerEvent: {}
+[1.201861] (-) TimerEvent: {}
+[1.302069] (-) TimerEvent: {}
+[1.402278] (-) TimerEvent: {}
+[1.502492] (-) TimerEvent: {}
+[1.602716] (-) TimerEvent: {}
+[1.702936] (-) TimerEvent: {}
+[1.803158] (-) TimerEvent: {}
+[1.903353] (-) TimerEvent: {}
+[2.003579] (-) TimerEvent: {}
+[2.103801] (-) TimerEvent: {}
+[2.204028] (-) TimerEvent: {}
+[2.304300] (-) TimerEvent: {}
+[2.404522] (-) TimerEvent: {}
+[2.504745] (-) TimerEvent: {}
+[2.604970] (-) TimerEvent: {}
+[2.705172] (-) TimerEvent: {}
+[2.805391] (-) TimerEvent: {}
+[2.905619] (-) TimerEvent: {}
+[3.005850] (-) TimerEvent: {}
+[3.106083] (-) TimerEvent: {}
+[3.206320] (-) TimerEvent: {}
+[3.306550] (-) TimerEvent: {}
+[3.406778] (-) TimerEvent: {}
+[3.507001] (-) TimerEvent: {}
+[3.607264] (-) TimerEvent: {}
+[3.707494] (-) TimerEvent: {}
+[3.807720] (-) TimerEvent: {}
+[3.907942] (-) TimerEvent: {}
+[4.008187] (-) TimerEvent: {}
+[4.108420] (-) TimerEvent: {}
+[4.208640] (-) TimerEvent: {}
+[4.308859] (-) TimerEvent: {}
+[4.409074] (-) TimerEvent: {}
+[4.509275] (-) TimerEvent: {}
+[4.609487] (-) TimerEvent: {}
+[4.709704] (-) TimerEvent: {}
+[4.809920] (-) TimerEvent: {}
+[4.910139] (-) TimerEvent: {}
+[5.010330] (-) TimerEvent: {}
+[5.110549] (-) TimerEvent: {}
+[5.210763] (-) TimerEvent: {}
+[5.310985] (-) TimerEvent: {}
+[5.411205] (-) TimerEvent: {}
+[5.511418] (-) TimerEvent: {}
+[5.611635] (-) TimerEvent: {}
+[5.711830] (-) TimerEvent: {}
+[5.812072] (-) TimerEvent: {}
+[5.912271] (-) TimerEvent: {}
+[6.012489] (-) TimerEvent: {}
+[6.112708] (-) TimerEvent: {}
+[6.212954] (-) TimerEvent: {}
+[6.313185] (-) TimerEvent: {}
+[6.413408] (-) TimerEvent: {}
+[6.513636] (-) TimerEvent: {}
+[6.613864] (-) TimerEvent: {}
+[6.714092] (-) TimerEvent: {}
+[6.751083] (rov_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable gamepad_parser_node\x1b[0m\n'}
+[6.814173] (-) TimerEvent: {}
+[6.914407] (-) TimerEvent: {}
+[7.010822] (rov_control) StdoutLine: {'line': b'[100%] Built target gamepad_parser_node\n'}
+[7.014494] (-) TimerEvent: {}
+[7.021581] (rov_control) CommandEnded: {'returncode': 0}
+[7.022085] (rov_control) JobProgress: {'identifier': 'rov_control', 'progress': 'install'}
+[7.029906] (rov_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/student/Desktop/ROV2026/build/rov_control'], 'cwd': '/home/student/Desktop/ROV2026/build/rov_control', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US', 'USER': 'student', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/student/Desktop/ROV2026/install/rov_control/lib:/home/student/Desktop/ROV2026/install/dummy_hardware/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/student', 'CHROME_DESKTOP': 'code.desktop', 'TERM_PROGRAM_VERSION': '1.100.3', 'DESKTOP_SESSION': 'cinnamon', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/student/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '1913', 'INSIDE_NEMO_PYTHON': '', '_colcon_cd_root': '/opt/ros/jazzy/', 'COLCON_PREFIX_PATH': '/home/student/Desktop/ROV2026/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'student', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c2', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/student/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/student/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/16-linux:@/tmp/.ICE-unix/1220,unix/16-linux:/tmp/.ICE-unix/1220', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/student/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-24ef3565e38d51b0.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/student/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-fcdc5fc64d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/student', 'AMENT_PREFIX_PATH': '/home/student/Desktop/ROV2026/install/rov_control:/home/student/Desktop/ROV2026/install/dummy_hardware:/home/student/Desktop/ROV2026/install/description:/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'cinnamon', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'XDG_VTNR': '7', 'PWD': '/home/student/Desktop/ROV2026/build/rov_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/student/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/student/Desktop/ROV2026/install/rov_control:/home/student/Desktop/ROV2026/install/dummy_hardware:/home/student/Desktop/ROV2026/install/description:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[7.036545] (rov_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.036935] (rov_control) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[7.037056] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl.h\n'}
+[7.037254] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_types.h\n'}
+[7.037411] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_version.h\n'}
+[7.037556] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp.h\n'}
+[7.037652] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_constants.h\n'}
+[7.037725] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_functions.h\n'}
+[7.037804] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_types.h\n'}
+[7.037882] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_export_define.h\n'}
+[7.037957] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include/osqp/osqp_configure.h\n'}
+[7.038096] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config.cmake\n'}
+[7.038231] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config-version.cmake\n'}
+[7.038383] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/thruster_pid_controller_plugin.xml\n'}
+[7.038546] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/pwm_interface_plugin.xml\n'}
+[7.038699] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/axis_to_command_controller_plugin.xml\n'}
+[7.039031] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/axis_to_command_controller.hpp\n'}
+[7.039132] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/gamepad_parser_node.hpp\n'}
+[7.039381] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685.h\n'}
+[7.039522] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685_interface.h\n'}
+[7.039876] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/pwm_interface.hpp\n'}
+[7.039945] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/include//rov_control/thruster_pid_controller.hpp\n'}
+[7.040016] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch.py\n'}
+[7.040079] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch_test.py\n'}
+[7.040215] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/config/control_parameters.yaml\n'}
+[7.040375] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/config/gamepad_parser_parameters.yaml\n'}
+[7.040446] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/config/joy_parameters.yaml\n'}
+[7.040552] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.sh\n'}
+[7.040660] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.dsv\n'}
+[7.040836] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/package_run_dependencies/rov_control\n'}
+[7.040982] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/parent_prefix_path/rov_control\n'}
+[7.041110] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.sh\n'}
+[7.041302] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.dsv\n'}
+[7.041444] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.sh\n'}
+[7.041565] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.dsv\n'}
+[7.041695] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.bash\n'}
+[7.041801] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.sh\n'}
+[7.041909] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.zsh\n'}
+[7.042039] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.dsv\n'}
+[7.042134] (rov_control) StdoutLine: {'line': b'-- Symlinking: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv\n'}
+[7.049966] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/packages/rov_control\n'}
+[7.050122] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rov_control\n'}
+[7.050279] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/rov_control\n'}
+[7.050430] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.050572] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.050688] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig.cmake\n'}
+[7.050776] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig-version.cmake\n'}
+[7.050883] (rov_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/package.xml\n'}
+[7.051565] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/libosqpstatic.a\n'}
+[7.051665] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets.cmake\n'}
+[7.051744] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets-noconfig.cmake\n'}
+[7.051818] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/libosqp.so\n'}
+[7.051914] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets.cmake\n'}
+[7.051986] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets-noconfig.cmake\n'}
+[7.052078] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files\n'}
+[7.052183] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src\n'}
+[7.052263] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/scaling.c\n'}
+[7.052325] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/util.c\n'}
+[7.052386] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl.c\n'}
+[7.052446] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/vector.c\n'}
+[7.052506] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/osqp_api.c\n'}
+[7.052566] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl_interface.c\n'}
+[7.052626] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/auxil.c\n'}
+[7.052687] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/kkt.c\n'}
+[7.052747] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_utils.c\n'}
+[7.052807] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/error.c\n'}
+[7.052868] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/matrix.c\n'}
+[7.053000] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/algebra_libs.c\n'}
+[7.053058] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_math.c\n'}
+[7.053124] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc\n'}
+[7.053186] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public\n'}
+[7.053244] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_functions.h\n'}
+[7.053312] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_types.h\n'}
+[7.053374] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp.h\n'}
+[7.053431] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_constants.h\n'}
+[7.053487] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_export_define.h\n'}
+[7.053543] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private\n'}
+[7.053602] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/auxil.h\n'}
+[7.053662] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/timing.h\n'}
+[7.053722] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_interface.h\n'}
+[7.053801] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/version.h\n'}
+[7.053875] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/printing.h\n'}
+[7.053937] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/scaling.h\n'}
+[7.053998] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_utils.h\n'}
+[7.054059] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/error.h\n'}
+[7.054135] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/types.h\n'}
+[7.054198] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_math.h\n'}
+[7.054255] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_types.h\n'}
+[7.054311] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/profilers.h\n'}
+[7.054368] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_matrix.h\n'}
+[7.054429] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_version.h\n'}
+[7.054487] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/lin_alg.h\n'}
+[7.054544] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_impl.h\n'}
+[7.054600] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/glob_opts.h\n'}
+[7.054655] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/util.h\n'}
+[7.054710] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_vector.h\n'}
+[7.054767] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/kkt.h\n'}
+[7.054827] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl.h\n'}
+[7.054885] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/Makefile\n'}
+[7.054942] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/libthruster_pid_controller.so\n'}
+[7.054999] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/librov_control.so\n'}
+[7.055055] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so\n'}
+[7.055119] (rov_control) StdoutLine: {'line': b'-- Installing: /home/student/Desktop/ROV2026/install/rov_control/lib/rov_control/gamepad_parser_node\n'}
+[7.058258] (rov_control) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/student/Desktop/ROV2026/install/rov_control/lib/rov_control/gamepad_parser_node" to ""\n'}
+[7.058418] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport.cmake\n'}
+[7.058485] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/student/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport-noconfig.cmake\n'}
+[7.059955] (rov_control) CommandEnded: {'returncode': 0}
+[7.074631] (rov_control) JobEnded: {'identifier': 'rov_control', 'rc': 0}
+[7.075223] (-) EventReactorShutdown: {}

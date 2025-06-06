@@ -15,8 +15,11 @@ GamepadParser::GamepadParser() : Node("gamepad_parser")
     this->declare_parameter<uint8_t>("axes." + axis_key + ".index", -1);
     this->get_parameter("axes." + axis_key + ".binding", binding);
     this->get_parameter("axes." + axis_key + ".index", index);
+    RCLCPP_INFO(this->get_logger(), "Axis param: axes.%s.binding = '%s', axes.%s.index = %d",
+                axis_key.c_str(), binding.c_str(), axis_key.c_str(), index);
     if (!binding.empty() && index >= 0) {
       axis_bindings_[binding] = index;
+      RCLCPP_INFO(this->get_logger(), "Axis binding: '%s' -> %d", binding.c_str(), index);
     }
   }
 
@@ -33,8 +36,11 @@ GamepadParser::GamepadParser() : Node("gamepad_parser")
     this->declare_parameter<uint8_t>("buttons." + button_key + ".index", -1);
     this->get_parameter("buttons." + button_key + ".binding", binding);
     this->get_parameter("buttons." + button_key + ".index", index);
+    RCLCPP_INFO(this->get_logger(), "Button param: buttons.%s.binding = '%s', buttons.%s.index = %d",
+                button_key.c_str(), binding.c_str(), button_key.c_str(), index);
     if (!binding.empty() && index >= 0) {
       button_bindings_[binding] = index;
+      RCLCPP_INFO(this->get_logger(), "Button binding: '%s' -> %d", binding.c_str(), index);
     }
   }
 
@@ -46,7 +52,6 @@ GamepadParser::GamepadParser() : Node("gamepad_parser")
 
 void GamepadParser::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
 {
-  // Removed: float deadzone = this->get_parameter("deadzone").as_double();
 
   geometry_msgs::msg::Twist twist;
   // Use binding names to get the correct axis index

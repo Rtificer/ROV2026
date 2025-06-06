@@ -1,3 +1,1 @@
-source;share/rov_control/environment/ament_prefix_path.sh
-source;share/rov_control/environment/library_path.sh
-source;share/rov_control/environment/path.sh
+/home/student/Desktop/ROV2026/build/rov_control/ament_cmake_environment_hooks/local_setup.dsv

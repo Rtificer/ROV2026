@@ -10,7 +10,7 @@
 #include <Eigen/Core>
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
-#include <geometry_msgs/msg/twist.hpp>
+#include <geometry_msgs/msg/wrench.hpp>
 
 extern "C"
 {
@@ -194,8 +194,8 @@ namespace rov_controllers
     size_t num_joints_ = 8;
 
     std::vector<std::reference_wrapper<hardware_interface::LoanedCommandInterface>> command_interfaces_;
-    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr desired_wrench_sub_;
-    geometry_msgs::msg::Twist::SharedPtr latest_wrench_;
+    rclcpp::Subscription<geometry_msgs::msg::Wrench>::SharedPtr desired_wrench_sub_;
+    geometry_msgs::msg::Wrench::SharedPtr latest_wrench_;
 
     OSQPSettings settings_;
     OSQPWorkspace *qp_workspace_ = nullptr;

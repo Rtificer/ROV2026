@@ -38,6 +38,13 @@ namespace rov_controllers
     auto_declare<std::string>("output_topic", "/desired_wrench");
 
     dof_names_ = get_node()->get_parameter("dof_names").as_string_array();
+    for(const auto &dof : dof_names_)
+    {
+      auto_declare<std::vector<double>>("gains." + dof, {0.0, 0.0, 0.0, 0.0, 0.0});
+      if (!get_node()->has_parameter("gains." + dof)) {
+        RCLCPP_ERROR(get_node()->get_logger(), "Parameter gains.%s not found!", dof.c_str());
+      }
+    }
 
     RCLCPP_INFO(get_node()->get_logger(), "dof_names size: %zu", dof_names_.size());
     for (const auto& name : dof_names_) {
