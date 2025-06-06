@@ -1,0 +1,43 @@
+[0.009s] Invoking command in '/home/artificer/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/artificer/Desktop/ROV2026/build/rov_control -- -j12 -l12
+[0.049s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.241s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.265s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.273s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.282s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.293s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.348s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.349s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.409s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.473s] -- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[0.680s] -- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+[0.687s] -- Debug mode: 
+[0.688s] -- We are on a Linux system
+[0.688s] -- Embedded mode: OFF
+[0.688s] -- Algebra backend: builtin
+[0.688s] -- Solver profiling: ON
+[0.688s] -- Solver interrupt: ON
+[0.688s] -- Using double precision floating-point
+[0.688s] -- Using long integers
+[0.688s] -- Code generation: ON
+[0.688s] -- Derivative support: ON
+[0.694s] -- Fetching/configuring QDLDL solver
+[1.195s] --   Using double precision floats
+[1.195s] --   Long integers (64bit) are ON
+[1.197s] --   Static library build is OFF
+[1.197s] --   Shared library build is OFF
+[1.197s] --   Demo executable build is OFF
+[1.197s] --   Not building demo executable
+[1.197s] --   Unit testing suite build is OFF
+[1.197s] -- Build static library: ON
+[1.197s] -- Build shared library: ON
+[1.197s] -- Build demo executable: ON
+[1.202s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):
+[1.202s]   ament_target_dependencies() the passed package name 'control_toolbox' was
+[1.202s]   not found before
+[1.202s] Call Stack (most recent call first):
+[1.202s]   CMakeLists.txt:90 (ament_target_dependencies)
+[1.202s] 
+[1.202s] [0m
+[1.202s] -- Configuring incomplete, errors occurred!
+[1.213s] gmake: *** [Makefile:573: cmake_check_build_system] Error 1
+[1.215s] Invoked command in '/home/artificer/Desktop/ROV2026/build/rov_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/artificer/Desktop/ROV2026/build/rov_control -- -j12 -l12

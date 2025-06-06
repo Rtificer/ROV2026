@@ -1,0 +1,45 @@
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:[m[K In member function ‘[01m[Kvirtual controller_interface::CallbackReturn rov_controllers::PidController::[01;32m[Kon_configure[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:64:19:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid control_toolbox::Pid::[01;32m[KinitPid[m[K(double, double, double, double, double, bool)[m[K’ is deprecated: Use initialize() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   64 |       [01;35m[Kpid->initPid(p, i, d, i_max, i_min)[m[K;
+      |       [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:11[m[K:
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:231:51:[m[K [01;36m[Knote: [m[Kdeclared here
+  231 |   [[deprecated("Use initialize() instead")]] void [01;36m[KinitPid[m[K(
+      |                                                   [01;36m[K^~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:[m[K In member function ‘[01m[Kvirtual controller_interface::return_type rov_controllers::PidController::[01;32m[Kupdate[m[K(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:117:46:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  117 |     wrench.force.x = [01;35m[Kpids_[0]->computeCommand(ref.linear.x - state.linear.x, period.seconds())[m[K;
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:118:46:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  118 |     wrench.force.y = [01;35m[Kpids_[1]->computeCommand(ref.linear.y - state.linear.y, period.seconds())[m[K;
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:119:46:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  119 |     wrench.force.z = [01;35m[Kpids_[2]->computeCommand(ref.linear.z - state.linear.z, period.seconds())[m[K;
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:121:47:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  121 |     wrench.torque.x = [01;35m[Kpids_[3]->computeCommand(ref.angular.x - state.angular.x, period.seconds())[m[K;
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:122:47:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  122 |     wrench.torque.y = [01;35m[Kpids_[4]->computeCommand(ref.angular.y - state.angular.y, period.seconds())[m[K;
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:123:47:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  123 |     wrench.torque.z = [01;35m[Kpids_[5]->computeCommand(ref.angular.z - state.angular.z, period.seconds())[m[K;
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K

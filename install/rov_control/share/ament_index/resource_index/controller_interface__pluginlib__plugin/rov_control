@@ -1,1 +1,2 @@
-/home/artificer/Desktop/ROV2026/build/rov_control/ament_cmake_index/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rov_control
+share/rov_control/plugins/thruster_pid_controller_plugin.xml
+share/rov_control/plugins/axis_to_command_controller_plugin.xml

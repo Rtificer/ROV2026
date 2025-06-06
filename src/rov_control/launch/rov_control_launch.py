@@ -13,11 +13,6 @@ import os
 
 def generate_launch_description():
     config_file = LaunchConfiguration('config_file')
-    urdf_path = os.path.join(
-        get_package_share_directory('rov_control'),
-        'description', 'urdf', 'ROV2026.urdf.xacro'
-    )
-    urdf_path = os.path.abspath(urdf_path)
     return LaunchDescription([
         DeclareLaunchArgument(
             'config_file',
@@ -70,7 +65,7 @@ def generate_launch_description():
             name='robot_state_publisher',
             output='screen',
             parameters=[{
-                'robot_description': Command(['xacro', urdf_path])
+                'robot_description': Command(['/opt/ros/jazzy/bin/xacro ', "/home/artificer/Desktop/ROV2026/src/description/urdf/ROV2026.urdf.xacro "]),
             }]
         ),
     ])

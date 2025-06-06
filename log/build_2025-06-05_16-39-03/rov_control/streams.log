@@ -1,0 +1,65 @@
+[0.008s] Invoking command in '/home/artificer/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/rov_control -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/rov_control
+[0.088s] -- The C compiler identification is GNU 13.3.0
+[0.141s] -- The CXX compiler identification is GNU 13.3.0
+[0.157s] -- Detecting C compiler ABI info
+[0.240s] -- Detecting C compiler ABI info - done
+[0.248s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.248s] -- Detecting C compile features
+[0.248s] -- Detecting C compile features - done
+[0.256s] -- Detecting CXX compiler ABI info
+[0.347s] -- Detecting CXX compiler ABI info - done
+[0.355s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.355s] -- Detecting CXX compile features
+[0.356s] -- Detecting CXX compile features - done
+[0.359s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.491s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.586s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.628s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.641s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.656s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.673s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.747s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.749s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.832s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.851s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.873s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.942s] -- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[1.300s] -- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+[1.313s] -- Debug mode: 
+[1.314s] -- We are on a Linux system
+[1.314s] -- Embedded mode: OFF
+[1.314s] -- Algebra backend: builtin
+[1.314s] -- Solver profiling: ON
+[1.314s] -- Solver interrupt: ON
+[1.314s] -- Using double precision floating-point
+[1.314s] -- Using long integers
+[1.314s] -- Code generation: ON
+[1.314s] -- Derivative support: ON
+[1.320s] -- Fetching/configuring QDLDL solver
+[2.272s] --   Using double precision floats
+[2.272s] --   Long integers (64bit) are ON
+[2.274s] --   Static library build is OFF
+[2.274s] --   Shared library build is OFF
+[2.275s] --   Demo executable build is OFF
+[2.275s] --   Not building demo executable
+[2.275s] --   Unit testing suite build is OFF
+[2.275s] -- Build static library: ON
+[2.275s] -- Build shared library: ON
+[2.275s] -- Build demo executable: ON
+[2.370s] -- Configuring done (2.4s)
+[2.378s] [31mCMake Error at CMakeLists.txt:51 (add_library):
+[2.379s]   Cannot find source file:
+[2.379s] 
+[2.379s]     src/axis_to_command_controller.cpp
+[2.379s] 
+[2.379s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[2.379s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[2.379s]   .f95 .f03 .hip .ispc
+[2.379s] 
+[2.379s] [0m
+[2.384s] [31mCMake Error at CMakeLists.txt:51 (add_library):
+[2.384s]   No SOURCES given to target: axis_to_command_controller
+[2.385s] 
+[2.385s] [0m
+[2.385s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[2.403s] Invoked command in '/home/artificer/Desktop/ROV2026/build/rov_control' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/rov_control -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/rov_control

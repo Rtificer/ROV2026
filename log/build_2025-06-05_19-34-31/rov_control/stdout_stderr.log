@@ -1,0 +1,214 @@
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+-- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+-- Found control_toolbox: 4.3.0 (/opt/ros/jazzy/share/control_toolbox/cmake)
+-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Debug mode: 
+-- We are on a Linux system
+-- Embedded mode: OFF
+-- Algebra backend: builtin
+-- Solver profiling: ON
+-- Solver interrupt: ON
+-- Using double precision floating-point
+-- Using long integers
+-- Code generation: ON
+-- Derivative support: ON
+-- Fetching/configuring QDLDL solver
+--   Using double precision floats
+--   Long integers (64bit) are ON
+--   Static library build is OFF
+--   Shared library build is OFF
+--   Demo executable build is OFF
+--   Not building demo executable
+--   Unit testing suite build is OFF
+-- Build static library: ON
+-- Build shared library: ON
+-- Build demo executable: ON
+-- Configuring done (1.4s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/artificer/Desktop/ROV2026/build/rov_control
+[  5%] Built target copy_codegen_makefile
+[  9%] [32mBuilding CXX object CMakeFiles/thruster_pid_controller.dir/src/thruster_pid_controller.cpp.o[0m
+[ 10%] Built target qdldlobject
+[ 33%] Built target copy_codegen_incs
+[ 38%] Built target copy_codegen_linalg
+[ 43%] Built target copy_codegen_srcs
+[ 45%] Built target gamepad_parser_node
+[ 47%] [32mBuilding C object CMakeFiles/rov_control.dir/src/libdriver_pca9685/src/driver_pca9685.c.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/rov_control.dir/src/pwm_interface.cpp.o[0m
+[ 48%] [32mBuilding C object CMakeFiles/rov_control.dir/src/libdriver_pca9685/interface/driver_pca9685_interface.c.o[0m
+[ 48%] Built target copy_codegen_files
+[ 78%] Built target OSQPLIB
+[ 80%] Built target osqpstatic
+[ 82%] Built target osqp
+[ 84%] Built target osqp_simple_demo
+[ 86%] Built target osqp_codegen_demo
+[ 95%] Built target osqp_demo
+[ 97%] Built target axis_to_command_controller
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:[m[K In member function ‘[01m[Kvirtual controller_interface::CallbackReturn rov_controllers::PidController::[01;32m[Kon_configure[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:64:19:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid control_toolbox::Pid::[01;32m[KinitPid[m[K(double, double, double, double, double, bool)[m[K’ is deprecated: Use initialize() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   64 |       [01;35m[Kpid->initPid(p, i, d, i_max, i_min)[m[K;
+      |       [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:11[m[K:
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:231:51:[m[K [01;36m[Knote: [m[Kdeclared here
+  231 |   [[deprecated("Use initialize() instead")]] void [01;36m[KinitPid[m[K(
+      |                                                   [01;36m[K^~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:[m[K In member function ‘[01m[Kvirtual controller_interface::return_type rov_controllers::PidController::[01;32m[Kupdate[m[K(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:117:46:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  117 |     wrench.force.x = [01;35m[Kpids_[0]->computeCommand(ref.linear.x - state.linear.x, period.seconds())[m[K;
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:118:46:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  118 |     wrench.force.y = [01;35m[Kpids_[1]->computeCommand(ref.linear.y - state.linear.y, period.seconds())[m[K;
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:119:46:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  119 |     wrench.force.z = [01;35m[Kpids_[2]->computeCommand(ref.linear.z - state.linear.z, period.seconds())[m[K;
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:121:47:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  121 |     wrench.torque.x = [01;35m[Kpids_[3]->computeCommand(ref.angular.x - state.angular.x, period.seconds())[m[K;
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:122:47:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  122 |     wrench.torque.y = [01;35m[Kpids_[4]->computeCommand(ref.angular.y - state.angular.y, period.seconds())[m[K;
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/artificer/Desktop/ROV2026/src/rov_control/src/thruster_pid_controller.cpp:123:47:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble control_toolbox::Pid::[01;32m[KcomputeCommand[m[K(double, uint64_t)[m[K’ is deprecated: Use compute_command() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  123 |     wrench.torque.z = [01;35m[Kpids_[5]->computeCommand(ref.angular.z - state.angular.z, period.seconds())[m[K;
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/control_toolbox/control_toolbox/pid.hpp:386:72:[m[K [01;36m[Knote: [m[Kdeclared here
+  386 |   [[deprecated("Use compute_command() instead")]] [[nodiscard]] double [01;36m[KcomputeCommand[m[K(
+      |                                                                        [01;36m[K^~~~~~~~~~~~~~[m[K
+[ 98%] [32m[1mLinking CXX shared library librov_control.so[0m
+[ 98%] Built target rov_control
+[100%] [32m[1mLinking CXX shared library libthruster_pid_controller.so[0m
+[100%] Built target thruster_pid_controller
+-- Install configuration: ""
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_types.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_version.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_constants.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_functions.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_types.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_export_define.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_configure.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libosqpstatic.a
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets-noconfig.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libosqp.so
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets-noconfig.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config-version.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/Makefile
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_export_define.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_constants.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_functions.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_types.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_utils.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/scaling.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_math.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/glob_opts.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/error.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/timing.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/printing.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_interface.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/auxil.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_version.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/util.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/kkt.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_impl.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/profilers.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_vector.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/version.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/lin_alg.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_types.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_matrix.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/types.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/vector.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/util.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/error.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl_interface.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_math.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/matrix.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/algebra_libs.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/scaling.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_utils.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/kkt.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/osqp_api.c
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/auxil.c
+-- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/thruster_pid_controller_plugin.xml
+-- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libthruster_pid_controller.so
+-- Set non-toolchain portion of runtime path of "/home/artificer/Desktop/ROV2026/install/rov_control/lib/libthruster_pid_controller.so" to ""
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/pwm_interface_plugin.xml
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/axis_to_command_controller_plugin.xml
+-- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/lib/librov_control.so
+-- Set non-toolchain portion of runtime path of "/home/artificer/Desktop/ROV2026/install/rov_control/lib/librov_control.so" to ""
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/rov_control/gamepad_parser_node
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/axis_to_command_controller.hpp
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/gamepad_parser_node.hpp
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/pwm_interface.hpp
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/thruster_pid_controller.hpp
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685_interface.h
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/launch
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch.py
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch_test.py
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.sh
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.dsv
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/package_run_dependencies/rov_control
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/parent_prefix_path/rov_control
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.sh
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.sh
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.dsv
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.bash
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.sh
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.zsh
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.dsv
+-- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/packages/rov_control
+-- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rov_control
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/rov_control
+-- Old export file "/home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport.cmake" will be replaced.  Removing files [/home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport-noconfig.cmake].
+-- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport.cmake
+-- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport-noconfig.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig-version.cmake
+-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/package.xml

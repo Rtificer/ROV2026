@@ -1,0 +1,157 @@
+[0.013s] Invoking command in '/home/artificer/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/rov_control -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/rov_control
+[0.027s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.232s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.249s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.287s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.298s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.313s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.330s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.406s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.408s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.500s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.573s] -- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[0.803s] -- Found controller_interface: 4.29.0 (/opt/ros/jazzy/share/controller_interface/cmake)
+[0.813s] -- Debug mode: 
+[0.813s] -- We are on a Linux system
+[0.813s] -- Embedded mode: OFF
+[0.813s] -- Algebra backend: builtin
+[0.813s] -- Solver profiling: ON
+[0.814s] -- Solver interrupt: ON
+[0.814s] -- Using double precision floating-point
+[0.814s] -- Using long integers
+[0.814s] -- Code generation: ON
+[0.814s] -- Derivative support: ON
+[0.821s] -- Fetching/configuring QDLDL solver
+[1.666s] --   Using double precision floats
+[1.666s] --   Long integers (64bit) are ON
+[1.668s] --   Static library build is OFF
+[1.668s] --   Shared library build is OFF
+[1.668s] --   Demo executable build is OFF
+[1.668s] --   Not building demo executable
+[1.668s] --   Unit testing suite build is OFF
+[1.668s] -- Build static library: ON
+[1.669s] -- Build shared library: ON
+[1.669s] -- Build demo executable: ON
+[1.779s] -- Configuring done (1.8s)
+[1.850s] -- Generating done (0.1s)
+[1.862s] -- Build files have been written to: /home/artificer/Desktop/ROV2026/build/rov_control
+[1.873s] Invoked command in '/home/artificer/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/rov_control -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/rov_control
+[1.874s] Invoking command in '/home/artificer/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/artificer/Desktop/ROV2026/build/rov_control -- -j12 -l12
+[1.935s] [  8%] Built target copy_codegen_makefile
+[1.935s] [ 18%] Built target copy_codegen_srcs
+[1.935s] [ 20%] Built target qdldlobject
+[1.936s] [ 42%] Built target copy_codegen_linalg
+[1.936s] [ 43%] Built target copy_codegen_incs
+[1.945s] [ 45%] Built target gamepad_parser_node
+[1.947s] [ 50%] Built target rov_control
+[1.955s] [ 50%] Built target copy_codegen_files
+[1.972s] [ 79%] Built target OSQPLIB
+[1.992s] [ 84%] Built target osqp
+[1.992s] [ 84%] Built target osqpstatic
+[2.015s] [ 86%] Built target osqp_simple_demo
+[2.016s] [ 89%] Built target osqp_codegen_demo
+[2.017s] [ 97%] Built target osqp_demo
+[2.026s] [100%] Built target axis_to_command_controller
+[2.039s] Invoked command in '/home/artificer/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/artificer/Desktop/ROV2026/build/rov_control -- -j12 -l12
+[2.040s] Invoking command in '/home/artificer/Desktop/ROV2026/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/artificer/Desktop/ROV2026/build/rov_control
+[2.049s] -- Install configuration: ""
+[2.049s] -- Execute custom install script
+[2.049s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl.h
+[2.049s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_types.h
+[2.050s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_version.h
+[2.050s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp.h
+[2.050s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_constants.h
+[2.050s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_functions.h
+[2.050s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_types.h
+[2.050s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_export_define.h
+[2.051s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_configure.h
+[2.051s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config.cmake
+[2.051s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config-version.cmake
+[2.051s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/pwm_interface_plugin.xml
+[2.051s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/axis_to_command_controller_plugin.xml
+[2.052s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/axis_to_command_controller.hpp
+[2.052s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/gamepad_parser_node.hpp
+[2.052s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685.h
+[2.052s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685_interface.h
+[2.052s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/pwm_interface.hpp
+[2.052s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/thruster_pid_controller.hpp
+[2.052s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch.py
+[2.053s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch_test.py
+[2.053s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.sh
+[2.053s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.dsv
+[2.053s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/package_run_dependencies/rov_control
+[2.053s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/parent_prefix_path/rov_control
+[2.053s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.sh
+[2.053s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.dsv
+[2.054s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.sh
+[2.054s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.dsv
+[2.054s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.bash
+[2.054s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.sh
+[2.054s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.zsh
+[2.054s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.dsv
+[2.054s] -- Symlinking: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv
+[2.066s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/packages/rov_control
+[2.066s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/rov_control
+[2.066s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rov_control
+[2.066s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_libraries-extras.cmake
+[2.066s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_targets-extras.cmake
+[2.066s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig.cmake
+[2.066s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig-version.cmake
+[2.067s] -- Up-to-date symlink: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/package.xml
+[2.067s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libosqpstatic.a
+[2.067s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets.cmake
+[2.067s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets-noconfig.cmake
+[2.068s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libosqp.so
+[2.068s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets.cmake
+[2.068s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets-noconfig.cmake
+[2.068s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files
+[2.069s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/Makefile
+[2.069s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc
+[2.069s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public
+[2.069s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp.h
+[2.069s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_export_define.h
+[2.069s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_constants.h
+[2.070s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_functions.h
+[2.070s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_types.h
+[2.070s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private
+[2.070s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_utils.h
+[2.070s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/scaling.h
+[2.070s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_math.h
+[2.070s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/glob_opts.h
+[2.070s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/error.h
+[2.070s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/timing.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/printing.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_interface.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/auxil.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_version.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/util.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/kkt.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_impl.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/profilers.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_vector.h
+[2.071s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/version.h
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/lin_alg.h
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_types.h
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_matrix.h
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/types.h
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/vector.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/util.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/error.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl_interface.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_math.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/matrix.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/algebra_libs.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/scaling.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_utils.c
+[2.072s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/kkt.c
+[2.073s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/osqp_api.c
+[2.073s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/auxil.c
+[2.073s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/librov_control.so
+[2.073s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so
+[2.073s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/rov_control/gamepad_parser_node
+[2.073s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport.cmake
+[2.073s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport-noconfig.cmake
+[2.074s] Invoked command in '/home/artificer/Desktop/ROV2026/build/rov_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/artificer/Desktop/ROV2026/build/rov_control

@@ -48,6 +48,7 @@ bool solve_thruster_qp(
 
   P += Q_total;
   P = 0.5 * (P + P.transpose()); // Ensure symmetry
+  P = P.triangularView<Eigen::Upper>();
 
   // q = -2 * A^T * W^T * W * desired_wrench
   Eigen::VectorXd q = -2.0 * A_wrench.transpose() * WtW * desired_wrench;
@@ -94,6 +95,7 @@ bool solve_thruster_qp(
   settings->time_limit = qp_time_limit / 1000; // ms to seconds.
   settings->eps_abs = 1e-4;                    // just try as hard as you can until you reach the time limit
   settings->eps_rel = 1e-4;                    // just try as hard as you can until you reach the time limit
+  settings->verbose = false;                   // stop yapping
 
   // Setup solver
   OSQPSolver *solver = nullptr;
@@ -142,20 +144,19 @@ bool solve_thruster_qp(
 namespace rov_controllers
 {
 
-controller_interface::InterfaceConfiguration AxisToCommandController::command_interface_configuration() const
-{
-  controller_interface::InterfaceConfiguration config;
-  config.type = controller_interface::interface_configuration_type::INDIVIDUAL;
-  config.names = joint_names_;
-  return config;
-}
+  controller_interface::InterfaceConfiguration AxisToCommandController::command_interface_configuration() const
+  {
+    controller_interface::InterfaceConfiguration config;
+    config.type = controller_interface::interface_configuration_type::INDIVIDUAL;
+    return config;
+  }
 
-controller_interface::InterfaceConfiguration AxisToCommandController::state_interface_configuration() const
-{
-  controller_interface::InterfaceConfiguration config;
-  config.type = controller_interface::interface_configuration_type::NONE;
-  return config;
-}
+  controller_interface::InterfaceConfiguration AxisToCommandController::state_interface_configuration() const
+  {
+    controller_interface::InterfaceConfiguration config;
+    config.type = controller_interface::interface_configuration_type::NONE;
+    return config;
+  }
 
   AxisToCommandController::AxisToCommandController() = default;
 
@@ -181,7 +182,7 @@ controller_interface::InterfaceConfiguration AxisToCommandController::state_inte
     auto_declare<double>("prim_res_threshold", 1e-2);
     auto_declare<double>("dual_res_threshold", 1e-2);
 
-    //This may seem redudant but is actually needed so that joint_names_ is populated before on_export_reference_interfaces() is called
+    // This may seem redudant but is actually needed so that joint_names_ is populated before on_export_reference_interfaces() is called
     joint_names_ = get_node()->get_parameter("joints").as_string_array();
     return CallbackReturn::SUCCESS;
   }
@@ -199,11 +200,11 @@ controller_interface::InterfaceConfiguration AxisToCommandController::state_inte
     prim_res_threshold_ = get_node()->get_parameter("prim_res_threshold").as_double();
     dual_res_threshold_ = get_node()->get_parameter("dual_res_threshold").as_double();
     desired_wrench_sub_ = get_node()->create_subscription<geometry_msgs::msg::Twist>(
-    "/desired_wrench", 10,
-    [this](const geometry_msgs::msg::Twist::SharedPtr msg) {
-      latest_wrench_ = msg;
-    });
-    
+        "/desired_wrench", 10,
+        [this](const geometry_msgs::msg::Twist::SharedPtr msg)
+        {
+          latest_wrench_ = msg;
+        });
 
     if (effort_weights_.size() != joint_names_.size())
     {
@@ -212,6 +213,7 @@ controller_interface::InterfaceConfiguration AxisToCommandController::state_inte
     }
 
     num_joints_ = joint_names_.size();
+    reference_interfaces_.resize(num_joints_);
 
     // Initialize OSQP
     osqp_set_default_settings(&settings_);
@@ -350,10 +352,17 @@ controller_interface::InterfaceConfiguration AxisToCommandController::state_inte
       M_minus.block<3, 1>(3, i) = tau_minus;
     }
     Eigen::VectorXd desired_wrench(6);
-    if (latest_wrench_) {
-      desired_wrench << latest_wrench_->linear.x, latest_wrench_->linear.y, latest_wrench_->linear.z,
-                        latest_wrench_->angular.x, latest_wrench_->angular.y, latest_wrench_->angular.z;
-    } else {
+    if (latest_wrench_)
+    {
+      desired_wrench << latest_wrench_->linear.x, 
+                        latest_wrench_->linear.y, 
+                        latest_wrench_->linear.z,
+                        latest_wrench_->angular.x, 
+                        latest_wrench_->angular.y, 
+                        latest_wrench_->angular.z;
+    }
+    else
+    {
       desired_wrench.setZero();
     }
     Eigen::VectorXd T_plus, T_minus;
@@ -364,15 +373,15 @@ controller_interface::InterfaceConfiguration AxisToCommandController::state_inte
     {
       Eigen::VectorXd T = T_plus + T_minus;
 
-      // Print T to the console
-      std::ostringstream oss;
-      oss << "Thruster output T: [";
-      for (int i = 0; i < T.size(); ++i) {
-        oss << T(i);
-        if (i < T.size() - 1) oss << ", ";
-      }
-      oss << "]";
-      RCLCPP_INFO(get_node()->get_logger(), "%s", oss.str().c_str());
+      // // Print T to the console
+      // std::ostringstream oss;
+      // oss << "Thruster output T: [";
+      // for (int i = 0; i < T.size(); ++i) {
+      //   oss << T(i);
+      //   if (i < T.size() - 1) oss << ", ";
+      // }
+      // oss << "]";
+      // RCLCPP_INFO(get_node()->get_logger(), "%s", oss.str().c_str());
 
       double max_abs = T.cwiseAbs().maxCoeff();
       if (max_abs > 1.0)
@@ -410,8 +419,12 @@ controller_interface::InterfaceConfiguration AxisToCommandController::state_inte
   rov_controllers::AxisToCommandController::on_export_reference_interfaces()
   {
     std::vector<hardware_interface::CommandInterface> refs;
-    for (const auto& joint : joint_names_) {
-        refs.emplace_back(joint, hardware_interface::HW_IF_EFFORT);
+    const std::string prefix = this->get_node()->get_name();
+    for (const auto &joint : joint_names_)
+    {
+      std::string full_name = prefix + "/" + joint;
+      RCLCPP_INFO(get_node()->get_logger(), "Exporting reference interface: %s", full_name.c_str());
+      refs.emplace_back(full_name, hardware_interface::HW_IF_EFFORT);
     }
     RCLCPP_INFO(rclcpp::get_logger("AxisToCommandController"), "Exporting %zu reference interfaces", refs.size());
     return refs;

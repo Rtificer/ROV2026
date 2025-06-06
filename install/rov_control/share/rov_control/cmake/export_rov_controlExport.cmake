@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS rov_control::rov_control rov_control::axis_to_command_controller rov_control::gamepad_parser_node)
+foreach(_cmake_expected_target IN ITEMS rov_control::thruster_pid_controller rov_control::rov_control rov_control::axis_to_command_controller rov_control::gamepad_parser_node)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -55,11 +55,19 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
+# Create imported target rov_control::thruster_pid_controller
+add_library(rov_control::thruster_pid_controller SHARED IMPORTED)
+
+set_target_properties(rov_control::thruster_pid_controller PROPERTIES
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "rclcpp::rclcpp;controller_interface::controller_interface;hardware_interface::mock_components;hardware_interface::hardware_interface;pluginlib::pluginlib;control_toolbox::control_toolbox;control_toolbox::low_pass_filter;control_toolbox::low_pass_filter_parameters;control_toolbox::rate_limiter;control_toolbox::rate_limiter_parameters;control_toolbox::exponential_filter;control_toolbox::exponential_filter_parameters;control_toolbox::gravity_compensation;control_toolbox::gravity_compensation_filter_parameters;geometry_msgs::geometry_msgs__rosidl_generator_c;geometry_msgs::geometry_msgs__rosidl_typesupport_fastrtps_c;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_c;geometry_msgs::geometry_msgs__rosidl_typesupport_c;geometry_msgs::geometry_msgs__rosidl_generator_cpp;geometry_msgs::geometry_msgs__rosidl_typesupport_fastrtps_cpp;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_cpp;geometry_msgs::geometry_msgs__rosidl_typesupport_cpp;geometry_msgs::geometry_msgs__rosidl_generator_py"
+)
+
 # Create imported target rov_control::rov_control
 add_library(rov_control::rov_control SHARED IMPORTED)
 
 set_target_properties(rov_control::rov_control PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/include/eigen3"
   INTERFACE_LINK_LIBRARIES "rclcpp::rclcpp;hardware_interface::mock_components;hardware_interface::hardware_interface;pluginlib::pluginlib;controller_interface::controller_interface;sensor_msgs::sensor_msgs__rosidl_generator_c;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_c;sensor_msgs::sensor_msgs__rosidl_generator_cpp;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_cpp;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_c;sensor_msgs::sensor_msgs__rosidl_typesupport_c;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_cpp;sensor_msgs::sensor_msgs__rosidl_typesupport_cpp;sensor_msgs::sensor_msgs__rosidl_generator_py;sensor_msgs::sensor_msgs_library"
 )
 
@@ -67,7 +75,7 @@ set_target_properties(rov_control::rov_control PROPERTIES
 add_library(rov_control::axis_to_command_controller SHARED IMPORTED)
 
 set_target_properties(rov_control::axis_to_command_controller PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/include/eigen3"
   INTERFACE_LINK_LIBRARIES "osqp::osqpstatic;rclcpp::rclcpp;controller_interface::controller_interface;hardware_interface::mock_components;hardware_interface::hardware_interface;pluginlib::pluginlib"
 )
 

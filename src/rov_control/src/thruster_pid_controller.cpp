@@ -14,6 +14,7 @@
 
 namespace rov_controllers
 {
+  PidController::PidController() = default;
 
   controller_interface::InterfaceConfiguration PidController::command_interface_configuration() const
   {
@@ -35,6 +36,13 @@ namespace rov_controllers
     auto_declare<std::string>("reference_topic", "/desired_velocity");
     auto_declare<std::string>("state_topic", "/current_velocity");
     auto_declare<std::string>("output_topic", "/desired_wrench");
+
+    dof_names_ = get_node()->get_parameter("dof_names").as_string_array();
+
+    RCLCPP_INFO(get_node()->get_logger(), "dof_names size: %zu", dof_names_.size());
+    for (const auto& name : dof_names_) {
+        RCLCPP_INFO(get_node()->get_logger(), "dof_name: %s", name.c_str());
+    }
     return CallbackReturn::SUCCESS;
   }
 
@@ -49,15 +57,13 @@ namespace rov_controllers
     pids_.clear();
     for (const auto &dof : dof_names_)
     {
-      std::string prefix = "gains." + dof;
-      double p = get_node()->get_parameter(prefix + ".p").as_double();
-      double i = get_node()->get_parameter(prefix + ".i").as_double();
-      double d = get_node()->get_parameter(prefix + ".d").as_double();
-      double i_max = get_node()->get_parameter(prefix + ".i_clamp_max").as_double();
-      double i_min = get_node()->get_parameter(prefix + ".i_clamp_min").as_double();
+      if (!get_node()->has_parameter("gains." + dof)) {
+        RCLCPP_ERROR(get_node()->get_logger(), "Parameter gains.%s not found!", dof.c_str());
+      }
+      auto dof_params = get_node()->get_parameter("gains." + dof).as_double_array();
 
       auto pid = std::make_shared<control_toolbox::Pid>();
-      pid->initPid(p, i, d, i_max, i_min);
+      pid->initialize(dof_params[0], dof_params[1], dof_params[2], dof_params[3], dof_params[4]);
       pids_.push_back(pid);
     }
 
@@ -78,6 +84,15 @@ namespace rov_controllers
         });
 
     wrench_pub_ = get_node()->create_publisher<geometry_msgs::msg::Wrench>(output_topic_, 10);
+
+    RCLCPP_INFO(get_node()->get_logger(), "dof_names size: %zu", dof_names_.size());
+    for (const auto& name : dof_names_) {
+        RCLCPP_INFO(get_node()->get_logger(), "dof_name: %s", name.c_str());
+    }
+
+    for (const auto &param : get_node()->list_parameters({}, 10).names) {
+    RCLCPP_INFO(get_node()->get_logger(), "Loaded param: %s", param.c_str());
+    }
 
     return controller_interface::CallbackReturn::SUCCESS;
   }
@@ -105,13 +120,13 @@ namespace rov_controllers
 
     geometry_msgs::msg::Wrench wrench;
     // Linear
-    wrench.force.x = pids_[0]->computeCommand(ref.linear.x - state.linear.x, period.seconds());
-    wrench.force.y = pids_[1]->computeCommand(ref.linear.y - state.linear.y, period.seconds());
-    wrench.force.z = pids_[2]->computeCommand(ref.linear.z - state.linear.z, period.seconds());
+    wrench.force.x = pids_[0]->compute_command(ref.linear.x - state.linear.x, period.seconds());
+    wrench.force.y = pids_[1]->compute_command(ref.linear.y - state.linear.y, period.seconds());
+    wrench.force.z = pids_[2]->compute_command(ref.linear.z - state.linear.z, period.seconds());
     // Angular
-    wrench.torque.x = pids_[3]->computeCommand(ref.angular.x - state.angular.x, period.seconds());
-    wrench.torque.y = pids_[4]->computeCommand(ref.angular.y - state.angular.y, period.seconds());
-    wrench.torque.z = pids_[5]->computeCommand(ref.angular.z - state.angular.z, period.seconds());
+    wrench.torque.x = pids_[3]->compute_command(ref.angular.x - state.angular.x, period.seconds());
+    wrench.torque.y = pids_[4]->compute_command(ref.angular.y - state.angular.y, period.seconds());
+    wrench.torque.z = pids_[5]->compute_command(ref.angular.z - state.angular.z, period.seconds());
 
     wrench_pub_->publish(wrench);
     return controller_interface::return_type::OK;

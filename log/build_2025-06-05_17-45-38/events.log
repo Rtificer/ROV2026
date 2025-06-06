@@ -1,0 +1,242 @@
+[0.000000] (-) TimerEvent: {}
+[0.000290] (-) JobUnselected: {'identifier': 'description'}
+[0.000389] (-) JobUnselected: {'identifier': 'dummy_hardware'}
+[0.000408] (rov_control) JobQueued: {'identifier': 'rov_control', 'dependencies': OrderedDict()}
+[0.000424] (rov_control) JobStarted: {'identifier': 'rov_control'}
+[0.007251] (rov_control) JobProgress: {'identifier': 'rov_control', 'progress': 'cmake'}
+[0.007772] (rov_control) JobProgress: {'identifier': 'rov_control', 'progress': 'build'}
+[0.008396] (rov_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/artificer/Desktop/ROV2026/build/rov_control', '--', '-j12', '-l12'], 'cwd': '/home/artificer/Desktop/ROV2026/build/rov_control', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US', 'USER': 'artificer', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/artificer/Desktop/ROV2026/install/rov_control/lib:/home/artificer/Desktop/ROV2026/install/dummy_hardware/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/artificer', 'CHROME_DESKTOP': 'code.desktop', 'TERM_PROGRAM_VERSION': '1.100.3', 'DESKTOP_SESSION': 'cinnamon', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/artificer/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2252', 'INSIDE_NEMO_PYTHON': '', 'COLCON_PREFIX_PATH': '/home/artificer/Desktop/ROV2026/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'artificer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c2', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/artificer/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/artificer/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/desktop-linux:@/tmp/.ICE-unix/1539,unix/desktop-linux:/tmp/.ICE-unix/1539', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/artificer/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-9d6b24c8b015b31b.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/artificer/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-2e6a973c97.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/artificer', 'AMENT_PREFIX_PATH': '/home/artificer/Desktop/ROV2026/install/rov_control:/home/artificer/Desktop/ROV2026/install/dummy_hardware:/home/artificer/Desktop/ROV2026/install/description:/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'cinnamon', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'XDG_VTNR': '7', 'PWD': '/home/artificer/Desktop/ROV2026/build/rov_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/artificer/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/artificer/Desktop/ROV2026/install/rov_control:/home/artificer/Desktop/ROV2026/install/dummy_hardware:/home/artificer/Desktop/ROV2026/install/description:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.071517] (rov_control) StdoutLine: {'line': b'[  1%] Built target qdldlobject\n'}
+[0.072125] (rov_control) StdoutLine: {'line': b'[ 10%] Built target copy_codegen_srcs\n'}
+[0.072520] (rov_control) StdoutLine: {'line': b'[ 15%] Built target copy_codegen_makefile\n'}
+[0.072659] (rov_control) StdoutLine: {'line': b'[ 41%] Built target copy_codegen_linalg\n'}
+[0.072789] (rov_control) StdoutLine: {'line': b'[ 43%] Built target copy_codegen_incs\n'}
+[0.077292] (rov_control) StdoutLine: {'line': b'[ 45%] Built target gamepad_parser_node\n'}
+[0.078574] (rov_control) StdoutLine: {'line': b'[ 50%] Built target rov_control\n'}
+[0.091286] (rov_control) StdoutLine: {'line': b'[ 50%] Built target copy_codegen_files\n'}
+[0.095630] (rov_control) StdoutLine: {'line': b'[ 79%] Built target OSQPLIB\n'}
+[0.099829] (-) TimerEvent: {}
+[0.117436] (rov_control) StdoutLine: {'line': b'[ 84%] Built target osqpstatic\n'}
+[0.117703] (rov_control) StdoutLine: {'line': b'[ 84%] Built target osqp\n'}
+[0.139772] (rov_control) StdoutLine: {'line': b'[ 90%] Built target osqp_simple_demo\n'}
+[0.140242] (rov_control) StdoutLine: {'line': b'[ 90%] Built target osqp_codegen_demo\n'}
+[0.140419] (rov_control) StdoutLine: {'line': b'[ 97%] Built target osqp_demo\n'}
+[0.150371] (rov_control) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding CXX object CMakeFiles/axis_to_command_controller.dir/src/axis_to_command_controller.cpp.o\x1b[0m\n'}
+[0.199921] (-) TimerEvent: {}
+[0.300112] (-) TimerEvent: {}
+[0.400377] (-) TimerEvent: {}
+[0.500627] (-) TimerEvent: {}
+[0.600845] (-) TimerEvent: {}
+[0.701088] (-) TimerEvent: {}
+[0.801312] (-) TimerEvent: {}
+[0.901529] (-) TimerEvent: {}
+[1.001745] (-) TimerEvent: {}
+[1.101972] (-) TimerEvent: {}
+[1.202201] (-) TimerEvent: {}
+[1.302418] (-) TimerEvent: {}
+[1.402637] (-) TimerEvent: {}
+[1.502862] (-) TimerEvent: {}
+[1.603097] (-) TimerEvent: {}
+[1.703325] (-) TimerEvent: {}
+[1.803570] (-) TimerEvent: {}
+[1.903816] (-) TimerEvent: {}
+[2.004035] (-) TimerEvent: {}
+[2.104262] (-) TimerEvent: {}
+[2.204478] (-) TimerEvent: {}
+[2.304702] (-) TimerEvent: {}
+[2.404930] (-) TimerEvent: {}
+[2.505151] (-) TimerEvent: {}
+[2.605376] (-) TimerEvent: {}
+[2.705598] (-) TimerEvent: {}
+[2.805818] (-) TimerEvent: {}
+[2.906045] (-) TimerEvent: {}
+[3.006274] (-) TimerEvent: {}
+[3.106498] (-) TimerEvent: {}
+[3.206741] (-) TimerEvent: {}
+[3.306991] (-) TimerEvent: {}
+[3.407277] (-) TimerEvent: {}
+[3.507583] (-) TimerEvent: {}
+[3.607817] (-) TimerEvent: {}
+[3.708128] (-) TimerEvent: {}
+[3.808447] (-) TimerEvent: {}
+[3.908791] (-) TimerEvent: {}
+[4.009128] (-) TimerEvent: {}
+[4.109430] (-) TimerEvent: {}
+[4.209818] (-) TimerEvent: {}
+[4.310249] (-) TimerEvent: {}
+[4.410544] (-) TimerEvent: {}
+[4.510814] (-) TimerEvent: {}
+[4.611057] (-) TimerEvent: {}
+[4.711328] (-) TimerEvent: {}
+[4.811547] (-) TimerEvent: {}
+[4.911770] (-) TimerEvent: {}
+[5.011995] (-) TimerEvent: {}
+[5.112229] (-) TimerEvent: {}
+[5.212453] (-) TimerEvent: {}
+[5.312707] (-) TimerEvent: {}
+[5.412997] (-) TimerEvent: {}
+[5.513230] (-) TimerEvent: {}
+[5.613451] (-) TimerEvent: {}
+[5.713669] (-) TimerEvent: {}
+[5.813891] (-) TimerEvent: {}
+[5.914107] (-) TimerEvent: {}
+[6.014328] (-) TimerEvent: {}
+[6.114548] (-) TimerEvent: {}
+[6.214819] (-) TimerEvent: {}
+[6.315079] (-) TimerEvent: {}
+[6.415321] (-) TimerEvent: {}
+[6.515563] (-) TimerEvent: {}
+[6.615797] (-) TimerEvent: {}
+[6.716011] (-) TimerEvent: {}
+[6.816231] (-) TimerEvent: {}
+[6.916450] (-) TimerEvent: {}
+[7.016673] (-) TimerEvent: {}
+[7.116891] (-) TimerEvent: {}
+[7.217113] (-) TimerEvent: {}
+[7.317328] (-) TimerEvent: {}
+[7.417549] (-) TimerEvent: {}
+[7.517766] (-) TimerEvent: {}
+[7.617985] (-) TimerEvent: {}
+[7.718212] (-) TimerEvent: {}
+[7.818426] (-) TimerEvent: {}
+[7.918647] (-) TimerEvent: {}
+[8.018870] (-) TimerEvent: {}
+[8.119094] (-) TimerEvent: {}
+[8.219306] (-) TimerEvent: {}
+[8.319522] (-) TimerEvent: {}
+[8.419736] (-) TimerEvent: {}
+[8.519947] (-) TimerEvent: {}
+[8.620174] (-) TimerEvent: {}
+[8.720389] (-) TimerEvent: {}
+[8.820602] (-) TimerEvent: {}
+[8.920815] (-) TimerEvent: {}
+[9.021031] (-) TimerEvent: {}
+[9.121257] (-) TimerEvent: {}
+[9.221474] (-) TimerEvent: {}
+[9.321691] (-) TimerEvent: {}
+[9.421906] (-) TimerEvent: {}
+[9.522104] (-) TimerEvent: {}
+[9.622318] (-) TimerEvent: {}
+[9.722536] (-) TimerEvent: {}
+[9.822763] (-) TimerEvent: {}
+[9.922997] (-) TimerEvent: {}
+[10.023246] (-) TimerEvent: {}
+[10.123483] (-) TimerEvent: {}
+[10.223734] (-) TimerEvent: {}
+[10.314137] (rov_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libaxis_to_command_controller.so\x1b[0m\n'}
+[10.323821] (-) TimerEvent: {}
+[10.424036] (-) TimerEvent: {}
+[10.524284] (-) TimerEvent: {}
+[10.624552] (-) TimerEvent: {}
+[10.704137] (rov_control) StdoutLine: {'line': b'[100%] Built target axis_to_command_controller\n'}
+[10.717632] (rov_control) CommandEnded: {'returncode': 0}
+[10.718233] (rov_control) JobProgress: {'identifier': 'rov_control', 'progress': 'install'}
+[10.724640] (-) TimerEvent: {}
+[10.727138] (rov_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/artificer/Desktop/ROV2026/build/rov_control'], 'cwd': '/home/artificer/Desktop/ROV2026/build/rov_control', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US', 'USER': 'artificer', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/artificer/Desktop/ROV2026/install/rov_control/lib:/home/artificer/Desktop/ROV2026/install/dummy_hardware/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/artificer', 'CHROME_DESKTOP': 'code.desktop', 'TERM_PROGRAM_VERSION': '1.100.3', 'DESKTOP_SESSION': 'cinnamon', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/artificer/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2252', 'INSIDE_NEMO_PYTHON': '', 'COLCON_PREFIX_PATH': '/home/artificer/Desktop/ROV2026/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'artificer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c2', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/artificer/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/artificer/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/desktop-linux:@/tmp/.ICE-unix/1539,unix/desktop-linux:/tmp/.ICE-unix/1539', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/artificer/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-9d6b24c8b015b31b.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/artificer/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-2e6a973c97.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/artificer', 'AMENT_PREFIX_PATH': '/home/artificer/Desktop/ROV2026/install/rov_control:/home/artificer/Desktop/ROV2026/install/dummy_hardware:/home/artificer/Desktop/ROV2026/install/description:/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'cinnamon', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'XDG_VTNR': '7', 'PWD': '/home/artificer/Desktop/ROV2026/build/rov_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/artificer/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/artificer/Desktop/ROV2026/install/rov_control:/home/artificer/Desktop/ROV2026/install/dummy_hardware:/home/artificer/Desktop/ROV2026/install/description:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[10.736123] (rov_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.736771] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl.h\n'}
+[10.736877] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_types.h\n'}
+[10.736987] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/qdldl/qdldl_version.h\n'}
+[10.737088] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp.h\n'}
+[10.737189] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_constants.h\n'}
+[10.737281] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_functions.h\n'}
+[10.737355] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_api_types.h\n'}
+[10.737433] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_export_define.h\n'}
+[10.737525] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/osqp/osqp_configure.h\n'}
+[10.737604] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libosqpstatic.a\n'}
+[10.737680] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets.cmake\n'}
+[10.737793] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqpstatic-targets-noconfig.cmake\n'}
+[10.737919] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libosqp.so\n'}
+[10.738033] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets.cmake\n'}
+[10.738178] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-targets-noconfig.cmake\n'}
+[10.738280] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config.cmake\n'}
+[10.738387] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/cmake/osqp/osqp-config-version.cmake\n'}
+[10.738466] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files\n'}
+[10.738542] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/Makefile\n'}
+[10.738648] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc\n'}
+[10.738720] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public\n'}
+[10.738794] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp.h\n'}
+[10.738883] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_export_define.h\n'}
+[10.738965] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_constants.h\n'}
+[10.739036] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_functions.h\n'}
+[10.739129] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/public/osqp_api_types.h\n'}
+[10.739182] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private\n'}
+[10.739232] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_utils.h\n'}
+[10.739280] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/scaling.h\n'}
+[10.739329] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/csc_math.h\n'}
+[10.739377] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/glob_opts.h\n'}
+[10.739424] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/error.h\n'}
+[10.739482] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl.h\n'}
+[10.739532] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/timing.h\n'}
+[10.739580] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/printing.h\n'}
+[10.739626] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_interface.h\n'}
+[10.739672] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/auxil.h\n'}
+[10.739718] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_version.h\n'}
+[10.739763] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/util.h\n'}
+[10.739810] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/kkt.h\n'}
+[10.739857] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_impl.h\n'}
+[10.739910] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/profilers.h\n'}
+[10.739957] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_vector.h\n'}
+[10.740005] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/version.h\n'}
+[10.740050] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/lin_alg.h\n'}
+[10.740114] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/qdldl_types.h\n'}
+[10.740164] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/algebra_matrix.h\n'}
+[10.740211] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/inc/private/types.h\n'}
+[10.740258] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src\n'}
+[10.740304] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl.c\n'}
+[10.740349] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/vector.c\n'}
+[10.740395] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/util.c\n'}
+[10.740440] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/error.c\n'}
+[10.740485] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/qdldl_interface.c\n'}
+[10.740531] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_math.c\n'}
+[10.740576] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/matrix.c\n'}
+[10.740622] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/algebra_libs.c\n'}
+[10.740673] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/scaling.c\n'}
+[10.740721] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/csc_utils.c\n'}
+[10.740766] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/kkt.c\n'}
+[10.740811] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/osqp_api.c\n'}
+[10.740856] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/osqp/codegen_files/src/auxil.c\n'}
+[10.740902] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/pwm_interface_plugin.xml\n'}
+[10.740947] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/plugins/axis_to_command_controller_plugin.xml\n'}
+[10.740993] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/librov_control.so\n'}
+[10.741039] (rov_control) StdoutLine: {'line': b'-- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so\n'}
+[10.747736] (rov_control) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/artificer/Desktop/ROV2026/install/rov_control/lib/libaxis_to_command_controller.so" to ""\n'}
+[10.748084] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/lib/rov_control/gamepad_parser_node\n'}
+[10.748341] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include/\n'}
+[10.748569] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control\n'}
+[10.748796] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/axis_to_command_controller.hpp\n'}
+[10.748956] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/gamepad_parser_node.hpp\n'}
+[10.749114] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/pwm_interface.hpp\n'}
+[10.749243] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/thruster_pid_controller.hpp\n'}
+[10.749353] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685\n'}
+[10.749411] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685.h\n'}
+[10.749465] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/include//rov_control/libdriver_pca9685/driver_pca9685_interface.h\n'}
+[10.749553] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/launch\n'}
+[10.749629] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch.py\n'}
+[10.749699] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/launch/rov_control_launch_test.py\n'}
+[10.749769] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.sh\n'}
+[10.749839] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/library_path.dsv\n'}
+[10.749908] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/package_run_dependencies/rov_control\n'}
+[10.749977] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/parent_prefix_path/rov_control\n'}
+[10.750045] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.sh\n'}
+[10.750176] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/ament_prefix_path.dsv\n'}
+[10.750235] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.sh\n'}
+[10.750287] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/environment/path.dsv\n'}
+[10.750338] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.bash\n'}
+[10.750388] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.sh\n'}
+[10.750443] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.zsh\n'}
+[10.750497] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/local_setup.dsv\n'}
+[10.750546] (rov_control) StdoutLine: {'line': b'-- Installing: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/package.dsv\n'}
+[10.750594] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/packages/rov_control\n'}
+[10.750643] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/rov_control\n'}
+[10.750692] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rov_control\n'}
+[10.750741] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport.cmake\n'}
+[10.750789] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/export_rov_controlExport-noconfig.cmake\n'}
+[10.750865] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[10.750918] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[10.750966] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig.cmake\n'}
+[10.751015] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/cmake/rov_controlConfig-version.cmake\n'}
+[10.751072] (rov_control) StdoutLine: {'line': b'-- Up-to-date: /home/artificer/Desktop/ROV2026/install/rov_control/share/rov_control/package.xml\n'}
+[10.751751] (rov_control) CommandEnded: {'returncode': 0}
+[10.766714] (rov_control) JobEnded: {'identifier': 'rov_control', 'rc': 0}
+[10.767339] (-) EventReactorShutdown: {}

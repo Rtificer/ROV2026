@@ -8,6 +8,7 @@ find_package(hardware_interface REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(controller_interface REQUIRED)
 find_package(Eigen3 REQUIRED)
+find_package(control_toolbox REQUIRED)
 
 # ========= OSQP VENDOR SETUP =========
 # Build OSQP from vendor source
@@ -77,6 +78,34 @@ ament_target_dependencies(axis_to_command_controller
   Eigen3
 )
 
+# ========= BUILD THRUSTER PID CONTROLLER =========
+add_library(thruster_pid_controller SHARED
+  src/thruster_pid_controller.cpp
+)
+
+target_include_directories(thruster_pid_controller PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
+
+ament_target_dependencies(thruster_pid_controller
+  rclcpp
+  controller_interface
+  hardware_interface
+  pluginlib
+  control_toolbox
+  geometry_msgs
+)
+
+pluginlib_export_plugin_description_file(controller_interface plugins/thruster_pid_controller_plugin.xml)
+
+install(TARGETS thruster_pid_controller
+  EXPORT export_rov_control
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
+
 pluginlib_export_plugin_description_file(hardware_interface plugins/pwm_interface_plugin.xml)
 pluginlib_export_plugin_description_file(controller_interface plugins/axis_to_command_controller_plugin.xml)
 
@@ -95,6 +124,10 @@ install(DIRECTORY include/
 
 install(DIRECTORY launch/
   DESTINATION share/${PROJECT_NAME}/launch
+)
+
+install(DIRECTORY config/
+  DESTINATION share/${PROJECT_NAME}/config
 )
 
 ament_export_libraries(

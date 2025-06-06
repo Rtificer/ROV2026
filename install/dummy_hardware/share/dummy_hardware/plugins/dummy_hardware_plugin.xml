@@ -1,1 +1,7 @@
-/home/artificer/Desktop/ROV2026/src/dummy_hardware/plugins/dummy_hardware_plugin.xml
+<library path="dummy_hardware">
+  <class name="dummy_hardware/DummyHardwareSystem"
+         type="DummyHardwareSystem"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>Minimal dummy hardware system for testing.</description>
+  </class>
+</library>
