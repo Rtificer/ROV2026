@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['num_5fjoints_5f_0',['num_joints_',['../classrov__controllers_1_1AxisToCommandController.html#a9e950f56be00b03a5221a427cb874f28',1,'rov_controllers::AxisToCommandController']]]
+  ['last_5fimu_5ftime_5f_0',['last_imu_time_',['../classrov__controllers_1_1PidController.html#adc838c2917e71775f792f91c0494bb7f',1,'rov_controllers::PidController']]],
+  ['latest_5fwrench_5f_1',['latest_wrench_',['../classrov__controllers_1_1AxisToCommandController.html#ae16024c92c62fe06950159b3eccb8620',1,'rov_controllers::AxisToCommandController']]]
 ];

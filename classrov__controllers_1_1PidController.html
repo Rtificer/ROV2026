@@ -164,8 +164,6 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a7d8b3df76cb41a22e207e44d7c8b2082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a277fb975658da95b6a826c26e244bb4b" id="r_a277fb975658da95b6a826c26e244bb4b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1PidController.html#a277fb975658da95b6a826c26e244bb4b">reference_topic_</a></td></tr>
 <tr class="separator:a277fb975658da95b6a826c26e244bb4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85d0d589d3f0a518dfb688036fb613f3" id="r_a85d0d589d3f0a518dfb688036fb613f3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1PidController.html#a85d0d589d3f0a518dfb688036fb613f3">state_topic_</a></td></tr>
-<tr class="separator:a85d0d589d3f0a518dfb688036fb613f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31fb0de97413fdced248507d77f3568f" id="r_a31fb0de97413fdced248507d77f3568f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1PidController.html#a31fb0de97413fdced248507d77f3568f">output_topic_</a></td></tr>
 <tr class="separator:a31fb0de97413fdced248507d77f3568f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02b213fef27c5a56d514c3d974a89598" id="r_a02b213fef27c5a56d514c3d974a89598"><td class="memItemLeft" align="right" valign="top">geometry_msgs::msg::Twist&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1PidController.html#a02b213fef27c5a56d514c3d974a89598">ref_</a></td></tr>
@@ -176,10 +174,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a41a96abbaefa830f142289495a67a46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97a9f12b1a71e3e6b4b70312748e1bf5" id="r_a97a9f12b1a71e3e6b4b70312748e1bf5"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; geometry_msgs::msg::Twist &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1PidController.html#a97a9f12b1a71e3e6b4b70312748e1bf5">ref_sub_</a></td></tr>
 <tr class="separator:a97a9f12b1a71e3e6b4b70312748e1bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5b5d29a4f095525bfb28b48cbf73d68" id="r_ab5b5d29a4f095525bfb28b48cbf73d68"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; geometry_msgs::msg::Twist &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1PidController.html#ab5b5d29a4f095525bfb28b48cbf73d68">state_sub_</a></td></tr>
-<tr class="separator:ab5b5d29a4f095525bfb28b48cbf73d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae120e4ac8270c60ad4c82c925e2b7f7" id="r_aae120e4ac8270c60ad4c82c925e2b7f7"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; sensor_msgs::msg::Imu &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1PidController.html#aae120e4ac8270c60ad4c82c925e2b7f7">imu_sub_</a></td></tr>
+<tr class="separator:aae120e4ac8270c60ad4c82c925e2b7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16747f1d77cca699d4f8a89b7b0bb703" id="r_a16747f1d77cca699d4f8a89b7b0bb703"><td class="memItemLeft" align="right" valign="top">rclcpp::Publisher&lt; geometry_msgs::msg::Wrench &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1PidController.html#a16747f1d77cca699d4f8a89b7b0bb703">wrench_pub_</a></td></tr>
 <tr class="separator:a16747f1d77cca699d4f8a89b7b0bb703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc838c2917e71775f792f91c0494bb7f" id="r_adc838c2917e71775f792f91c0494bb7f"><td class="memItemLeft" align="right" valign="top">rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrov__controllers_1_1PidController.html#adc838c2917e71775f792f91c0494bb7f">last_imu_time_</a> {0, 0, RCL_ROS_TIME}</td></tr>
+<tr class="separator:adc838c2917e71775f792f91c0494bb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7df0a4ac961f4f7120004ac22605ec71" name="a7df0a4ac961f4f7120004ac22605ec71"></a>
@@ -490,6 +490,50 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aae120e4ac8270c60ad4c82c925e2b7f7" name="aae120e4ac8270c60ad4c82c925e2b7f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae120e4ac8270c60ad4c82c925e2b7f7">&#9670;&#160;</a></span>imu_sub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Subscription&lt;sensor_msgs::msg::Imu&gt;::SharedPtr rov_controllers::PidController::imu_sub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc838c2917e71775f792f91c0494bb7f" name="adc838c2917e71775f792f91c0494bb7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc838c2917e71775f792f91c0494bb7f">&#9670;&#160;</a></span>last_imu_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Time rov_controllers::PidController::last_imu_time_ {0, 0, RCL_ROS_TIME}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a31fb0de97413fdced248507d77f3568f" name="a31fb0de97413fdced248507d77f3568f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31fb0de97413fdced248507d77f3568f">&#9670;&#160;</a></span>output_topic_</h2>
 
@@ -611,50 +655,6 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">geometry_msgs::msg::Twist rov_controllers::PidController::state_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab5b5d29a4f095525bfb28b48cbf73d68" name="ab5b5d29a4f095525bfb28b48cbf73d68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5b5d29a4f095525bfb28b48cbf73d68">&#9670;&#160;</a></span>state_sub_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">rclcpp::Subscription&lt;geometry_msgs::msg::Twist&gt;::SharedPtr rov_controllers::PidController::state_sub_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a85d0d589d3f0a518dfb688036fb613f3" name="a85d0d589d3f0a518dfb688036fb613f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85d0d589d3f0a518dfb688036fb613f3">&#9670;&#160;</a></span>state_topic_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string rov_controllers::PidController::state_topic_</td>
         </tr>
       </table>
   </td>

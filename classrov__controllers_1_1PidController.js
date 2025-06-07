@@ -10,13 +10,13 @@ var classrov__controllers_1_1PidController =
     [ "update", "classrov__controllers_1_1PidController.html#ab8fc8949920b632ba47fcd086b77c021", null ],
     [ "data_mutex_", "classrov__controllers_1_1PidController.html#a41a96abbaefa830f142289495a67a46f", null ],
     [ "dof_names_", "classrov__controllers_1_1PidController.html#ac9f3506596fb6bb5cdb7a62657dab403", null ],
+    [ "imu_sub_", "classrov__controllers_1_1PidController.html#aae120e4ac8270c60ad4c82c925e2b7f7", null ],
+    [ "last_imu_time_", "classrov__controllers_1_1PidController.html#adc838c2917e71775f792f91c0494bb7f", null ],
     [ "output_topic_", "classrov__controllers_1_1PidController.html#a31fb0de97413fdced248507d77f3568f", null ],
     [ "pids_", "classrov__controllers_1_1PidController.html#a7d8b3df76cb41a22e207e44d7c8b2082", null ],
     [ "ref_", "classrov__controllers_1_1PidController.html#a02b213fef27c5a56d514c3d974a89598", null ],
     [ "ref_sub_", "classrov__controllers_1_1PidController.html#a97a9f12b1a71e3e6b4b70312748e1bf5", null ],
     [ "reference_topic_", "classrov__controllers_1_1PidController.html#a277fb975658da95b6a826c26e244bb4b", null ],
     [ "state_", "classrov__controllers_1_1PidController.html#a7f27e6f4e04d20bf01bf7e565dcbd490", null ],
-    [ "state_sub_", "classrov__controllers_1_1PidController.html#ab5b5d29a4f095525bfb28b48cbf73d68", null ],
-    [ "state_topic_", "classrov__controllers_1_1PidController.html#a85d0d589d3f0a518dfb688036fb613f3", null ],
     [ "wrench_pub_", "classrov__controllers_1_1PidController.html#a16747f1d77cca699d4f8a89b7b0bb703", null ]
 ];
