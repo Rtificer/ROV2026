@@ -1,0 +1,1 @@
+Invoking command in '/home/artificer/Desktop/ROV2026/src/build/rov_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/rov_control -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/src/install/rov_control

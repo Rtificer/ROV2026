@@ -1,0 +1,7 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The patch step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+command (connected)=/usr/bin/cmake;-Dcan_fetch=YES;-P;/home/artificer/Desktop/ROV2026/src/build/rov_control/_deps/qdldl-subbuild/qdldl-populate-prefix/tmp/qdldl-populate-gitupdate.cmake
+command (disconnected)=/usr/bin/cmake;-Dcan_fetch=NO;-P;/home/artificer/Desktop/ROV2026/src/build/rov_control/_deps/qdldl-subbuild/qdldl-populate-prefix/tmp/qdldl-populate-gitupdate.cmake
+work_dir=/home/artificer/Desktop/ROV2026/src/build/rov_control/_deps/qdldl-src

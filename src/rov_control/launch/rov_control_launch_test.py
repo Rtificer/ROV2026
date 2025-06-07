@@ -41,9 +41,16 @@ def generate_launch_description():
             package='rov_control',
             executable='bar100_sensor',
             parameters=[
-                '/home/artificer/Desktop/ROV2026/src/rov_control/config/bar100_sensor.yaml'
+                '/home/artificer/Desktop/ROV2026/src/rov_control/config/bar100_sensor_parameters.yaml'
             ],
             output='screen'
+        ),
+        Node(
+            package='bno055',
+            executable='bno055',
+            parameters=[
+                '/home/artificer/Desktop/ROV2026/src/bno055/bno055/params/bno055_parameters.yaml'
+            ],
         ),
         Node(
             package='rov_control',

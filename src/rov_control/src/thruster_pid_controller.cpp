@@ -1,15 +1,3 @@
-#include <memory>
-#include <string>
-#include <vector>
-#include <mutex>
-
-#include <rclcpp/rclcpp.hpp>
-#include <controller_interface/controller_interface.hpp>
-#include <pluginlib/class_list_macros.hpp>
-#include <geometry_msgs/msg/twist.hpp>
-#include <geometry_msgs/msg/wrench.hpp>
-#include <control_toolbox/pid.hpp>
-
 #include "rov_control/thruster_pid_controller.hpp"
 
 namespace rov_controllers
@@ -34,8 +22,8 @@ namespace rov_controllers
   {
     auto_declare<std::vector<std::string>>("dof_names", {"surge", "sway", "heave", "roll", "pitch", "yaw"});
     auto_declare<std::string>("reference_topic", "/desired_velocity");
-    auto_declare<std::string>("state_topic", "/current_velocity");
     auto_declare<std::string>("output_topic", "/desired_wrench");
+    // Remove state_topic
 
     dof_names_ = get_node()->get_parameter("dof_names").as_string_array();
     for(const auto &dof : dof_names_)
@@ -53,11 +41,10 @@ namespace rov_controllers
     return CallbackReturn::SUCCESS;
   }
 
-  controller_interface::CallbackReturn PidController::on_configure(const rclcpp_lifecycle::State &previous_state)
+  controller_interface::CallbackReturn PidController::on_configure(const rclcpp_lifecycle::State &)
   {
     dof_names_ = get_node()->get_parameter("dof_names").as_string_array();
     reference_topic_ = get_node()->get_parameter("reference_topic").as_string();
-    state_topic_ = get_node()->get_parameter("state_topic").as_string();
     output_topic_ = get_node()->get_parameter("output_topic").as_string();
 
     // Load PID gains for each DOF
@@ -82,12 +69,28 @@ namespace rov_controllers
           ref_ = *msg;
         });
 
-    state_sub_ = get_node()->create_subscription<geometry_msgs::msg::Twist>(
-        state_topic_, 10,
-        [this](const geometry_msgs::msg::Twist::SharedPtr msg)
+    // Subscribe to IMU for angular velocity
+    imu_sub_ = get_node()->create_subscription<sensor_msgs::msg::Imu>(
+        "/bno055/imu", 10,
+        [this](const sensor_msgs::msg::Imu::SharedPtr msg)
         {
           std::lock_guard<std::mutex> lock(data_mutex_);
-          state_ = *msg;
+          // Update angular velocity
+          state_.angular.x = msg->angular_velocity.x;
+          state_.angular.y = msg->angular_velocity.y;
+          state_.angular.z = msg->angular_velocity.z;
+
+          // Integrate linear acceleration for linear velocity (temporary stand-in)
+          rclcpp::Time current_time = msg->header.stamp;
+          double dt = 0.0;
+          if (last_imu_time_.nanoseconds() > 0) {
+            dt = (current_time - last_imu_time_).seconds();
+            // v = v + a * dt
+            state_.linear.x += msg->linear_acceleration.x * dt;
+            state_.linear.y += msg->linear_acceleration.y * dt;
+            state_.linear.z += msg->linear_acceleration.z * dt;
+          }
+          last_imu_time_ = current_time;
         });
 
     wrench_pub_ = get_node()->create_publisher<geometry_msgs::msg::Wrench>(output_topic_, 10);

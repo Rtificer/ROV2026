@@ -1,0 +1,86 @@
+[0.782s] Invoking command in '/home/artificer/Desktop/ROV2026/src/bno055': PYTHONPATH=/home/artificer/Desktop/ROV2026/build/bno055/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bno055 build --build-base /home/artificer/Desktop/ROV2026/build/bno055/build install --record /home/artificer/Desktop/ROV2026/build/bno055/install.log --single-version-externally-managed install_data
+[1.026s] running egg_info
+[1.027s] creating ../../build/bno055/bno055.egg-info
+[1.047s] writing ../../build/bno055/bno055.egg-info/PKG-INFO
+[1.047s] writing dependency_links to ../../build/bno055/bno055.egg-info/dependency_links.txt
+[1.047s] writing entry points to ../../build/bno055/bno055.egg-info/entry_points.txt
+[1.047s] writing requirements to ../../build/bno055/bno055.egg-info/requires.txt
+[1.047s] writing top-level names to ../../build/bno055/bno055.egg-info/top_level.txt
+[1.047s] writing manifest file '../../build/bno055/bno055.egg-info/SOURCES.txt'
+[1.087s] reading manifest file '../../build/bno055/bno055.egg-info/SOURCES.txt'
+[1.088s] adding license file 'LICENSE'
+[1.088s] adding license file 'AUTHORS'
+[1.088s] writing manifest file '../../build/bno055/bno055.egg-info/SOURCES.txt'
+[1.088s] running build
+[1.088s] running build_py
+[1.088s] creating /home/artificer/Desktop/ROV2026/build/bno055/build
+[1.088s] creating /home/artificer/Desktop/ROV2026/build/bno055/build/lib
+[1.089s] creating /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055
+[1.089s] copying bno055/__init__.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055
+[1.089s] copying bno055/bno055.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055
+[1.089s] copying bno055/registers.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055
+[1.089s] creating /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/connectors
+[1.089s] copying bno055/connectors/i2c.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/connectors
+[1.089s] copying bno055/connectors/Connector.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/connectors
+[1.089s] copying bno055/connectors/__init__.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/connectors
+[1.089s] copying bno055/connectors/uart.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/connectors
+[1.090s] creating /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/params
+[1.090s] copying bno055/params/__init__.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/params
+[1.090s] copying bno055/params/NodeParameters.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/params
+[1.090s] creating /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/error_handling
+[1.090s] copying bno055/error_handling/__init__.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/error_handling
+[1.090s] copying bno055/error_handling/exceptions.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/error_handling
+[1.090s] creating /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/sensor
+[1.090s] copying bno055/sensor/SensorService.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/sensor
+[1.090s] copying bno055/sensor/__init__.py -> /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/sensor
+[1.091s] running install
+[1.096s] running install_lib
+[1.116s] creating /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055
+[1.116s] creating /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/connectors
+[1.116s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/connectors/i2c.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/connectors
+[1.116s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/connectors/Connector.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/connectors
+[1.117s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/connectors/__init__.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/connectors
+[1.117s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/connectors/uart.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/connectors
+[1.117s] creating /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/params
+[1.117s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/params/__init__.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/params
+[1.117s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/params/NodeParameters.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/params
+[1.117s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/__init__.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055
+[1.117s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/registers.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055
+[1.117s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/bno055.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055
+[1.117s] creating /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/error_handling
+[1.117s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/error_handling/__init__.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/error_handling
+[1.118s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/error_handling/exceptions.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/error_handling
+[1.118s] creating /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/sensor
+[1.118s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/sensor/SensorService.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/sensor
+[1.118s] copying /home/artificer/Desktop/ROV2026/build/bno055/build/lib/bno055/sensor/__init__.py -> /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/sensor
+[1.118s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/connectors/i2c.py to i2c.cpython-312.pyc
+[1.119s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/connectors/Connector.py to Connector.cpython-312.pyc
+[1.119s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/connectors/__init__.py to __init__.cpython-312.pyc
+[1.119s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/connectors/uart.py to uart.cpython-312.pyc
+[1.120s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/params/__init__.py to __init__.cpython-312.pyc
+[1.120s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/params/NodeParameters.py to NodeParameters.cpython-312.pyc
+[1.121s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/__init__.py to __init__.cpython-312.pyc
+[1.121s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/registers.py to registers.cpython-312.pyc
+[1.122s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/bno055.py to bno055.cpython-312.pyc
+[1.123s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/error_handling/__init__.py to __init__.cpython-312.pyc
+[1.123s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/error_handling/exceptions.py to exceptions.cpython-312.pyc
+[1.123s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/sensor/SensorService.py to SensorService.cpython-312.pyc
+[1.126s] byte-compiling /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055/sensor/__init__.py to __init__.cpython-312.pyc
+[1.126s] running install_data
+[1.126s] creating /home/artificer/Desktop/ROV2026/install/bno055/share/ament_index
+[1.126s] creating /home/artificer/Desktop/ROV2026/install/bno055/share/ament_index/resource_index
+[1.126s] creating /home/artificer/Desktop/ROV2026/install/bno055/share/ament_index/resource_index/packages
+[1.126s] copying resource/bno055 -> /home/artificer/Desktop/ROV2026/install/bno055/share/ament_index/resource_index/packages
+[1.126s] copying package.xml -> /home/artificer/Desktop/ROV2026/install/bno055/share/bno055
+[1.126s] creating /home/artificer/Desktop/ROV2026/install/bno055/share/bno055/launch
+[1.126s] copying launch/bno055.launch.py -> /home/artificer/Desktop/ROV2026/install/bno055/share/bno055/launch
+[1.127s] creating /home/artificer/Desktop/ROV2026/install/bno055/share/bno055/config
+[1.127s] copying bno055/params/bno055_params_i2c.yaml -> /home/artificer/Desktop/ROV2026/install/bno055/share/bno055/config
+[1.127s] copying bno055/params/bno055_params.yaml -> /home/artificer/Desktop/ROV2026/install/bno055/share/bno055/config
+[1.127s] copying bno055/params/bno055_params_test.yaml -> /home/artificer/Desktop/ROV2026/install/bno055/share/bno055/config
+[1.127s] running install_egg_info
+[1.148s] Copying ../../build/bno055/bno055.egg-info to /home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages/bno055-0.5.0-py3.12.egg-info
+[1.149s] running install_scripts
+[1.285s] Installing bno055 script to /home/artificer/Desktop/ROV2026/install/bno055/lib/bno055
+[1.286s] writing list of installed files to '/home/artificer/Desktop/ROV2026/build/bno055/install.log'
+[1.308s] Invoked command in '/home/artificer/Desktop/ROV2026/src/bno055' returned '0': PYTHONPATH=/home/artificer/Desktop/ROV2026/build/bno055/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/artificer/Desktop/ROV2026/install/bno055/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bno055 build --build-base /home/artificer/Desktop/ROV2026/build/bno055/build install --record /home/artificer/Desktop/ROV2026/build/bno055/install.log --single-version-externally-managed install_data

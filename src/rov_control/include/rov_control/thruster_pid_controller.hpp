@@ -13,6 +13,8 @@
 #include <geometry_msgs/msg/twist.hpp>
 #include <geometry_msgs/msg/wrench.hpp>
 #include <control_toolbox/pid.hpp>
+#include <sensor_msgs/msg/imu.hpp>
+#include <pluginlib/class_list_macros.hpp>
 
 namespace rov_controllers
 {
@@ -96,11 +98,13 @@ namespace rov_controllers
   private:
     std::vector<std::string> dof_names_;
     std::vector<std::shared_ptr<control_toolbox::Pid>> pids_;
-    std::string reference_topic_, state_topic_, output_topic_;
+    std::string reference_topic_, output_topic_;
     geometry_msgs::msg::Twist ref_, state_;
     std::mutex data_mutex_;
-    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr ref_sub_, state_sub_;
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr ref_sub_;
+    rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub_;
     rclcpp::Publisher<geometry_msgs::msg::Wrench>::SharedPtr wrench_pub_;
+    rclcpp::Time last_imu_time_{0, 0, RCL_ROS_TIME};
   };
 
 } // namespace rov_controllers

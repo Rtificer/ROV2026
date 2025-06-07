@@ -24,6 +24,7 @@
   <exec_depend>python3-pip</exec_depend>
   <exec_depend>python3-typeguard</exec_depend>
   <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>bno055</exec_depend>
 
 
   <test_depend>ament_lint_auto</test_depend>
