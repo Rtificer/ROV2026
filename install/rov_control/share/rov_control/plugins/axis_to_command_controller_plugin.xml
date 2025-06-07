@@ -1,1 +1,7 @@
-/home/student/Desktop/ROV2026/src/rov_control/plugins/axis_to_command_controller_plugin.xml
+<library path="axis_to_command_controller">
+  <class name="rov_controllers/AxisToCommandController"
+         type="rov_controllers::AxisToCommandController"
+         base_class_type="controller_interface::ChainableControllerInterface">
+    <description>Command mixer using OSQP constrained least squares.</description>
+  </class>
+</library>

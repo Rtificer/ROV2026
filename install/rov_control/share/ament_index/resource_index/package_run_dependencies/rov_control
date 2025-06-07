@@ -1,1 +1,1 @@
-/home/student/Desktop/ROV2026/build/rov_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rov_control
+hardware_interface;rclcpp;pluginlib;controller_interface;control_toolbox;eigen3_cmake_module;launch;launch_ros;python-smbus;python3-yaml;python3-setuptools;python3-pip;python3-typeguard;python3-numpy;ament_lint_auto;ament_lint_common

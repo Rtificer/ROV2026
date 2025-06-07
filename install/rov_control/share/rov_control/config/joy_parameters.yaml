@@ -1,1 +1,3 @@
-/home/student/Desktop/ROV2026/src/rov_control/config/joy_parameters.yaml
+joy_node:
+  ros__parameters:
+    deadzone: 0.05

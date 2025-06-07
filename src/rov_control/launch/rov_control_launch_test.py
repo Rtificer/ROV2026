@@ -2,7 +2,6 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.substitutions import Command, PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
-import smbus
 
 
 def generate_launch_description():
@@ -22,7 +21,7 @@ def generate_launch_description():
             package='controller_manager',
             executable='ros2_control_node',
             parameters=[
-                '/home/student/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml'
+                '/home/artificer/Desktop/ROV2026/src/rov_control/config/control_parameters.yaml'
             ],
             output='screen'
         ),
@@ -40,9 +39,17 @@ def generate_launch_description():
         ),
         Node(
             package='rov_control',
+            executable='bar100_sensor',
+            parameters=[
+                '/home/artificer/Desktop/ROV2026/src/rov_control/config/bar100_sensor.yaml'
+            ],
+            output='screen'
+        ),
+        Node(
+            package='rov_control',
             executable='gamepad_parser_node',
             parameters=[
-                '/home/student/Desktop/ROV2026/src/rov_control/config/gamepad_parser_parameters.yaml'
+                '/home/artificer/Desktop/ROV2026/src/rov_control/config/gamepad_parser_parameters.yaml'
             ],
             output='screen'
         ),
@@ -50,7 +57,7 @@ def generate_launch_description():
             package='joy',
             executable='joy_node',
             parameters=[
-                '/home/student/Desktop/ROV2026/src/rov_control/config/joy_parameters.yaml'
+                '/home/artificer/Desktop/ROV2026/src/rov_control/config/joy_parameters.yaml'
             ],
             output='screen'
         ),

@@ -130,6 +130,12 @@ install(DIRECTORY config/
   DESTINATION share/${PROJECT_NAME}/config
 )
 
+install(PROGRAMS
+  src/bar100_sensor.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME bar100_sensor
+)
+
 ament_export_libraries(
   rov_control
   axis_to_command_controller

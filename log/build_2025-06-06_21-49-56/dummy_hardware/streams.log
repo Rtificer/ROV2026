@@ -1,0 +1,22 @@
+[0.012s] Invoking command in '/home/artificer/Desktop/ROV2026/build/dummy_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /home/artificer/Desktop/ROV2026/build/dummy_hardware -- -j12 -l12
+[0.066s] [100%] Built target dummy_hardware
+[0.083s] Invoked command in '/home/artificer/Desktop/ROV2026/build/dummy_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /home/artificer/Desktop/ROV2026/build/dummy_hardware -- -j12 -l12
+[0.084s] Invoking command in '/home/artificer/Desktop/ROV2026/build/dummy_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /home/artificer/Desktop/ROV2026/build/dummy_hardware
+[0.091s] -- Install configuration: ""
+[0.091s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/plugins/dummy_hardware_plugin.xml
+[0.091s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/lib/libdummy_hardware.so
+[0.091s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/ament_index/resource_index/package_run_dependencies/dummy_hardware
+[0.091s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/ament_index/resource_index/parent_prefix_path/dummy_hardware
+[0.091s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/environment/ament_prefix_path.dsv
+[0.091s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/environment/path.dsv
+[0.091s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/local_setup.bash
+[0.091s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/local_setup.sh
+[0.091s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/local_setup.zsh
+[0.092s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/local_setup.dsv
+[0.092s] -- Installing: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.dsv
+[0.092s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/ament_index/resource_index/packages/dummy_hardware
+[0.092s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/dummy_hardware
+[0.092s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/cmake/dummy_hardwareConfig.cmake
+[0.092s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/cmake/dummy_hardwareConfig-version.cmake
+[0.092s] -- Up-to-date: /home/artificer/Desktop/ROV2026/install/dummy_hardware/share/dummy_hardware/package.xml
+[0.093s] Invoked command in '/home/artificer/Desktop/ROV2026/build/dummy_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /home/artificer/Desktop/ROV2026/build/dummy_hardware

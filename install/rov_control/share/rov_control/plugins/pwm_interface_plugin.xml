@@ -1,1 +1,10 @@
-/home/student/Desktop/ROV2026/src/rov_control/plugins/pwm_interface_plugin.xml
+<library path="rov_control">
+  <class
+    name="rov_control/PWMInterface"
+    type="rov_control::PWMInterface"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>
+      A custom hardware interface for effort-based thruster control on an ROV.
+    </description>
+  </class>
+</library>

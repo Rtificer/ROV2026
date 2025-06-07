@@ -1,0 +1,6 @@
+bar100_sensor:
+  ros__parameters:
+    timer_period: 0.05 #seconds
+    surface_pressure: 101325 #Pa
+    water_density: 1025 #kg/m^3
+    gravity_acceleration: 9.80665 #m/s^2

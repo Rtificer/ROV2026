@@ -1,2 +1,6 @@
 smbus==1.1.post2
-kellerLD @ git+https://github.com/bluerobotics/KellerLD-python.git@3ae00ec3c774c9f3d6b01acbdf6dd497be4084fa
+kellerLD @ git+https://github.com/Rtificer/KellerLD-python-patched.git
+PyYAML
+setuptools
+typeguard
+numpy

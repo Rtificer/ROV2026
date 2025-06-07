@@ -1,1 +1,2 @@
-/home/student/Desktop/ROV2026/build/dummy_hardware/ament_cmake_environment_hooks/local_setup.dsv
+source;share/dummy_hardware/environment/ament_prefix_path.sh
+source;share/dummy_hardware/environment/path.sh
