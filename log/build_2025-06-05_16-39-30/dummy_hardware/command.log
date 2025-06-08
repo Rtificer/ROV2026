@@ -1,3 +1,0 @@
-Invoking command in '/home/artificer/Desktop/ROV2026/build/dummy_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/dummy_hardware -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/dummy_hardware
-Invoked command in '/home/artificer/Desktop/ROV2026/build/dummy_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/artificer/Desktop/ROV2026/src/dummy_hardware -DCMAKE_INSTALL_PREFIX=/home/artificer/Desktop/ROV2026/install/dummy_hardware
-Invoking command in '/home/artificer/Desktop/ROV2026/build/dummy_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/artificer/Desktop/ROV2026/build/dummy_hardware -- -j12 -l12

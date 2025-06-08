@@ -1,7 +1,0 @@
-smbus==1.1.post2
-kellerLD @ git+https://github.com/Rtificer/KellerLD-python-patched.git
-PyYAML
-setuptools
-typeguard
-numpy
-catkin_pkg

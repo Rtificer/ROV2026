@@ -1,1 +1,1 @@
-hardware_interface;rclcpp;pluginlib;controller_interface;control_toolbox;eigen3_cmake_module;launch;launch_ros;python-smbus;python3-yaml;python3-setuptools;python3-pip;python3-typeguard;python3-numpy;ament_lint_auto;ament_lint_common
+hardware_interface;rclcpp;pluginlib;controller_interface;control_toolbox;eigen3_cmake_module;launch;launch_ros;python-smbus;python3-yaml;python3-setuptools;python3-pip;python3-typeguard;python3-numpy;bno055;ament_lint_auto;ament_lint_common
