@@ -62,7 +62,7 @@
  * @section measurement_models Measurement Models
  *
  * - **Pressure Sensor (depth only):** @f$ z_k = p_k^{(z)} + v_k @f$
- * - **USBL Position Measurement:** @f$ \mathbf{z}_k^{\text{USBL}} = \mathbf{p}_k + \mathbf{v}_k^{\text{noise}} @f$
+ * - **USBL Position Measurement:** @f$ z_k^{\text{USBL}} = p_k + v_k^{\text{noise}} @f$
  *
  * @section usb_cov USBL Position Measurement Model and Range-Dependent Noise Covariance
  *
