@@ -47,16 +47,16 @@ extern "C"
  *
  * The QP is solved using OSQP. The solution is returned in @f$ T^+ @f$ and @f$ T^- @f$.
  *
- * @param[in]  M_plus         Thruster mapping matrix for forward thrust (6 x n)
- * @param[in]  M_minus        Thruster mapping matrix for reverse thrust (6 x n)
- * @param[in]  W              Diagonal wrench weighting matrix (6 x 6)
- * @param[in]  Q              Diagonal effort weighting matrix (n x n)
- * @param[in]  desired_wrench Desired 6-DOF wrench vector (6 x 1)
- * @param[out] T_plus         Solution vector for forward thruster commands (n x 1)
- * @param[out] T_minus        Solution vector for reverse thruster commands (n x 1)
- * @param[in]  qp_time_limit  Maximum time allowed for QP solve (milliseconds)
- * @param[out] prim_residual  (Optional) Pointer to store the primal residual
- * @param[out] dual_residual  (Optional) Pointer to store the dual residual
+ * @param[in]  M_plus          Thruster mapping matrix for forward thrust (6 x n)
+ * @param[in]  M_minus         Thruster mapping matrix for reverse thrust (6 x n)
+ * @param[in]  W               Diagonal wrench weighting matrix (6 x 6)
+ * @param[in]  Q               Diagonal effort weighting matrix (n x n)
+ * @param[in]  desired_wrench  Desired 6-DOF wrench vector (6 x 1)
+ * @param[out] T_plus          Solution vector for forward thruster commands (n x 1)
+ * @param[out] T_minus         Solution vector for reverse thruster commands (n x 1)
+ * @param[in]  qp_time_limit   Maximum time allowed for QP solve (milliseconds)
+ * @param[out] prim_residual   (Optional) Pointer to store the primal residual
+ * @param[out] dual_residual   (Optional) Pointer to store the dual residual
  * @return True if a solution was found, false otherwise
  */
 bool solve_thruster_qp(
