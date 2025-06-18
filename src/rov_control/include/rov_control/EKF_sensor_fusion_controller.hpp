@@ -1,4 +1,5 @@
 /**
+ * @file EKF_sensor_fusion_controller.hpp
  * @brief Extended Kalman Filter for 6-DOF State Estimation with IMU, Pressure Sensor, and USBL
  *
  * This filter estimates the full 6-DOF state of a vehicle by fusing data from:
