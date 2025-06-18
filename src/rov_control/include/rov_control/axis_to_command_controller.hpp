@@ -20,28 +20,32 @@ extern "C"
 /**
  * @brief Solve the thruster allocation quadratic program (QP) for ROV control.
  *
- * This function solves the following QP to optimally allocate forward (T⁺) and reverse (T⁻) thruster commands:
+ * This function solves the following QP to optimally allocate forward (@f$ T^+ @f$) and reverse (@f$ T^- @f$) thruster commands:
  *
- * Minimize over T⁺, T⁻:
+ * **Minimize over** @f$ T^+, T^- @f$:
+ * @f[
+ *     \left\| W \left( w - \sum_{i} (T^+_i M^+_{:,i} + T^-_i M^-_{:,i}) \right) \right\|^2 + (T^+ + T^-)^\top Q (T^+ + T^-)
+ * @f]
  *
- *     || W (w - Σᵢ (T⁺ᵢ M⁺[:,i] + T⁻ᵢ M⁻[:,i])) ||² + (T⁺ + T⁻)ᵀ Q (T⁺ + T⁻)
+ * **Subject to:**
+ * @f[
+ * \begin{align*}
+ * 0 &\leq T^+_i \leq 1 \\
+ * -1 &\leq T^-_i \leq 0 \\
+ * T_i &= T^+_i + T^-_i \in [-1, 1]
+ * \end{align*}
+ * @f]
  *
- * Subject to:
+ * **Where:**
+ * - @f$ T @f$ (@f$ n \times 1 @f$): Total normalized thruster command vector, values in @f$ [-1, 1] @f$.
+ * - @f$ T_i = T^+_i + T^-_i @f$: Effort sent to thruster @f$ i @f$.
+ * - @f$ T^+, T^- @f$ (@f$ n \times 1 @f$): Forward and reverse thruster command vectors, constrained to [0, 1] and [-1, 0] respectively.
+ * - @f$ M^+, M^- @f$ (@f$ 6 \times n @f$): Thruster mapping matrices for forward/reverse. @f$ M^+_{:,i} @f$ describes the wrench contribution for max forward thrust, @f$ M^-_{:,i} @f$ for max reverse thrust.
+ * - @f$ W @f$ (@f$ 6 \times 6 @f$): Diagonal wrench weighting matrix.
+ * - @f$ Q @f$ (@f$ n \times n @f$): Diagonal effort weighting matrix.
+ * - @f$ w @f$ (@f$ 6 \times 1 @f$): Desired 6-DOF wrench vector (3 forces, 3 torques).
  *
- *   - 0 ≤ T⁺ᵢ ≤ 1
- *   - -1 ≤ T⁻ᵢ ≤ 0
- *   - Tᵢ = T⁺ᵢ + T⁻ᵢ ∈ [−1, 1]
- *
- * Where:
- *   - T (n x 1):       Total normalized thruster command vector with values in [-1, 1].
- *   - Tᵢ (scaler):     Each Tᵢ is the effort sent to thruster i. Equal to T⁺ᵢ + T⁻ᵢ.
- *   - T⁺, T⁻ (n x 1):  Forward and reverse thruster command vectors. Constrained to [0, 1] and [-1, 0] respectively.
- *   - M⁺, M⁻  (6 x n): Thruster mapping matrices for forward/reverse. M⁺[:,i] describes the wrench contribution when thruster i is at 1 (max forward thrust), and vice versa for M⁻[:,i] (max reverse thrust).
- *   - W (6 x 6):       Diagonal wrench weighting matrix. Scales errors in certain directions, accounting for the difference in drag present for certain axes. (Difference is thrust per direction because of the angles of the thrusters is accounted for in the mixer matricies.)
- *   - Q (n x n):       Diagonal effort weighting matrix. Scales the effort penalty for each thruster. (This is used to account for differences in the output of each thruster, but likely will exlcusivly be used if a thruster stops working mid-opertation, to allow the ROV to continue operating with the remaining thrusters, but completly stopping the use of the failed thruster.)
- *   - w (6 x 1):       The desired 6-DOF wrench vector. (a vector of 3 linear forces (x, y, z) and 3 torques (roll, pitch, yaw))
- *
- * The QP is solved using OSQP. The solution is returned in T_plus and T_minus.
+ * The QP is solved using OSQP. The solution is returned in @f$ T^+ @f$ and @f$ T^- @f$.
  *
  * @param[in]  M_plus         Thruster mapping matrix for forward thrust (6 x n)
  * @param[in]  M_minus        Thruster mapping matrix for reverse thrust (6 x n)
