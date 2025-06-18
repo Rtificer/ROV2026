@@ -4,7 +4,7 @@ var searchData=
   ['command_5finterface_5fconfiguration_1',['command_interface_configuration',['../classrov__controllers_1_1AxisToCommandController.html#aba31a38e36e4e65b1d579d134c9c85e0',1,'rov_controllers::AxisToCommandController::command_interface_configuration()'],['../classrov__controllers_1_1PidController.html#a6f43cf7cab33e7faad4e8e92db582437',1,'rov_controllers::PidController::command_interface_configuration()']]],
   ['command_5finterfaces_5f_2',['command_interfaces_',['../classrov__controllers_1_1AxisToCommandController.html#a70cc97aa1b3c9ab9f22ae5e79118268c',1,'rov_controllers::AxisToCommandController']]],
   ['command_5fto_5fticks_3',['command_to_ticks',['../classrov__control_1_1PWMInterface.html#a71cd8378d02ebfd2ac4a320ac62092d4',1,'rov_control::PWMInterface']]],
-  ['computation_4',['Jacobian Computation',['..//home/runner/work/ROV2026/ROV2026/src/rov_control/include/rov_control/EKF_sensor_fusion_controller.hpp#jacobians',1,'']]],
-  ['covariance_5',['covariance',['..//home/runner/work/ROV2026/ROV2026/src/rov_control/include/rov_control/EKF_sensor_fusion_controller.hpp#range_dependent_cov',1,'Range-Dependent Measurement Noise Covariance'],['..//home/runner/work/ROV2026/ROV2026/src/rov_control/include/rov_control/EKF_sensor_fusion_controller.hpp#usb_cov',1,'USBL Position Measurement Model and Range-Dependent Noise Covariance']]],
-  ['covariance_20modeling_6',['Covariance Modeling',['..//home/runner/work/ROV2026/ROV2026/src/rov_control/include/rov_control/EKF_sensor_fusion_controller.hpp#covariance_model',1,'']]]
+  ['computation_4',['Jacobian Computation',['../EKF__sensor__fusion__controller_8hpp.html#jacobians',1,'']]],
+  ['covariance_5',['covariance',['../EKF__sensor__fusion__controller_8hpp.html#range_dependent_cov',1,'Range-Dependent Measurement Noise Covariance'],['../EKF__sensor__fusion__controller_8hpp.html#usb_cov',1,'USBL Position Measurement Model and Range-Dependent Noise Covariance']]],
+  ['covariance_20modeling_6',['Covariance Modeling',['../EKF__sensor__fusion__controller_8hpp.html#covariance_model',1,'']]]
 ];
