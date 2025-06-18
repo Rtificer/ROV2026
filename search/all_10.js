@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['thruster_5fpid_5fcontroller_2ehpp_0',['thruster_pid_controller.hpp',['../thruster__pid__controller_8hpp.html',1,'']]],
-  ['twist_5fpub_5f_1',['twist_pub_',['../classGamepadParser.html#abc34a1ca50cbb7735daef5a6d073cd85',1,'GamepadParser']]]
+  ['settings_5f_0',['settings_',['../classrov__controllers_1_1AxisToCommandController.html#a757e6ebd52b154730effa1e62dd3e645',1,'rov_controllers::AxisToCommandController']]],
+  ['solve_5fthruster_5fqp_1',['solve_thruster_qp',['../axis__to__command__controller_8hpp.html#a38687d7993a68fa0042b964b60a6c1a0',1,'axis_to_command_controller.hpp']]],
+  ['state_20definition_2',['State Definition',['..//home/runner/work/ROV2026/ROV2026/src/rov_control/include/rov_control/EKF_sensor_fusion_controller.hpp#state_vector',1,'']]],
+  ['state_5f_3',['state_',['../classrov__control_1_1PWMInterface.html#a2f207b516495acedd3650ad285e29aa0',1,'rov_control::PWMInterface::state_'],['../classrov__controllers_1_1PidController.html#a7f27e6f4e04d20bf01bf7e565dcbd490',1,'rov_controllers::PidController::state_']]],
+  ['state_5finterface_5fconfiguration_4',['state_interface_configuration',['../classrov__controllers_1_1AxisToCommandController.html#a14a2407d58c87e2c05843a3beed98f43',1,'rov_controllers::AxisToCommandController::state_interface_configuration()'],['../classrov__controllers_1_1PidController.html#acaadeafef93e2c0d74bab3474b0136b5',1,'rov_controllers::PidController::state_interface_configuration()']]]
 ];

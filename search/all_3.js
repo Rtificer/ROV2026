@@ -1,7 +1,10 @@
 var searchData=
 [
   ['data_5fmutex_5f_0',['data_mutex_',['../classrov__controllers_1_1PidController.html#a41a96abbaefa830f142289495a67a46f',1,'rov_controllers::PidController']]],
-  ['desired_5fwrench_5fsub_5f_1',['desired_wrench_sub_',['../classrov__controllers_1_1AxisToCommandController.html#ade42e150b4c9589f6f65aa616833f4b5',1,'rov_controllers::AxisToCommandController']]],
-  ['dof_5fnames_5f_2',['dof_names_',['../classrov__controllers_1_1PidController.html#ac9f3506596fb6bb5cdb7a62657dab403',1,'rov_controllers::PidController']]],
-  ['dual_5fres_5fthreshold_5f_3',['dual_res_threshold_',['../classrov__controllers_1_1AxisToCommandController.html#aa218e83ed70ba987d98ada1642b9d1c5',1,'rov_controllers::AxisToCommandController']]]
+  ['definition_1',['State Definition',['..//home/runner/work/ROV2026/ROV2026/src/rov_control/include/rov_control/EKF_sensor_fusion_controller.hpp#state_vector',1,'']]],
+  ['dependent_20measurement_20noise_20covariance_2',['Range-Dependent Measurement Noise Covariance',['..//home/runner/work/ROV2026/ROV2026/src/rov_control/include/rov_control/EKF_sensor_fusion_controller.hpp#range_dependent_cov',1,'']]],
+  ['dependent_20noise_20covariance_3',['USBL Position Measurement Model and Range-Dependent Noise Covariance',['..//home/runner/work/ROV2026/ROV2026/src/rov_control/include/rov_control/EKF_sensor_fusion_controller.hpp#usb_cov',1,'']]],
+  ['desired_5fwrench_5fsub_5f_4',['desired_wrench_sub_',['../classrov__controllers_1_1AxisToCommandController.html#ade42e150b4c9589f6f65aa616833f4b5',1,'rov_controllers::AxisToCommandController']]],
+  ['dof_5fnames_5f_5',['dof_names_',['../classrov__controllers_1_1PidController.html#ac9f3506596fb6bb5cdb7a62657dab403',1,'rov_controllers::PidController']]],
+  ['dual_5fres_5fthreshold_5f_6',['dual_res_threshold_',['../classrov__controllers_1_1AxisToCommandController.html#aa218e83ed70ba987d98ada1642b9d1c5',1,'rov_controllers::AxisToCommandController']]]
 ];

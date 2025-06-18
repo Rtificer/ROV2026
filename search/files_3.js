@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['thruster_5fpid_5fcontroller_2ehpp_0',['thruster_pid_controller.hpp',['../thruster__pid__controller_8hpp.html',1,'']]]
+  ['pwm_5finterface_2ehpp_0',['pwm_interface.hpp',['../pwm__interface_8hpp.html',1,'']]]
 ];

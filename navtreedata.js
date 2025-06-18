@@ -50,7 +50,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"EKF__sensor__fusion__controller_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
