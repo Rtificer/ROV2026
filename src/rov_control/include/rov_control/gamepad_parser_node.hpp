@@ -13,7 +13,7 @@ public:
    * @brief Construct a new GamepadParser node.
    *
    * Declares the "deadzone" parameter and sets up the subscriber for the /joy topic
-   * and the publisher for the /desired_velocity topic.
+   * and the publisher for the /desired_twist topic.
    */
   GamepadParser();
 
@@ -22,7 +22,7 @@ private:
    * @brief Callback function for processing incoming joystick messages.
    *
    * Applies a deadzone to joystick axes and publishes a geometry_msgs::msg::Twist message
-   * to the /desired_velocity topic.
+   * to the /desired_twist topic.
    *
    * @param msg Shared pointer to the received sensor_msgs::msg::Joy message.
    */

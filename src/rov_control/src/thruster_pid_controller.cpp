@@ -21,7 +21,7 @@ namespace rov_controllers
   controller_interface::CallbackReturn PidController::on_init()
   {
     auto_declare<std::vector<std::string>>("dof_names", {"surge", "sway", "heave", "roll", "pitch", "yaw"});
-    auto_declare<std::string>("reference_topic", "/desired_velocity");
+    auto_declare<std::string>("reference_topic", "/desired_twist");
     auto_declare<std::string>("output_topic", "/desired_wrench");
     // Remove state_topic
 

@@ -47,7 +47,7 @@ GamepadParser::GamepadParser() : Node("gamepad_parser")
   joy_sub_ = this->create_subscription<sensor_msgs::msg::Joy>(
     "/joy", 10,
     std::bind(&GamepadParser::joy_callback, this, std::placeholders::_1));
-  twist_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/desired_velocity", 10);
+  twist_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/desired_twist", 10);
 }
 
 void GamepadParser::joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg)
