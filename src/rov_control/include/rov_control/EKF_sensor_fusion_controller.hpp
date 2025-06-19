@@ -16,9 +16,11 @@
  * \mathbf{p}_k \\
  * \mathbf{v}_k \\
  * \mathbf{q}_k \\
- * \boldsymbol{\omega}_k
+ * \boldsymbol{\omega}_k \\
+ * \mathbf{b}_{\boldsymbol{\omega}_k} \\
+ * \mathbf{b}_{\mathbf{a}_k}
  * \end{bmatrix}
- * \in \mathbb{R}^{13}
+ * \in \mathbb{R}^{19}
  * @f]
  *
  * where:
@@ -26,6 +28,8 @@
  * - @f$ \mathbf{v}_k \in \mathbb{R}^3 @f$: Velocity in the world frame.
  * - @f$ \mathbf{q}_k \in \mathbb{R}^4 @f$: Unit quaternion (orientation from body to world frame).
  * - @f$ \boldsymbol{\omega}_k \in \mathbb{R}^3 @f$: Angular velocity in the body frame.
+ * - @f$ \mathbf{b}_{\boldsymbol{\omega}_k} \in \mathbb{R}^3 @f$: Gyro bias.
+ * - @f$ \mathbf{b}_{\mathbf{a}_k} \in \mathbb{R}^3 @f$: Accelerometer bias.
  *
  * @section process_model Process Model
  *
@@ -33,10 +37,12 @@
  *
  * @f[
  * \begin{aligned}
- * \mathbf{p}_{k+1} &= \mathbf{p}_k + \mathbf{v}_k \Delta t + \frac{1}{2}(\mathbf{R}(\mathbf{q}_k)\mathbf{a}_k - \mathbf{g}) \Delta t^2 \\
- * \mathbf{v}_{k+1} &= \mathbf{v}_k + (\mathbf{R}(\mathbf{q}_k)\mathbf{a}_k - \mathbf{g}) \Delta t \\
- * \mathbf{q}_{k+1} &= \mathbf{q}_k \otimes \exp_q\left( \frac{1}{2} \boldsymbol{\omega}_k \Delta t \right) \\
- * \boldsymbol{\omega}_{k+1} &= \boldsymbol{\omega}_k
+ * \mathbf{p}_{k+1} &= \mathbf{p}_k + \mathbf{v}_k \Delta t + \frac{1}{2}(\mathbf{R}(\mathbf{q}_k)(\mathbf{a}_k-\mathbf{b}_{\mathbf{a}_k}) - \mathbf{g}) \Delta t^2 \\
+ * \mathbf{v}_{k+1} &= \mathbf{v}_k + (\mathbf{R}(\mathbf{q}_k)(\mathbf{a}_k-\mathbf{b}_{\mathbf{a}_k}) - \mathbf{g}) \Delta t - \mathbf{D}_{\text{linear}}\mathbf{v}_k\Delta t \\
+ * \mathbf{q}_{k+1} &= \mathbf{q}_k \otimes \exp_q\left( \frac{1}{2} (\boldsymbol{\omega}_k-\mathbf{b}_{\boldsymbol{\omega}_k}) \Delta t \right) \\
+ * \boldsymbol{\omega}_{k+1} &= \boldsymbol{\omega}_k - \mathbf{D}_{\text{angular}}\boldsymbol{\omega}_k\Delta t + \mathbf{w}_{\boldsymbol{\omega}} \\
+ * \mathbf{b}_{\boldsymbol{\omega}_{k+1}} &= \mathbf{b}_{\boldsymbol{\omega}_k} + \mathbf{w}_b \\
+ * \mathbf{b}_{\mathbf{a}_{k+1}} &= \mathbf{b}_{\mathbf{a}_k} + \mathbf{w}_{ba}
  * \end{aligned}
  * @f]
  *
@@ -46,6 +52,30 @@
  * - @f$ \exp_q(\cdot) @f$: Quaternion exponential map.
  * - @f$ \mathbf{g} @f$: World-frame gravity vector.
  * - @f$ \otimes @f$: Quaternion multiplication.
+ * - @f$ \mathbf{w}_{\boldsymbol{\omega}} @f$: Angular velocity random walk noise.
+ * - @f$ \mathbf{w}_b @f$: Gyro bias random walk noise.
+ * - @f$ \mathbf{w}_{ba} @f$: Accelerometer bias random walk noise.
+ * - @f$ \mathbf{D}_{\text{linear}} = \text{diag}(d_x, d_y, d_z) @f$: Linear drag coefficients.
+ * - @f$ \mathbf{D}_{\text{angular}} = \text{diag}(d_{\text{roll}}, d_{\text{pitch}}, d_{\text{yaw}}) @f$: Angular drag coefficients.
+ *
+ * @section hydrodynamic_model Hydrodynamic Effects Model
+ * 
+ * The filter incorporates a simplified hydrodynamic model to account for drag forces in underwater environments:
+ * 
+ * @f[
+ * \begin{aligned}
+ * \mathbf{F}_{\text{drag}} &= -\mathbf{D}_{\text{linear}}\mathbf{v}_k \\
+ * \boldsymbol{\tau}_{\text{drag}} &= -\mathbf{D}_{\text{angular}}\boldsymbol{\omega}_k
+ * \end{aligned}
+ * @f]
+ * 
+ * where:
+ * - @f$ \mathbf{F}_{\text{drag}} @f$: Drag force in world frame.
+ * - @f$ \boldsymbol{\tau}_{\text{drag}} @f$: Drag torque in body frame.
+ * - @f$ \mathbf{D}_{\text{linear}} @f$ and @f$ \mathbf{D}_{\text{angular}} @f$: Diagonal matrices of linear and angular drag coefficients.
+ * 
+ * This model captures the first-order effects of water resistance, which is particularly important for accurate velocity estimation 
+ * and improved dead-reckoning performance during periods without external position measurements.
  *
  * @section quaternion_expmap Quaternion Exponential Map
  *
@@ -63,6 +93,24 @@
  *
  * - **Pressure Sensor (depth only):** @f$ z_k = p_k^{(z)} + v_k @f$
  * - **USBL Position Measurement:** @f$ z_k^{\text{USBL}} = p_k + v_k^{\text{noise}} @f$
+ *
+ * @section measurement_gating Measurement Validation Gating
+ * 
+ * A statistical validation gate is applied to reject outlier measurements:
+ * 
+ * @f[
+ * d^2 = \mathbf{y}_k^T \mathbf{S}_k^{-1} \mathbf{y}_k \leq \gamma
+ * @f]
+ * 
+ * where:
+ * - @f$ \mathbf{y}_k = \mathbf{z}_k - h(\mathbf{x}_{k|k-1}) @f$ is the innovation (measurement residual)
+ * - @f$ \mathbf{S}_k = \mathbf{H}_k \mathbf{P}_{k|k-1} \mathbf{H}_k^T + \mathbf{R}_k @f$ is the innovation covariance
+ * - @f$ d^2 @f$ is the squared Mahalanobis distance
+ * - @f$ \gamma @f$ is the chi-square threshold for the given confidence level and measurement dimension
+ * 
+ * Measurements that fail this test are considered outliers and are not used in the update step.
+ * This is especially important for USBL measurements, which can occasionally suffer from multipath effects,
+ * interference, or other anomalies that lead to highly erroneous position fixes.
  *
  * @section usb_cov USBL Position Measurement Model and Range-Dependent Noise Covariance
  *
@@ -99,14 +147,35 @@
  *
  * This results in an ellipsoidal measurement covariance aligned with the sensor geometry.
  *
+ * @section accelerometer_bias Accelerometer Bias Estimation
+ * 
+ * The filter estimates accelerometer bias @f$ \mathbf{b}_{\mathbf{a}} @f$ to compensate for systematic errors:
+ * 
+ * @f[
+ * \begin{aligned}
+ * \mathbf{a}_{\text{true}} &= \mathbf{a}_{\text{measured}} - \mathbf{b}_{\mathbf{a}} \\
+ * \mathbf{b}_{\mathbf{a}_{k+1}} &= \mathbf{b}_{\mathbf{a}_k} + \mathbf{w}_{ba}
+ * \end{aligned}
+ * @f]
+ * 
+ * where @f$ \mathbf{w}_{ba} \sim \mathcal{N}(0, \mathbf{Q}_{ba}) @f$ models the bias as a random walk process.
+ * 
+ * Bias estimation is critical because:
+ * - Small biases integrate into significant velocity errors over time
+ * - They distinguish true accelerations from sensor offsets
+ * - They compensate for temperature-dependent drift and manufacturing imperfections
+ * 
+ * Since accelerometer biases couple with gravity in the world frame, they're best observable 
+ * during maneuvers with varying orientation relative to gravity.
+ *
  * @section ekf_update EKF Measurement Update
  *
  * During each EKF update:
  * - The range @f$ r_k @f$ is recomputed from the predicted state.
  * - The USBL measurement covariance @f$ R_k^{USBL} @f$ is recalculated.
  * - Measurement Jacobians @f$ H_k @f$ are constructed for:
- *     - USBL: @f$ H_k^{USBL} = [I_3,\ 0_{3x10}] @f$
- *     - Pressure: @f$ H_k^{depth} = [0\ 0\ 1\ \mathbf{0}_{1 \times 10}] @f$
+ *     - USBL: @f$ H_k^{USBL} = [I_3,\ 0_{3x16}] @f$
+ *     - Pressure: @f$ H_k^{depth} = [0\ 0\ 1\ \mathbf{0}_{1 \times 16}] @f$
  *
  * @section jacobians Jacobian Computation
  *
