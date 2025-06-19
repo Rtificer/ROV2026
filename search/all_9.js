@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['last_5fimu_5ftime_5f_0',['last_imu_time_',['../classrov__controllers_1_1PidController.html#adc838c2917e71775f792f91c0494bb7f',1,'rov_controllers::PidController']]],
-  ['latest_5fwrench_5f_1',['latest_wrench_',['../classrov__controllers_1_1AxisToCommandController.html#ae16024c92c62fe06950159b3eccb8620',1,'rov_controllers::AxisToCommandController']]],
-  ['load_5fparameters_2',['load_parameters',['../classrov__control_1_1PWMInterface.html#a5f150a0ff93daea01c185b12fc429790',1,'rov_control::PWMInterface']]]
+  ['jacobian_20computation_0',['Jacobian Computation',['../EKF__sensor__fusion__controller_8hpp.html#jacobians',1,'']]],
+  ['joint_5fnames_5f_1',['joint_names_',['../classrov__controllers_1_1AxisToCommandController.html#afae78ac8651d61876f8e76572b2b2004',1,'rov_controllers::AxisToCommandController']]],
+  ['joy_5fcallback_2',['joy_callback',['../classGamepadParser.html#a4918af1b3135d983645a5571a035f533',1,'GamepadParser']]],
+  ['joy_5fsub_5f_3',['joy_sub_',['../classGamepadParser.html#a2eebf552ab65e3172cfacce008548cde',1,'GamepadParser']]]
 ];

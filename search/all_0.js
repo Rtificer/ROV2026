@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['and_20range_20dependent_20noise_20covariance_0',['USBL Position Measurement Model and Range-Dependent Noise Covariance',['../EKF__sensor__fusion__controller_8hpp.html#usb_cov',1,'']]],
-  ['axis_5fbindings_5f_1',['axis_bindings_',['../classGamepadParser.html#a9205b9c6e8a09d4f49dab039631248b3',1,'GamepadParser']]],
-  ['axis_5fto_5fcommand_5fcontroller_2ehpp_2',['axis_to_command_controller.hpp',['../axis__to__command__controller_8hpp.html',1,'']]],
-  ['axistocommandcontroller_3',['axistocommandcontroller',['../classrov__controllers_1_1AxisToCommandController.html',1,'rov_controllers::AxisToCommandController'],['../classrov__controllers_1_1AxisToCommandController.html#af46f564987af7ab4dd25cb1553748f0c',1,'rov_controllers::AxisToCommandController::AxisToCommandController()']]]
+  ['accelerometer_20bias_20estimation_0',['Accelerometer Bias Estimation',['../EKF__sensor__fusion__controller_8hpp.html#accelerometer_bias',1,'']]],
+  ['and_20range_20dependent_20noise_20covariance_1',['USBL Position Measurement Model and Range-Dependent Noise Covariance',['../EKF__sensor__fusion__controller_8hpp.html#usb_cov',1,'']]],
+  ['axis_5fbindings_5f_2',['axis_bindings_',['../classGamepadParser.html#a9205b9c6e8a09d4f49dab039631248b3',1,'GamepadParser']]],
+  ['axis_5fto_5fcommand_5fcontroller_2ehpp_3',['axis_to_command_controller.hpp',['../axis__to__command__controller_8hpp.html',1,'']]],
+  ['axistocommandcontroller_4',['axistocommandcontroller',['../classrov__controllers_1_1AxisToCommandController.html',1,'rov_controllers::AxisToCommandController'],['../classrov__controllers_1_1AxisToCommandController.html#af46f564987af7ab4dd25cb1553748f0c',1,'rov_controllers::AxisToCommandController::AxisToCommandController()']]]
 ];
