@@ -185,7 +185,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a new <a class="el" href="classGamepadParser.html">GamepadParser</a> node. </p>
-<p>Declares the "deadzone" parameter and sets up the subscriber for the /joy topic and the publisher for the /desired_velocity topic. </p>
+<p>Declares the "deadzone" parameter and sets up the subscriber for the /joy topic and the publisher for the /desired_twist topic. </p>
 
 </div>
 </div>
@@ -215,7 +215,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Callback function for processing incoming joystick messages. </p>
-<p>Applies a deadzone to joystick axes and publishes a geometry_msgs::msg::Twist message to the /desired_velocity topic.</p>
+<p>Applies a deadzone to joystick axes and publishes a geometry_msgs::msg::Twist message to the /desired_twist topic.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>Shared pointer to the received sensor_msgs::msg::Joy message. </td></tr>
