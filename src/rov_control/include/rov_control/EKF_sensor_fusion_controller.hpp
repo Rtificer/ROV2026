@@ -16,8 +16,8 @@
  * \mathbf{p}_k \\
  * \mathbf{v}_k \\
  * \mathbf{q}_k \\
- * \boldsymbol{\omega}_k \\
- * \mathbf{b}_{\boldsymbol{\omega}_k} \\
+ * \bm{\omega}_k \\
+ * \mathbf{b}_{\bm{\omega}_k} \\
  * \mathbf{b}_{\mathbf{a}_k}
  * \end{bmatrix}
  * \in \mathbb{R}^{19}
@@ -27,8 +27,8 @@
  * - @f$ \mathbf{p}_k \in \mathbb{R}^3 @f$: Position in the world frame.
  * - @f$ \mathbf{v}_k \in \mathbb{R}^3 @f$: Velocity in the world frame.
  * - @f$ \mathbf{q}_k \in \mathbb{R}^4 @f$: Unit quaternion (orientation from body to world frame).
- * - @f$ \boldsymbol{\omega}_k \in \mathbb{R}^3 @f$: Angular velocity in the body frame.
- * - @f$ \mathbf{b}_{\boldsymbol{\omega}_k} \in \mathbb{R}^3 @f$: Gyro bias.
+ * - @f$ \bm{\omega}_k \in \mathbb{R}^3 @f$: Angular velocity in the body frame.
+ * - @f$ \mathbf{b}_{\bm{\omega}_k} \in \mathbb{R}^3 @f$: Gyro bias.
  * - @f$ \mathbf{b}_{\mathbf{a}_k} \in \mathbb{R}^3 @f$: Accelerometer bias.
  *
  * @section process_model Process Model
@@ -39,9 +39,9 @@
  * \begin{aligned}
  * \mathbf{p}_{k+1} &= \mathbf{p}_k + \mathbf{v}_k \Delta t + \frac{1}{2}(\mathbf{R}(\mathbf{q}_k)(\mathbf{a}_k-\mathbf{b}_{\mathbf{a}_k}) - \mathbf{g}) \Delta t^2 \\
  * \mathbf{v}_{k+1} &= \mathbf{v}_k + (\mathbf{R}(\mathbf{q}_k)(\mathbf{a}_k-\mathbf{b}_{\mathbf{a}_k}) - \mathbf{g}) \Delta t - \mathbf{D}_{\text{linear}}\mathbf{v}_k\Delta t \\
- * \mathbf{q}_{k+1} &= \mathbf{q}_k \otimes \exp_q\left( \frac{1}{2} (\boldsymbol{\omega}_k-\mathbf{b}_{\boldsymbol{\omega}_k}) \Delta t \right) \\
- * \boldsymbol{\omega}_{k+1} &= \boldsymbol{\omega}_k - \mathbf{D}_{\text{angular}}\boldsymbol{\omega}_k\Delta t + \mathbf{w}_{\boldsymbol{\omega}} \\
- * \mathbf{b}_{\boldsymbol{\omega}_{k+1}} &= \mathbf{b}_{\boldsymbol{\omega}_k} + \mathbf{w}_b \\
+ * \mathbf{q}_{k+1} &= \mathbf{q}_k \otimes \exp_q\left( \frac{1}{2} (\bm{\omega}_k-\mathbf{b}_{\bm{\omega}_k}) \Delta t \right) \\
+ * \bm{\omega}_{k+1} &= \bm{\omega}_k - \mathbf{D}_{\text{angular}}\bm{\omega}_k\Delta t + \mathbf{w}_{\bm{\omega}} \\
+ * \mathbf{b}_{\bm{\omega}_{k+1}} &= \mathbf{b}_{\bm{\omega}_k} + \mathbf{w}_b \\
  * \mathbf{b}_{\mathbf{a}_{k+1}} &= \mathbf{b}_{\mathbf{a}_k} + \mathbf{w}_{ba}
  * \end{aligned}
  * @f]
@@ -52,7 +52,7 @@
  * - @f$ \exp_q(\cdot) @f$: Quaternion exponential map.
  * - @f$ \mathbf{g} @f$: World-frame gravity vector.
  * - @f$ \otimes @f$: Quaternion multiplication.
- * - @f$ \mathbf{w}_{\boldsymbol{\omega}} @f$: Angular velocity random walk noise.
+ * - @f$ \mathbf{w}_{\bm{\omega}} @f$: Angular velocity random walk noise.
  * - @f$ \mathbf{w}_b @f$: Gyro bias random walk noise.
  * - @f$ \mathbf{w}_{ba} @f$: Accelerometer bias random walk noise.
  * - @f$ \mathbf{D}_{\text{linear}} = \text{diag}(d_x, d_y, d_z) @f$: Linear drag coefficients.
@@ -65,13 +65,13 @@
  * @f[
  * \begin{aligned}
  * \mathbf{F}_{\text{drag}} &= -\mathbf{D}_{\text{linear}}\mathbf{v}_k \\
- * \boldsymbol{\tau}_{\text{drag}} &= -\mathbf{D}_{\text{angular}}\boldsymbol{\omega}_k
+ * \bm{\tau}_{\text{drag}} &= -\mathbf{D}_{\text{angular}}\bm{\omega}_k
  * \end{aligned}
  * @f]
  * 
  * where:
  * - @f$ \mathbf{F}_{\text{drag}} @f$: Drag force in world frame.
- * - @f$ \boldsymbol{\tau}_{\text{drag}} @f$: Drag torque in body frame.
+ * - @f$ \bm{\tau}_{\text{drag}} @f$: Drag torque in body frame.
  * - @f$ \mathbf{D}_{\text{linear}} @f$ and @f$ \mathbf{D}_{\text{angular}} @f$: Diagonal matrices of linear and angular drag coefficients.
  * 
  * This model captures the first-order effects of water resistance, which is particularly important for accurate velocity estimation 
@@ -81,13 +81,13 @@
  *
  * Used to update orientation from angular velocity:
  * @f[
- * \delta \mathbf{q}_k = \exp_q\left( \frac{1}{2} \boldsymbol{\omega}_k \Delta t \right)
- * = \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\boldsymbol{\omega}_k}{\theta} \right]
- * \quad \text{where} \quad \theta = \|\boldsymbol{\omega}_k\| \Delta t
+ * \delta \mathbf{q}_k = \exp_q\left( \frac{1}{2} \bm{\omega}_k \Delta t \right)
+ * = \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\bm{\omega}_k}{\theta} \right]
+ * \quad \text{where} \quad \theta = \|\bm{\omega}_k\| \Delta t
  * @f]
  *
  * For small @f$ \theta @f$, use first-order approximation:
- * @f$ \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \boldsymbol{\omega}_k \Delta t] @f$
+ * @f$ \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \bm{\omega}_k \Delta t] @f$
  *
  * @section measurement_models Measurement Models
  *
