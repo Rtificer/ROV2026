@@ -1,11 +1,21 @@
 <map id="src/rov_control/include/rov_control/pwm_interface.hpp" name="src/rov_control/include/rov_control/pwm_interface.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="240,5,468,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,172,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,48,160,92,159,87,295,43"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="196,93,344,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="337,47,300,85,296,82,333,44"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="369,101,510,126"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="375,44,420,89,416,92,371,47"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="535,101,597,126"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="403,43,523,91,528,93,526,98,521,96,401,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="731,5,959,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,101,172,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="731,35,479,55,331,73,184,96,165,100,164,95,183,91,330,67,478,50,730,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="196,101,344,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="731,40,554,61,357,96,342,100,340,94,356,91,553,56,730,35"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="369,108,510,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="741,48,635,69,523,96,486,106,485,101,521,91,634,64,740,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="534,93,726,148"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="802,48,704,90,702,85,800,43"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="751,108,939,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="847,45,847,94,842,94,842,45"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="963,101,1163,141"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="890,43,1008,93,1006,98,888,48"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1188,93,1376,148"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="943,43,1175,91,1174,96,942,48"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1401,108,1486,133"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="959,27,1053,34,1162,45,1277,64,1389,91,1412,99,1410,104,1388,96,1276,69,1161,51,1052,39,959,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1511,108,1573,133"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="959,30,1252,52,1396,69,1454,79,1499,91,1516,98,1514,103,1497,96,1453,85,1395,74,1252,57,959,35"/>
 </map>

@@ -129,24 +129,24 @@ $(document).ready(function(){initNavTree('axis__to__command__controller_8hpp_sou
   <div class="headertitle"><div class="title">axis_to_command_controller.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="axis__to__command__controller_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ROV_CONTROLLERS__AXIS_TO_COMMAND_CONTROLLER_HPP_</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ROV_CONTROLLERS__AXIS_TO_COMMAND_CONTROLLER_HPP_</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;controller_interface/chainable_controller_interface.hpp&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;hardware_interface/types/hardware_interface_type_values.hpp&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;rclcpp/rclcpp.hpp&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;Eigen/Sparse&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;geometry_msgs/msg/wrench.hpp&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;osqp.h&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<a href="axis__to__command__controller_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;controller_interface/chainable_controller_interface.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;hardware_interface/types/hardware_interface_type_values.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;rclcpp/rclcpp.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Eigen/Sparse&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;geometry_msgs/msg/wrench.hpp&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;osqp.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="axis__to__command__controller_8hpp.html#a38687d7993a68fa0042b964b60a6c1a0">   62</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="axis__to__command__controller_8hpp.html#a38687d7993a68fa0042b964b60a6c1a0">solve_thruster_qp</a>(</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">const</span> Eigen::MatrixXd &amp;M_plus,</div>
@@ -218,8 +218,6 @@ $(document).ready(function(){initNavTree('axis__to__command__controller_8hpp_sou
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>} <span class="comment">// namespace rov_controllers</span></div>
 </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#endif </span><span class="comment">// ROV_CONTROLLERS__AXIS_TO_COMMAND_CONTROLLER_HPP_</span></div>
 <div class="ttc" id="aaxis__to__command__controller_8hpp_html_a38687d7993a68fa0042b964b60a6c1a0"><div class="ttname"><a href="axis__to__command__controller_8hpp.html#a38687d7993a68fa0042b964b60a6c1a0">solve_thruster_qp</a></div><div class="ttdeci">bool solve_thruster_qp(const Eigen::MatrixXd &amp;M_plus, const Eigen::MatrixXd &amp;M_minus, const Eigen::MatrixXd &amp;W, const Eigen::MatrixXd &amp;Q, const Eigen::VectorXd &amp;desired_wrench, Eigen::VectorXd &amp;T_plus, Eigen::VectorXd &amp;T_minus, double qp_time_limit, double *prim_residual=nullptr, double *dual_residual=nullptr)</div><div class="ttdoc">Solve the thruster allocation quadratic program (QP) for ROV control.</div></div>
 <div class="ttc" id="aclassrov__controllers_1_1AxisToCommandController_html"><div class="ttname"><a href="classrov__controllers_1_1AxisToCommandController.html">rov_controllers::AxisToCommandController</a></div><div class="ttdef"><b>Definition</b> axis_to_command_controller.hpp:78</div></div>
 <div class="ttc" id="aclassrov__controllers_1_1AxisToCommandController_html_a02a75e674b2dfe5afd3266e30626a123"><div class="ttname"><a href="classrov__controllers_1_1AxisToCommandController.html#a02a75e674b2dfe5afd3266e30626a123">rov_controllers::AxisToCommandController::on_export_state_interfaces</a></div><div class="ttdeci">std::vector&lt; hardware_interface::StateInterface &gt; on_export_state_interfaces() override</div></div>
