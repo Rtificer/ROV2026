@@ -5,11 +5,6 @@
 
 #include "rov_control/pwm_interface.hpp"
 #include "pluginlib/class_list_macros.hpp"
-#include "hardware_interface/types/hardware_interface_type_values.hpp"
-#include "rclcpp_lifecycle/state.hpp"
-#include <algorithm>
-
-// Include the LibDriver PCA9685 header (its a c library so extern "C" is nessasary)
 extern "C"
 {
 #include "rov_control/libdriver_pca9685/driver_pca9685.h"

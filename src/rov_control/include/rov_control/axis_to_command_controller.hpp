@@ -1,12 +1,8 @@
-#ifndef ROV_CONTROLLERS__AXIS_TO_COMMAND_CONTROLLER_HPP_
-#define ROV_CONTROLLERS__AXIS_TO_COMMAND_CONTROLLER_HPP_
+#pragma once
 
 #include <controller_interface/chainable_controller_interface.hpp>
 #include <hardware_interface/types/hardware_interface_type_values.hpp>
 #include <rclcpp/rclcpp.hpp>
-#include <string>
-#include <vector>
-#include <memory>
 #include <Eigen/Core>
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
@@ -16,6 +12,10 @@ extern "C"
 {
 #include "osqp.h"
 }
+
+#include <string>
+#include <vector>
+#include <memory>
 
 /**
  * @brief Solve the thruster allocation quadratic program (QP) for ROV control.
@@ -206,5 +206,3 @@ namespace rov_controllers
   };
 
 } // namespace rov_controllers
-
-#endif // ROV_CONTROLLERS__AXIS_TO_COMMAND_CONTROLLER_HPP_

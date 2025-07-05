@@ -1,6 +1,3 @@
-#ifndef ROV_CONTROL__THRUSTER_PID_CONTROLLER_HPP_
-#define ROV_CONTROL__THRUSTER_PID_CONTROLLER_HPP_
-
 #pragma once
 
 #include <vector>
@@ -108,5 +105,3 @@ namespace rov_controllers
   };
 
 } // namespace rov_controllers
-
-#endif // THRUSTER_PID_CONTROLLER_HPP

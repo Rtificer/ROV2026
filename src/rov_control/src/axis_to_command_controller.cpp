@@ -1,21 +1,5 @@
-#include <chrono>
-#include <memory>
-#include <string>
-#include <vector>
-
-#include <controller_interface/chainable_controller_interface.hpp>
-#include <hardware_interface/types/hardware_interface_type_values.hpp>
-#include <pluginlib/class_list_macros.hpp>
-#include <rclcpp/rclcpp.hpp>
-
 #include "rov_control/axis_to_command_controller.hpp"
-
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
-extern "C"
-{
-#include "osqp.h"
-}
+#include <pluginlib/class_list_macros.hpp>
 
 bool solve_thruster_qp(
     const Eigen::MatrixXd &M_plus,

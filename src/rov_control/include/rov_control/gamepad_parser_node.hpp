@@ -1,7 +1,5 @@
-#ifndef ROV_CONTROL__GAMEPAD_PARSER_NODE_HPP_
-#define ROV_CONTROL__GAMEPAD_PARSER_NODE_HPP_
-
 #pragma once
+
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/joy.hpp>
 #include <geometry_msgs/msg/twist.hpp>
@@ -34,5 +32,3 @@ private:
   rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub_;
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr twist_pub_;
 };
-
-#endif // GAMEPAD_PARSER_NODE_HPP

@@ -163,7 +163,7 @@
     pitch="${float(rotation_offset.split()[0])}" 
     yaw="${180 + float(rotation_offset.split()[1])}"
   />
-  <xacro:thruster 
+  <xacro:thruster thruster_control_joint
     name="back_right_top_thruster" 
     x="${float(position_offset.split()[0])}" 
     y="${-float(position_offset.split()[1])}" 
