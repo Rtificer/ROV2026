@@ -1,0 +1,241 @@
+[0.097s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/artificer/Desktop/ROV2026', '--log-base', '/dev/null']
+[0.097s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/artificer/Desktop/ROV2026', '--log-base', '/dev/null'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7c1bc9c4f2c0>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7c1bc9c4e420>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7c1bc9c4e420>>, mixin_verb=('list',))
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.133s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/artificer/Desktop/ROV2026', '/home/artificer/Desktop/ROV2026/--log-base', '/dev/null'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extensions ['ignore', 'ignore_ament_install']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extension 'ignore'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extension 'ignore_ament_install'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extensions ['colcon_pkg']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extension 'colcon_pkg'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extensions ['colcon_meta']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extension 'colcon_meta'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extensions ['ros']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extension 'ros'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extensions ['cmake', 'python']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extension 'cmake'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extension 'python'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extensions ['python_setup_py']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026) by extension 'python_setup_py'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extension 'ignore'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extension 'ignore_ament_install'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extensions ['colcon_pkg']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extension 'colcon_pkg'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extensions ['ros']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extension 'ros'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extensions ['cmake', 'python']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extension 'cmake'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extension 'python'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extensions ['python_setup_py']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen) by extension 'python_setup_py'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extension 'ros'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extensions ['cmake', 'python']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extension 'cmake'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extension 'python'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extensions ['python_setup_py']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html) by extension 'python_setup_py'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extension 'ros'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extensions ['cmake', 'python']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extension 'cmake'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extension 'python'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extensions ['python_setup_py']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css) by extension 'python_setup_py'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extensions ['colcon_pkg']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extension 'colcon_pkg'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extensions ['colcon_meta']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extension 'ros'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extensions ['cmake', 'python']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extension 'cmake'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extension 'python'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extensions ['python_setup_py']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs) by extension 'python_setup_py'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extension 'ros'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extensions ['cmake', 'python']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extension 'cmake'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extension 'python'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extensions ['python_setup_py']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/docs/img) by extension 'python_setup_py'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'ros'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['cmake', 'python']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'cmake'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'python'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extensions ['python_setup_py']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/doxygen-custom) by extension 'python_setup_py'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extension 'ros'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extensions ['cmake', 'python']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extension 'cmake'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extension 'python'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extensions ['python_setup_py']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/img) by extension 'python_setup_py'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extension 'ros'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extensions ['cmake', 'python']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extension 'cmake'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extension 'python'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extensions ['python_setup_py']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include) by extension 'python_setup_py'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'ros'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['cmake', 'python']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'cmake'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'python'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extensions ['python_setup_py']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/doxygen-awesome-css/include/MyLibrary) by extension 'python_setup_py'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extension 'ros'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extensions ['cmake', 'python']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extension 'cmake'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extension 'python'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extensions ['python_setup_py']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/html/search) by extension 'python_setup_py'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extension 'colcon_meta'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extensions ['ros']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extension 'ros'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extensions ['cmake', 'python']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extension 'cmake'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extension 'python'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extensions ['python_setup_py']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/doxygen/latex) by extension 'python_setup_py'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/install) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/install) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/install) ignored
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/log) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/log) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/log) ignored
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extension 'ros'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extensions ['cmake', 'python']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extension 'cmake'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extension 'python'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extensions ['colcon_meta']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extension 'colcon_meta'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extensions ['ros']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extension 'ros'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extensions ['cmake', 'python']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extension 'cmake'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extension 'python'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/bno055) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/description) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/description) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/description) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/description) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/description) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/description) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/description) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/description) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/description) by extension 'ros'
+[0.176s] DEBUG:colcon.colcon_core.package_identification:Package '/home/artificer/Desktop/ROV2026/src/description' with type 'ros.ament_cmake' and name 'description'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/dummy_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/dummy_hardware) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/dummy_hardware) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/dummy_hardware) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/dummy_hardware) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/dummy_hardware) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/dummy_hardware) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/dummy_hardware) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/dummy_hardware) by extension 'ros'
+[0.177s] DEBUG:colcon.colcon_core.package_identification:Package '/home/artificer/Desktop/ROV2026/src/dummy_hardware' with type 'ros.ament_cmake' and name 'dummy_hardware'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/rov_control) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/rov_control) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/rov_control) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/rov_control) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/rov_control) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/rov_control) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/rov_control) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/rov_control) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(/home/artificer/Desktop/ROV2026/src/rov_control) by extension 'ros'
+[0.178s] DEBUG:colcon.colcon_core.package_identification:Package '/home/artificer/Desktop/ROV2026/src/rov_control' with type 'ros.ament_cmake' and name 'rov_control'
+[0.178s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults

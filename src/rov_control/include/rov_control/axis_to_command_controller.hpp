@@ -24,7 +24,7 @@ extern "C"
  *
  * **Minimize over** @f$ T^+, T^- @f$:
  * @f[
- *     \left\| W \left( w - \sum_{i} (T^+_i M^+_{:,i} + T^-_i M^-_{:,i}) \right) \right\|^2 + (T^+ + T^-)^\top Q (T^+ + T^-)
+ *     \left\| W \left( w - \sum_{i} Q_{[i, i]} (T^+_i M^+_{:,i} + T^-_i M^-_{:,i}) \right) \right\|^2 + λ(T^+ + T^-)^\top (T^+ + T^-)
  * @f]
  *
  * **Subject to:**

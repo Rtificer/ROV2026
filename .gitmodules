@@ -1,9 +1,9 @@
 [submodule "src/rov_control/external/osqp"]
     path = src/rov_control/external/osqp
     url = https://github.com/osqp/osqp.git
-[submodule "src/bno055"]
-	path = src/bno055
-	url = https://github.com/dheera/ros-imu-bno055.git
+# [submodule "src/bno055"]
+# 	path = src/bno055
+# 	url = https://github.com/dheera/ros-imu-bno055.git
 [submodule "doxygen-awesome-css"]
 	path = doxygen-awesome-css
 	url = https://github.com/jothepro/doxygen-awesome-css.git
