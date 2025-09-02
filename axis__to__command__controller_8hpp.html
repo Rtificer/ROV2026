@@ -267,7 +267,7 @@ Functions</h2></td></tr>
 <p>This function solves the following QP to optimally allocate forward ( \( T^+ \)) and reverse ( \( T^- \)) thruster commands:</p>
 <p><b>Minimize over</b> \( T^+, T^- \):  </p><p class="formulaDsp">
 \[
-    \left\| W \left( w - \sum_{i} (T^+_i M^+_{:,i} + T^-_i M^-_{:,i}) \right) \right\|^2 + (T^+ + T^-)^\top Q (T^+ + T^-)
+    \left\| W \left( w - \sum_{i} Q_{[i, i]} (T^+_i M^+_{:,i} + T^-_i M^-_{:,i}) \right) \right\|^2 + λ(T^+ + T^-)^\top (T^+ + T^-)
 \]
 </p>
 <p><b>Subject to:</b>  </p><p class="formulaDsp">
