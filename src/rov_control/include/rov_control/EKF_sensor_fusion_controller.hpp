@@ -97,7 +97,6 @@
  * @section measurement_gating Measurement Validation Gating
  * 
  * A statistical validation gate is applied to reject outlier measurements:
- * https://rtificer.github.io/ROV2026/EKF__sensor__fusion__controller_8hpp.html
  * \f[
  * d^2 = \mathbf{y}_k^T \mathbf{S}_k^{-1} \mathbf{y}_k \leq \gamma
  * \f]
