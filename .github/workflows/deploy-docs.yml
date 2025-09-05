@@ -2,7 +2,7 @@ name: Deploy Doxygen Docs
 
 on:
   push:
-    branches: [main]  # or your default branch
+    branches: [main]
 
 jobs:
   deploy:
