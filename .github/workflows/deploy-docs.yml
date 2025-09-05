@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install LaTeX
+        run: sudo apt-get install texlive-latex-base
+
       - name: Install Doxygen
         run: sudo apt-get install doxygen graphviz
 
