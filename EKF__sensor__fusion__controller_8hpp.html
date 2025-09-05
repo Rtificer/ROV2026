@@ -166,9 +166,9 @@ Process Model</h1>
 <p class="formulaDsp">
 \[
 \begin{aligned}
-\mathbf{p}_{k+1} &amp;= \mathbf{p}_k + \mathbf{v}_k \Delta t + \frac{1}{2}(\mathbf{R}(\mathbf{q}_k)(\mathbf{a}_k-\mathbf{b}_{\mathbf{a}_k}) - \mathbf{g}) \Delta t^2 \\
+\mathbf{p}_{k+1} &amp;= \mathbf{p}_k + \mathbf{v}_k \Delta t + @frac{1}{2}(\mathbf{R}(\mathbf{q}_k)(\mathbf{a}_k-\mathbf{b}_{\mathbf{a}_k}) - \mathbf{g}) \Delta t^2 \\
 \mathbf{v}_{k+1} &amp;= \mathbf{v}_k + (\mathbf{R}(\mathbf{q}_k)(\mathbf{a}_k-\mathbf{b}_{\mathbf{a}_k}) - \mathbf{g}) \Delta t - \mathbf{D}_{\text{linear}}\mathbf{v}_k\Delta t \\
-\mathbf{q}_{k+1} &amp;= \mathbf{q}_k \otimes \exp_q\left( \frac{1}{2} (\bm{\omega}_k-\mathbf{b}_{\bm{\omega}_k}) \Delta t \right) \\
+\mathbf{q}_{k+1} &amp;= \mathbf{q}_k \otimes \exp_q\left( @frac{1}{2} (\bm{\omega}_k-\mathbf{b}_{\bm{\omega}_k}) \Delta t \right) \\
 \bm{\omega}_{k+1} &amp;= \bm{\omega}_k - \mathbf{D}_{\text{angular}}\bm{\omega}_k\Delta t + \mathbf{w}_{\bm{\omega}} \\
 \mathbf{b}_{\bm{\omega}_{k+1}} &amp;= \mathbf{b}_{\bm{\omega}_k} + \mathbf{w}_b \\
 \mathbf{b}_{\mathbf{a}_{k+1}} &amp;= \mathbf{b}_{\mathbf{a}_k} + \mathbf{w}_{ba}
@@ -208,12 +208,12 @@ Hydrodynamic Effects Model</h1>
 Quaternion Exponential Map</h1>
 <p>Used to update orientation from angular velocity:  </p><p class="formulaDsp">
 \[
-\delta \mathbf{q}_k = \exp_q\left( \frac{1}{2} \bm{\omega}_k \Delta t \right)
-= \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\bm{\omega}_k}{\theta} \right]
+\delta \mathbf{q}_k = \exp_q\left( @frac{1}{2} \bm{\omega}_k \Delta t \right)
+= \left[ \cos\left(@frac{\theta}{2}\right),\ \sin\left(@frac{\theta}{2}\right) @frac{\bm{\omega}_k}{\theta} \right]
 \quad \text{where} \quad \theta = \|\bm{\omega}_k\| \Delta t
 \]
 </p>
-<p>For small \( \theta \), use first-order approximation: \( \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \bm{\omega}_k \Delta t] \)</p>
+<p>For small \( \theta \), use first-order approximation: \( \delta \mathbf{q}_k \approx [1,\ @frac{1}{2} \bm{\omega}_k \Delta t] \)</p>
 <h1><a class="anchor" id="measurement_models"></a>
 Measurement Models</h1>
 <ul>
@@ -254,7 +254,7 @@ R_k^{\text{USBL}} = \sigma_\theta^2 r_k^2 (I_3 - \mathbf{n}\mathbf{n}^T) + \sigm
 <p>where:</p><ul>
 <li>\( \sigma_\theta^2 \): Angle-of-arrival variance.</li>
 <li>\( \sigma_r^2 \): Range measurement variance.</li>
-<li>\( \mathbf{n} = \frac{\mathbf{p}_k - \mathbf{p}_{USBL}}{\|\mathbf{p}_k - \mathbf{p}_{USBL}\|} \): Line-of-sight unit vector.</li>
+<li>\( \mathbf{n} = @frac{\mathbf{p}_k - \mathbf{p}_{USBL}}{\|\mathbf{p}_k - \mathbf{p}_{USBL}\|} \): Line-of-sight unit vector.</li>
 <li>\( I_3 - \mathbf{n}\mathbf{n}^T \): Projects onto the tangent plane of the measurement sphere.</li>
 </ul>
 <h2><a class="anchor" id="covariance_intuition"></a>
@@ -296,8 +296,8 @@ EKF Measurement Update</h1>
 <h1><a class="anchor" id="jacobians"></a>
 Jacobian Computation</h1>
 <p>The EKF linearizes the process and measurement models:</p><ul>
-<li>State transition Jacobian \( F_k = \frac{\partial f}{\partial x} \)</li>
-<li>Measurement Jacobian \( H_k = \frac{\partial h}{\partial x} \)</li>
+<li>State transition Jacobian \( F_k = @frac{\partial f}{\partial x} \)</li>
+<li>Measurement Jacobian \( H_k = @frac{\partial h}{\partial x} \)</li>
 </ul>
 <p>Orientation derivatives use quaternion product Jacobians:</p>
 <p>Left quaternion multiplication matrix:  </p><p class="formulaDsp">
@@ -313,7 +313,7 @@ q_z &amp; -q_y &amp;  q_x &amp;  q_w
 </p>
 <p>And the derivative of rotated vectors:  </p><p class="formulaDsp">
 \[
-\frac{\partial (\mathbf{R}(\mathbf{q}) \mathbf{a})}{\partial \mathbf{q}} \in \mathbb{R}^{3 \times 4}
+@frac{\partial (\mathbf{R}(\mathbf{q}) \mathbf{a})}{\partial \mathbf{q}} \in \mathbb{R}^{3 \times 4}
 \]
 </p>
 <p> gives sensitivity of the rotated IMU accelerations to orientation changes.</p>
