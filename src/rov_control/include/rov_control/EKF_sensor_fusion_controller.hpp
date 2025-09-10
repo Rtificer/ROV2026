@@ -82,8 +82,7 @@
  * Used to update orientation from angular velocity:
  * \f[
  * \delta \mathbf{q}_k = \exp_q\left( \frac{1}{2} \mathbf{\omega}_k \Delta t \right)
- * = \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\mathbf{\omega}_k}{\theta} \right]
- * \quad \text{where} \quad \theta = \|\mathbf{\omega}_k\| \Delta t
+ * = \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\mathbf{\omega}_k}{\theta} \right] \quad \text{where} \quad \theta = \|\mathbf{\omega}_k\| \Delta t
  * \f]
  *
  * For small \f$ \theta \f$, use first-order approximation:
