@@ -1,5 +1,5 @@
 /**
- * @file EKF_sensor_fusion_controller.hpp
+ * @file EKF_sensor_fusion_controller_cleaned.hpp
  * @brief Extended Kalman Filter for 6-DOF State Estimation with IMU, Pressure Sensor, and USBL
  *
  * This filter estimates the full 6-DOF state of an underwater vehicle by fusing data from:
