@@ -57,7 +57,7 @@
  * \f[
  * \delta \mathbf{q}_k = \exp_q\left( \frac{1}{2} \mathbf{\omega}_k \Delta t \right)
  * = \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\mathbf{\omega}_k}{\theta} \right]
- * \]
+ * \f]
  * where \f$ \theta = \|\mathbf{\omega}_k\| \Delta t \f$. For small angles, the first-order approximation
  * \f$ \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \mathbf{\omega}_k \Delta t] \f$ is used to avoid singularities.
  *
