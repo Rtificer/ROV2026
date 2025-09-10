@@ -202,8 +202,7 @@ Quaternion Exponential Map</h1>
 <p>Used to update orientation from angular velocity:  </p><p class="formulaDsp">
 \[
 \delta \mathbf{q}_k = \exp_q\left( \frac{1}{2} \mathbf{\omega}_k \Delta t \right)
-= \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\mathbf{\omega}_k}{\theta} \right]
-\quad \text{where} \quad \theta = \|\mathbf{\omega}_k\| \Delta t
+= \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\mathbf{\omega}_k}{\theta} \right] \quad \text{where} \quad \theta = \|\mathbf{\omega}_k\| \Delta t
 \]
 </p>
 <p>For small \( \theta \), use first-order approximation: \( \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \mathbf{\omega}_k \Delta t] \)</p>
