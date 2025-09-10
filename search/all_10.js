@@ -2,7 +2,7 @@ var searchData=
 [
   ['range_20dependent_20measurement_20noise_20covariance_0',['Range-Dependent Measurement Noise Covariance',['../EKF__sensor__fusion__controller_8hpp.html#range_dependent_cov',1,'']]],
   ['range_20dependent_20noise_20covariance_1',['USBL Position Measurement Model and Range-Dependent Noise Covariance',['../EKF__sensor__fusion__controller_8hpp.html#usb_cov',1,'']]],
-  ['range_20dependent_20noise_20modeling_2',['USBL Range-Dependent Noise Modeling',['../EKF__sensor__fusion__controller_8hpp.html#usbl_covariance',1,'']]],
+  ['range_20dependent_20noise_20modeling_2',['USBL Range-Dependent Noise Modeling',['../EKF__sensor__fusion__controller__cleaned_8hpp.html#usbl_covariance',1,'']]],
   ['read_3',['read',['../classrov__control_1_1PWMInterface.html#ad04db75eaa1f5425fcda2133337cebb0',1,'rov_control::PWMInterface']]],
   ['ref_5f_4',['ref_',['../classrov__controllers_1_1PidController.html#a02b213fef27c5a56d514c3d974a89598',1,'rov_controllers::PidController']]],
   ['ref_5fsub_5f_5',['ref_sub_',['../classrov__controllers_1_1PidController.html#a97a9f12b1a71e3e6b4b70312748e1bf5',1,'rov_controllers::PidController']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['observability_0',['Sensor Bias Estimation and Observability',['../EKF__sensor__fusion__controller_8hpp.html#bias_estimation',1,'']]],
+  ['observability_0',['Sensor Bias Estimation and Observability',['../EKF__sensor__fusion__controller__cleaned_8hpp.html#bias_estimation',1,'']]],
   ['on_5factivate_1',['on_activate',['../classrov__control_1_1PWMInterface.html#aaea2943e8203604494d48335f4b5f9f6',1,'rov_control::PWMInterface::on_activate()'],['../classrov__controllers_1_1PidController.html#a3beb1f80e56bcecb9e59519fedc928ed',1,'rov_controllers::PidController::on_activate()'],['../classrov__controllers_1_1AxisToCommandController.html#a8887804a99e4c22a427bcc00c5cbf43f',1,'rov_controllers::AxisToCommandController::on_activate()']]],
   ['on_5fcleanup_2',['on_cleanup',['../classrov__control_1_1PWMInterface.html#a3bde60e13810ff40b04b2578f8878621',1,'rov_control::PWMInterface']]],
   ['on_5fconfigure_3',['on_configure',['../classrov__control_1_1PWMInterface.html#af3474724b6eac30fd729b8ff1298df00',1,'rov_control::PWMInterface::on_configure()'],['../classrov__controllers_1_1PidController.html#aa800b128f11ee18746b64106a0bdd9cb',1,'rov_controllers::PidController::on_configure()'],['../classrov__controllers_1_1AxisToCommandController.html#a81203bd6674d7698f6c26aae1ce94f44',1,'rov_controllers::AxisToCommandController::on_configure(const rclcpp_lifecycle::State &amp;previous_state) override']]],
