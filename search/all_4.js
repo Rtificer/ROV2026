@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['effects_20model_0',['Hydrodynamic Effects Model',['../EKF__sensor__fusion__controller_8hpp.html#hydrodynamic_model',1,'']]],
+  ['effects_20model_0',['Hydrodynamic Effects Model',['../EKF__sensor__fusion__controller__cleaned_8hpp.html#hydrodynamic_model',1,'']]],
   ['effort_5fweights_5f_1',['effort_weights_',['../classrov__controllers_1_1AxisToCommandController.html#ae5668893e3ea2adbcc981450159a23a9',1,'rov_controllers::AxisToCommandController']]],
   ['ekf_20implementation_20and_20jacobian_20computation_2',['EKF Implementation and Jacobian Computation',['../EKF__sensor__fusion__controller__cleaned_8hpp.html#ekf_implementation',1,'']]],
   ['ekf_20measurement_20update_3',['EKF Measurement Update',['../EKF__sensor__fusion__controller_8hpp.html#ekf_update',1,'']]],

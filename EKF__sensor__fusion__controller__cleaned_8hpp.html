@@ -176,23 +176,22 @@ Process Model</h1>
 \delta \mathbf{q}_k = \exp_q\left( \frac{1}{2} \mathbf{\omega}_k \Delta t \right)
 = \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\mathbf{\omega}_k}{\theta} \right]
 \]
-where \f$ \theta = \|\mathbf{\omega}_k\| \Delta t \f$. For small angles, the first-order approximation
-\f$ \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \mathbf{\omega}_k \Delta t] \f$ is used to avoid singularities.
-
-Model parameters:
-- \f$ \mathbf{a}_k \f$: IMU-measured linear acceleration (body frame)
-- \f$ \mathbf{R}(\mathbf{q}) \f$: Rotation matrix corresponding to quaternion \f$ \mathbf{q} \f$
-- \f$ \mathbf{g} \f$: World-frame gravity vector \f$ [0, 0, 9.81]^T \f$
-- \f$ \otimes \f$: Quaternion multiplication operator
-- \f$ \mathbf{w}_{\mathbf{\omega}}, \mathbf{w}_b, \mathbf{w}_{ba} \f$: Process noise terms for angular velocity and bias random walks
-- \f$ \mathbf{D}_{\text{linear}} = \text{diag}(d_x, d_y, d_z) \f$: Linear drag coefficient matrix
-- \f$ \mathbf{D}_{\text{angular}} = \text{diag}(d_{\text{roll}}, d_{\text{pitch}}, d_{\text{yaw}}) \f$: Angular drag coefficient matrix
-
-@section hydrodynamic_model Hydrodynamic Drag Effects
-
-The filter incorporates simplified hydrodynamic drag models essential for underwater vehicle dynamics:
-
-\f[
+</p>
+<p> where \( \theta = \|\mathbf{\omega}_k\| \Delta t \). For small angles, the first-order approximation \( \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \mathbf{\omega}_k \Delta t] \) is used to avoid singularities.</p>
+<p>Model parameters:</p><ul>
+<li>\( \mathbf{a}_k \): IMU-measured linear acceleration (body frame)</li>
+<li>\( \mathbf{R}(\mathbf{q}) \): Rotation matrix corresponding to quaternion \( \mathbf{q} \)</li>
+<li>\( \mathbf{g} \): World-frame gravity vector \( [0, 0, 9.81]^T \)</li>
+<li>\( \otimes \): Quaternion multiplication operator</li>
+<li>\( \mathbf{w}_{\mathbf{\omega}}, \mathbf{w}_b, \mathbf{w}_{ba} \): Process noise terms for angular velocity and bias random walks</li>
+<li>\( \mathbf{D}_{\text{linear}} = \text{diag}(d_x, d_y, d_z) \): Linear drag coefficient matrix</li>
+<li>\( \mathbf{D}_{\text{angular}} = \text{diag}(d_{\text{roll}}, d_{\text{pitch}}, d_{\text{yaw}}) \): Angular drag coefficient matrix</li>
+</ul>
+<h1><a class="anchor" id="hydrodynamic_model"></a>
+Hydrodynamic Effects Model</h1>
+<p>The filter incorporates simplified hydrodynamic drag models essential for underwater vehicle dynamics:</p>
+<p class="formulaDsp">
+\[
 \begin{aligned}
 \mathbf{F}_{\text{drag}} &amp;= -\mathbf{D}_{\text{linear}}\mathbf{v}_k \\
 \mathbf{\tau}_{\text{drag}} &amp;= -\mathbf{D}_{\text{angular}}\mathbf{\omega}_k
