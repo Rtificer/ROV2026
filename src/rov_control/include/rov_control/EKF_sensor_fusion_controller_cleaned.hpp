@@ -59,6 +59,9 @@
  * = \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\mathbf{\omega}_k}{\theta} \right]
  * \quad \text{where} \quad \theta = \|\mathbf{\omega}_k\| \Delta t
  * \f]
+ * 
+ * For small \f$ \theta \f$, use first-order approximation:
+ * \f$ \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \mathbf{\omega}_k \Delta t] \f$
  *
  * Model parameters:
  * - \f$ \mathbf{a}_k \f$: IMU-measured linear acceleration (body frame)
@@ -83,12 +86,6 @@
  * where \f$ \mathbf{F}_{\text{drag}} \f$ represents drag force in the world frame and \f$ \mathbf{\tau}_{\text{drag}} \f$ 
  * represents drag torque in the body frame. The diagonal drag matrices \f$ \mathbf{D}_{\text{linear}} \f$ and 
  * \f$ \mathbf{D}_{\text{angular}} \f$ capture first-order hydrodynamic resistance effects.
- * 
- * This modeling is critical for underwater applications because:
- * - Water resistance significantly affects vehicle dynamics compared to aerial vehicles
- * - Drag forces provide natural damping that improves velocity estimation accuracy
- * - Proper drag modeling enhances dead-reckoning performance during USBL outages
- * - The model helps distinguish between thruster-induced and drag-induced accelerations
  *
  * @section measurement_models Measurement Models and Sensor Integration
  *
@@ -178,12 +175,6 @@
  * 
  * where \f$ \mathbf{w}_b, \mathbf{w}_{ba} \sim \mathcal{N}(0, \mathbf{Q}_b) \f$ model the biases as random walk processes.
  * 
- * Bias estimation is essential because:
- * - Small systematic errors integrate into large position and orientation drifts over time
- * - Temperature variations and aging affect sensor calibration
- * - Manufacturing tolerances create unit-to-unit variations in sensor characteristics
- * - Proper bias estimation significantly improves long-term navigation accuracy
- * 
  * **Observability Considerations:**
  * - Gyroscope biases are observable through orientation drift when external attitude references are available
  * - Accelerometer biases are most observable during vehicle maneuvers with varying orientation relative to gravity
@@ -221,8 +212,9 @@
  * provides the sensitivity of rotated IMU measurements to orientation changes, enabling proper
  * uncertainty propagation through the nonlinear rotation operations.
  *
- * **Update Sequence:**
- * During each filter cycle:
+ * @section update_sequence Update Sequence
+ * 
+ * **During each filter cycle:**
  * 1. Predict state and covariance using the process model
  * 2. Compute range-dependent USBL measurement covariance \f$ \mathbf{R}_k^{\text{USBL}} \f$
  * 3. Apply measurement validation gating to incoming sensor data
