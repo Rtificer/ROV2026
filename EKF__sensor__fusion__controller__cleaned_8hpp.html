@@ -175,9 +175,9 @@ Process Model</h1>
 \[
 \delta \mathbf{q}_k = \exp_q\left( \frac{1}{2} \mathbf{\omega}_k \Delta t \right)
 = \left[ \cos\left(\frac{\theta}{2}\right),\ \sin\left(\frac{\theta}{2}\right) \frac{\mathbf{\omega}_k}{\theta} \right]
+\quad \text{where} \quad \theta = \|\mathbf{\omega}_k\| \Delta t
 \]
 </p>
-<p> where \( \theta = \|\mathbf{\omega}_k\| \Delta t \). For small angles, the first-order approximation \( \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \mathbf{\omega}_k \Delta t] \) is used to avoid singularities.</p>
 <p>Model parameters:</p><ul>
 <li>\( \mathbf{a}_k \): IMU-measured linear acceleration (body frame)</li>
 <li>\( \mathbf{R}(\mathbf{q}) \): Rotation matrix corresponding to quaternion \( \mathbf{q} \)</li>
