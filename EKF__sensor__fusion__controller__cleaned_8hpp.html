@@ -178,6 +178,7 @@ Process Model</h1>
 \quad \text{where} \quad \theta = \|\mathbf{\omega}_k\| \Delta t
 \]
 </p>
+<p>For small \( \theta \), use first-order approximation: \( \delta \mathbf{q}_k \approx [1,\ \frac{1}{2} \mathbf{\omega}_k \Delta t] \)</p>
 <p>Model parameters:</p><ul>
 <li>\( \mathbf{a}_k \): IMU-measured linear acceleration (body frame)</li>
 <li>\( \mathbf{R}(\mathbf{q}) \): Rotation matrix corresponding to quaternion \( \mathbf{q} \)</li>
@@ -199,12 +200,6 @@ Hydrodynamic Effects Model</h1>
 \]
 </p>
 <p>where \( \mathbf{F}_{\text{drag}} \) represents drag force in the world frame and \( \mathbf{\tau}_{\text{drag}} \) represents drag torque in the body frame. The diagonal drag matrices \( \mathbf{D}_{\text{linear}} \) and \( \mathbf{D}_{\text{angular}} \) capture first-order hydrodynamic resistance effects.</p>
-<p>This modeling is critical for underwater applications because:</p><ul>
-<li>Water resistance significantly affects vehicle dynamics compared to aerial vehicles</li>
-<li>Drag forces provide natural damping that improves velocity estimation accuracy</li>
-<li>Proper drag modeling enhances dead-reckoning performance during USBL outages</li>
-<li>The model helps distinguish between thruster-induced and drag-induced accelerations</li>
-</ul>
 <h1><a class="anchor" id="measurement_models"></a>
 Measurement Models</h1>
 <p>The filter processes measurements from multiple sensors with distinct characteristics:</p>
@@ -276,12 +271,6 @@ Sensor Bias Estimation and Observability</h1>
 \]
 </p>
 <p>where \( \mathbf{w}_b, \mathbf{w}_{ba} \sim \mathcal{N}(0, \mathbf{Q}_b) \) model the biases as random walk processes.</p>
-<p>Bias estimation is essential because:</p><ul>
-<li>Small systematic errors integrate into large position and orientation drifts over time</li>
-<li>Temperature variations and aging affect sensor calibration</li>
-<li>Manufacturing tolerances create unit-to-unit variations in sensor characteristics</li>
-<li>Proper bias estimation significantly improves long-term navigation accuracy</li>
-</ul>
 <p><b>Observability Considerations:</b></p><ul>
 <li>Gyroscope biases are observable through orientation drift when external attitude references are available</li>
 <li>Accelerometer biases are most observable during vehicle maneuvers with varying orientation relative to gravity</li>
@@ -313,7 +302,9 @@ q_z &amp; -q_y &amp;  q_x &amp;  q_w
 \]
 </p>
 <p> provides the sensitivity of rotated IMU measurements to orientation changes, enabling proper uncertainty propagation through the nonlinear rotation operations.</p>
-<p><b>Update Sequence:</b> During each filter cycle:</p><ol type="1">
+<h1><a class="anchor" id="update_sequence"></a>
+Update Sequence</h1>
+<p><b>During each filter cycle:</b></p><ol type="1">
 <li>Predict state and covariance using the process model</li>
 <li>Compute range-dependent USBL measurement covariance \( \mathbf{R}_k^{\text{USBL}} \)</li>
 <li>Apply measurement validation gating to incoming sensor data</li>
